@@ -1,0 +1,82 @@
+{
+  "project": {
+    "id": "2612650212901166198",
+    "title": "ScaleSight SaaS Marketing Site"
+  },
+  "export_root": "/home/admin/github-pojects-backup/scalesight_website/stitch_exports/scalesight-saas-marketing-site",
+  "items": [
+    {
+      "order": 1,
+      "id": "010cac90400e403ba93e2d2620254a98",
+      "alias": "01-shader",
+      "title": "Shader",
+      "image": "images/01-shader.png",
+      "code": "html/01-shader.html"
+    },
+    {
+      "order": 2,
+      "id": "3e1c4d67e6c34fdbbd8e0f0b09a6eb00",
+      "alias": "02-perspective-dashboard-visualization",
+      "title": "A clean, professional 3D dashboard visualization for an ecommerce decision intelligence platform. Dark mode UI, Geist Sans typography. Three panels in a perspective fan layout: a central Weekly Planning Dashboard with bar charts and line graphs, flanked by a Executive Decision Dashboard and a Scenario Planning Dashboard. High-fidelity, premium SaaS aesthetic, deep navy background with subtle blue radial glow. No realistic people, just UI components.",
+      "image": "images/02-perspective-dashboard-visualization.jpg",
+      "code": null
+    },
+    {
+      "order": 3,
+      "id": "52ca27cfe62f4bd0832e547045db90c3",
+      "alias": "03-case-studies-results",
+      "title": "ScaleSight | Case Studies & Results",
+      "image": "images/03-case-studies-results.png",
+      "code": "html/03-case-studies-results.html"
+    },
+    {
+      "order": 4,
+      "id": "5a80dc1af88b49adbf4ed054831f7f71",
+      "alias": "04-decision-intelligence-for-ecommerce",
+      "title": "ScaleSight | Decision Intelligence for Ecommerce",
+      "image": "images/04-decision-intelligence-for-ecommerce.png",
+      "code": "html/04-decision-intelligence-for-ecommerce.html"
+    },
+    {
+      "order": 5,
+      "id": "960f15cb8584437f967bf458cb66cb0f",
+      "alias": "05-dashboard-grid",
+      "title": "A grid of four high-fidelity dashboard screenshots for a SaaS product. 1. Revenue Forecast with line charts. 2. Inventory Health with status badges. 3. SKU Demand Forecast with heatmaps. 4. Operational Planning with gantt-style bars. All in dark mode, matching #07111F and #0C1727 colors. Professional, clean, Geist Sans font.",
+      "image": "images/05-dashboard-grid.jpg",
+      "code": null
+    },
+    {
+      "order": 6,
+      "id": "a85b07be5bcd4cce977a004a76ff253f",
+      "alias": "06-about-the-mission",
+      "title": "ScaleSight | About the Mission",
+      "image": "images/06-about-the-mission.png",
+      "code": "html/06-about-the-mission.html"
+    },
+    {
+      "order": 7,
+      "id": "abbe37f2fe9543aca7504664899c1024",
+      "alias": "07-book-your-strategy-call",
+      "title": "ScaleSight | Book Your Strategy Call",
+      "image": "images/07-book-your-strategy-call.png",
+      "code": "html/07-book-your-strategy-call.html"
+    },
+    {
+      "order": 8,
+      "id": "asset-stub-assets_4e22773e61da45878046a03ef2b29a81",
+      "alias": "08-design-system",
+      "title": "Design System",
+      "image": null,
+      "code": "design-system/08-design-system.json",
+      "design_md": "design-system/08-design-system.DESIGN.md"
+    },
+    {
+      "order": 9,
+      "id": "de5faae58c0c4a919e3dea1e64a1c77c",
+      "alias": "09-revenue-demand-forecasting",
+      "title": "ScaleSight | Revenue & Demand Forecasting",
+      "image": "images/09-revenue-demand-forecasting.png",
+      "code": "html/09-revenue-demand-forecasting.html"
+    }
+  ]
+}

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ScaleSight | Plan Growth With More Confidence</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist+Sans:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Geist Sans', sans-serif;
+            background-color: #0a141f;
+            color: #d9e3f4;
+            overflow-x: hidden;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .blue-glow-border {
+            border: 1px solid rgba(4, 180, 253, 0.15);
+            box-shadow: 0 0 20px rgba(0, 94, 240, 0.05);
+        }
+
+        .hero-gradient-text {
+            background: linear-gradient(135deg, #b3c5ff 0%, #00b3fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: #0C1727;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .dashed-line {
+            background-image: linear-gradient(to right, rgba(140, 144, 161, 0.3) 50%, transparent 50%);
+            background-size: 12px 1px;
+            background-repeat: repeat-x;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#121c28",
+                      "surface-dim": "#0a141f",
+                      "tertiary-fixed": "#d9e3f7",
+                      "outline-variant": "#424655",
+                      "secondary-fixed-dim": "#87ceff",
+                      "surface": "#0a141f",
+                      "on-surface": "#d9e3f4",
+                      "primary-fixed-dim": "#b3c5ff",
+                      "outline": "#8c90a1",
+                      "tertiary-container": "#606a7b",
+                      "on-primary-fixed": "#00184a",
+                      "on-primary": "#002a76",
+                      "inverse-primary": "#0054d8",
+                      "surface-container": "#17202c",
+                      "on-primary-fixed-variant": "#003fa5",
+                      "primary-fixed": "#dbe1ff",
+                      "error-container": "#93000a",
+                      "on-surface-variant": "#c2c6d8",
+                      "surface-container-high": "#212b37",
+                      "on-tertiary-fixed-variant": "#3e4757",
+                      "on-secondary-fixed": "#001e2e",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#b3c5ff",
+                      "primary": "#b3c5ff",
+                      "tertiary": "#bdc7db",
+                      "secondary-container": "#00b3fc",
+                      "tertiary-fixed-dim": "#bdc7db",
+                      "on-primary-container": "#e6eaff",
+                      "primary-container": "#005ef0",
+                      "inverse-on-surface": "#27313e",
+                      "background": "#0a141f",
+                      "on-secondary-container": "#004260",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-highest": "#2c3542",
+                      "on-tertiary-container": "#e1ebff",
+                      "inverse-surface": "#d9e3f4",
+                      "on-background": "#d9e3f4",
+                      "secondary-fixed": "#c8e6ff",
+                      "surface-bright": "#303a47",
+                      "surface-variant": "#2c3542",
+                      "on-tertiary-fixed": "#121c2a",
+                      "secondary": "#87ceff",
+                      "on-tertiary": "#273140",
+                      "on-error": "#690005",
+                      "on-secondary": "#00344d",
+                      "surface-container-lowest": "#050f1a",
+                      "on-secondary-fixed-variant": "#004c6d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "section-desktop": "120px",
+                      "gutter": "24px",
+                      "stack-lg": "24px",
+                      "section-mobile": "64px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Geist Sans"],
+                      "hero-display-mobile": ["Geist Sans"],
+                      "eyebrow": ["Geist Sans"],
+                      "hero-display": ["Geist Sans"],
+                      "body-md": ["Geist Sans"],
+                      "headline-lg": ["Geist Sans"],
+                      "body-lg": ["Geist Sans"],
+                      "label-sm": ["Geist Sans"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "hero-display-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "eyebrow": ["13px", {"lineHeight": "1.0", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                      "hero-display": ["96px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-white/10">
+<div class="max-w-[1280px] mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">insights</span>
+                ScaleSight
+            </div>
+<nav class="hidden md:flex items-center gap-stack-lg">
+<a class="font-body-md text-body-md text-primary dark:text-primary font-semibold border-b-2 border-primary py-1" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors py-1" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors py-1" href="#">Services</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-label-sm text-label-sm active:scale-95 transition-all hover:bg-primary/90">
+                Book a Strategy Call
+            </button>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative pt-40 pb-section-desktop overflow-hidden">
+<!-- STITCH_SHADER_START:ANIMATION_4 class="absolute inset-0 w-full h-full opacity-40" -->
+<div class="absolute inset-0 w-full h-full opacity-40" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_4" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_4');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+    
+    // Create a slow, subtle radial glow in the center
+    float d = length(uv - vec2(0.5, 0.4));
+    float glow = smoothstep(0.8, 0.0, d);
+    
+    // Deep navy base
+    vec3 color = vec3(0.027, 0.067, 0.122); // #07111F
+    
+    // Primary Blue glow
+    vec3 primaryBlue = vec3(0.0, 0.369, 0.941); // #005EF0
+    color += primaryBlue * glow * 0.15 * (0.8 + 0.2 * sin(u_time * 0.5));
+    
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_4 -->
+<div class="relative z-10 max-w-[1280px] mx-auto px-margin-desktop text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-stack-lg">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#87ceff]"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">New Intelligence Engine v2.0</span>
+</div>
+<h1 class="font-hero-display text-hero-display max-w-4xl mx-auto mb-stack-md leading-tight">
+                    Plan Growth With More <span class="hero-gradient-text">Confidence.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    Turn sales, inventory, and customer data into clearer forecasts. ScaleSight empowers high-growth brands to anticipate demand and eliminate guesswork.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-20">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-body-md font-bold flex items-center gap-2 hover:opacity-90 transition-all active:scale-95">
+                        Book a Strategy Call
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-white/10 bg-surface-container-low px-8 py-4 rounded-lg font-body-md font-bold hover:bg-surface-container-high transition-all active:scale-95">
+                        Watch Walkthrough
+                    </button>
+</div>
+<div class="relative mt-20 group">
+<div class="absolute inset-0 bg-primary/20 blur-[120px] rounded-full scale-75 -z-10 group-hover:scale-90 transition-transform duration-1000"></div>
+<img alt="Hero Dashboard UI" class="rounded-2xl border border-white/10 shadow-2xl relative z-20 w-full animate-float" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrDDLPkcfhEu8hJzzexIBgLSdglLIqL0THXCXYMFElAyFxtbqIpHwHlTpWcVdGF217w18lzU7yCyJodWZjj_dIJ28zDSl7UXhBJdnyUIwj7XW9rfWZnXHZVedIcvzN_l5kfU_vJUYUV_m9kPU9d_v5KMRGJTpEJpDVfICJdZoCJR5XcEYZqj-Zgb4xxjCSNB8MnRyAWoBeoUtqSw2QqG8FzrJNaUrboIKg2HtG73739Elb61pSapBKi3mkvtO-BRQ8z2FbJfN25f4"/>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="py-16 border-y border-white/5 bg-surface-container-low/30">
+<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<div class="flex flex-wrap justify-between items-center gap-gutter opacity-40 grayscale pointer-events-none">
+<div class="font-headline-md font-bold">SHOPIFY</div>
+<div class="font-headline-md font-bold">DTC BRANDS</div>
+<div class="font-headline-md font-bold">OPERATIONS</div>
+<div class="font-headline-md font-bold">INVENTORY</div>
+<div class="font-headline-md font-bold">GROWTH</div>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-section-desktop max-w-[1280px] mx-auto px-margin-desktop">
+<div class="mb-section-mobile">
+<h2 class="font-headline-lg text-headline-lg mb-4">Growth Creates Complexity.</h2>
+<p class="text-on-surface-variant font-body-lg max-w-xl">Scaling isn't just about more sales—it's about managing more data, more risk, and more variables.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-card p-8 rounded-xl flex flex-col gap-4 hover:border-primary/30 transition-all group">
+<span class="material-symbols-outlined text-error text-4xl" style="font-variation-settings: 'FILL' 1;">trending_down</span>
+<h3 class="font-headline-md text-headline-md">Revenue Uncertainty</h3>
+<p class="text-on-surface-variant font-body-md">Flying blind without accurate sales projections leads to missed targets and stressed cash flow.</p>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col gap-4 hover:border-primary/30 transition-all group">
+<span class="material-symbols-outlined text-error text-4xl" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<h3 class="font-headline-md text-headline-md">Inventory Risk</h3>
+<p class="text-on-surface-variant font-body-md">Overstocking ties up capital, while stockouts drive customers away. Both kill margins.</p>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col gap-4 hover:border-primary/30 transition-all group">
+<span class="material-symbols-outlined text-error text-4xl" style="font-variation-settings: 'FILL' 1;">event_busy</span>
+<h3 class="font-headline-md text-headline-md">Reactive Planning</h3>
+<p class="text-on-surface-variant font-body-md">Always playing catch-up with yesterday's problems instead of preparing for tomorrow's growth.</p>
+</div>
+<div class="glass-card p-8 rounded-xl flex flex-col gap-4 hover:border-primary/30 transition-all group">
+<span class="material-symbols-outlined text-error text-4xl" style="font-variation-settings: 'FILL' 1;">link_off</span>
+<h3 class="font-headline-md text-headline-md">Disconnected Decisions</h3>
+<p class="text-on-surface-variant font-body-md">Siloed data between marketing, ops, and finance results in conflicting strategies.</p>
+</div>
+</div>
+</section>
+<!-- Visibility Section -->
+<section class="py-section-desktop bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-section-mobile">
+<div>
+<span class="font-eyebrow text-eyebrow text-primary uppercase mb-4 block">Platform Core</span>
+<h2 class="font-headline-lg text-headline-lg">What ScaleSight Helps You See.</h2>
+</div>
+<button class="text-primary font-body-md flex items-center gap-2 hover:underline">Explore all modules <span class="material-symbols-outlined">north_east</span></button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="bg-surface p-6 rounded-lg border-l-2 border-primary-container shadow-xl">
+<h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-2">Forecasted Revenue</h4>
+<div class="text-headline-md font-bold mb-4">$2.4M</div>
+<p class="text-on-surface-variant text-label-sm">Projected for Q4 based on current acquisition velocity.</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border-l-2 border-primary-container shadow-xl">
+<h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-2">Inventory Risk</h4>
+<div class="text-headline-md font-bold mb-4">Low Risk</div>
+<p class="text-on-surface-variant text-label-sm">98.2% fulfillment confidence across top-performing SKUs.</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border-l-2 border-primary-container shadow-xl">
+<h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-2">Demand Trends</h4>
+<div class="text-headline-md font-bold mb-4">+18.5%</div>
+<p class="text-on-surface-variant text-label-sm">Rising interest in sustainable product lines detected.</p>
+</div>
+<div class="bg-surface p-6 rounded-lg border-l-2 border-primary-container shadow-xl">
+<h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-2">Recommendations</h4>
+<div class="text-headline-md font-bold mb-4">6 New</div>
+<p class="text-on-surface-variant text-label-sm">Automated planning actions ready for your review.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Decision Section -->
+<section class="py-section-desktop max-w-[1280px] mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6 leading-tight">Decisions Become Easier When The Data Is Clear.</h2>
+<p class="text-on-surface-variant font-body-lg mb-8">Stop relying on gut feelings. ScaleSight provides a single source of truth that aligns every department under one clear, data-driven vision.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span class="font-body-md">Reduce manual data cleaning by 90%</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span class="font-body-md">Improve forecast accuracy to within 5%</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span class="font-body-md">Sync marketing spend with real-time stock levels</span>
+</div>
+</div>
+</div>
+<div class="relative h-[400px] flex flex-wrap content-center gap-4">
+<div class="glass-card px-6 py-3 rounded-full text-body-md font-medium border-primary/20 animate-float" style="animation-delay: 0s;">Should we increase ad spend?</div>
+<div class="glass-card px-6 py-3 rounded-full text-body-md font-medium border-primary/20 animate-float" style="animation-delay: 0.5s;">Will inventory support demand?</div>
+<div class="blue-glow-border bg-primary-container/20 px-6 py-3 rounded-full text-body-md font-bold animate-float" style="animation-delay: 1s;">When is the next reorder?</div>
+<div class="glass-card px-6 py-3 rounded-full text-body-md font-medium border-primary/20 animate-float" style="animation-delay: 0.2s;">Is Q4 revenue on track?</div>
+<div class="glass-card px-6 py-3 rounded-full text-body-md font-medium border-primary/20 animate-float" style="animation-delay: 1.5s;">Can we launch a new SKU?</div>
+</div>
+</div>
+</section>
+<!-- Dashboard Showcase -->
+<section class="py-section-desktop bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg mb-12">One View For Your Entire Business.</h2>
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="px-6 py-2 rounded-lg font-label-sm text-label-sm bg-primary-container text-on-primary-container">Revenue Forecasting</button>
+<button class="px-6 py-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high transition-all">Inventory Visibility</button>
+<button class="px-6 py-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high transition-all">Demand Forecasting</button>
+<button class="px-6 py-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high transition-all">Executive Overview</button>
+<button class="px-6 py-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high transition-all">Operational Planning</button>
+</div>
+<div class="blue-glow-border rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Platform Dashboard Grid" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2Zxe-ZvPhESF7pYsyrzkwXOCBFwA0WizsWKMLKmlJhjZndC6KQ7jdDjF0F7cMqjZPNzYFssSxpdyDYft2U9LGAOaDWvXx0fVeagamUuRGrgioFAy1IoTnAXdRrWeGqWbjRp5n8TqKvxlKd9K5mPGh7-0I-dg1CwLpKCqqr8pP_aGBjwAITrdeFJoAY4uyjZbkvORPQbiMG0qNjEVuLQuLF21s6l764QHlDLpP3rwyWjgk0bKxId7-gSURaWJ6bcD6YdT_DZpcnPQ"/>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-section-desktop max-w-[1280px] mx-auto px-margin-desktop">
+<div class="text-center mb-section-mobile">
+<h2 class="font-headline-lg text-headline-lg mb-4">The Road to Clarity.</h2>
+<p class="text-on-surface-variant font-body-lg max-w-xl mx-auto">Five steps to transforming your complex data into a predictable growth engine.</p>
+</div>
+<div class="relative">
+<div class="absolute top-10 left-0 w-full h-[1px] dashed-line -z-10 hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-gutter">
+<div class="text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container font-bold text-xl mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white transition-all duration-300">01</div>
+<h5 class="font-label-sm font-bold uppercase mb-2">Integrate</h5>
+<p class="text-on-surface-variant text-label-sm px-4">Connect Shopify, ERPs, and ad platforms.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container font-bold text-xl mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white transition-all duration-300">02</div>
+<h5 class="font-label-sm font-bold uppercase mb-2">Synthesize</h5>
+<p class="text-on-surface-variant text-label-sm px-4">Cleanse and unify your historical data.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container font-bold text-xl mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white transition-all duration-300">03</div>
+<h5 class="font-label-sm font-bold uppercase mb-2">Model</h5>
+<p class="text-on-surface-variant text-label-sm px-4">Apply predictive AI to project future demand.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container font-bold text-xl mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white transition-all duration-300">04</div>
+<h5 class="font-label-sm font-bold uppercase mb-2">Optimize</h5>
+<p class="text-on-surface-variant text-label-sm px-4">Adjust scenarios for marketing &amp; supply chain.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container font-bold text-xl mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white transition-all duration-300">05</div>
+<h5 class="font-label-sm font-bold uppercase mb-2">Scale</h5>
+<p class="text-on-surface-variant text-label-sm px-4">Execute with confidence and watch growth fly.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Study Section -->
+<section class="py-section-desktop bg-surface-container-low/50">
+<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg mb-12">Insight in Action.</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+<!-- Problem Card -->
+<div class="glass-card p-8 rounded-xl flex flex-col gap-4">
+<span class="text-primary font-bold text-sm">STEP 1: THE PROBLEM</span>
+<h3 class="font-headline-md text-2xl">Unseen Overstock</h3>
+<p class="text-on-surface-variant text-sm">Capital locked in slow-moving inventory while top-sellers frequently stock out.</p>
+</div>
+<!-- Gap Card -->
+<div class="glass-card p-8 rounded-xl flex flex-col gap-4 relative">
+<span class="text-primary font-bold text-sm">STEP 2: THE GAP</span>
+<h3 class="font-headline-md text-2xl">Visibility Gap</h3>
+<p class="text-on-surface-variant text-sm">Disconnected spreadsheets meant procurement didn't see marketing's next push.</p>
+<span class="material-symbols-outlined absolute top-1/2 -right-4 translate-y-[-50%] z-20 text-primary hidden md:block">arrow_forward</span>
+</div>
+<!-- Insight Card -->
+<div class="glass-card p-8 rounded-xl flex flex-col gap-4 relative">
+<span class="text-primary font-bold text-sm">STEP 3: THE INSIGHT</span>
+<h3 class="font-headline-md text-2xl">Predictive Reorder</h3>
+<p class="text-on-surface-variant text-sm">ScaleSight identified a 22% spike in demand before it happened.</p>
+<span class="material-symbols-outlined absolute top-1/2 -right-4 translate-y-[-50%] z-20 text-primary hidden md:block">arrow_forward</span>
+</div>
+<!-- Outcome Card -->
+<div class="bg-primary-container/20 blue-glow-border p-8 rounded-xl flex flex-col gap-4">
+<span class="text-secondary font-bold text-sm">STEP 4: THE OUTCOME</span>
+<h3 class="font-headline-md text-2xl">30% Margin Boost</h3>
+<p class="text-on-surface-variant text-sm">Optimized stock levels released $400k in cash flow for ad scaling.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-section-desktop max-w-[1280px] mx-auto px-margin-desktop">
+<div class="bg-[#0C1727] blue-glow-border rounded-3xl p-16 md:p-24 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] -z-10"></div>
+<h2 class="font-headline-lg text-headline-lg mb-8 max-w-3xl mx-auto">Stop Making Important Decisions Without Visibility.</h2>
+<p class="font-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Join dozens of high-growth DTC brands using ScaleSight to navigate complexity with ease.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-headline-md text-xl hover:scale-105 transition-all">Book Your Strategy Call</button>
+<button class="border border-white/20 hover:bg-white/5 px-10 py-5 rounded-lg font-headline-md text-xl transition-all">Talk to an Expert</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-low border-t border-white/10 mt-section-desktop">
+<div class="max-w-[1280px] mx-auto px-margin-desktop py-section-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col gap-stack-lg">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">ScaleSight</div>
+<p class="font-body-md text-on-surface-variant">The intelligence layer for high-performance commerce decisions.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary">share</span>
+</div>
+</div>
+<div>
+<h6 class="font-label-sm font-bold text-primary mb-6 uppercase tracking-wider">Product</h6>
+<ul class="flex flex-col gap-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-white transition-colors" href="#">Forecasting</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Revenue Forecasting</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Inventory Visibility</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Demand Planning</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-sm font-bold text-primary mb-6 uppercase tracking-wider">Company</h6>
+<ul class="flex flex-col gap-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-white transition-colors" href="#">About</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Case Studies</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Career</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-sm font-bold text-primary mb-6 uppercase tracking-wider">Stay Updated</h6>
+<p class="font-body-md text-on-surface-variant mb-4">Get the latest insights on commerce strategy.</p>
+<div class="flex gap-2">
+<input class="bg-surface rounded-lg border-white/10 px-4 py-2 w-full focus:border-primary outline-none text-on-surface" placeholder="Email address" type="email"/>
+<button class="bg-primary-container p-2 rounded-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-desktop py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-outline font-label-sm">
+<span>© 2024 ScaleSight. All rights reserved.</span>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Studies | ScaleSight</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/font/sans.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#121c28",
+                    "surface-dim": "#0a141f",
+                    "tertiary-fixed": "#d9e3f7",
+                    "outline-variant": "#424655",
+                    "secondary-fixed-dim": "#87ceff",
+                    "surface": "#0a141f",
+                    "on-surface": "#d9e3f4",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "outline": "#8c90a1",
+                    "tertiary-container": "#606a7b",
+                    "on-primary-fixed": "#00184a",
+                    "on-primary": "#002a76",
+                    "inverse-primary": "#0054d8",
+                    "surface-container": "#17202c",
+                    "on-primary-fixed-variant": "#003fa5",
+                    "primary-fixed": "#dbe1ff",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#c2c6d8",
+                    "surface-container-high": "#212b37",
+                    "on-tertiary-fixed-variant": "#3e4757",
+                    "on-secondary-fixed": "#001e2e",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#b3c5ff",
+                    "primary": "#b3c5ff",
+                    "tertiary": "#bdc7db",
+                    "secondary-container": "#00b3fc",
+                    "tertiary-fixed-dim": "#bdc7db",
+                    "on-primary-container": "#e6eaff",
+                    "primary-container": "#005ef0",
+                    "inverse-on-surface": "#27313e",
+                    "background": "#0a141f",
+                    "on-secondary-container": "#004260",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-highest": "#2c3542",
+                    "on-tertiary-container": "#e1ebff",
+                    "inverse-surface": "#d9e3f4",
+                    "on-background": "#d9e3f4",
+                    "secondary-fixed": "#c8e6ff",
+                    "surface-bright": "#303a47",
+                    "surface-variant": "#2c3542",
+                    "on-tertiary-fixed": "#121c2a",
+                    "secondary": "#87ceff",
+                    "on-tertiary": "#273140",
+                    "on-error": "#690005",
+                    "on-secondary": "#00344d",
+                    "surface-container-lowest": "#050f1a",
+                    "on-secondary-fixed-variant": "#004c6d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "section-desktop": "120px",
+                    "gutter": "24px",
+                    "stack-lg": "24px",
+                    "section-mobile": "64px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Geist Sans"],
+                    "hero-display-mobile": ["Geist Sans"],
+                    "eyebrow": ["Geist Sans"],
+                    "hero-display": ["Geist Sans"],
+                    "body-md": ["Geist Sans"],
+                    "headline-lg": ["Geist Sans"],
+                    "body-lg": ["Geist Sans"],
+                    "label-sm": ["Geist Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "hero-display-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "eyebrow": ["13px", {"lineHeight": "1.0", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "hero-display": ["96px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #07111F;
+            color: #d9e3f4;
+            font-family: 'Geist Sans', sans-serif;
+        }
+        .glow-border {
+            border: 1px solid rgba(4, 180, 253, 0.15);
+        }
+        .card-surface {
+            background-color: #0C1727;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #b3c5ff 0%, #00b3fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-white/10">
+<div class="max-w-[1280px] mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">insights</span>
+                ScaleSight
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary font-semibold border-b-2 border-primary" href="#">Case Studies</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-body-md text-body-md font-semibold hover:bg-primary-container/90 active:scale-95 transition-all">
+                Book a Strategy Call
+            </button>
+</div>
+</header>
+<main class="pt-32 pb-section-desktop">
+<!-- Hero Section -->
+<section class="max-w-[1280px] mx-auto px-margin-desktop text-center mb-section-desktop">
+<div class="inline-block px-3 py-1 mb-6 rounded-full bg-primary-container/10 border border-primary-container/20">
+<span class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest">Success Stories</span>
+</div>
+<h1 class="font-hero-display text-hero-display mb-6 tracking-tight">
+                Visibility <span class="text-gradient">Creates</span> Better Outcomes.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Real results from ecommerce brands navigating the complexities of modern inventory and demand planning.
+            </p>
+</section>
+<!-- Case Studies Stack -->
+<section class="max-w-[860px] mx-auto px-4 flex flex-col gap-12">
+<!-- Case Study 1 -->
+<article class="card-surface rounded-xl p-8 md:p-12 relative overflow-hidden group hover:glow-border transition-all duration-500">
+<div class="flex flex-col gap-8">
+<header class="flex justify-between items-start">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2 block">Direct-to-Consumer / Health &amp; Wellness</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">VeloVitality Performance</h2>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-outline/30 text-4xl">monitoring</span>
+</div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-12 flex flex-col gap-6">
+<div>
+<h3 class="font-label-sm text-label-sm text-outline-variant uppercase mb-2">The Challenge</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rapid scaling led to fragmented data silos. Seasonal peaks in their signature energy gels were resulting in consistent 15% stockouts, while niche product lines gathered dust in expensive warehouse space.</p>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-primary uppercase mb-2">Visibility Gap</h3>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"We were flying blind between production lead times and live sales velocity. Our spreadsheets were 48 hours behind reality."</p>
+</div>
+<div class="py-4">
+<h3 class="font-label-sm text-label-sm text-outline-variant uppercase mb-4">Solution Implementation</h3>
+<div class="rounded-lg overflow-hidden border border-white/5 relative">
+<img alt="ScaleSight Dashboard Grid" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2Zxe-ZvPhESF7pYsyrzkwXOCBFwA0WizsWKMLKmlJhjZndC6KQ7jdDjF0F7cMqjZPNzYFssSxpdyDYft2U9LGAOaDWvXx0fVeagamUuRGrgioFAy1IoTnAXdRrWeGqWbjRp5n8TqKvxlKd9K5mPGh7-0I-dg1CwLpKCqqr8pP_aGBjwAITrdeFJoAY4uyjZbkvORPQbiMG0qNjEVuLQuLF21s6l764QHlDLpP3rwyWjgk0bKxId7-gSURaWJ6bcD6YdT_DZpcnPQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0C1727] via-transparent to-transparent"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="font-label-sm text-label-sm text-outline-variant uppercase mb-2">Outcome</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Implemented real-time SKU demand heatmaps and inventory health status badges. Automated re-order triggers reduced stockouts by 92% in the first quarter.</p>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-outline-variant uppercase mb-2">Lessons Learned</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The biggest ROI didn't come from selling more, but from not missing the sales they already had through better operational rhythm.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric Callout -->
+<div class="md:absolute bottom-8 right-8 mt-8 md:mt-0 bg-primary-container p-6 rounded-lg shadow-2xl flex flex-col items-end transform group-hover:scale-105 transition-transform">
+<span class="font-hero-display-mobile text-hero-display-mobile text-on-primary-container leading-none">+34%</span>
+<span class="font-label-sm text-label-sm text-on-primary-container/80 uppercase tracking-tight">Forecast Accuracy</span>
+</div>
+</article>
+<!-- Case Study 2 -->
+<article class="card-surface rounded-xl p-8 md:p-12 relative overflow-hidden group hover:glow-border transition-all duration-500">
+<div class="flex flex-col gap-8">
+<header class="flex justify-between items-start">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2 block">Enterprise / Sustainable Apparel</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">EcoThread Collective</h2>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-outline/30 text-4xl">eco</span>
+</div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-12 flex flex-col gap-6">
+<div>
+<h3 class="font-label-sm text-label-sm text-outline-variant uppercase mb-2">The Challenge</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Global supply chain volatility meant fabric lead times increased from 30 to 90 days. Their legacy planning couldn't adapt to the non-linear shifts in consumer demand for eco-conscious basics.</p>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-primary uppercase mb-2">Visibility Gap</h3>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"We had zero visibility into how a logistics delay in Southeast Asia would impact our Black Friday inventory position."</p>
+</div>
+<div class="py-4">
+<h3 class="font-label-sm text-label-sm text-outline-variant uppercase mb-4">Strategic Forecasting</h3>
+<div class="rounded-lg overflow-hidden border border-white/5 relative bg-surface-container-highest/30 aspect-video flex items-center justify-center p-8">
+<div class="w-full h-full bg-[#07111F] rounded border border-white/10 p-4 relative overflow-hidden">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<div class="h-2 w-32 bg-white/10 rounded"></div>
+</div>
+<div class="space-y-3">
+<div class="h-4 w-full bg-primary/20 rounded"></div>
+<div class="h-4 w-5/6 bg-white/5 rounded"></div>
+<div class="h-4 w-4/6 bg-white/5 rounded"></div>
+</div>
+<div class="mt-8 flex gap-4 items-end h-32">
+<div class="w-full bg-primary/40 rounded-t h-[20%]"></div>
+<div class="w-full bg-primary/40 rounded-t h-[45%]"></div>
+<div class="w-full bg-primary/60 rounded-t h-[80%]"></div>
+<div class="w-full bg-primary/40 rounded-t h-[60%]"></div>
+<div class="w-full bg-primary/80 rounded-t h-[100%]"></div>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-surface/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<p class="font-label-sm text-label-sm text-white bg-primary-container px-4 py-2 rounded-full">Interactive Demand Modeling</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="font-label-sm text-label-sm text-outline-variant uppercase mb-2">Outcome</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Deployment of the Revenue Forecast and Operational Planning modules allowed for 'What-If' scenario modeling. They successfully pivoted $4M in production before a major regional shutdown.</p>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-outline-variant uppercase mb-2">Lessons Learned</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Resilience is built into the data layer. Predictive insights are worth 10x more than historical reports in a volatile market.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric Callout -->
+<div class="md:absolute bottom-8 right-8 mt-8 md:mt-0 bg-primary-container p-6 rounded-lg shadow-2xl flex flex-col items-end transform group-hover:scale-105 transition-transform">
+<span class="font-hero-display-mobile text-hero-display-mobile text-on-primary-container leading-none">-$1.2M</span>
+<span class="font-label-sm text-label-sm text-on-primary-container/80 uppercase tracking-tight">Oversupply Reduction</span>
+</div>
+</article>
+</section>
+<!-- Final CTA -->
+<section class="max-w-[1280px] mx-auto px-margin-desktop mt-section-desktop text-center">
+<div class="card-surface p-16 rounded-2xl glow-border relative overflow-hidden">
+
+<h2 class="font-headline-lg text-headline-lg mb-6 relative z-10">Ready to build your success story?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto relative z-10">Get the same visibility that drives 30%+ efficiency gains for our partners.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center relative z-10">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-body-md text-body-md font-bold hover:scale-105 transition-transform">Book Strategy Call</button>
+<button class="border border-white/20 text-on-surface px-8 py-4 rounded-lg font-body-md text-body-md font-semibold hover:bg-white/5 transition-colors">Download Case Studies PDF</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-low border-t border-white/10">
+<div class="max-w-[1280px] mx-auto px-margin-desktop py-section-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface mb-4">ScaleSight</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">Empowering ecommerce brands with surgical data visibility and forecasting precision.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-6">Platform</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors" href="#">Forecasting</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors" href="#">Inventory Visibility</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors" href="#">Demand Planning</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors" href="#">About</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors" href="#">Case Studies</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors" href="#">Home</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-6">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">link</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+<p class="mt-8 font-label-sm text-label-sm text-on-surface-variant/50">© 2024 ScaleSight. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for smooth scrolling or hover effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
+
 import "./globals.css";
 
-export const metadata = {
+const geist = localFont({
+  src: "./fonts/Geist-Regular.ttf",
+  variable: "--font-geist-sans",
+});
+
+export const metadata: Metadata = {
   title: "ScaleSight",
-  description:
-    "Forecasting & Operational Visibility for Scaling Ecommerce Brands",
+  description: "Decision intelligence for modern ecommerce planning teams.",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.png",
   },
 };
 
@@ -17,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={geist.variable}>{children}</body>
     </html>
   );
 }
