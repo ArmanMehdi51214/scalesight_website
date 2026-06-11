@@ -215,15 +215,11 @@ export default function Home() {
           </div>
 
           <div className="relative mx-auto max-w-7xl">
-            <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#04B4FD]/80 md:text-[0.95rem]">
-                Trusted Ecosystem
-              </p>
-
-              <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-semibold tracking-[-0.05em] text-white md:text-4xl lg:text-[3.2rem]">
-                Trusted by Scaling Ecommerce Brands
-              </h2>
-            </div>
+            <SectionHeader
+              align="center"
+              eyebrow="Trusted Ecosystem"
+              title="Trusted by Scaling Ecommerce Brands"
+            />
 
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-5">
               {trustItems.map((item) => (
