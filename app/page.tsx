@@ -29,23 +29,44 @@ const trustItems = [
 const problemCards = [
   {
     icon: TrendingDown,
+    category: "Revenue Risk",
     title: "Revenue Uncertainty",
-    copy: "Flying blind without reliable projections leads to missed targets and stressed cash flow.",
+    copy: "Without a reliable forward view, teams commit budget, inventory, and hiring against assumptions that can shift too late. Missed targets rarely happen all at once. They build quietly through weak planning and slower reactions.",
+    question: "How do you plan confidently when the number keeps moving?",
+    accentClass: "bg-[#f43f5e]",
+    iconClass: "bg-[#f43f5e]/12 text-[#fda4af]",
+    labelClass: "text-[#fda4af]",
   },
   {
     icon: TriangleAlert,
+    category: "Inventory Pressure",
     title: "Inventory Risk",
-    copy: "Overstocking ties up capital while stockouts quietly erase margin and trust.",
+    copy: "Inventory mistakes create pain on both sides. Overstock ties up working capital and compresses margins, while stockouts quietly erase demand, customer trust, and campaign efficiency at the exact moment growth should compound.",
+    question:
+      "Are you protecting service levels, or just reacting after the damage?",
+    accentClass: "bg-[#f59e0b]",
+    iconClass: "bg-[#f59e0b]/12 text-[#fcd34d]",
+    labelClass: "text-[#fcd34d]",
   },
   {
     icon: Sparkles,
+    category: "Planning Velocity",
     title: "Reactive Planning",
-    copy: "Teams get stuck solving yesterday's issues instead of shaping the next decision window.",
+    copy: "When planning depends on static reports and manual updates, teams spend the week chasing yesterday's issues instead of shaping the next decision window. That slows execution and turns every decision into a catch-up exercise.",
+    question: "Are you steering the business ahead, or scrambling to catch up?",
+    accentClass: "bg-[#04b4fd]",
+    iconClass: "bg-[#04b4fd]/12 text-[#8dd9ff]",
+    labelClass: "text-[#8dd9ff]",
   },
   {
     icon: Link2Off,
+    category: "Cross-Team Alignment",
     title: "Disconnected Decisions",
-    copy: "Siloed reporting across growth, finance, and ops creates conflicting moves.",
+    copy: "Growth, finance, and operations often work from different versions of reality. When reporting is fragmented, each team makes a reasonable decision locally, but the combined outcome creates friction, waste, and missed timing.",
+    question: "What happens when every team is right, but no one is aligned?",
+    accentClass: "bg-[#8b5cf6]",
+    iconClass: "bg-[#8b5cf6]/12 text-[#c4b5fd]",
+    labelClass: "text-[#c4b5fd]",
   },
 ];
 
@@ -217,8 +238,9 @@ export default function Home() {
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
-              title="Growth Creates Complexity."
-              copy="Scaling is not just about more sales. It is about managing more data, more risk, and more variables."
+              align="center"
+              title="Growth Creates Complexity"
+              copy="As your business grows, making decisions becomes harder. More products, more channels, more uncertainty."
             />
 
             <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -228,17 +250,40 @@ export default function Home() {
                 return (
                   <article
                     key={card.title}
-                    className="surface-card rounded-[1.6rem] p-8"
+                    className="group relative overflow-hidden rounded-[1.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(12,23,39,0.98),rgba(8,15,26,0.96))] p-8 transition duration-300 hover:border-white/16"
                   >
-                    <div className="text-rose-300">
-                      <Icon size={30} strokeWidth={1.9} />
+                    <div
+                      className={`absolute inset-x-0 top-0 h-[3px] opacity-0 transition duration-300 group-hover:opacity-100 ${card.accentClass}`}
+                    />
+
+                    <div className="flex h-full min-h-[20rem] flex-col">
+                      <div
+                        className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${card.iconClass}`}
+                      >
+                        <Icon size={28} strokeWidth={1.9} />
+                      </div>
+
+                      <p
+                        className={`mt-6 text-xs font-semibold uppercase tracking-[0.24em] ${card.labelClass}`}
+                      >
+                        {card.category}
+                      </p>
+
+                      <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">
+                        {card.title}
+                      </h3>
+
+                      <p className="mt-4 max-w-lg text-sm leading-7 text-[var(--text-secondary)]">
+                        {card.copy}
+                      </p>
+
+                      <div className="mt-auto pt-8">
+                        <div className="h-px w-full bg-white/8" />
+                        <p className="mt-5 text-sm italic leading-7 text-white/72">
+                          {card.question}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="mt-6 text-2xl font-semibold text-white">
-                      {card.title}
-                    </h3>
-                    <p className="mt-4 max-w-lg text-sm leading-7 text-[var(--text-secondary)]">
-                      {card.copy}
-                    </p>
                   </article>
                 );
               })}
