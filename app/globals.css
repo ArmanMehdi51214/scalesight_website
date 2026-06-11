@@ -298,10 +298,38 @@ button {
 }
 
 .story-card {
+  position: relative;
+  overflow: hidden;
   border-radius: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(12, 23, 39, 0.92);
   padding: 2rem;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.story-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(4, 180, 253, 0.85), rgba(0, 94, 240, 0.25));
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.story-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(4, 180, 253, 0.16);
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.24);
+}
+
+.story-card:hover::before {
+  opacity: 1;
 }
 
 .story-card--active {

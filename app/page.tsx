@@ -104,33 +104,45 @@ const questionChips = [
 ];
 
 const processSteps = [
-  ["01", "Review Your Business Data", "Understand current operations and available data."],
-  ["02", "Build Forecasting Models", "Develop forecasting systems tailored to the business."],
-  ["03", "Create Visibility Dashboard", "Build decision-focused visibility tools."],
+  [
+    "01",
+    "Review Your Business Data",
+    "Understand current operations and available data.",
+  ],
+  [
+    "02",
+    "Build Forecasting Models",
+    "Develop forecasting systems tailored to the business.",
+  ],
+  [
+    "03",
+    "Create Visibility Dashboard",
+    "Build decision-focused visibility tools.",
+  ],
   ["04", "Deliver Actionable Insights", "Translate data into recommendations."],
   ["05", "Support Planning Decisions", "Help teams plan with confidence."],
 ];
 
 const storyCards = [
   {
-    step: "STEP 1: THE PROBLEM",
-    title: "Unseen Overstock",
-    copy: "Capital was locked in slow movers while top sellers still stocked out.",
+    step: "CARD 1",
+    title: "Business Problem",
+    copy: "Unpredictable demand and inventory uncertainty.",
   },
   {
-    step: "STEP 2: THE GAP",
+    step: "CARD 2",
     title: "Visibility Gap",
-    copy: "Procurement could not see what growth and merchandising were about to do next.",
+    copy: "Lack of forecasting and operational visibility.",
   },
   {
-    step: "STEP 3: THE INSIGHT",
-    title: "Predictive Reorder",
-    copy: "ScaleSight surfaced a demand spike before the inventory window closed.",
+    step: "CARD 3",
+    title: "Dashboard Insight",
+    copy: "Demand forecast highlighted future inventory risk.",
   },
   {
-    step: "STEP 4: THE OUTCOME",
-    title: "30% Margin Boost",
-    copy: "Better stock timing released working capital and protected contribution margin.",
+    step: "CARD 4",
+    title: "Planning Outcome",
+    copy: "Improved inventory planning and better operational decisions.",
   },
 ];
 
@@ -449,6 +461,11 @@ export default function Home() {
                 </article>
               ))}
             </div>
+            <div className="mt-10 flex justify-center">
+              <SecondaryButton href="/case-studies">
+                View Case Studies
+              </SecondaryButton>
+            </div>
           </div>
         </section>
 
@@ -457,15 +474,15 @@ export default function Home() {
             <SectionHeader
               align="center"
               title="Stop Making Important Decisions Without Visibility."
-              copy="Join high-growth brands using ScaleSight to navigate complexity with more control and less friction."
+              copy="Get clarity on revenue, inventory, and planning before making your next big decision."
             />
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <PrimaryButton href="/contact">
-                Book Your Strategy Call
+                Book a Strategy Call
               </PrimaryButton>
-              <SecondaryButton href="/services">
+              {/* <SecondaryButton href="/services">
                 Talk to an Expert
-              </SecondaryButton>
+              </SecondaryButton> */}
             </div>
           </div>
         </section>
