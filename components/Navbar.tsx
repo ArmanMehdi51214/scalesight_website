@@ -1,51 +1,49 @@
 import Image from "next/image";
+import Link from "next/link";
+
+const navItems = [
+  { href: "#platform", label: "Platform" },
+  { href: "#forecasting", label: "Forecasting" },
+  { href: "#results", label: "Results" },
+  { href: "#mission", label: "Mission" },
+];
+
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-[#07111f]/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-
-        <div className="flex items-center">
-        <Image
-            src="/logo.svg"
+    <header className="sticky top-0 z-50 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(7,17,31,0.76)] backdrop-blur-2xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <Link className="flex items-center" href="/">
+          <Image
+            src="/images/logo.png"
             alt="ScaleSight"
-            width={220}
-            height={48}
+            width={176}
+            height={38}
             priority
-        />
-        </div>
+          />
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
-          <a href="#" className="text-[#A6B2C8] hover:text-white transition">
-            Services
-          </a>
+        <nav className="hidden items-center gap-8 md:flex">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="text-sm text-[var(--text-secondary)] transition hover:text-white"
+            >
+              {item.label}
+            </a>
+          ))}
 
-          <a href="#" className="text-[#A6B2C8] hover:text-white transition">
-            Process
-          </a>
-
-          <a href="#" className="text-[#A6B2C8] hover:text-white transition">
-            Case Studies
-          </a>
+          <Link
+            href="/design-system"
+            className="rounded-full border border-white/8 px-4 py-2 text-sm text-[var(--text-secondary)] transition hover:border-white/16 hover:text-white"
+          >
+            Design System
+          </Link>
         </nav>
 
-        <button
-          className="
-          rounded-full
-          bg-gradient-to-r
-          from-[#005EF0]
-          to-[#04B4FD]
-          px-6
-          py-3
-          font-medium
-          text-white
-          transition-all
-          duration-300
-          hover:shadow-[0_0_40px_rgba(4,180,253,0.35)]
-          "
-        >
+        <a className="cta-primary !px-5 !py-3 text-sm" href="#book-call">
           Book Call
-        </button>
-
+        </a>
       </div>
     </header>
   );

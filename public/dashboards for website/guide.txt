@@ -1,0 +1,24 @@
+
+1. **Executive Decision Dashboard**
+   Best for homepage hero. It shows revenue, inventory, alerts, recommendations — closest to the “enterprise SaaS” feel.
+
+2. **Revenue Forecasting Dashboard**
+   Use for `/forecasting` page and dashboard showcase. It directly supports the core offer.
+
+3. **Inventory Health Dashboard**
+   Use for inventory visibility section. Shows stock risk, overstock, inventory value.
+
+4. **SKU Demand Forecast Dashboard**
+   Use for demand forecasting/product-level visibility section.
+
+5. **Weekly Planning Dashboard or Scenario Planning Dashboard**
+   Use for operational planning section. Scenario planning is better if you want to show ad spend/promo decision-making.
+
+Best order for website:
+
+Homepage hero: **Executive Decision Dashboard**
+Homepage showcase: **Revenue Forecast + Inventory Health + SKU Demand**
+Forecasting page: **Revenue Forecast + Scenario Planning + Weekly Planning**
+Case study page: **Executive Dashboard + SKU Demand Forecast**
+
+The doc specifically asks for revenue forecasting, inventory planning, executive visibility, demand forecasting, and operational planning visuals, so these match perfectly. 
