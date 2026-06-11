@@ -104,11 +104,11 @@ const questionChips = [
 ];
 
 const processSteps = [
-  ["01", "Integrate", "Connect Shopify, ERPs, and planning sources."],
-  ["02", "Synthesize", "Clean and unify fragmented historical data."],
-  ["03", "Model", "Project future demand with predictive intelligence."],
-  ["04", "Optimize", "Pressure-test scenarios for growth and supply chain."],
-  ["05", "Scale", "Execute with confidence and tighter weekly alignment."],
+  ["01", "Review Your Business Data", "Understand current operations and available data."],
+  ["02", "Build Forecasting Models", "Develop forecasting systems tailored to the business."],
+  ["03", "Create Visibility Dashboard", "Build decision-focused visibility tools."],
+  ["04", "Deliver Actionable Insights", "Translate data into recommendations."],
+  ["05", "Support Planning Decisions", "Help teams plan with confidence."],
 ];
 
 const storyCards = [
@@ -428,7 +428,7 @@ export default function Home() {
 
         <section className="bg-[rgba(18,28,40,0.56)] px-6 py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionHeader title="Insight in Action." />
+            <SectionHeader title="Visibility Creates Better Outcomes" />
             <div className="mt-12 grid gap-4 md:grid-cols-4">
               {storyCards.map((card, index) => (
                 <article
