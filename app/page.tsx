@@ -21,9 +21,9 @@ import {
 const trustItems = [
   "Shopify",
   "DTC Brands",
-  "Operations",
-  "Inventory",
-  "Growth",
+  "Operations Teams",
+  "Inventory Managers",
+  "Growth Teams",
 ];
 
 const problemCards = [
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-y border-white/6 bg-[rgba(18,28,40,0.52)] px-6 py-10">
+        {/* <section className="border-y border-white/6 bg-[rgba(18,28,40,0.52)] px-6 py-10">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 text-center">
             {trustItems.map((item) => (
               <p
@@ -169,6 +169,48 @@ export default function Home() {
                 {item}
               </p>
             ))}
+          </div>
+        </section> */}
+
+        <section className="relative overflow-hidden border-y border-white/6 bg-[#07111F] px-6 py-16 md:py-20">
+          {/* Soft background glow */}
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute left-1/2 top-0 h-40 w-[720px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(4,180,253,0.14),rgba(0,94,240,0.06),transparent_70%)] blur-2xl" />
+            <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#04B4FD]/35 to-transparent" />
+          </div>
+
+          <div className="relative mx-auto max-w-7xl">
+            <div className="text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#04B4FD]/80 md:text-[0.95rem]">
+                Trusted Ecosystem
+              </p>
+
+              <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-semibold tracking-[-0.05em] text-white md:text-4xl lg:text-[3.2rem]">
+                Trusted by Scaling Ecommerce Brands
+              </h2>
+            </div>
+
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-5">
+              {trustItems.map((item) => (
+                <div
+                  key={item}
+                  className="group relative overflow-hidden rounded-2xl border border-white/8 bg-white/[0.035] px-5 py-6 text-center backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35 hover:bg-white/[0.06] md:px-6"
+                >
+                  {/* Animated shine */}
+                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+                  {/* Small glowing dot */}
+                  <div className="mx-auto mb-3 h-2 w-2 rounded-full bg-[#04B4FD] shadow-[0_0_18px_rgba(4,180,253,0.9)]" />
+
+                  <p className="relative text-sm font-semibold uppercase tracking-[0.18em] text-[#B7C1D1] transition group-hover:text-white">
+                    {item}
+                  </p>
+
+                  {/* Bottom glow line */}
+                  <div className="absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-[#04B4FD]/60 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
