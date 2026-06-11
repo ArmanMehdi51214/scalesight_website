@@ -107,12 +107,12 @@ export default function ForecastingPage() {
               <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-[rgba(4,8,18,0.94)] p-3">
                 <div className="rounded-[1.4rem] border border-white/8 bg-[radial-gradient(circle_at_center,rgba(4,180,253,0.18),rgba(5,10,21,0.96)_58%)] p-4">
                   <Image
-                    alt="ScaleSight dashboard preview"
+                    alt="Revenue forecasting dashboard preview"
                     className="h-auto w-full rounded-[1.2rem] border border-white/8 object-cover"
-                    height={286}
+                    height={1024}
                     priority
-                    src="/stitch/05-dashboard-grid.jpg"
-                    width={512}
+                    src="/dashboards%20for%20website/visual%201.png"
+                    width={1536}
                   />
                 </div>
               </div>
@@ -178,11 +178,11 @@ export default function ForecastingPage() {
               <div className="surface-card mt-10 overflow-hidden rounded-[2rem] p-4">
                 <div className="relative overflow-hidden rounded-[1.4rem] border border-white/8 bg-[radial-gradient(circle_at_top,rgba(4,180,253,0.14),rgba(7,17,31,0.96)_64%)] p-3">
                   <Image
-                    alt="Perspective dashboard planning view"
+                    alt="Scenario planning dashboard visual"
                     className="h-auto w-full rounded-[1rem] object-cover opacity-88"
-                    height={286}
-                    src="/stitch/02-perspective-dashboard-visualization.jpg"
-                    width={512}
+                    height={1024}
+                    src="/dashboards%20for%20website/visual%202s.png"
+                    width={1536}
                   />
                 </div>
               </div>

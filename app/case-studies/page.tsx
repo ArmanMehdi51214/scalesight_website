@@ -51,32 +51,25 @@ function StudyVisual({ visual }: { visual: "image" | "chart" }) {
     return (
       <div className="overflow-hidden rounded-[1rem] border border-white/8">
         <Image
-          alt="Dashboard grid preview"
+          alt="SKU demand forecast dashboard preview"
           className="h-auto w-full object-cover"
-          height={286}
-          src="/stitch/05-dashboard-grid.jpg"
-          width={512}
+          height={1024}
+          src="/dashboards%20for%20website/visual%202.png"
+          width={1536}
         />
       </div>
     );
   }
 
   return (
-    <div className="rounded-[1rem] border border-white/8 bg-[rgba(8,15,26,0.96)] p-5">
-      <div className="flex items-center gap-2">
-        <div className="h-3 w-3 rounded-full bg-[#04b4fd]" />
-        <div className="h-2 w-28 rounded-full bg-white/10" />
-      </div>
-      <div className="mt-6 flex h-40 items-end gap-4">
-        {[28, 50, 74, 58, 96].map((height, index) => (
-          <div key={height} className="flex-1">
-            <div
-              className={index === 4 ? "rounded-t-[1rem] bg-[#b3c5ff]" : "rounded-t-[1rem] bg-[#365fdd]"}
-              style={{ height }}
-            />
-          </div>
-        ))}
-      </div>
+    <div className="overflow-hidden rounded-[1rem] border border-white/8">
+      <Image
+        alt="Revenue forecasting dashboard preview"
+        className="h-auto w-full object-cover"
+        height={1024}
+        src="/dashboards%20for%20website/visual%201.png"
+        width={1536}
+      />
     </div>
   );
 }
