@@ -36,7 +36,9 @@ export default function SiteHeader() {
           <span className="brand-mark">
             <TrendingUp size={16} strokeWidth={2.25} />
           </span>
-          <span className="text-2xl font-semibold tracking-tight">ScaleSight</span>
+          <span className="text-2xl font-semibold tracking-tight">
+            ScaleSight
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -81,7 +83,11 @@ export default function SiteHeader() {
               return (
                 <Link
                   key={item.href}
-                  className={active ? "mobile-nav-link mobile-nav-link--active" : "mobile-nav-link"}
+                  className={
+                    active
+                      ? "mobile-nav-link mobile-nav-link--active"
+                      : "mobile-nav-link"
+                  }
                   href={item.href}
                   onClick={() => setOpen(false)}
                 >

@@ -12,9 +12,19 @@ import PerspectiveShowcase from "@/components/PerspectiveShowcase";
 import ShaderBackdrop from "@/components/ShaderBackdrop";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
-import { PrimaryButton, SecondaryButton, SectionHeader } from "@/components/marketing-primitives";
+import {
+  PrimaryButton,
+  SecondaryButton,
+  SectionHeader,
+} from "@/components/marketing-primitives";
 
-const trustItems = ["Shopify", "DTC Brands", "Operations", "Inventory", "Growth"];
+const trustItems = [
+  "Shopify",
+  "DTC Brands",
+  "Operations",
+  "Inventory",
+  "Growth",
+];
 
 const problemCards = [
   {
@@ -111,24 +121,27 @@ export default function Home() {
 
           <div className="relative mx-auto max-w-7xl">
             <div className="mx-auto max-w-5xl text-center">
-              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/18 bg-[rgba(17,31,49,0.8)] px-4 py-2 text-xs uppercase tracking-[0.24em] text-[#8dd9ff]">
+              {/* <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/18 bg-[rgba(17,31,49,0.8)] px-4 py-2 text-xs uppercase tracking-[0.24em] text-[#8dd9ff]">
                 <span className="h-2 w-2 rounded-full bg-[#8dd9ff]" />
                 New intelligence engine v2.0
-              </div>
+              </div> */}
 
               <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold tracking-[-0.07em] text-white md:text-7xl lg:text-[6rem]">
                 Plan Growth With More{" "}
                 <span className="text-gradient-primary">Confidence.</span>
               </h1>
               <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-[var(--text-secondary)] md:text-xl">
-                Turn sales, inventory, and customer data into clearer forecasts.
-                ScaleSight empowers high-growth brands to anticipate demand and
-                eliminate guesswork.
+                Turn sales, inventory, and customer data into clearer forecasts,
+                smarter planning, and better business decisions.
               </p>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <PrimaryButton href="/contact">Book a Strategy Call</PrimaryButton>
-                <SecondaryButton href="/services">Watch Walkthrough</SecondaryButton>
+                <PrimaryButton href="/contact">
+                  Book a Strategy Call
+                </PrimaryButton>
+                <SecondaryButton href="/services">
+                  Watch 90-Second Walkthrough
+                </SecondaryButton>
               </div>
             </div>
 
@@ -165,11 +178,16 @@ export default function Home() {
                 const Icon = card.icon;
 
                 return (
-                  <article key={card.title} className="surface-card rounded-[1.6rem] p-8">
+                  <article
+                    key={card.title}
+                    className="surface-card rounded-[1.6rem] p-8"
+                  >
                     <div className="text-rose-300">
                       <Icon size={30} strokeWidth={1.9} />
                     </div>
-                    <h3 className="mt-6 text-2xl font-semibold text-white">{card.title}</h3>
+                    <h3 className="mt-6 text-2xl font-semibold text-white">
+                      {card.title}
+                    </h3>
                     <p className="mt-4 max-w-lg text-sm leading-7 text-[var(--text-secondary)]">
                       {card.copy}
                     </p>
@@ -228,7 +246,10 @@ export default function Home() {
                   "Improve forecast accuracy with tighter weekly alignment",
                   "Sync marketing spend with real inventory constraints",
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 text-base text-white">
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 text-base text-white"
+                  >
                     <CheckCircle2 size={18} className="text-[#8dd9ff]" />
                     <span>{item}</span>
                   </div>
@@ -240,7 +261,11 @@ export default function Home() {
               {questionChips.map((chip, index) => (
                 <div
                   key={chip}
-                  className={index === 2 ? "floating-chip floating-chip--active" : "floating-chip"}
+                  className={
+                    index === 2
+                      ? "floating-chip floating-chip--active"
+                      : "floating-chip"
+                  }
                 >
                   {chip}
                 </div>
@@ -251,7 +276,10 @@ export default function Home() {
 
         <section className="bg-[rgba(5,15,26,0.96)] px-6 py-24">
           <div className="mx-auto max-w-7xl text-center">
-            <SectionHeader align="center" title="One View For Your Entire Business." />
+            <SectionHeader
+              align="center"
+              title="One View For Your Entire Business."
+            />
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               {[
                 "Revenue Forecasting",
@@ -262,7 +290,9 @@ export default function Home() {
               ].map((item, index) => (
                 <div
                   key={item}
-                  className={index === 0 ? "tab-pill tab-pill--active" : "tab-pill"}
+                  className={
+                    index === 0 ? "tab-pill tab-pill--active" : "tab-pill"
+                  }
                 >
                   {item}
                 </div>
@@ -308,12 +338,16 @@ export default function Home() {
               {storyCards.map((card, index) => (
                 <article
                   key={card.title}
-                  className={index === 3 ? "story-card story-card--active" : "story-card"}
+                  className={
+                    index === 3 ? "story-card story-card--active" : "story-card"
+                  }
                 >
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
                     {card.step}
                   </p>
-                  <h3 className="mt-5 text-2xl font-semibold text-white">{card.title}</h3>
+                  <h3 className="mt-5 text-2xl font-semibold text-white">
+                    {card.title}
+                  </h3>
                   <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
                     {card.copy}
                   </p>
@@ -331,8 +365,12 @@ export default function Home() {
               copy="Join high-growth brands using ScaleSight to navigate complexity with more control and less friction."
             />
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-              <PrimaryButton href="/contact">Book Your Strategy Call</PrimaryButton>
-              <SecondaryButton href="/services">Talk to an Expert</SecondaryButton>
+              <PrimaryButton href="/contact">
+                Book Your Strategy Call
+              </PrimaryButton>
+              <SecondaryButton href="/services">
+                Talk to an Expert
+              </SecondaryButton>
             </div>
           </div>
         </section>
