@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, TrendingUp, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
@@ -30,15 +31,21 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[rgba(7,17,31,0.78)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 bg-transparent">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <Link className="inline-flex items-center gap-3 text-white" href="/">
-          <span className="brand-mark">
-            <TrendingUp size={16} strokeWidth={2.25} />
-          </span>
-          <span className="text-2xl font-semibold tracking-tight">
-            ScaleSight
-          </span>
+        <Link
+          aria-label="ScaleSight home"
+          className="inline-flex items-center text-white"
+          href="/"
+        >
+          <Image
+            alt="ScaleSight"
+            className="h-auto w-[9.5rem] md:w-[10.5rem]"
+            height={1216}
+            priority
+            src="/logo.png"
+            width={4345}
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -66,7 +73,7 @@ export default function SiteHeader() {
         <button
           aria-expanded={open}
           aria-label="Toggle navigation"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white transition hover:bg-white/5 lg:hidden"
           onClick={() => setOpen((value) => !value)}
           type="button"
         >
@@ -75,7 +82,7 @@ export default function SiteHeader() {
       </div>
 
       {open ? (
-        <div className="border-t border-white/10 bg-[rgba(7,17,31,0.98)] lg:hidden">
+        <div className="bg-[rgba(7,17,31,0.98)] lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-4">
             {navItems.map((item) => {
               const active = isActive(pathname, item.href);

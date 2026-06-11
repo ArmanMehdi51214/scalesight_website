@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 import visualOne from "@/public/dashboards for website/visual 1.png";
 import visualTwo from "@/public/dashboards for website/visual 2.png";
@@ -6,80 +6,62 @@ import visualThree from "@/public/dashboards for website/viusal 3.png";
 
 const showcaseCards = [
   {
-    title: "Revenue Forecasting Dashboard",
-    label: "Forecast view",
     image: visualTwo,
     alt: "Revenue forecasting dashboard preview",
     className:
-      "left-0 top-16 w-[68%] origin-left -rotate-[9deg] scale-[0.9] md:w-[62%]",
-    imageClassName: "object-cover object-left-top",
+      "left-[1%] top-[4.5rem] z-10 w-[54%] origin-left -rotate-[10deg] sm:w-[50%] md:left-[5%] md:top-[4.25rem] md:w-[42%]",
+    priority: false,
   },
   {
-    title: "Executive Decision Dashboard",
-    label: "Hero dashboard",
     image: visualOne,
     alt: "Executive decision dashboard preview",
     className:
-      "left-1/2 top-5 z-20 w-[74%] -translate-x-1/2 md:w-[66%] lg:w-[62%]",
-    imageClassName: "object-cover object-center",
+      "left-1/2 top-2 z-20 w-[62%] -translate-x-1/2 sm:w-[58%] md:top-0 md:w-[47%]",
+    priority: true,
   },
   {
-    title: "Inventory Health Dashboard",
-    label: "Operations view",
     image: visualThree,
     alt: "Inventory health dashboard preview",
     className:
-      "right-0 top-[4.5rem] w-[68%] origin-right rotate-[10deg] scale-[0.9] md:w-[62%]",
-    imageClassName: "object-cover object-right-top",
+      "right-[1%] top-[4.5rem] z-10 w-[54%] origin-right rotate-[10deg] sm:w-[50%] md:right-[5%] md:top-[4.25rem] md:w-[42%]",
+    priority: false,
   },
-] as const;
+] satisfies Array<{
+  alt: string;
+  className: string;
+  image: StaticImageData;
+  priority: boolean;
+}>;
 
 function ShowcaseCard({
-  title,
-  label,
   image,
   alt,
   className,
-  imageClassName,
+  priority,
 }: (typeof showcaseCards)[number]) {
   return (
-    <article
-      className={`fan-panel absolute aspect-[3/2] overflow-hidden rounded-[30px] border border-white/10 bg-[#08111c] shadow-[0_24px_80px_rgba(0,0,0,0.36)] ${className}`}
-    >
+    <div className={`absolute ${className}`}>
       <Image
         alt={alt}
-        className={imageClassName}
-        fill
+        className="h-auto w-full object-contain drop-shadow-[0_28px_60px_rgba(0,0,0,0.28)]"
         placeholder="blur"
-        sizes="(max-width: 768px) 68vw, (max-width: 1280px) 42vw, 36vw"
+        priority={priority}
+        sizes="(max-width: 640px) 62vw, (max-width: 1024px) 48vw, 34vw"
         src={image}
       />
-
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.05),rgba(7,17,31,0.4))]" />
-
-      <div className="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-4 md:p-5">
-        <div className="rounded-[18px] border border-white/10 bg-[rgba(7,17,31,0.72)] px-4 py-3 backdrop-blur-md">
-          <p className="text-sm font-medium text-white">{title}</p>
-          <p className="mt-1 text-[11px] uppercase tracking-[0.22em] text-[var(--text-muted)]">
-            {label}
-          </p>
-        </div>
-
-        <span className="rounded-full border border-white/10 bg-[rgba(7,17,31,0.72)] px-3 py-1 text-[11px] text-[var(--text-secondary)] backdrop-blur-md">
-          Live data
-        </span>
-      </div>
-    </article>
+    </div>
   );
 }
 
 export default function PerspectiveShowcase() {
   return (
-    <div className="relative h-[34rem] perspective-[1800px]">
-      <div className="absolute inset-0 rounded-[38px] bg-[radial-gradient(circle_at_center,rgba(4,180,253,0.18),transparent_58%)] blur-3xl" />
+    <div className="relative h-[21rem] overflow-hidden sm:h-[24rem] md:h-[27rem] lg:h-[29rem]">
+      <div className="absolute bottom-[-6rem] left-1/2 h-[18rem] w-[24rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(4,180,253,0.34),rgba(0,94,240,0.2),transparent_72%)] blur-3xl md:bottom-[-7rem] md:h-[24rem] md:w-[34rem] lg:bottom-[-8rem] lg:h-[28rem] lg:w-[42rem]" />
+      <div className="absolute bottom-[2.5rem] left-1/2 h-[14rem] w-[16rem] -translate-x-1/2 rounded-full border border-white/6 opacity-30 [background-image:linear-gradient(rgba(4,180,253,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(4,180,253,0.14)_1px,transparent_1px)] [background-size:22px_22px] md:bottom-[3rem] md:h-[18rem] md:w-[22rem] lg:bottom-[3.5rem] lg:h-[22rem] lg:w-[28rem]" />
+      <div className="absolute bottom-[1rem] left-1/2 h-[18rem] w-[20rem] -translate-x-1/2 rounded-full border border-[rgba(141,217,255,0.08)] md:bottom-[1.5rem] md:h-[24rem] md:w-[28rem] lg:bottom-[2rem] lg:h-[28rem] lg:w-[34rem]" />
 
       {showcaseCards.map((card) => (
-        <ShowcaseCard key={card.title} {...card} />
+        <ShowcaseCard key={card.alt} {...card} />
       ))}
     </div>
   );

@@ -116,26 +116,32 @@ export default function Home() {
     <>
       <SiteHeader />
       <main className="relative overflow-hidden">
-        <section className="relative px-6 pb-16 pt-16 md:pb-20 md:pt-24">
+        <section className="relative px-6 pb-16 pt-8 md:pb-20 md:pt-10">
           <ShaderBackdrop />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[38%] overflow-hidden">
+            <div className="absolute left-1/2 bottom-[-42%] h-[420px] w-[1200px] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(4,180,253,0.95)_0%,rgba(0,94,240,0.75)_28%,rgba(0,94,240,0.28)_48%,rgba(7,17,31,0)_72%)] blur-2xl" />
+            <div className="absolute left-1/2 bottom-[-58%] h-[360px] w-[900px] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.42)_0%,rgba(4,180,253,0.22)_32%,transparent_68%)] blur-3xl" />
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-7xl"></div>
 
           <div className="relative mx-auto max-w-7xl">
-            <div className="mx-auto max-w-5xl text-center">
+            <div className="mx-auto max-w-4xl text-center">
               {/* <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/18 bg-[rgba(17,31,49,0.8)] px-4 py-2 text-xs uppercase tracking-[0.24em] text-[#8dd9ff]">
                 <span className="h-2 w-2 rounded-full bg-[#8dd9ff]" />
                 New intelligence engine v2.0
               </div> */}
 
-              <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold tracking-[-0.07em] text-white md:text-7xl lg:text-[6rem]">
+              <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-semibold tracking-[-0.07em] text-white md:text-6xl lg:text-[5.25rem]">
                 Plan Growth With More{" "}
                 <span className="text-gradient-primary">Confidence.</span>
               </h1>
-              <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-[var(--text-secondary)] md:text-xl">
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-[var(--text-secondary)] md:text-lg md:leading-8">
                 Turn sales, inventory, and customer data into clearer forecasts,
                 smarter planning, and better business decisions.
               </p>
 
-              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <PrimaryButton href="/contact">
                   Book a Strategy Call
                 </PrimaryButton>
@@ -145,8 +151,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hero-frame mt-16 p-4 md:p-6">
-              <div className="rounded-[2rem] border border-white/8 bg-[rgba(2,6,14,0.92)] p-4 md:p-6">
+            <div className="mt-12 md:mt-14">
+              <div className="mx-auto max-w-6xl">
                 <PerspectiveShowcase />
               </div>
             </div>
