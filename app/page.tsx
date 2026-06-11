@@ -238,7 +238,6 @@ export default function Home() {
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
-              align="center"
               title="Growth Creates Complexity"
               copy="As your business grows, making decisions becomes harder. More products, more channels, more uncertainty."
             />
@@ -296,7 +295,8 @@ export default function Home() {
             <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
               <SectionHeader
                 eyebrow="Platform Core"
-                title="What ScaleSight Helps You See."
+                title="What ScaleSight Helps You See"
+                copy="Transform business data into operational visibility."
               />
               <a
                 className="inline-flex items-center gap-2 text-sm font-medium text-[#8dd9ff] transition hover:text-white"
@@ -330,7 +330,7 @@ export default function Home() {
             <div>
               <SectionHeader
                 title="Decisions Become Easier When The Data Is Clear."
-                copy="Replace gut feel with one aligned, practical view that finance, ops, and growth can use together."
+                copy="When visibility improves, decision-making improves."
               />
 
               <div className="mt-8 space-y-4">
