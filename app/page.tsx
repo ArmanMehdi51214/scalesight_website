@@ -96,9 +96,11 @@ const visibilityCards = [
 const questionChips = [
   "Should we increase ad spend?",
   "Will inventory support demand?",
-  "When is the next reorder?",
-  "Is Q4 revenue on track?",
-  "Can we launch a new SKU?",
+  "Which products need attention?",
+  "Are we likely to hit targets?",
+  "How much stock should we reorder?",
+  "Will a promotion create stockouts?",
+  "Should we prepare for seasonal demand?",
 ];
 
 const processSteps = [
@@ -329,7 +331,7 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
               <SectionHeader
-                title="Decisions Become Easier When The Data Is Clear."
+                title="Decisions Become Easier"
                 copy="When visibility improves, decision-making improves."
               />
 
@@ -371,7 +373,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl text-center">
             <SectionHeader
               align="center"
-              title="One View For Your Entire Business."
+              title="See The Business Before It Happens"
             />
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               {[
