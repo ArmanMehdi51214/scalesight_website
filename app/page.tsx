@@ -442,13 +442,8 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <SectionHeader title="Visibility Creates Better Outcomes" />
             <div className="mt-12 grid gap-4 md:grid-cols-4">
-              {storyCards.map((card, index) => (
-                <article
-                  key={card.title}
-                  className={
-                    index === 3 ? "story-card story-card--active" : "story-card"
-                  }
-                >
+              {storyCards.map((card) => (
+                <article key={card.title} className="story-card">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
                     {card.step}
                   </p>

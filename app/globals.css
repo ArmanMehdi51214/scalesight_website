@@ -324,17 +324,13 @@ button {
 
 .story-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(4, 180, 253, 0.16);
-  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.24);
+  border-color: rgba(4, 180, 253, 0.22);
+  background: linear-gradient(180deg, rgba(0, 94, 240, 0.08), rgba(12, 23, 39, 0.96));
+  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.28);
 }
 
 .story-card:hover::before {
   opacity: 1;
-}
-
-.story-card--active {
-  border-color: rgba(4, 180, 253, 0.16);
-  background: linear-gradient(180deg, rgba(0, 94, 240, 0.12), rgba(12, 23, 39, 0.94));
 }
 
 .cta-panel {
