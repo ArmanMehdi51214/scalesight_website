@@ -404,8 +404,8 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <SectionHeader
               align="center"
-              title="The Road to Clarity."
-              copy="Five steps for transforming fragmented data into a predictable operating rhythm."
+              title="How ScaleSight Works"
+              // copy="Five steps for transforming fragmented data into a predictable operating rhythm."
             />
 
             <div className="mt-14 grid gap-8 md:grid-cols-5">
