@@ -1,19 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #07111f;
+  --brand-bg: #07111f;
+  --brand-blue-primary: #005ef0;
+  --brand-blue-secondary: #04b4fd;
+  --brand-card: #0c1727;
+  --brand-text-primary: #ffffff;
+  --brand-text-secondary: #b7c1d1;
+  --brand-text-muted: #7f8ca3;
+  --brand-border: rgba(255, 255, 255, 0.08);
+
+  --bg: var(--brand-bg);
   --bg-soft: #0a141f;
-  --panel: #0c1727;
+  --panel: var(--brand-card);
   --panel-strong: #121c28;
   --panel-muted: #17202c;
-  --border: rgba(255, 255, 255, 0.08);
+  --border: var(--brand-border);
   --border-strong: rgba(4, 180, 253, 0.16);
-  --text-primary: #d9e3f4;
-  --text-secondary: #b7c1d1;
-  --text-muted: #7f8ca3;
-  --blue-primary: #005ef0;
-  --blue-secondary: #04b4fd;
+  --text-primary: var(--brand-text-primary);
+  --text-secondary: var(--brand-text-secondary);
+  --text-muted: var(--brand-text-muted);
+  --blue-primary: var(--brand-blue-primary);
+  --blue-secondary: var(--brand-blue-secondary);
   --blue-soft: #8dd9ff;
+  --font-brand: var(--font-geist-sans), sans-serif;
 }
 
 * {
@@ -30,9 +40,9 @@ body {
   background:
     radial-gradient(circle at top, rgba(0, 94, 240, 0.12), transparent 28%),
     radial-gradient(circle at bottom right, rgba(4, 180, 253, 0.08), transparent 24%),
-    linear-gradient(180deg, #09121e 0%, #07111f 100%);
+    linear-gradient(180deg, var(--brand-bg) 0%, var(--brand-bg) 100%);
   color: var(--text-primary);
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: var(--font-brand);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
