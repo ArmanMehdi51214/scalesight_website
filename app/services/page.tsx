@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import ForecastingPage from "@/components/pages/ForecastingPage";
 
 export const metadata: Metadata = {
-  title: "ScaleSight | Revenue & Demand Forecasting",
-  description: "Forecasting, inventory visibility, and demand planning for ecommerce operators.",
+  title: "ScaleSight | Plan With Confidence",
+  description:
+    "Operational visibility for ecommerce teams across revenue, inventory, demand, and planning decisions.",
 };
 
 export default function ServicesPage() {
