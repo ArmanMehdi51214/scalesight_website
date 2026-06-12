@@ -1,10 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
-import { TrendingUp, Globe, Share2 } from "lucide-react";
 
 const productLinks = [
-  { href: "/services", label: "Forecasting" },
-  { href: "/services", label: "Inventory Visibility" },
-  { href: "/services", label: "Demand Planning" },
+  { href: "/plan-with-confidence", label: "Forecasting" },
+  { href: "/plan-with-confidence", label: "Inventory Visibility" },
+  { href: "/plan-with-confidence", label: "Demand Planning" },
 ];
 
 const companyLinks = [
@@ -18,17 +18,20 @@ export default function SiteFooter() {
     <footer className="border-t border-white/10 bg-[rgba(10,20,31,0.92)]">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
         <div className="space-y-5">
-          <Link className="inline-flex items-center gap-3 text-white" href="/">
-            <span className="brand-mark">
-              <TrendingUp size={16} strokeWidth={2.25} />
-            </span>
-            <span className="text-2xl font-semibold tracking-tight">ScaleSight</span>
+          <Link className="inline-flex items-center text-white" href="/">
+            <Image
+              alt="ScaleSight"
+              className="h-auto w-[9.5rem] md:w-[10.5rem]"
+              height={1216}
+              src="/logo.png"
+              width={4345}
+            />
           </Link>
           <p className="max-w-xs text-sm leading-7 text-[var(--text-secondary)]">
             Precision demand planning and revenue visibility for teams scaling
             beyond spreadsheet-driven decisions.
           </p>
-          <div className="flex gap-3">
+          {/* <div className="flex gap-3">
             {[Globe, Share2].map((Icon, index) => (
               <span
                 key={index}
@@ -37,7 +40,7 @@ export default function SiteFooter() {
                 <Icon size={16} />
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div>
@@ -65,9 +68,9 @@ export default function SiteFooter() {
         <div>
           <h3 className="footer-heading">Contact</h3>
           <div className="mt-5 space-y-3 text-sm text-[var(--text-secondary)]">
-            <p>hello@scalesight.io</p>
-            <p>New York, NY</p>
-            <p>Built for Shopify Plus and modern ops teams.</p>
+            <p>arman@scalesight.org</p>
+            <p>Lahore, PK</p>
+            {/* <p>Built for Shopify Plus and modern ops teams.</p> */}
           </div>
         </div>
       </div>
