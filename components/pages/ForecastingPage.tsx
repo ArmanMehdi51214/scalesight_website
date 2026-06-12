@@ -257,20 +257,22 @@ function HeroDashboardCard({
 }) {
   return (
     <div className={`absolute ${className}`}>
-      <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-white shadow-[0_28px_80px_rgba(0,0,0,0.38)]">
-        <div className="border-b border-slate-200/90 bg-white px-4 py-3">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-500">
+      <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,23,39,0.98),rgba(8,15,26,0.96))] shadow-[0_28px_80px_rgba(0,0,0,0.38)]">
+        <div className="border-b border-white/8 bg-[rgba(7,17,31,0.92)] px-4 py-3">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
             {title}
           </p>
         </div>
-        <Image
-          alt={alt}
-          className="h-auto w-full object-cover"
-          placeholder="blur"
-          priority={priority}
-          sizes="(max-width: 768px) 75vw, 34vw"
-          src={image}
-        />
+        <div className="bg-[rgba(6,12,21,0.94)] p-2">
+          <Image
+            alt={alt}
+            className="h-auto w-full rounded-[0.85rem] object-cover"
+            placeholder="blur"
+            priority={priority}
+            sizes="(max-width: 768px) 75vw, 34vw"
+            src={image}
+          />
+        </div>
       </div>
     </div>
   );
@@ -441,38 +443,40 @@ export default function ForecastingPage() {
             </Reveal>
 
             <Reveal className="mx-auto mt-12 max-w-5xl" delay={80}>
-              <div className="surface-card overflow-hidden rounded-[2rem] p-3 md:p-5">
-                <div className="relative aspect-video overflow-hidden rounded-[1.6rem] border border-cyan-400/15 bg-[linear-gradient(180deg,rgba(6,15,27,0.96),rgba(10,19,33,0.88))]">
-                  {walkthroughVideoId ? (
-                    <iframe
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                      className="absolute inset-0 h-full w-full"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      src={`https://www.youtube-nocookie.com/embed/${walkthroughVideoId}?rel=0`}
-                      title="ScaleSight walkthrough"
-                    />
-                  ) : (
-                    <>
-                      <Image
-                        alt="ScaleSight walkthrough preview"
-                        className="h-full w-full object-cover"
-                        placeholder="blur"
-                        priority
-                        src={executiveDashboard}
+              <div className="surface-card overflow-hidden rounded-[2rem] p-4 md:p-5">
+                <div className="relative aspect-video overflow-hidden rounded-[1.75rem] border border-white/8 bg-[linear-gradient(180deg,rgba(6,15,27,0.98),rgba(8,15,26,0.96))] p-2 md:p-3">
+                  <div className="relative h-full w-full overflow-hidden rounded-[1.25rem] border border-white/6 bg-[rgba(3,10,18,0.94)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                    {walkthroughVideoId ? (
+                      <iframe
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="absolute inset-0 h-full w-full"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        src={`https://www.youtube-nocookie.com/embed/${walkthroughVideoId}?rel=0`}
+                        title="ScaleSight walkthrough"
                       />
-                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,10,18,0.18),rgba(3,10,18,0.54))]" />
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(4,180,253,0.24),transparent_58%)]" />
-                    </>
-                  )}
+                    ) : (
+                      <>
+                        <Image
+                          alt="ScaleSight walkthrough preview"
+                          className="h-full w-full object-cover"
+                          placeholder="blur"
+                          priority
+                          src={executiveDashboard}
+                        />
+                        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,10,18,0.22),rgba(3,10,18,0.56))]" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(4,180,253,0.16),transparent_58%)]" />
+                      </>
+                    )}
 
-                  {!walkthroughVideoId ? (
-                    <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                      <div className="flex h-[5.5rem] w-[5.5rem] items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--blue-primary),var(--blue-secondary))] text-white shadow-[0_24px_60px_rgba(0,94,240,0.35)] md:h-24 md:w-24">
-                        <CirclePlay size={34} />
+                    {!walkthroughVideoId ? (
+                      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                        <div className="flex h-[5.5rem] w-[5.5rem] items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--blue-primary),var(--blue-secondary))] text-white shadow-[0_24px_60px_rgba(0,94,240,0.3)] md:h-24 md:w-24">
+                          <CirclePlay size={34} />
+                        </div>
                       </div>
-                    </div>
-                  ) : null}
+                    ) : null}
+                  </div>
 
                   <div className="absolute right-5 top-5 rounded-full border border-white/10 bg-[rgba(7,17,31,0.78)] px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[var(--blue-soft)]">
                     90 second walkthrough
@@ -581,17 +585,17 @@ export default function ForecastingPage() {
                   {decisionQuestions.map((question, index) => (
                     <div
                       key={question}
-                      className={`group relative overflow-hidden rounded-[1.4rem] border border-white/8 bg-[#0C1727]/80 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/40 hover:bg-[#0C1727] hover:shadow-[0_22px_70px_rgba(4,180,253,0.12)] ${
+                      className={`group relative overflow-hidden rounded-[1.4rem] border border-white/8 bg-[#0C1727]/84 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:border-white/14 hover:bg-[#0C1727]/96 hover:shadow-[0_20px_58px_rgba(0,0,0,0.24)] ${
                         index % 2 === 0
                           ? "sm:translate-y-3"
                           : "sm:-translate-y-3"
                       }`}
                     >
                       {/* soft hover shine */}
-                      <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/8 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                      <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/4 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
 
                       {/* subtle glow dot */}
-                      <div className="pointer-events-none absolute right-4 top-4 h-2 w-2 rounded-full bg-[#04B4FD]/40 opacity-0 shadow-[0_0_18px_rgba(4,180,253,0.8)] transition-opacity duration-300 group-hover:opacity-100" />
+                      <div className="pointer-events-none absolute right-4 top-4 h-1.5 w-1.5 rounded-full bg-[#04B4FD]/28 opacity-0 shadow-[0_0_14px_rgba(4,180,253,0.4)] transition-opacity duration-300 group-hover:opacity-100" />
 
                       <div className="relative flex items-start justify-between gap-4">
                         <p className="max-w-[16rem] text-base font-medium leading-7 text-white/90 transition-colors duration-300 group-hover:text-white">
@@ -600,7 +604,7 @@ export default function ForecastingPage() {
                       </div>
 
                       {/* bottom animated border */}
-                      <div className="pointer-events-none absolute inset-x-5 bottom-0 h-px bg-gradient-to-r from-transparent via-[#04B4FD]/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      <div className="pointer-events-none absolute inset-x-5 bottom-0 h-px bg-gradient-to-r from-transparent via-[#04B4FD]/38 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     </div>
                   ))}
                 </div>
@@ -663,15 +667,17 @@ export default function ForecastingPage() {
                   </div>
                 </div> */}
 
-              <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.28)]">
-                <Image
-                  alt={activeShowcase.label}
-                  className="h-auto w-full object-cover"
-                  placeholder="blur"
-                  priority
-                  sizes="(max-width: 1280px) 100vw, 1120px"
-                  src={activeShowcase.image}
-                />
+              <div className="overflow-hidden rounded-[1.9rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,23,39,0.98),rgba(8,15,26,0.96))] p-3 shadow-[0_24px_80px_rgba(0,0,0,0.28)] md:p-4">
+                <div className="overflow-hidden rounded-[1.35rem] border border-white/8 bg-[rgba(6,12,21,0.94)]">
+                  <Image
+                    alt={activeShowcase.label}
+                    className="h-auto w-full object-cover"
+                    placeholder="blur"
+                    priority
+                    sizes="(max-width: 1280px) 100vw, 1120px"
+                    src={activeShowcase.image}
+                  />
+                </div>
               </div>
               {/* </div> */}
             </Reveal>
