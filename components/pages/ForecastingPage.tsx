@@ -750,8 +750,14 @@ export default function ForecastingPage() {
           </div>
         </section>
 
-        <section className="bg-[rgba(5,15,26,0.94)] px-6 py-20 md:py-24">
-          <div className="mx-auto max-w-4xl">
+        <section className="relative overflow-hidden bg-[rgba(5,15,26,0.94)] px-6 py-20 md:py-24">
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute left-1/2 top-0 h-48 w-[48rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(4,180,253,0.16),rgba(0,94,240,0.08),transparent_72%)] blur-3xl" />
+            <div className="absolute right-[-8rem] top-1/3 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(0,94,240,0.12),transparent_68%)] blur-3xl" />
+            <div className="absolute bottom-[-6rem] left-[-4rem] h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(4,180,253,0.1),transparent_70%)] blur-3xl" />
+          </div>
+
+          <div className="relative mx-auto max-w-4xl">
             <Reveal className="mx-auto max-w-3xl text-center">
               <SectionHeader
                 align="center"
