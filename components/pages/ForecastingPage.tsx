@@ -38,7 +38,7 @@ import scenarioPlanning from "@/public/dashboards for website/visual 2s.png";
 import inventoryDashboard from "@/public/dashboards for website/viusal 3.png";
 
 const walkthroughVideoId =
-  process.env.NEXT_PUBLIC_SCALESIGHT_WALKTHROUGH_VIDEO_ID;
+  process.env.NEXT_PUBLIC_SCALESIGHT_WALKTHROUGH_VIDEO_ID ?? "QlHoHLyWkfw";
 
 const trustItems = [
   "Revenue visibility",
@@ -466,11 +466,13 @@ export default function ForecastingPage() {
                     </>
                   )}
 
-                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                    <div className="flex h-[5.5rem] w-[5.5rem] items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--blue-primary),var(--blue-secondary))] text-white shadow-[0_24px_60px_rgba(0,94,240,0.35)] md:h-24 md:w-24">
-                      <CirclePlay size={34} />
+                  {!walkthroughVideoId ? (
+                    <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                      <div className="flex h-[5.5rem] w-[5.5rem] items-center justify-center rounded-full bg-[linear-gradient(135deg,var(--blue-primary),var(--blue-secondary))] text-white shadow-[0_24px_60px_rgba(0,94,240,0.35)] md:h-24 md:w-24">
+                        <CirclePlay size={34} />
+                      </div>
                     </div>
-                  </div>
+                  ) : null}
 
                   <div className="absolute right-5 top-5 rounded-full border border-white/10 bg-[rgba(7,17,31,0.78)] px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[var(--blue-soft)]">
                     90 second walkthrough
