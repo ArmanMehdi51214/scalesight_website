@@ -685,7 +685,7 @@ export default function ForecastingPage() {
                 <SectionHeader
                   eyebrow="Who It's For"
                   title="Built For Growing Ecommerce Brands."
-                  copy="ScaleSight is built for operators who need clearer visibility across revenue, inventory, demand, and planning decisions."
+                  // copy="ScaleSight is built for operators who need clearer visibility across revenue, inventory, demand, and planning decisions."
                 />
 
                 <div className="surface-card mt-10 rounded-[1.8rem] p-7">
