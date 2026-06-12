@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import type { PointerEvent } from "react";
 
 const productLinks = [
   { href: "/plan-with-confidence", label: "Forecasting" },
@@ -13,10 +16,24 @@ const companyLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+function handleFooterPointerMove(event: PointerEvent<HTMLDivElement>) {
+  const bounds = event.currentTarget.getBoundingClientRect();
+  const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+  const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+
+  event.currentTarget.style.setProperty("--footer-x", `${x}%`);
+  event.currentTarget.style.setProperty("--footer-y", `${y}%`);
+}
+
+function handleFooterPointerLeave(event: PointerEvent<HTMLDivElement>) {
+  event.currentTarget.style.setProperty("--footer-x", "50%");
+  event.currentTarget.style.setProperty("--footer-y", "50%");
+}
+
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-[rgba(10,20,31,0.92)]">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[rgba(10,20,31,0.92)]">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
         <div className="space-y-5">
           <Link className="inline-flex items-center text-white" href="/">
             <Image
@@ -73,6 +90,32 @@ export default function SiteFooter() {
             {/* <p>Built for Shopify Plus and modern ops teams.</p> */}
           </div>
         </div>
+      </div>
+      <div
+        className="footer-brand-stage"
+        onPointerLeave={handleFooterPointerLeave}
+        onPointerMove={handleFooterPointerMove}
+      >
+        <div className="footer-brand-stage__glow" />
+        <div className="footer-brand-stage__shine" />
+        <div className="footer-brand-stage__grid" />
+        <Image
+          alt="ScaleSight"
+          className="footer-brand-image footer-brand-image--base"
+          height={1216}
+          priority={false}
+          src="/logo.png"
+          width={4345}
+        />
+        <Image
+          alt=""
+          aria-hidden="true"
+          className="footer-brand-image footer-brand-image--color"
+          height={1216}
+          priority={false}
+          src="/logo.png"
+          width={4345}
+        />
       </div>
     </footer>
   );
