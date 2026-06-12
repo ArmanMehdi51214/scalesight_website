@@ -644,8 +644,8 @@ export default function ForecastingPage() {
             </Reveal>
 
             <Reveal className="mt-10" delay={160}>
-              <div className="surface-card overflow-hidden rounded-[2rem] p-4 md:p-5">
-                <div className="mb-6 flex flex-col gap-4 border-b border-white/8 pb-6 md:flex-row md:items-end md:justify-between">
+              {/* <div className="surface-card overflow-hidden rounded-[2rem] p-4 md:p-5"> */}
+                {/* <div className="mb-6 flex flex-col gap-4 border-b border-white/8 pb-6 md:flex-row md:items-end md:justify-between">
                   <div className="max-w-2xl">
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--blue-soft)]">
                       {activeShowcase.label}
@@ -661,7 +661,7 @@ export default function ForecastingPage() {
                     <ChartColumnIncreasing size={14} />
                     Strongest visibility surfaces
                   </div>
-                </div>
+                </div> */}
 
                 <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.28)]">
                   <Image
@@ -673,7 +673,7 @@ export default function ForecastingPage() {
                     src={activeShowcase.image}
                   />
                 </div>
-              </div>
+              {/* </div> */}
             </Reveal>
           </div>
         </section>
