@@ -403,16 +403,18 @@ button {
   border-radius: 1.4rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(12, 23, 39, 0.92);
-  padding: 1.35rem 1.4rem;
+  overflow: hidden;
 }
 
 .faq-summary {
   display: flex;
+  width: 100%;
   cursor: pointer;
   list-style: none;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  padding: 1.35rem 1.4rem;
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -432,7 +434,8 @@ button {
 }
 
 .faq-answer {
-  margin: 1rem 0 0;
+  margin: 0;
+  padding: 0 1.4rem 1.35rem;
   color: var(--text-secondary);
   line-height: 1.85;
 }
