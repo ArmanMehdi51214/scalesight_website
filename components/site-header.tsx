@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
+  { href: "/plan-with-confidence", label: "Plan with Confidence" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/contact", label: "Contact" },
 ];
@@ -19,7 +19,7 @@ function isActive(pathname: string, href: string) {
     return pathname === "/";
   }
 
-  if (href === "/services" && pathname === "/forecasting") {
+  if (href === "/plan-with-confidence" && pathname === "/plan-with-confidence/") {
     return true;
   }
 
