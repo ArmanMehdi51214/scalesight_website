@@ -365,8 +365,8 @@ export default function ForecastingPage() {
             </Reveal>
 
             <Reveal className="relative" delay={120}>
-              <div className="hero-frame relative min-h-[23rem] overflow-hidden p-4 sm:min-h-[28rem] md:p-6 lg:min-h-[34rem]">
-                <div className="absolute inset-x-10 top-6 z-30 flex flex-wrap justify-center gap-3">
+              {/* <div className="hero-frame relative min-h-[23rem] overflow-hidden p-4 sm:min-h-[28rem] md:p-6 lg:min-h-[34rem]"> */}
+              {/* <div className="absolute inset-x-10 top-6 z-30 flex flex-wrap justify-center gap-3">
                   {[
                     "Revenue Forecast",
                     "Inventory Risk",
@@ -380,31 +380,31 @@ export default function ForecastingPage() {
                       {item}
                     </span>
                   ))}
-                </div>
+                </div> */}
 
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(4,180,253,0.18),transparent_58%)]" />
+              {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(4,180,253,0.18),transparent_58%)]" /> */}
 
-                <HeroDashboardCard
-                  alt="Demand planning dashboard"
-                  className="left-[2%] top-[6.75rem] z-10 w-[49%] origin-bottom-left -rotate-[8deg] sm:left-[5%] sm:w-[42%] lg:top-[7rem]"
-                  image={demandPlanning}
-                  title="Demand Planning"
-                />
-                <HeroDashboardCard
-                  alt="Revenue forecast dashboard"
-                  className="left-1/2 top-[4.5rem] z-20 w-[58%] -translate-x-1/2 sm:w-[52%] lg:top-[4.75rem]"
-                  image={executiveDashboard}
-                  priority
-                  title="Revenue Forecast"
-                />
-                <HeroDashboardCard
-                  alt="Inventory risk dashboard"
-                  className="right-[2%] top-[6.75rem] z-10 w-[49%] origin-bottom-right rotate-[8deg] sm:right-[5%] sm:w-[42%] lg:top-[7rem]"
-                  image={inventoryDashboard}
-                  title="Inventory Risk"
-                />
+              <HeroDashboardCard
+                alt="Demand planning dashboard"
+                className="left-[2%] top-[6.75rem] z-10 w-[49%] origin-bottom-left -rotate-[8deg] sm:left-[5%] sm:w-[42%] lg:top-[7rem]"
+                image={demandPlanning}
+                title="Demand Planning"
+              />
+              <HeroDashboardCard
+                alt="Revenue forecast dashboard"
+                className="left-1/2 top-[4.5rem] z-20 w-[58%] -translate-x-1/2 sm:w-[52%] lg:top-[4.75rem]"
+                image={executiveDashboard}
+                priority
+                title="Revenue Forecast"
+              />
+              <HeroDashboardCard
+                alt="Inventory risk dashboard"
+                className="right-[2%] top-[6.75rem] z-10 w-[49%] origin-bottom-right rotate-[8deg] sm:right-[5%] sm:w-[42%] lg:top-[7rem]"
+                image={inventoryDashboard}
+                title="Inventory Risk"
+              />
 
-                <div className="absolute inset-x-8 bottom-5 z-30 rounded-[1.4rem] border border-cyan-400/18 bg-[rgba(7,17,31,0.78)] px-4 py-4 backdrop-blur-md sm:px-5">
+              {/* <div className="absolute inset-x-8 bottom-5 z-30 rounded-[1.4rem] border border-cyan-400/18 bg-[rgba(7,17,31,0.78)] px-4 py-4 backdrop-blur-md sm:px-5">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <p className="text-sm font-semibold text-white">
@@ -420,8 +420,8 @@ export default function ForecastingPage() {
                       Executive clarity
                     </span>
                   </div>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
             </Reveal>
           </div>
         </section>
