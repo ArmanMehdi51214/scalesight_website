@@ -571,7 +571,7 @@ export default function ForecastingPage() {
                 <SectionHeader
                   eyebrow="Decision System"
                   title="Decisions Become Easier."
-                  copy="The goal is not more reporting. It is clearer answers to the business questions that shape growth, inventory, and operations."
+                  // copy="The goal is not more reporting. It is clearer answers to the business questions that shape growth, inventory, and operations."
                 />
               </Reveal>
 
@@ -581,21 +581,26 @@ export default function ForecastingPage() {
                   {decisionQuestions.map((question, index) => (
                     <div
                       key={question}
-                      className={`surface-card rounded-[1.4rem] p-5 transition-transform duration-200 hover:-translate-y-1 ${
+                      className={`group relative overflow-hidden rounded-[1.4rem] border border-white/8 bg-[#0C1727]/80 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/40 hover:bg-[#0C1727] hover:shadow-[0_22px_70px_rgba(4,180,253,0.12)] ${
                         index % 2 === 0
                           ? "sm:translate-y-3"
                           : "sm:-translate-y-3"
                       }`}
                     >
-                      <div className="flex items-start justify-between gap-4">
-                        <p className="max-w-[16rem] text-base font-medium leading-7 text-white">
+                      {/* soft hover shine */}
+                      <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/8 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+                      {/* subtle glow dot */}
+                      <div className="pointer-events-none absolute right-4 top-4 h-2 w-2 rounded-full bg-[#04B4FD]/40 opacity-0 shadow-[0_0_18px_rgba(4,180,253,0.8)] transition-opacity duration-300 group-hover:opacity-100" />
+
+                      <div className="relative flex items-start justify-between gap-4">
+                        <p className="max-w-[16rem] text-base font-medium leading-7 text-white/90 transition-colors duration-300 group-hover:text-white">
                           {question}
                         </p>
-                        <ArrowRight
-                          className="mt-1 shrink-0 text-[var(--blue-soft)]"
-                          size={18}
-                        />
                       </div>
+
+                      {/* bottom animated border */}
+                      <div className="pointer-events-none absolute inset-x-5 bottom-0 h-px bg-gradient-to-r from-transparent via-[#04B4FD]/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     </div>
                   ))}
                 </div>
