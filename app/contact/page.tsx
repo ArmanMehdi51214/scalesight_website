@@ -1,13 +1,39 @@
+"use client";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarRange, Database, Lightbulb, Timer, Globe, Share2 } from "lucide-react";
+import {
+  CalendarRange,
+  Database,
+  Lightbulb,
+  Timer,
+  Globe,
+  Share2,
+} from "lucide-react";
 
 import SiteHeader from "@/components/site-header";
 import { Eyebrow } from "@/components/marketing-primitives";
 
 export const metadata: Metadata = {
   title: "ScaleSight | Book Your Strategy Call",
-  description: "Contact ScaleSight to discuss forecasting, planning, and operating visibility.",
+  description:
+    "Contact ScaleSight to discuss forecasting, planning, and operating visibility.",
+};
+
+const CALENDLY_URL = "https://calendly.com/kazmiarmanmehdi/30min";
+
+const handleCalendlySubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+
+  const formData = new FormData(event.currentTarget);
+
+  const name = String(formData.get("name") || "");
+  const email = String(formData.get("email") || "");
+
+  const calendlyLink = `${CALENDLY_URL}?name=${encodeURIComponent(
+    name,
+  )}&email=${encodeURIComponent(email)}`;
+
+  window.open(calendlyLink, "_blank", "noopener,noreferrer");
 };
 
 const expectations = [
@@ -41,8 +67,8 @@ export default function ContactPage() {
               <span className="text-gradient-primary">Visibility.</span>
             </h1>
             <p className="section-copy mt-6 max-w-2xl">
-              Tell us about your business. We are ready to dive into your data and
-              uncover the signals hidden in the noise.
+              Tell us about your business. We are ready to dive into your data
+              and uncover the signals hidden in the noise.
             </p>
           </div>
         </section>
@@ -50,52 +76,90 @@ export default function ContactPage() {
         <section className="mx-auto mt-16 grid max-w-7xl gap-6 lg:grid-cols-12 lg:items-start">
           <div className="surface-card relative overflow-hidden rounded-[2rem] p-7 md:p-10 lg:col-span-7">
             <div className="absolute -left-16 -top-16 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(0,94,240,0.22),transparent_68%)] blur-3xl" />
-            <form className="relative grid gap-5 md:grid-cols-2">
+            <form
+              onSubmit={handleCalendlySubmit}
+              className="relative grid gap-5 md:grid-cols-2"
+            >
               <label className="field-group">
                 <span>Name</span>
-                <input className="field-input" placeholder="John Doe" type="text" />
+                <input
+                  name="name"
+                  className="field-input"
+                  placeholder="John Doe"
+                  type="text"
+                  required
+                />
               </label>
+
               <label className="field-group">
                 <span>Email</span>
-                <input className="field-input" placeholder="john@company.com" type="email" />
+                <input
+                  name="email"
+                  className="field-input"
+                  placeholder="john@company.com"
+                  type="email"
+                  required
+                />
               </label>
+
               <label className="field-group">
                 <span>Company</span>
-                <input className="field-input" placeholder="Acme Inc." type="text" />
+                <input
+                  name="company"
+                  className="field-input"
+                  placeholder="Acme Inc."
+                  type="text"
+                />
               </label>
+
               <label className="field-group">
                 <span>Website</span>
-                <input className="field-input" placeholder="https://..." type="url" />
+                <input
+                  name="website"
+                  className="field-input"
+                  placeholder="https://..."
+                  type="url"
+                />
               </label>
+
               <label className="field-group">
                 <span>Monthly Revenue</span>
-                <select className="field-input">
-                  <option>Select range</option>
+                <select name="monthlyRevenue" className="field-input">
+                  <option value="">Select range</option>
                   <option>$10k - $50k</option>
                   <option>$50k - $250k</option>
                   <option>$250k - $1M</option>
                   <option>$1M+</option>
                 </select>
               </label>
+
               <label className="field-group">
                 <span>Primary Challenge</span>
-                <select className="field-input">
-                  <option>Select challenge</option>
-                  <option>Inventory Forecasting</option>
-                  <option>Demand Planning</option>
-                  <option>Data Visibility</option>
-                  <option>Other</option>
+                <select name="primaryChallenge" className="field-input">
+                  <option value="">Select challenge</option>
+                  <option>Revenue visibility</option>
+                  <option>Inventory planning</option>
+                  <option>Demand forecasting</option>
+                  <option>Marketing performance</option>
+                  <option>Multi-channel reporting</option>
+                  <option>Operational planning</option>
+                  <option>Not sure yet</option>
                 </select>
               </label>
+
               <label className="field-group md:col-span-2">
                 <span>Message</span>
                 <textarea
+                  name="message"
                   className="field-input min-h-[160px] resize-none"
                   placeholder="Briefly describe your current situation..."
                 />
               </label>
 
-              <button className="primary-button mt-3 justify-center md:col-span-2" type="submit">
+              <button
+                className="primary-button mt-3 justify-center md:col-span-2"
+                type="submit"
+              >
                 Book Strategy Call
               </button>
             </form>
@@ -116,7 +180,9 @@ export default function ContactPage() {
                         <Icon size={16} />
                       </div>
                       <div>
-                        <p className="text-base font-semibold text-white">{item.title}</p>
+                        <p className="text-base font-semibold text-white">
+                          {item.title}
+                        </p>
                         <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
                           {item.copy}
                         </p>
@@ -131,10 +197,12 @@ export default function ContactPage() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-[var(--text-secondary)]">
                 <CalendarRange size={22} />
               </div>
-              <p className="mt-5 text-base text-white">Prefer picking a time directly?</p>
+              <p className="mt-5 text-base text-white">
+                Prefer picking a time directly?
+              </p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                Interactive scheduler is ready to be wired when you want to connect
-                Calendly or your preferred booking flow.
+                Interactive scheduler is ready to be wired when you want to
+                connect Calendly or your preferred booking flow.
               </p>
               <div className="mt-6 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">
                 Calendly integration ready
@@ -150,15 +218,15 @@ export default function ContactPage() {
                   className="mt-2 inline-block text-base font-semibold text-[#8dd9ff] transition hover:text-white"
                   href="mailto:hello@scalesight.io"
                 >
-                  hello@scalesight.io
+                  arman@scalesight.org
                 </a>
               </div>
-              <div>
+              {/* <div>
                 <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-muted)]">
                   Office
                 </p>
                 <p className="mt-2 text-base text-white">New York, NY</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -166,25 +234,40 @@ export default function ContactPage() {
         <section className="mx-auto mt-24 max-w-7xl border-t border-white/8 pt-12">
           <div className="grid gap-10 md:grid-cols-4">
             <div>
-              <h3 className="text-2xl font-semibold tracking-tight text-white">ScaleSight</h3>
+              <h3 className="text-2xl font-semibold tracking-tight text-white">
+                ScaleSight
+              </h3>
               <p className="mt-4 max-w-xs text-sm leading-7 text-[var(--text-secondary)]">
-                Precision demand planning and revenue forecasting for modern ecommerce teams.
+                Precision demand planning and revenue forecasting for modern
+                ecommerce teams.
               </p>
             </div>
             <div>
               <p className="footer-heading">Platform</p>
               <div className="mt-4 space-y-3">
-                <Link className="footer-link" href="/services">Forecasting</Link>
-                <Link className="footer-link" href="/services">Inventory Visibility</Link>
-                <Link className="footer-link" href="/services">Demand Planning</Link>
+                <Link className="footer-link" href="/services">
+                  Forecasting
+                </Link>
+                <Link className="footer-link" href="/services">
+                  Inventory Visibility
+                </Link>
+                <Link className="footer-link" href="/services">
+                  Demand Planning
+                </Link>
               </div>
             </div>
             <div>
               <p className="footer-heading">Company</p>
               <div className="mt-4 space-y-3">
-                <Link className="footer-link" href="/about">About</Link>
-                <Link className="footer-link" href="/case-studies">Case Studies</Link>
-                <Link className="footer-link" href="/contact">Contact</Link>
+                <Link className="footer-link" href="/about">
+                  About
+                </Link>
+                <Link className="footer-link" href="/case-studies">
+                  Case Studies
+                </Link>
+                <Link className="footer-link" href="/contact">
+                  Contact
+                </Link>
               </div>
             </div>
             <div>
