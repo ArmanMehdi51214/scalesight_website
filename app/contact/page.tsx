@@ -13,11 +13,11 @@ import {
 import SiteHeader from "@/components/site-header";
 import { Eyebrow } from "@/components/marketing-primitives";
 
-export const metadata: Metadata = {
-  title: "ScaleSight | Book Your Strategy Call",
-  description:
-    "Contact ScaleSight to discuss forecasting, planning, and operating visibility.",
-};
+// export const metadata: Metadata = {
+//   title: "ScaleSight | Book Your Strategy Call",
+//   description:
+//     "Contact ScaleSight to discuss forecasting, planning, and operating visibility.",
+// };
 
 const CALENDLY_URL = "https://calendly.com/kazmiarmanmehdi/30min";
 
