@@ -1,15 +1,12 @@
 "use client";
-import type { Metadata } from "next";
-import Link from "next/link";
 import {
   CalendarRange,
   Database,
   Lightbulb,
   Timer,
-  Globe,
-  Share2,
 } from "lucide-react";
 
+import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { Eyebrow } from "@/components/marketing-primitives";
 
@@ -81,7 +78,9 @@ export default function ContactPage() {
               className="relative grid gap-5 md:grid-cols-2"
             >
               <label className="field-group">
-                <span>Name</span>
+                <span>
+                  Name <span className="text-[#8dd9ff]">*</span>
+                </span>
                 <input
                   name="name"
                   className="field-input"
@@ -92,7 +91,9 @@ export default function ContactPage() {
               </label>
 
               <label className="field-group">
-                <span>Email</span>
+                <span>
+                  Email <span className="text-[#8dd9ff]">*</span>
+                </span>
                 <input
                   name="email"
                   className="field-input"
@@ -162,6 +163,11 @@ export default function ContactPage() {
               >
                 Book Strategy Call
               </button>
+
+              <p className="md:col-span-2 text-sm text-[var(--text-secondary)]">
+                Name and Email are required. After you submit, Calendly opens so
+                you can choose a time.
+              </p>
             </form>
           </div>
 
@@ -201,11 +207,11 @@ export default function ContactPage() {
                 Prefer picking a time directly?
               </p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                Interactive scheduler is ready to be wired when you want to
-                connect Calendly or your preferred booking flow.
+                Submit the form and Calendly will open immediately so you can
+                book your strategy call.
               </p>
               <div className="mt-6 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">
-                Calendly integration ready
+                Calendly active
               </div>
             </div>
 
@@ -231,61 +237,8 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="mx-auto mt-24 max-w-7xl border-t border-white/8 pt-12">
-          <div className="grid gap-10 md:grid-cols-4">
-            <div>
-              <h3 className="text-2xl font-semibold tracking-tight text-white">
-                ScaleSight
-              </h3>
-              <p className="mt-4 max-w-xs text-sm leading-7 text-[var(--text-secondary)]">
-                Precision demand planning and revenue forecasting for modern
-                ecommerce teams.
-              </p>
-            </div>
-            <div>
-              <p className="footer-heading">Platform</p>
-              <div className="mt-4 space-y-3">
-                <Link className="footer-link" href="/services">
-                  Forecasting
-                </Link>
-                <Link className="footer-link" href="/services">
-                  Inventory Visibility
-                </Link>
-                <Link className="footer-link" href="/services">
-                  Demand Planning
-                </Link>
-              </div>
-            </div>
-            <div>
-              <p className="footer-heading">Company</p>
-              <div className="mt-4 space-y-3">
-                <Link className="footer-link" href="/about">
-                  About
-                </Link>
-                <Link className="footer-link" href="/case-studies">
-                  Case Studies
-                </Link>
-                <Link className="footer-link" href="/contact">
-                  Contact
-                </Link>
-              </div>
-            </div>
-            <div>
-              <p className="footer-heading">Connect</p>
-              <div className="mt-4 flex gap-3">
-                {[Globe, Share2].map((Icon, index) => (
-                  <span
-                    key={index}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-[var(--text-secondary)]"
-                  >
-                    <Icon size={16} />
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
+      <SiteFooter />
     </>
   );
 }
