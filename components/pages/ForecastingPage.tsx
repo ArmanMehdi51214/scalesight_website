@@ -127,6 +127,14 @@ const decisionQuestions = [
 ];
 
 const showcaseTabs = [
+    {
+    id: "executive",
+    label: "Executive Overview",
+    title: "An executive view built for faster alignment.",
+    description:
+      "A clean operating picture across revenue, inventory, and demand so teams can move from fragmented reporting to coordinated decisions.",
+    image: inventoryDashboard,
+  },
   {
     id: "revenue",
     label: "Revenue Visibility",
@@ -135,14 +143,14 @@ const showcaseTabs = [
       "A forward view of likely revenue, confidence, and weekly movement so growth decisions are grounded in what is most likely to happen next.",
     image: executiveDashboard,
   },
-  {
-    id: "inventory",
-    label: "Inventory Planning",
-    title: "Inventory risk before it becomes a sales problem.",
-    description:
-      "Stock posture, category exposure, and product-level risk in one view so teams can protect revenue without tying up excess capital.",
-    image: inventoryDashboard,
-  },
+  // {
+  //   id: "inventory",
+  //   label: "Inventory Planning",
+  //   title: "Inventory risk before it becomes a sales problem.",
+  //   description:
+  //     "Stock posture, category exposure, and product-level risk in one view so teams can protect revenue without tying up excess capital.",
+  //   image: inventoryDashboard,
+  // },
   {
     id: "demand",
     label: "Demand Trends",
@@ -150,14 +158,6 @@ const showcaseTabs = [
     description:
       "SKU-level demand visibility that helps teams spot pressure early and prioritize the products that matter most.",
     image: demandPlanning,
-  },
-  {
-    id: "executive",
-    label: "Executive Overview",
-    title: "An executive view built for faster alignment.",
-    description:
-      "A clean operating picture across revenue, inventory, and demand so teams can move from fragmented reporting to coordinated decisions.",
-    image: executiveDashboard,
   },
   {
     id: "planning",
