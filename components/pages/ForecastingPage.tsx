@@ -190,39 +190,39 @@ const faqs = [
   {
     question: "What data do you need?",
     answer:
-      "We usually start with Shopify sales, inventory, product, and marketing context.",
+      "We typically work with Shopify sales data, inventory data, marketing performance data, and other operational datasets. During onboarding we review available data sources and build the visibility system around your business.",
   },
   {
     question: "How long does implementation take?",
     answer:
-      "Most brands are live in a few weeks, depending on data access and team availability.",
+      "Most implementations take between 1–3 weeks depending on data availability, integrations, and reporting requirements.",
   },
   {
     question: "Do you work with Shopify?",
     answer:
-      "Yes. ScaleSight is built for Shopify brands and the teams around them.",
+      "Yes. Shopify brands are our primary focus, and our systems are designed around the operational challenges faced by growing ecommerce businesses.",
   },
   {
     question: "Can this help inventory planning?",
     answer:
-      "Yes. It helps teams see stock risk, reorder timing, and demand pressure earlier.",
+      "Yes. ScaleSight helps identify inventory risks, forecast future demand, highlight stockout risks, and support smarter purchasing decisions.",
   },
   {
     question: "Do you offer ongoing support?",
     answer:
-      "Yes. We stay involved as your planning needs evolve and decisions get more complex.",
+      "Yes. We provide ongoing support, optimization, and reporting improvements as business requirements evolve.",
   },
   {
     question: "How accurate are the forecasts?",
     answer:
-      "They are designed to support better decisions, with confidence improving as more business context is connected.",
+      "Forecast accuracy depends on data quality and business conditions, but our focus is not only forecasting accuracy—it is providing better visibility and confidence for business planning decisions.",
   },
   {
     question: "Can this work with multiple channels?",
     answer:
-      "Yes. We can help unify visibility across channels when the data is available.",
+      "Yes. We can combine data from multiple sales and operational channels to provide a unified decision-making view.",
   },
-] as const;
+];
 
 type RevealProps = {
   children: React.ReactNode;
