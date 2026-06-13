@@ -247,12 +247,12 @@ function HeroDashboardCard({
   alt,
   title,
   className,
-  priority = false,
+  preload = false,
 }: {
   alt: string;
   className: string;
   image: StaticImageData;
-  priority?: boolean;
+  preload?: boolean;
   title: string;
 }) {
   return (
@@ -268,7 +268,7 @@ function HeroDashboardCard({
             alt={alt}
             className="h-auto w-full rounded-[0.85rem] object-cover"
             placeholder="blur"
-            priority={priority}
+            preload={preload}
             sizes="(max-width: 768px) 75vw, 34vw"
             src={image}
           />
@@ -393,17 +393,17 @@ export default function ForecastingPage() {
                   title="Demand Planning"
                 />
                 <HeroDashboardCard
-                  alt="Revenue forecast dashboard"
+                  alt="Executive overview dashboard"
                   className="left-1/2 top-[3.25rem] z-20 w-[58%] -translate-x-1/2 animate-[float-card_6s_ease-in-out_infinite] sm:w-[52%] lg:top-[3rem]"
-                  image={executiveDashboard}
-                  priority
-                  title="Revenue Forecast"
+                  image={inventoryDashboard}
+                  preload
+                  title="Executive Overview"
                 />
                 <HeroDashboardCard
-                  alt="Inventory risk dashboard"
+                  alt="Scenario Planning dashboard"
                   className="right-[2%] top-[5.6rem] z-10 w-[49%] origin-bottom-right rotate-[8deg] animate-[float-card_7.8s_ease-in-out_infinite] sm:right-[5%] sm:w-[42%] lg:top-[5.5rem]"
-                  image={inventoryDashboard}
-                  title="Inventory Risk"
+                  image={scenarioPlanning}
+                  title="Scenario Planning"
                 />
 
                 {/* <div className="absolute inset-x-8 bottom-5 z-30 rounded-[1.4rem] border border-cyan-400/18 bg-[rgba(7,17,31,0.78)] px-4 py-4 backdrop-blur-md sm:px-5">
