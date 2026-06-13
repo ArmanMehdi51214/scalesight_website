@@ -9,6 +9,7 @@ import {
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { Eyebrow } from "@/components/marketing-primitives";
+import process from "process";
 
 // export const metadata: Metadata = {
 //   title: "ScaleSight | Book Your Strategy Call",
@@ -16,7 +17,7 @@ import { Eyebrow } from "@/components/marketing-primitives";
 //     "Contact ScaleSight to discuss forecasting, planning, and operating visibility.",
 // };
 
-const CALENDLY_URL = "https://calendly.com/kazmiarmanmehdi/30min";
+const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL;
 
 const handleCalendlySubmit = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();

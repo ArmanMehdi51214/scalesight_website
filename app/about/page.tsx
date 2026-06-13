@@ -59,9 +59,6 @@ export default function AboutPage() {
         <section className="mx-auto mt-20 max-w-7xl">
           <div className="surface-card relative overflow-hidden rounded-[2rem] px-8 py-14 text-center md:px-20 md:py-20">
             <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(4,180,253,0.18),transparent_65%)]" />
-            <p className="text-[4rem] leading-none text-[rgba(4,180,253,0.28)] md:text-[5rem]">
-              99
-            </p>
             <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-semibold italic tracking-tight text-white md:text-5xl">
               &ldquo;We help businesses make decisions with confidence.&rdquo;
             </h2>
