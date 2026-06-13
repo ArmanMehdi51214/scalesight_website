@@ -1,35 +1,44 @@
 import type { Metadata } from "next";
-import { ArrowRight, Eye, Handshake, Lightbulb, Settings2 } from "lucide-react";
+import { ArrowRight, Eye, Handshake, Lightbulb, Settings2, Target } from "lucide-react";
 
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
-import { PrimaryButton, SectionHeader } from "@/components/marketing-primitives";
+import {
+  PrimaryButton,
+  SectionHeader,
+} from "@/components/marketing-primitives";
 
 export const metadata: Metadata = {
   title: "ScaleSight | About the Mission",
-  description: "The mission, values, and operating philosophy behind ScaleSight.",
+  description:
+    "The mission, values, and operating philosophy behind ScaleSight.",
 };
 
 const values = [
   {
     icon: Lightbulb,
     title: "Clarity",
-    copy: "We strip away noise and turn fragmented signals into decisions teams can actually act on.",
+    copy: "We turn complex ecommerce data into clear views that help teams understand what is happening and what needs attention.",
   },
   {
     icon: Eye,
     title: "Visibility",
-    copy: "Planning improves when finance, inventory, and growth are looking at the same truth.",
+    copy: "We help brands see revenue, inventory, demand, and planning signals before they become business problems.",
   },
   {
     icon: Settings2,
     title: "Practicality",
-    copy: "The system is designed for operators who need useful guidance, not abstract reporting theater.",
+    copy: "We focus on useful insights that support real operating decisions, not dashboards that only look good.",
   },
   {
     icon: Handshake,
     title: "Partnership",
-    copy: "We work like an extension of the team, focused on long-term operating quality as brands scale.",
+    copy: "We work closely with ecommerce teams to improve planning, reporting, and decision-making as the business grows.",
+  },
+  {
+    icon: Target,
+    title: "Decision-focused thinking",
+    copy: "Every forecast, dashboard, and recommendation is designed to help leaders make better business decisions with more confidence.",
   },
 ];
 
@@ -50,7 +59,9 @@ export default function AboutPage() {
         <section className="mx-auto mt-20 max-w-7xl">
           <div className="surface-card relative overflow-hidden rounded-[2rem] px-8 py-14 text-center md:px-20 md:py-20">
             <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(4,180,253,0.18),transparent_65%)]" />
-            <p className="text-[4rem] leading-none text-[rgba(4,180,253,0.28)] md:text-[5rem]">99</p>
+            <p className="text-[4rem] leading-none text-[rgba(4,180,253,0.28)] md:text-[5rem]">
+              99
+            </p>
             <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-semibold italic tracking-tight text-white md:text-5xl">
               &ldquo;We help businesses make decisions with confidence.&rdquo;
             </h2>
@@ -67,13 +78,13 @@ export default function AboutPage() {
               title="The Pillars of Our Success"
               copy="Built on transparency, technical rigor, and a deep understanding of modern ecommerce planning."
             />
-            <a
+            {/* <a
               className="inline-flex items-center gap-2 text-sm font-medium text-[#8dd9ff] transition hover:text-white"
               href="/contact"
             >
               Learn more about our methodology
               <ArrowRight size={16} />
-            </a>
+            </a> */}
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -81,11 +92,16 @@ export default function AboutPage() {
               const Icon = item.icon;
 
               return (
-                <article key={item.title} className="surface-card rounded-[1.6rem] p-8">
+                <article
+                  key={item.title}
+                  className="surface-card rounded-[1.6rem] p-8"
+                >
                   <div className="icon-badge">
                     <Icon size={18} />
                   </div>
-                  <h3 className="mt-6 text-2xl font-semibold text-white">{item.title}</h3>
+                  <h3 className="mt-6 text-2xl font-semibold text-white">
+                    {item.title}
+                  </h3>
                   <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
                     {item.copy}
                   </p>
