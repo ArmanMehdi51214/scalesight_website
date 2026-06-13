@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Eye, Handshake, Lightbulb, Settings2, Target } from "lucide-react";
+import { Eye, Handshake, Lightbulb, Settings2, Target } from "lucide-react";
 
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -94,15 +94,20 @@ export default function AboutPage() {
               return (
                 <article
                   key={item.title}
-                  className="surface-card rounded-[1.6rem] p-8"
+                  className="group surface-card relative h-full overflow-hidden rounded-[1.6rem] border border-white/8 p-8 transition duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-[#04B4FD]/28 hover:shadow-[0_30px_80px_rgba(0,0,0,0.3)]"
                 >
-                  <div className="icon-badge">
+                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(4,180,253,0.12),transparent_55%)] opacity-0 transition duration-300 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#04B4FD]/55 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-x-8 bottom-0 h-px bg-gradient-to-r from-transparent via-[#04B4FD]/65 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+
+                  <div className="icon-badge relative transition duration-300 group-hover:scale-110 group-hover:bg-[#04B4FD]/18 group-hover:text-white group-hover:shadow-[0_0_24px_rgba(4,180,253,0.2)]">
                     <Icon size={18} />
                   </div>
-                  <h3 className="mt-6 text-2xl font-semibold text-white">
+                  <h3 className="relative mt-6 text-2xl font-semibold text-white transition duration-300 group-hover:text-[#d9f2ff]">
                     {item.title}
                   </h3>
-                  <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
+                  <p className="relative mt-4 text-sm leading-7 text-[var(--text-secondary)] transition duration-300 group-hover:text-white/82">
                     {item.copy}
                   </p>
                 </article>
@@ -118,7 +123,7 @@ export default function AboutPage() {
             copy="Bring your planning questions, current systems, and growth targets. We will meet you where you are."
           />
           <div className="mt-10 flex justify-center">
-            <PrimaryButton href="/contact">Start a Conversation</PrimaryButton>
+            <PrimaryButton href="/contact">Book a Strategy Call</PrimaryButton>
           </div>
         </section>
       </main>
