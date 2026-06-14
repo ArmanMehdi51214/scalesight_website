@@ -127,6 +127,14 @@ const decisionQuestions = [
 ];
 
 const showcaseTabs = [
+    {
+    id: "executive",
+    label: "Executive Overview",
+    title: "An executive view built for faster alignment.",
+    description:
+      "A clean operating picture across revenue, inventory, and demand so teams can move from fragmented reporting to coordinated decisions.",
+    image: inventoryDashboard,
+  },
   {
     id: "revenue",
     label: "Revenue Visibility",
@@ -135,14 +143,14 @@ const showcaseTabs = [
       "A forward view of likely revenue, confidence, and weekly movement so growth decisions are grounded in what is most likely to happen next.",
     image: executiveDashboard,
   },
-  {
-    id: "inventory",
-    label: "Inventory Planning",
-    title: "Inventory risk before it becomes a sales problem.",
-    description:
-      "Stock posture, category exposure, and product-level risk in one view so teams can protect revenue without tying up excess capital.",
-    image: inventoryDashboard,
-  },
+  // {
+  //   id: "inventory",
+  //   label: "Inventory Planning",
+  //   title: "Inventory risk before it becomes a sales problem.",
+  //   description:
+  //     "Stock posture, category exposure, and product-level risk in one view so teams can protect revenue without tying up excess capital.",
+  //   image: inventoryDashboard,
+  // },
   {
     id: "demand",
     label: "Demand Trends",
@@ -150,14 +158,6 @@ const showcaseTabs = [
     description:
       "SKU-level demand visibility that helps teams spot pressure early and prioritize the products that matter most.",
     image: demandPlanning,
-  },
-  {
-    id: "executive",
-    label: "Executive Overview",
-    title: "An executive view built for faster alignment.",
-    description:
-      "A clean operating picture across revenue, inventory, and demand so teams can move from fragmented reporting to coordinated decisions.",
-    image: executiveDashboard,
   },
   {
     id: "planning",
@@ -190,39 +190,39 @@ const faqs = [
   {
     question: "What data do you need?",
     answer:
-      "We usually start with Shopify sales, inventory, product, and marketing context.",
+      "We typically work with Shopify sales data, inventory data, marketing performance data, and other operational datasets. During onboarding we review available data sources and build the visibility system around your business.",
   },
   {
     question: "How long does implementation take?",
     answer:
-      "Most brands are live in a few weeks, depending on data access and team availability.",
+      "Most implementations take between 1–3 weeks depending on data availability, integrations, and reporting requirements.",
   },
   {
     question: "Do you work with Shopify?",
     answer:
-      "Yes. ScaleSight is built for Shopify brands and the teams around them.",
+      "Yes. Shopify brands are our primary focus, and our systems are designed around the operational challenges faced by growing ecommerce businesses.",
   },
   {
     question: "Can this help inventory planning?",
     answer:
-      "Yes. It helps teams see stock risk, reorder timing, and demand pressure earlier.",
+      "Yes. ScaleSight helps identify inventory risks, forecast future demand, highlight stockout risks, and support smarter purchasing decisions.",
   },
   {
     question: "Do you offer ongoing support?",
     answer:
-      "Yes. We stay involved as your planning needs evolve and decisions get more complex.",
+      "Yes. We provide ongoing support, optimization, and reporting improvements as business requirements evolve.",
   },
   {
     question: "How accurate are the forecasts?",
     answer:
-      "They are designed to support better decisions, with confidence improving as more business context is connected.",
+      "Forecast accuracy depends on data quality and business conditions, but our focus is not only forecasting accuracy—it is providing better visibility and confidence for business planning decisions.",
   },
   {
     question: "Can this work with multiple channels?",
     answer:
-      "Yes. We can help unify visibility across channels when the data is available.",
+      "Yes. We can combine data from multiple sales and operational channels to provide a unified decision-making view.",
   },
-] as const;
+];
 
 type RevealProps = {
   children: React.ReactNode;
@@ -247,12 +247,12 @@ function HeroDashboardCard({
   alt,
   title,
   className,
-  priority = false,
+  preload = false,
 }: {
   alt: string;
   className: string;
   image: StaticImageData;
-  priority?: boolean;
+  preload?: boolean;
   title: string;
 }) {
   return (
@@ -268,7 +268,7 @@ function HeroDashboardCard({
             alt={alt}
             className="h-auto w-full rounded-[0.85rem] object-cover"
             placeholder="blur"
-            priority={priority}
+            preload={preload}
             sizes="(max-width: 768px) 75vw, 34vw"
             src={image}
           />
@@ -393,17 +393,17 @@ export default function ForecastingPage() {
                   title="Demand Planning"
                 />
                 <HeroDashboardCard
-                  alt="Revenue forecast dashboard"
+                  alt="Executive overview dashboard"
                   className="left-1/2 top-[3.25rem] z-20 w-[58%] -translate-x-1/2 animate-[float-card_6s_ease-in-out_infinite] sm:w-[52%] lg:top-[3rem]"
-                  image={executiveDashboard}
-                  priority
-                  title="Revenue Forecast"
+                  image={inventoryDashboard}
+                  preload
+                  title="Executive Overview"
                 />
                 <HeroDashboardCard
-                  alt="Inventory risk dashboard"
+                  alt="Scenario Planning dashboard"
                   className="right-[2%] top-[5.6rem] z-10 w-[49%] origin-bottom-right rotate-[8deg] animate-[float-card_7.8s_ease-in-out_infinite] sm:right-[5%] sm:w-[42%] lg:top-[5.5rem]"
-                  image={inventoryDashboard}
-                  title="Inventory Risk"
+                  image={scenarioPlanning}
+                  title="Scenario Planning"
                 />
 
                 {/* <div className="absolute inset-x-8 bottom-5 z-30 rounded-[1.4rem] border border-cyan-400/18 bg-[rgba(7,17,31,0.78)] px-4 py-4 backdrop-blur-md sm:px-5">

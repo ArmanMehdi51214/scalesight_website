@@ -1,7 +1,7 @@
 import Image, { type StaticImageData } from "next/image";
 
-import visualOne from "@/public/dashboards for website/visual 1.png";
 import visualTwo from "@/public/dashboards for website/visual 2.png";
+import visualTwos from "@/public/dashboards for website/visual 2s.png";
 import visualThree from "@/public/dashboards for website/viusal 3.png";
 
 const showcaseCards = [
@@ -13,14 +13,14 @@ const showcaseCards = [
     priority: false,
   },
   {
-    image: visualOne,
+    image: visualThree,
     alt: "Executive decision dashboard preview",
     className:
       "left-1/2 top-2 z-20 w-[62%] -translate-x-1/2 sm:w-[58%] md:top-0 md:w-[47%]",
     priority: true,
   },
   {
-    image: visualThree,
+    image: visualTwos,
     alt: "Inventory health dashboard preview",
     className:
       "right-[1%] top-[4.5rem] z-10 w-[54%] origin-right rotate-[10deg] sm:w-[50%] md:right-[5%] md:top-[4.25rem] md:w-[42%]",
