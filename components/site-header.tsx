@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { openCalendlyPopup } from "./marketing-primitives";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -85,7 +86,14 @@ export default function SiteHeader() {
         </nav>
 
         <div className="hidden lg:block">
-          <Link className="primary-button !px-5 !py-3 !text-sm" href="/contact">
+          <Link
+            className="primary-button !px-5 !py-3 !text-sm"
+            href="/contact"
+            onClick={(e) => {
+              e.preventDefault();
+              openCalendlyPopup();
+            }}
+          >
             Book a Strategy Call
           </Link>
         </div>
@@ -135,7 +143,11 @@ export default function SiteHeader() {
                 <Link
                   className="primary-button mt-3 justify-center"
                   href="/contact"
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setOpen(false);
+                    openCalendlyPopup();
+                  }}
                 >
                   Book a Strategy Call
                 </Link>
