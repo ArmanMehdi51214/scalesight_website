@@ -16,7 +16,7 @@ type ButtonProps = {
 export function openCalendlyPopup() {
   if (typeof window !== "undefined" && (window as any).Calendly) {
     (window as any).Calendly.initPopupWidget({
-      url: "https://calendly.com/muhammadwahib001",
+      url: process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/kazmiarmanmehdi/30min",
     });
   }
 }
