@@ -1,3 +1,6 @@
+"use client";
+import { openCalendlyPopup } from "./marketing-primitives";
+
 export default function Hero() {
   return (
     <section className="relative px-6 pb-20 pt-20 md:pb-24 md:pt-28">
@@ -18,7 +21,14 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row">
-            <a className="cta-primary" href="#book-call">
+            <a
+              className="cta-primary"
+              href="#book-call"
+              onClick={(e) => {
+                e.preventDefault();
+                openCalendlyPopup();
+              }}
+            >
               Book a strategy call
             </a>
             <a className="cta-secondary" href="#platform">

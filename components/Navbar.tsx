@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { openCalendlyPopup } from "./marketing-primitives";
 
 const navItems = [
   { href: "#platform", label: "Platform" },
@@ -41,7 +43,14 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        <a className="cta-primary !px-5 !py-3 text-sm" href="#book-call">
+        <a
+          className="cta-primary !px-5 !py-3 text-sm"
+          href="#book-call"
+          onClick={(e) => {
+            e.preventDefault();
+            openCalendlyPopup();
+          }}
+        >
           Book Call
         </a>
       </div>

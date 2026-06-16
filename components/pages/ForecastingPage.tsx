@@ -36,6 +36,7 @@ import executiveDashboard from "@/public/dashboards for website/visual 1.png";
 import demandPlanning from "@/public/dashboards for website/visual 2.png";
 import scenarioPlanning from "@/public/dashboards for website/visual 2s.png";
 import inventoryDashboard from "@/public/dashboards for website/viusal 3.png";
+import executiveOverview from "@/public/dashboards for website/visual 111.png";
 
 const walkthroughVideoId =
   process.env.NEXT_PUBLIC_SCALESIGHT_WALKTHROUGH_VIDEO_ID ?? "QlHoHLyWkfw";
@@ -133,7 +134,7 @@ const showcaseTabs = [
     title: "An executive view built for faster alignment.",
     description:
       "A clean operating picture across revenue, inventory, and demand so teams can move from fragmented reporting to coordinated decisions.",
-    image: inventoryDashboard,
+    image: executiveOverview,
   },
   {
     id: "revenue",
@@ -167,6 +168,14 @@ const showcaseTabs = [
       "Scenario-based views that help operators pressure test spend, timing, and inventory choices before committing.",
     image: scenarioPlanning,
   },
+  {
+    id: "inventory",
+    label: "Inventory Health",
+    title: "Inventory risk before it becomes a sales problem.",
+    description:
+      "Stock posture, category exposure, and product-level risk in one view so teams can protect revenue without tying up excess capital.",
+    image: inventoryDashboard,
+  }
 ] as const;
 
 const whoItsFor = [
@@ -395,7 +404,7 @@ export default function ForecastingPage() {
                 <HeroDashboardCard
                   alt="Executive overview dashboard"
                   className="left-1/2 top-[3.25rem] z-20 w-[58%] -translate-x-1/2 animate-[float-card_6s_ease-in-out_infinite] sm:w-[52%] lg:top-[3rem]"
-                  image={inventoryDashboard}
+                  image={executiveOverview}
                   preload
                   title="Executive Overview"
                 />
