@@ -5,9 +5,9 @@ import Link from "next/link";
 import type { PointerEvent } from "react";
 
 const productLinks = [
-  { href: "/plan-with-confidence", label: "Forecasting" },
-  { href: "/plan-with-confidence", label: "Inventory Visibility" },
-  { href: "/plan-with-confidence", label: "Demand Planning" },
+  { href: "/plan-with-confidence", label: "Ecommerce Forecasting" },
+  { href: "/plan-with-confidence", label: "Inventory Planning" },
+  { href: "/plan-with-confidence", label: "Revenue Visibility" },
 ];
 
 const companyLinks = [
@@ -45,8 +45,8 @@ export default function SiteFooter() {
             />
           </Link>
           <p className="max-w-xs text-sm leading-7 text-[var(--text-secondary)]">
-            Precision demand planning and revenue visibility for teams scaling
-            beyond spreadsheet-driven decisions.
+            Ecommerce decision intelligence for revenue visibility, inventory
+            planning, demand forecasting, and operational decisions.
           </p>
           {/* <div className="flex gap-3">
             {[Globe, Share2].map((Icon, index) => (
@@ -61,7 +61,7 @@ export default function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="footer-heading">Platform</h3>
+          <h3 className="footer-heading">Planning</h3>
           <div className="mt-5 space-y-3">
             {productLinks.map((item) => (
               <Link key={item.label} className="footer-link" href={item.href}>

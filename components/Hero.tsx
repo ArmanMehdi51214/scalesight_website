@@ -31,8 +31,8 @@ export default function Hero() {
             >
               Book a strategy call
             </a>
-            <a className="cta-secondary" href="#platform">
-              Explore the product vision
+            <a className="cta-secondary" href="#decision-system">
+              Explore the planning vision
             </a>
           </div>
         </div>

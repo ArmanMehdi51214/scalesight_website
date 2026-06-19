@@ -2,25 +2,29 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Activity, Leaf } from "lucide-react";
 
+import { absoluteUrl, createPageMetadata, jsonLdMarkup } from "@/app/seo";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { PrimaryButton, SecondaryButton, SectionHeader } from "@/components/marketing-primitives";
 
-export const metadata: Metadata = {
-  title: "ScaleSight | Case Studies & Results",
-  description: "Outcome-focused stories showing how ScaleSight improves planning clarity.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Ecommerce Forecasting Case Studies | ScaleSight",
+  description:
+    "See how ScaleSight helped Shopify and DTC brands gain revenue visibility, inventory planning, and demand forecasting clarity.",
+  path: "/case-studies",
+  image: "/dashboards%20for%20website/visual%202.png",
+});
 
 const studies = [
   {
     tag: "Direct-to-Consumer / Health & Wellness",
     title: "VeloVitality Performance",
     challenge:
-      "Rapid scaling created fragmented planning. Seasonal peaks in hero SKUs regularly triggered stockouts while slower lines soaked up capital.",
+      "Rapid scaling created fragmented ecommerce forecasting and planning. Seasonal peaks in hero SKUs regularly triggered stockouts while slower lines soaked up capital.",
     gap:
       '"We were flying blind between production lead times and live sales velocity. Our spreadsheets were already behind reality."',
     outcome:
-      "A shared planning view plus real-time SKU heatmaps helped the team reduce stockout exposure and tighten weekly decisions.",
+      "A shared planning view plus real-time SKU heatmaps helped the team gain demand visibility, reduce stockout exposure, and tighten weekly decisions.",
     lessons:
       "The biggest return came from avoiding missed demand, not from more reporting.",
     metric: "+34%",
@@ -32,11 +36,11 @@ const studies = [
     tag: "Enterprise / Sustainable Apparel",
     title: "EcoThread Collective",
     challenge:
-      "Longer supply chain lead times made traditional planning too slow for shifting demand in core apparel lines.",
+      "Longer supply chain lead times made Shopify inventory planning too slow for shifting demand in core apparel lines.",
     gap:
       '"We had no clear line of sight into how a logistics delay would change our Black Friday inventory position."',
     outcome:
-      "Scenario modeling allowed the team to move production earlier, protect revenue windows, and reduce cash trapped in slow-moving SKUs.",
+      "Scenario modeling allowed the team to move production earlier, protect revenue visibility, and reduce cash trapped in slow-moving SKUs.",
     lessons:
       "Visibility across finance, merchandising, and supply chain made growth tradeoffs explicit instead of political.",
     metric: "$1.2M",
@@ -51,7 +55,7 @@ function StudyVisual({ visual }: { visual: "image" | "chart" }) {
     return (
       <div className="overflow-hidden rounded-[1rem] border border-white/8">
         <Image
-          alt="SKU demand forecast dashboard preview"
+          alt="Shopify demand forecasting dashboard preview with SKU-level inventory planning"
           className="h-auto w-full object-cover"
           height={1024}
           src="/dashboards%20for%20website/visual%202.png"
@@ -64,7 +68,7 @@ function StudyVisual({ visual }: { visual: "image" | "chart" }) {
   return (
     <div className="overflow-hidden rounded-[1rem] border border-white/8">
       <Image
-        alt="Revenue forecasting dashboard preview"
+        alt="Ecommerce revenue visibility dashboard preview for forecasting case study"
         className="h-auto w-full object-cover"
         height={1024}
         src="/dashboards%20for%20website/visual%201.png"
@@ -83,8 +87,9 @@ export default function CaseStudiesPage() {
           <SectionHeader
             eyebrow="Success Stories"
             align="center"
+            level="h1"
             title="Visibility Creates Better Outcomes."
-            copy="Real examples of ecommerce brands replacing fragmented planning with one clearer operating view."
+            copy="Real examples of ecommerce brands replacing fragmented planning with revenue visibility, inventory planning, demand forecasting, and ecommerce decision intelligence."
           />
         </section>
 
@@ -100,9 +105,9 @@ export default function CaseStudiesPage() {
                       <p className="text-xs uppercase tracking-[0.24em] text-[#8dd9ff]">
                         {study.tag}
                       </p>
-                      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                      <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
                         {study.title}
-                      </h2>
+                      </h3>
                     </div>
                     <div className="hidden rounded-2xl border border-white/10 bg-white/5 p-3 text-[#8dd9ff] md:inline-flex">
                       <Icon size={24} />
@@ -164,11 +169,38 @@ export default function CaseStudiesPage() {
             />
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <PrimaryButton href="/contact">Book a Strategy Call</PrimaryButton>
-              <SecondaryButton href="/services">Explore the Platform</SecondaryButton>
+              <SecondaryButton href="/plan-with-confidence">
+                Explore ecommerce planning
+              </SecondaryButton>
             </div>
           </div>
         </section>
       </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLdMarkup({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Ecommerce Forecasting Case Studies",
+            url: absoluteUrl("/case-studies"),
+            description:
+              "ScaleSight case studies covering revenue visibility, inventory planning, demand forecasting, and ecommerce decision intelligence.",
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: studies.map((study, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                  "@type": "CreativeWork",
+                  name: study.title,
+                  description: `${study.challenge} ${study.outcome}`,
+                },
+              })),
+            },
+          }),
+        }}
+      />
       <SiteFooter />
     </>
   );

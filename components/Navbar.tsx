@@ -4,7 +4,7 @@ import Link from "next/link";
 import { openCalendlyPopup } from "./marketing-primitives";
 
 const navItems = [
-  { href: "#platform", label: "Platform" },
+  { href: "#decision-system", label: "Planning" },
   { href: "#forecasting", label: "Forecasting" },
   { href: "#results", label: "Results" },
   { href: "#mission", label: "Mission" },

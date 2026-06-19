@@ -6,7 +6,9 @@ import {
   TrendingDown,
   TriangleAlert,
 } from "lucide-react";
+import type { Metadata } from "next";
 
+import { createPageMetadata } from "@/app/seo";
 import DashboardGridShowcase from "@/components/DashboardGridShowcase";
 import PerspectiveShowcase from "@/components/PerspectiveShowcase";
 import ShaderBackdrop from "@/components/ShaderBackdrop";
@@ -17,6 +19,13 @@ import {
   SecondaryButton,
   SectionHeader,
 } from "@/components/marketing-primitives";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "ScaleSight | Ecommerce Decision Intelligence & Business Visibility",
+  description:
+    "Turn ecommerce data into visibility, forecasting, inventory planning, and smarter operational decisions. Built for growing Shopify and DTC brands.",
+  path: "/",
+});
 
 const trustItems = [
   "Shopify",
@@ -72,24 +81,24 @@ const problemCards = [
 
 const visibilityCards = [
   {
-    label: "Forecasted Revenue",
+    label: "Revenue Visibility",
     value: "$2.4M",
-    copy: "Projected for Q4 based on current demand velocity and campaign pacing.",
+    copy: "Projected for Q4 based on current demand velocity, campaign pacing, and sales forecasting for ecommerce growth.",
   },
   {
-    label: "Inventory Risk",
+    label: "Inventory Planning",
     value: "Low Risk",
-    copy: "98.2% fulfillment confidence across top-performing SKU clusters.",
+    copy: "98.2% fulfillment confidence with inventory visibility across top-performing SKU clusters.",
   },
   {
-    label: "Demand Trends",
+    label: "Demand Forecasting",
     value: "+18.5%",
-    copy: "Rising demand in high-contribution assortment lines detected early.",
+    copy: "Rising demand in high-contribution assortment lines detected early through ecommerce demand forecasting.",
   },
   {
-    label: "Recommendations",
+    label: "Operational Decision Intelligence",
     value: "6 New",
-    copy: "Planning actions are ready for review before the week begins.",
+    copy: "Planning actions are ready for review before the week begins so operational decisions stay aligned.",
   },
 ];
 
@@ -111,13 +120,13 @@ const processSteps = [
   ],
   [
     "02",
-    "Build Forecasting Models",
-    "Develop forecasting systems tailored to the business.",
+    "Model Demand And Inventory",
+    "Connect demand forecasting, inventory planning, and revenue visibility.",
   ],
   [
     "03",
     "Create Visibility Dashboard",
-    "Build decision-focused visibility tools.",
+    "Build an ecommerce reporting dashboard for decision-focused visibility.",
   ],
   ["04", "Deliver Actionable Insights", "Translate data into recommendations."],
   ["05", "Support Planning Decisions", "Help teams plan with confidence."],
@@ -137,12 +146,12 @@ const storyCards = [
   {
     step: "CARD 3",
     title: "Dashboard Insight",
-    copy: "Demand forecast highlighted future inventory risk.",
+    copy: "Demand forecasting highlighted future inventory risk and revenue visibility gaps.",
   },
   {
     step: "CARD 4",
     title: "Planning Outcome",
-    copy: "Improved inventory planning and better operational decisions.",
+    copy: "Improved inventory planning and better operational decision intelligence.",
   },
 ];
 
@@ -172,16 +181,17 @@ export default function Home() {
                 <span className="text-gradient-primary">Confidence.</span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-[var(--text-secondary)] md:text-lg md:leading-8">
-                Turn sales, inventory, and customer data into clearer forecasts,
-                smarter planning, and better business decisions.
+                ScaleSight is an ecommerce decision intelligence partner,
+                turning sales, inventory, and customer data into revenue
+                visibility, smarter planning, and better business decisions.
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <PrimaryButton href="/contact">
                   Book a Strategy Call
                 </PrimaryButton>
-                <SecondaryButton href="/services">
-                  Watch 90-Second Walkthrough
+                <SecondaryButton href="/plan-with-confidence">
+                  See how ecommerce forecasting works
                 </SecondaryButton>
               </div>
             </div>
@@ -300,19 +310,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[rgba(18,28,40,0.9)] px-6 py-24">
+        <section
+          className="bg-[rgba(18,28,40,0.9)] px-6 py-24"
+          id="decision-system"
+        >
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
               <SectionHeader
-                eyebrow="Platform Core"
+                eyebrow="Decision System"
                 title="What ScaleSight Helps You See"
-                copy="Transform business data into operational visibility."
+                copy="Transform business data into a business visibility dashboard for revenue, inventory, demand, and operational visibility."
               />
               <a
                 className="inline-flex items-center gap-2 text-sm font-medium text-[#8dd9ff] transition hover:text-white"
-                href="/services"
+                href="/plan-with-confidence"
               >
-                Explore all modules
+                Explore ecommerce forecasting and planning
                 <ArrowRight size={16} />
               </a>
             </div>
@@ -389,7 +402,7 @@ export default function Home() {
                 "Inventory Visibility",
                 "Demand Forecasting",
                 "Executive Overview",
-                "Operational Planning",
+                "Operational Decision Intelligence",
               ].map((item, index) => (
                 <div
                   key={item}
@@ -454,7 +467,7 @@ export default function Home() {
             </div>
             <div className="mt-10 flex justify-center">
               <SecondaryButton href="/case-studies">
-                View Case Studies
+                View ecommerce forecasting case studies
               </SecondaryButton>
             </div>
           </div>
@@ -471,9 +484,9 @@ export default function Home() {
               <PrimaryButton href="/contact">
                 Book a Strategy Call
               </PrimaryButton>
-              {/* <SecondaryButton href="/services">
-                Talk to an Expert
-              </SecondaryButton> */}
+              <SecondaryButton href="/about">
+                Meet the ecommerce analytics experts
+              </SecondaryButton>
             </div>
           </div>
         </section>
