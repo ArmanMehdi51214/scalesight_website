@@ -5,7 +5,11 @@ import { Activity, Leaf } from "lucide-react";
 import { absoluteUrl, createPageMetadata, jsonLdMarkup } from "@/app/seo";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
-import { PrimaryButton, SecondaryButton, SectionHeader } from "@/components/marketing-primitives";
+import {
+  PrimaryButton,
+  SecondaryButton,
+  SectionHeader,
+} from "@/components/marketing-primitives";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Ecommerce Forecasting Case Studies | ScaleSight",
@@ -53,11 +57,12 @@ const studies = [
 function StudyVisual({ visual }: { visual: "image" | "chart" }) {
   if (visual === "image") {
     return (
-      <div className="overflow-hidden rounded-[1rem] border border-white/8">
+      <div className="overflow-hidden rounded-[1.25rem] border border-white/8 bg-white/[0.03] shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
         <Image
           alt="Shopify demand forecasting dashboard preview with SKU-level inventory planning"
-          className="h-auto w-full object-cover"
+          className="aspect-[16/10] h-auto w-full object-cover"
           height={1024}
+          sizes="(max-width: 768px) 100vw, 720px"
           src="/dashboards%20for%20website/visual%202.png"
           width={1536}
         />
@@ -66,11 +71,12 @@ function StudyVisual({ visual }: { visual: "image" | "chart" }) {
   }
 
   return (
-    <div className="overflow-hidden rounded-[1rem] border border-white/8">
+    <div className="overflow-hidden rounded-[1.25rem] border border-white/8 bg-white/[0.03] shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
       <Image
         alt="Ecommerce revenue visibility dashboard preview for forecasting case study"
-        className="h-auto w-full object-cover"
+        className="aspect-[16/10] h-auto w-full object-cover"
         height={1024}
+        sizes="(max-width: 768px) 100vw, 720px"
         src="/dashboards%20for%20website/visual%201.png"
         width={1536}
       />
@@ -82,7 +88,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       <SiteHeader />
-      <main className="px-4 py-20 md:px-6 md:py-24">
+      <main className="px-4 py-16 sm:px-6 md:py-24">
         <section className="mx-auto max-w-5xl text-center">
           <SectionHeader
             eyebrow="Success Stories"
@@ -93,38 +99,58 @@ export default function CaseStudiesPage() {
           />
         </section>
 
-        <section className="mx-auto mt-20 flex max-w-4xl flex-col gap-10">
+        <section className="mx-auto mt-14 flex max-w-6xl flex-col gap-8 md:mt-20 md:gap-10">
           {studies.map((study) => {
             const Icon = study.icon;
 
             return (
-              <article key={study.title} className="surface-card relative overflow-hidden rounded-[2rem] p-7 md:p-10">
-                <div className="flex flex-col gap-8">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.24em] text-[#8dd9ff]">
-                        {study.tag}
-                      </p>
-                      <h3 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
-                        {study.title}
-                      </h3>
+              <article
+                key={study.title}
+                className="surface-card relative overflow-hidden rounded-[1.7rem] p-5 sm:p-7 md:rounded-[2rem] md:p-9 lg:p-10"
+              >
+                <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#04B4FD]/50 to-transparent" />
+
+                <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(22rem,1.05fr)] lg:gap-10">
+                  <div className="flex min-w-0 flex-col">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="min-w-0">
+                        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-[#8dd9ff] sm:text-xs">
+                          {study.tag}
+                        </p>
+                        <h3 className="mt-4 text-2xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-3xl md:text-4xl">
+                          {study.title}
+                        </h3>
+                      </div>
+                      <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] border border-white/10 bg-white/5 text-[#8dd9ff] sm:inline-flex">
+                        <Icon size={22} />
+                      </div>
                     </div>
-                    <div className="hidden rounded-2xl border border-white/10 bg-white/5 p-3 text-[#8dd9ff] md:inline-flex">
-                      <Icon size={24} />
+
+                    <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                      <div className="rounded-[1.25rem] border border-white/8 bg-white/[0.035] p-5">
+                        <p className="story-label">The Challenge</p>
+                        <p className="story-copy">{study.challenge}</p>
+                      </div>
+
+                      <div className="rounded-[1.25rem] border border-[#04B4FD]/14 bg-[#04B4FD]/[0.045] p-5">
+                        <p className="story-label text-[#8dd9ff]">
+                          Visibility Gap
+                        </p>
+                        <p className="story-copy italic">{study.gap}</p>
+                      </div>
+                    </div>
+
+                    <div className="mt-7 w-fit rounded-[1.2rem] bg-[linear-gradient(135deg,var(--blue-primary),var(--blue-secondary))] px-5 py-4 shadow-[0_20px_60px_rgba(0,94,240,0.28)]">
+                      <p className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                        {study.metric}
+                      </p>
+                      <p className="mt-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/78">
+                        {study.label}
+                      </p>
                     </div>
                   </div>
 
-                  <div className="space-y-6">
-                    <div>
-                      <p className="story-label">The Challenge</p>
-                      <p className="story-copy">{study.challenge}</p>
-                    </div>
-
-                    <div>
-                      <p className="story-label text-[#8dd9ff]">Visibility Gap</p>
-                      <p className="story-copy italic">{study.gap}</p>
-                    </div>
-
+                  <div className="min-w-0">
                     <div>
                       <p className="story-label">Solution Implementation</p>
                       <div className="mt-4">
@@ -132,27 +158,16 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
 
-                    <div className="grid gap-6 md:grid-cols-2">
-                      <div>
+                    <div className="mt-6 grid gap-4 md:grid-cols-2">
+                      <div className="rounded-[1.25rem] border border-white/8 bg-[rgba(7,17,31,0.48)] p-5">
                         <p className="story-label">Outcome</p>
                         <p className="story-copy">{study.outcome}</p>
                       </div>
-                      <div>
+                      <div className="rounded-[1.25rem] border border-white/8 bg-[rgba(7,17,31,0.48)] p-5">
                         <p className="story-label">Lessons Learned</p>
                         <p className="story-copy">{study.lessons}</p>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 flex justify-end md:absolute md:bottom-8 md:right-8 md:mt-0">
-                  <div className="rounded-[1.25rem] bg-[linear-gradient(135deg,var(--blue-primary),var(--blue-secondary))] px-6 py-5 text-right shadow-[0_20px_60px_rgba(0,94,240,0.28)]">
-                    <p className="text-4xl font-semibold tracking-tight text-white">
-                      {study.metric}
-                    </p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.2em] text-white/78">
-                      {study.label}
-                    </p>
                   </div>
                 </div>
               </article>
@@ -160,7 +175,7 @@ export default function CaseStudiesPage() {
           })}
         </section>
 
-        <section className="mx-auto mt-24 max-w-5xl">
+        <section className="mx-auto mt-16 max-w-5xl md:mt-24">
           <div className="cta-panel text-center">
             <SectionHeader
               align="center"
