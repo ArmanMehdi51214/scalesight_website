@@ -6,6 +6,10 @@ import ShaderBackdrop from "@/components/ShaderBackdrop";
 export const metadata: Metadata = {
   title: "ScaleSight Design System",
   description: "Design system and shader study for the ScaleSight marketing site.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const colors = [

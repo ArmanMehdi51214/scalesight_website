@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { createPageMetadata, jsonLdMarkup } from "@/app/seo";
+import { createPageMetadata, jsonLdMarkup, publisherJsonLd } from "@/app/seo";
 import ForecastingPage from "@/components/pages/ForecastingPage";
 
 export const metadata: Metadata = createPageMetadata({
@@ -9,6 +9,14 @@ export const metadata: Metadata = createPageMetadata({
     "See future revenue, inventory risks, and demand trends before they happen. Plan with confidence using ScaleSight's ecommerce decision system.",
   path: "/plan-with-confidence",
   image: "/dashboards%20for%20website/visual%201.png",
+  keywords: [
+    "ecommerce forecasting",
+    "inventory forecasting",
+    "demand forecasting",
+    "sales forecasting for ecommerce",
+    "revenue forecasting",
+    "inventory visibility",
+  ],
 });
 
 const faqItems = [
@@ -52,6 +60,7 @@ const faqItems = [
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  publisher: publisherJsonLd,
   mainEntity: faqItems.map((item) => ({
     "@type": "Question",
     name: item.question,

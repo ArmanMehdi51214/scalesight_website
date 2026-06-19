@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Activity, Leaf } from "lucide-react";
 
-import { absoluteUrl, createPageMetadata, jsonLdMarkup } from "@/app/seo";
+import {
+  absoluteUrl,
+  createPageMetadata,
+  jsonLdMarkup,
+  publisherJsonLd,
+} from "@/app/seo";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import {
@@ -17,6 +22,12 @@ export const metadata: Metadata = createPageMetadata({
     "See how ScaleSight helped Shopify and DTC brands gain revenue visibility, inventory planning, and demand forecasting clarity.",
   path: "/case-studies",
   image: "/dashboards%20for%20website/visual%202.png",
+  keywords: [
+    "ecommerce forecasting case study",
+    "Shopify forecasting",
+    "Shopify inventory planning",
+    "ecommerce decision intelligence",
+  ],
 });
 
 const studies = [
@@ -199,6 +210,7 @@ export default function CaseStudiesPage() {
             "@type": "CollectionPage",
             name: "Ecommerce Forecasting Case Studies",
             url: absoluteUrl("/case-studies"),
+            publisher: publisherJsonLd,
             description:
               "ScaleSight case studies covering revenue visibility, inventory planning, demand forecasting, and ecommerce decision intelligence.",
             mainEntity: {

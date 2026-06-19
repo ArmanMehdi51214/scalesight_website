@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 
-import { absoluteUrl, createPageMetadata, jsonLdMarkup } from "@/app/seo";
+import {
+  absoluteUrl,
+  createPageMetadata,
+  jsonLdMarkup,
+  publisherJsonLd,
+} from "@/app/seo";
 
 import ContactPageClient from "./contact-page-client";
 
@@ -9,6 +14,12 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Book a strategy call to discuss ecommerce forecasting, inventory planning, and demand visibility for your Shopify or DTC brand.",
   path: "/contact",
+  keywords: [
+    "ecommerce forecasting consultation",
+    "ecommerce planning consultation",
+    "ecommerce analytics consultation",
+    "strategy call ecommerce",
+  ],
 });
 
 const contactPageJsonLd = {
@@ -16,6 +27,7 @@ const contactPageJsonLd = {
   "@type": "ContactPage",
   name: "Book An Ecommerce Forecasting Consultation",
   url: absoluteUrl("/contact"),
+  publisher: publisherJsonLd,
   description:
     "Book a strategy call to discuss ecommerce forecasting, inventory planning, demand visibility, and operational decision intelligence with ScaleSight.",
 };

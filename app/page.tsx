@@ -25,6 +25,14 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Turn ecommerce data into visibility, forecasting, inventory planning, and smarter operational decisions. Built for growing Shopify and DTC brands.",
   path: "/",
+  keywords: [
+    "ecommerce decision intelligence",
+    "ecommerce analytics platform",
+    "ecommerce reporting dashboard",
+    "business visibility dashboard",
+    "operational visibility",
+    "inventory visibility",
+  ],
 });
 
 const trustItems = [

@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { Eye, Handshake, Lightbulb, Settings2, Target } from "lucide-react";
 
-import { absoluteUrl, createPageMetadata, jsonLdMarkup } from "@/app/seo";
+import {
+  absoluteUrl,
+  createPageMetadata,
+  jsonLdMarkup,
+  publisherJsonLd,
+} from "@/app/seo";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import {
@@ -15,6 +20,13 @@ export const metadata: Metadata = {
     description:
       "ScaleSight helps growing Shopify and DTC brands plan with confidence through ecommerce analytics, forecasting, and decision intelligence. Learn about our approach.",
     path: "/about",
+    keywords: [
+      "ecommerce analytics experts",
+      "ecommerce consulting",
+      "ecommerce planning solutions",
+      "ecommerce forecasting experts",
+      "data driven ecommerce growth",
+    ],
   }),
 };
 
@@ -23,6 +35,7 @@ const aboutPageJsonLd = {
   "@type": "AboutPage",
   name: "About ScaleSight",
   url: absoluteUrl("/about"),
+  publisher: publisherJsonLd,
   description:
     "ScaleSight helps Shopify and DTC brands with ecommerce analytics, revenue visibility, inventory planning, demand forecasting, and operational decision intelligence.",
 };

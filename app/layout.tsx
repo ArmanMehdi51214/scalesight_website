@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
 
@@ -15,9 +15,20 @@ export const metadata: Metadata = {
   title: "ScaleSight | Ecommerce Decision Intelligence & Business Visibility",
   description:
     "Turn ecommerce data into visibility, forecasting, inventory planning, and smarter operational decisions. Built for growing Shopify and DTC brands.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  other: {
+    publisher: "ScaleSight",
+  },
   icons: {
     icon: "/favicon.png",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#07111F",
 };
 
 const organizationJsonLd = {
@@ -25,7 +36,10 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "ScaleSight",
   url: siteUrl,
-  logo: absoluteUrl("/logo.png"),
+  logo: {
+    "@type": "ImageObject",
+    url: absoluteUrl("/logo.png"),
+  },
   description:
     "ScaleSight provides ecommerce decision intelligence, revenue visibility, inventory planning, and demand forecasting for Shopify and DTC brands.",
   contactPoint: {
@@ -47,6 +61,10 @@ export default function RootLayout({
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
         />
+        <link rel="preconnect" href="https://assets.calendly.com" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
       </head>
       <body className={geist.variable}>
         {children}
