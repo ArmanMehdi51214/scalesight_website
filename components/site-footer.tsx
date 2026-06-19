@@ -41,6 +41,7 @@ export default function SiteFooter() {
               className="h-auto w-[9.5rem] md:w-[10.5rem]"
               height={1216}
               src="/logo.png"
+              title="ScaleSight logo"
               width={4345}
             />
           </Link>
@@ -105,15 +106,17 @@ export default function SiteFooter() {
           height={1216}
           priority={false}
           src="/logo.png"
+          title="ScaleSight logo"
           width={4345}
         />
         <Image
-          alt=""
+          alt="ScaleSight logo color highlight"
           aria-hidden="true"
           className="footer-brand-image footer-brand-image--color"
           height={1216}
           priority={false}
           src="/logo.png"
+          title="ScaleSight logo color highlight"
           width={4345}
         />
       </div>

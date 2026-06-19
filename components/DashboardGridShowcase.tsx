@@ -70,6 +70,7 @@ export default function DashboardGridShowcase() {
                 height={1024}
                 src={card.src}
                 style={{ objectPosition: card.objectPosition }}
+                title={card.alt}
                 width={1536}
               />
             </button>
@@ -110,6 +111,7 @@ export default function DashboardGridShowcase() {
                 priority
                 src={selectedCard.src}
                 style={{ objectPosition: selectedCard.objectPosition }}
+                title={selectedCard.alt}
                 width={1536}
               />
             </div>

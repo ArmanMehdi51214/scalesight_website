@@ -49,6 +49,7 @@ function ShowcaseCard({
         priority={priority}
         sizes="(max-width: 640px) 62vw, (max-width: 1024px) 48vw, 34vw"
         src={image}
+        title={alt}
       />
     </div>
   );

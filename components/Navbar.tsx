@@ -21,6 +21,7 @@ export default function Navbar() {
             width={176}
             height={38}
             priority
+            title="ScaleSight logo"
           />
         </Link>
 

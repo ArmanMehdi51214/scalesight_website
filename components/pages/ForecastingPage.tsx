@@ -272,6 +272,7 @@ function HeroDashboardCard({
             preload={preload}
             sizes="(max-width: 768px) 75vw, 34vw"
             src={image}
+            title={alt}
           />
         </div>
       </div>
@@ -464,6 +465,7 @@ export default function ForecastingPage() {
                           placeholder="blur"
                           priority
                           src={executiveDashboard}
+                          title="ScaleSight walkthrough preview"
                         />
                         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,10,18,0.22),rgba(3,10,18,0.56))]" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(4,180,253,0.16),transparent_58%)]" />
@@ -677,6 +679,7 @@ export default function ForecastingPage() {
                     priority
                     sizes="(max-width: 1280px) 100vw, 1120px"
                     src={activeShowcase.image}
+                    title={`${activeShowcase.label} ecommerce dashboard`}
                   />
                 </div>
               </div>
@@ -804,6 +807,7 @@ export default function ForecastingPage() {
                     className="absolute inset-0 h-full w-full object-cover opacity-[0.08]"
                     placeholder="blur"
                     src={scenarioPlanning}
+                    title="ScaleSight dashboard background"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.56),rgba(7,17,31,0.92))]" />
                   <div className="absolute right-[-8rem] top-[-6rem] h-[20rem] w-[20rem] rounded-full bg-[radial-gradient(circle,rgba(4,180,253,0.2),transparent_64%)] blur-3xl" />

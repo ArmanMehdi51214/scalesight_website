@@ -75,6 +75,7 @@ function StudyVisual({ visual }: { visual: "image" | "chart" }) {
           height={1024}
           sizes="(max-width: 768px) 100vw, 720px"
           src="/dashboards%20for%20website/visual%202.png"
+          title="Shopify demand forecasting dashboard preview"
           width={1536}
         />
       </div>
@@ -89,6 +90,7 @@ function StudyVisual({ visual }: { visual: "image" | "chart" }) {
         height={1024}
         sizes="(max-width: 768px) 100vw, 720px"
         src="/dashboards%20for%20website/visual%201.png"
+        title="Ecommerce revenue visibility dashboard preview"
         width={1536}
       />
     </div>
