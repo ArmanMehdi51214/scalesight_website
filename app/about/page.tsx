@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Eye, Handshake, Lightbulb, Settings2, Target } from "lucide-react";
 
+import {
+  absoluteUrl,
+  createPageMetadata,
+  jsonLdMarkup,
+  publisherJsonLd,
+} from "@/app/seo";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import {
@@ -9,9 +15,29 @@ import {
 } from "@/components/marketing-primitives";
 
 export const metadata: Metadata = {
-  title: "ScaleSight | About the Mission",
+  ...createPageMetadata({
+    title: "About ScaleSight | Ecommerce Analytics & Forecasting Experts",
+    description:
+      "ScaleSight helps growing Shopify and DTC brands plan with confidence through ecommerce analytics, forecasting, and decision intelligence. Learn about our approach.",
+    path: "/about",
+    keywords: [
+      "ecommerce analytics experts",
+      "ecommerce consulting",
+      "ecommerce planning solutions",
+      "ecommerce forecasting experts",
+      "data driven ecommerce growth",
+    ],
+  }),
+};
+
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "About ScaleSight",
+  url: absoluteUrl("/about"),
+  publisher: publisherJsonLd,
   description:
-    "The mission, values, and operating philosophy behind ScaleSight.",
+    "ScaleSight helps Shopify and DTC brands with ecommerce analytics, revenue visibility, inventory planning, demand forecasting, and operational decision intelligence.",
 };
 
 const values = [
@@ -51,8 +77,9 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="Our Vision"
             align="center"
+            level="h1"
             title="Helping Ecommerce Brands Scale Without Guesswork."
-            copy="We bridge the gap between data complexity and practical intelligence for operators managing modern retail growth."
+            copy="We bridge the gap between data complexity and practical intelligence for operators managing revenue visibility, inventory planning, demand forecasting, and operational decision intelligence."
           />
         </section>
 
@@ -65,6 +92,11 @@ export default function AboutPage() {
             <div className="mx-auto mt-8 h-px w-24 bg-[linear-gradient(90deg,rgba(255,255,255,0),rgba(4,180,253,0.85),rgba(255,255,255,0))]" />
             <p className="mt-6 text-xs uppercase tracking-[0.24em] text-[var(--text-muted)]">
               Our core mission
+            </p>
+            <p className="relative mx-auto mt-6 max-w-3xl text-sm leading-7 text-[var(--text-secondary)]">
+              As ecommerce analytics experts, we support data driven ecommerce
+              growth by helping teams turn fragmented sales, inventory, and
+              demand signals into clearer planning decisions.
             </p>
           </div>
         </section>
@@ -124,6 +156,10 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdMarkup(aboutPageJsonLd) }}
+      />
       <SiteFooter />
     </>
   );

@@ -8,21 +8,21 @@ import visualoneone from "@/public/dashboards for website/visual 111.png";
 const showcaseCards = [
   {
     image: visualTwo,
-    alt: "Revenue forecasting dashboard preview",
+    alt: "Ecommerce revenue forecasting dashboard preview",
     className:
       "left-[1%] top-[4.5rem] z-10 w-[54%] origin-left -rotate-[10deg] sm:w-[50%] md:left-[5%] md:top-[4.25rem] md:w-[42%]",
     priority: false,
   },
   {
     image: visualoneone,
-    alt: "Executive decision dashboard preview",
+    alt: "Executive dashboard preview for ecommerce decision intelligence",
     className:
       "left-1/2 top-2 z-20 w-[62%] -translate-x-1/2 sm:w-[58%] md:top-0 md:w-[47%]",
     priority: true,
   },
   {
     image: visualTwos,
-    alt: "Inventory health dashboard preview",
+    alt: "Inventory planning dashboard preview with scenario visibility",
     className:
       "right-[1%] top-[4.5rem] z-10 w-[54%] origin-right rotate-[10deg] sm:w-[50%] md:right-[5%] md:top-[4.25rem] md:w-[42%]",
     priority: false,
@@ -49,6 +49,7 @@ function ShowcaseCard({
         priority={priority}
         sizes="(max-width: 640px) 62vw, (max-width: 1024px) 48vw, 34vw"
         src={image}
+        title={alt}
       />
     </div>
   );

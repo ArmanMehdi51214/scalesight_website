@@ -65,6 +65,7 @@ export default function SiteHeader() {
             height={1216}
             priority
             src="/logo.png"
+            title="ScaleSight logo"
             width={4345}
           />
         </Link>

@@ -6,7 +6,6 @@ import {
   ArrowRight,
   Boxes,
   BriefcaseBusiness,
-  ChartColumnIncreasing,
   ChartSpline,
   CirclePlay,
   Eye,
@@ -41,25 +40,18 @@ import executiveOverview from "@/public/dashboards for website/visual 111.png";
 const walkthroughVideoId =
   process.env.NEXT_PUBLIC_SCALESIGHT_WALKTHROUGH_VIDEO_ID ?? "QlHoHLyWkfw";
 
-const trustItems = [
-  "Revenue visibility",
-  "Inventory planning",
-  "Demand forecasting",
-  "Operational clarity",
-];
-
 const problemCards = [
   {
     icon: TrendingDown,
     title: "Revenue Uncertainty",
-    copy: "Can we realistically hit next month's target?",
+    copy: "Can revenue forecasting show whether we can realistically hit next month's target?",
     borderClass: "border-l-[#f43f5e]/60",
     iconClass: "bg-[#f43f5e]/12 text-[#fda4af]",
   },
   {
     icon: Boxes,
     title: "Inventory Pressure",
-    copy: "Will inventory support expected demand?",
+    copy: "Will inventory forecasting and planning keep stock aligned with expected demand?",
     borderClass: "border-l-[#f59e0b]/60",
     iconClass: "bg-[#f59e0b]/12 text-[#fcd34d]",
   },
@@ -106,13 +98,13 @@ const visibilityCards = [
   },
   {
     icon: ChartSpline,
-    title: "Demand Intelligence",
-    copy: "Understand future demand patterns.",
+    title: "Demand Forecasting",
+    copy: "Understand future demand patterns with demand forecasting tied to revenue and inventory.",
   },
   {
     icon: Sparkles,
-    title: "Planning Recommendations",
-    copy: "Receive insights that support better decisions.",
+    title: "Operational Decision Intelligence",
+    copy: "Receive insights that support better operational decisions across revenue, inventory, and demand.",
   },
 ] as const;
 
@@ -214,7 +206,7 @@ const faqs = [
   {
     question: "Can this help inventory planning?",
     answer:
-      "Yes. ScaleSight helps identify inventory risks, forecast future demand, highlight stockout risks, and support smarter purchasing decisions.",
+      "Yes. ScaleSight helps with inventory planning by identifying inventory risks, forecasting future demand, highlighting stockout risks, and supporting smarter purchasing decisions.",
   },
   {
     question: "Do you offer ongoing support?",
@@ -280,6 +272,7 @@ function HeroDashboardCard({
             preload={preload}
             sizes="(max-width: 768px) 75vw, 34vw"
             src={image}
+            title={alt}
           />
         </div>
       </div>
@@ -396,20 +389,20 @@ export default function ForecastingPage() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(4,180,253,0.18),transparent_58%)]" />
 
                 <HeroDashboardCard
-                  alt="Demand planning dashboard"
+                  alt="Ecommerce demand forecasting dashboard showing future demand patterns"
                   className="left-[2%] top-[5.6rem] z-10 w-[49%] origin-bottom-left -rotate-[8deg] animate-[float-card_7.2s_ease-in-out_infinite] sm:left-[5%] sm:w-[42%] lg:top-[5.5rem]"
                   image={demandPlanning}
                   title="Demand Planning"
                 />
                 <HeroDashboardCard
-                  alt="Executive overview dashboard"
+                  alt="Executive dashboard for ecommerce revenue visibility and operational decision intelligence"
                   className="left-1/2 top-[3.25rem] z-20 w-[58%] -translate-x-1/2 animate-[float-card_6s_ease-in-out_infinite] sm:w-[52%] lg:top-[3rem]"
                   image={executiveOverview}
                   preload
                   title="Executive Overview"
                 />
                 <HeroDashboardCard
-                  alt="Scenario Planning dashboard"
+                  alt="Scenario planning dashboard for ecommerce inventory forecasting and planning decisions"
                   className="right-[2%] top-[5.6rem] z-10 w-[49%] origin-bottom-right rotate-[8deg] animate-[float-card_7.8s_ease-in-out_infinite] sm:right-[5%] sm:w-[42%] lg:top-[5.5rem]"
                   image={scenarioPlanning}
                   title="Scenario Planning"
@@ -472,6 +465,7 @@ export default function ForecastingPage() {
                           placeholder="blur"
                           priority
                           src={executiveDashboard}
+                          title="ScaleSight walkthrough preview"
                         />
                         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,10,18,0.22),rgba(3,10,18,0.56))]" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(4,180,253,0.16),transparent_58%)]" />
@@ -679,12 +673,13 @@ export default function ForecastingPage() {
               <div className="overflow-hidden rounded-[1.9rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,23,39,0.98),rgba(8,15,26,0.96))] p-3 shadow-[0_24px_80px_rgba(0,0,0,0.28)] md:p-4">
                 <div className="overflow-hidden rounded-[1.35rem] border border-white/8 bg-[rgba(6,12,21,0.94)]">
                   <Image
-                    alt={activeShowcase.label}
+                    alt={`${activeShowcase.label} ecommerce dashboard showing revenue visibility, inventory planning, demand forecasting, and operational decision intelligence`}
                     className="h-auto w-full object-cover"
                     placeholder="blur"
                     priority
                     sizes="(max-width: 1280px) 100vw, 1120px"
                     src={activeShowcase.image}
+                    title={`${activeShowcase.label} ecommerce dashboard`}
                   />
                 </div>
               </div>
@@ -759,6 +754,13 @@ export default function ForecastingPage() {
                       </span>
                     ))}
                   </div>
+                  <a
+                    className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-[#8dd9ff] transition hover:text-white"
+                    href="/case-studies"
+                  >
+                    See how this worked for a Shopify brand
+                    <ArrowRight size={16} />
+                  </a>
                 </div>
               </Reveal>
             </div>
@@ -805,6 +807,7 @@ export default function ForecastingPage() {
                     className="absolute inset-0 h-full w-full object-cover opacity-[0.08]"
                     placeholder="blur"
                     src={scenarioPlanning}
+                    title="ScaleSight dashboard background"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.56),rgba(7,17,31,0.92))]" />
                   <div className="absolute right-[-8rem] top-[-6rem] h-[20rem] w-[20rem] rounded-full bg-[radial-gradient(circle,rgba(4,180,253,0.2),transparent_64%)] blur-3xl" />

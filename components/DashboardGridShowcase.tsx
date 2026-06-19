@@ -9,7 +9,7 @@ const dashboardCards = [
     subtitle: "13-week outlook",
     metric: "+18% growth trend",
     src: "/dashboards%20for%20website/visual%201.png",
-    alt: "Revenue forecasting dashboard visual",
+    alt: "Ecommerce revenue forecasting dashboard showing predicted sales trends",
     objectPosition: "center top",
   },
   {
@@ -17,7 +17,7 @@ const dashboardCards = [
     subtitle: "Risk, value, and stock posture",
     metric: "78 / 100 health score",
     src: "/dashboards%20for%20website/viusal%203.png",
-    alt: "Inventory health dashboard visual",
+    alt: "Ecommerce inventory planning dashboard showing stock health and risk",
     objectPosition: "center top",
   },
   {
@@ -25,7 +25,7 @@ const dashboardCards = [
     subtitle: "Product-level visibility",
     metric: "245 active SKUs",
     src: "/dashboards%20for%20website/visual%202.png",
-    alt: "SKU demand forecast dashboard visual",
+    alt: "SKU demand forecasting dashboard showing product-level demand visibility",
     objectPosition: "center top",
   },
   {
@@ -33,7 +33,7 @@ const dashboardCards = [
     subtitle: "Promo and ad spend decisions",
     metric: "+22% upside case",
     src: "/dashboards%20for%20website/visual%202s.png",
-    alt: "Scenario planning dashboard visual",
+    alt: "Scenario planning dashboard for ecommerce operational decision intelligence",
     objectPosition: "center top",
   },
 ] as const;
@@ -70,6 +70,7 @@ export default function DashboardGridShowcase() {
                 height={1024}
                 src={card.src}
                 style={{ objectPosition: card.objectPosition }}
+                title={card.alt}
                 width={1536}
               />
             </button>
@@ -110,6 +111,7 @@ export default function DashboardGridShowcase() {
                 priority
                 src={selectedCard.src}
                 style={{ objectPosition: selectedCard.objectPosition }}
+                title={selectedCard.alt}
                 width={1536}
               />
             </div>
