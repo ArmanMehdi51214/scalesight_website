@@ -184,7 +184,7 @@ export default function Home() {
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <PrimaryButton href="/contact">Book a Strategy Call</PrimaryButton>
-                <SecondaryButton href="/plan-with-confidence">
+                <SecondaryButton href="/30-day-planning-pilot">
                   See How the Pilot Works
                 </SecondaryButton>
               </div>

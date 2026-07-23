@@ -5,9 +5,9 @@ import Link from "next/link";
 import type { PointerEvent } from "react";
 
 const productLinks = [
-  { href: "/plan-with-confidence", label: "30-Day Planning Pilot" },
-  { href: "/plan-with-confidence", label: "Inventory Planning" },
-  { href: "/plan-with-confidence", label: "Revenue Forecasting" },
+  { href: "/30-day-planning-pilot", label: "30-Day Planning Pilot" },
+  { href: "/30-day-planning-pilot", label: "Inventory Planning" },
+  { href: "/30-day-planning-pilot", label: "Revenue Forecasting" },
 ];
 
 const companyLinks = [

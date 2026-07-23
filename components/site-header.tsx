@@ -10,7 +10,7 @@ import { openCalendlyPopup } from "./marketing-primitives";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/plan-with-confidence", label: "30-Day Pilot" },
+  { href: "/30-day-planning-pilot", label: "30-Day Pilot" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/contact", label: "Contact" },
 ];
@@ -20,7 +20,7 @@ function isActive(pathname: string, href: string) {
     return pathname === "/";
   }
 
-  if (href === "/plan-with-confidence" && pathname === "/plan-with-confidence/") {
+  if (href === "/30-day-planning-pilot" && pathname === "/30-day-planning-pilot/") {
     return true;
   }
 

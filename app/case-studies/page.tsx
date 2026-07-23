@@ -172,7 +172,7 @@ export default function CaseStudiesPage() {
             />
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <PrimaryButton href="/contact">Book Discovery Call</PrimaryButton>
-              <SecondaryButton href="/plan-with-confidence">See How the Pilot Works</SecondaryButton>
+              <SecondaryButton href="/30-day-planning-pilot">See How the Pilot Works</SecondaryButton>
             </div>
           </div>
         </section>
