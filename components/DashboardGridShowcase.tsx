@@ -5,6 +5,14 @@ import { useState } from "react";
 
 const dashboardCards = [
   {
+    title: "Executive Overview",
+    subtitle: "Full business picture at a glance",
+    metric: "Weekly summary",
+    src: "/dashboards%20for%20website/visual%20111.png",
+    alt: "Executive overview dashboard visual",
+    objectPosition: "center top",
+  },
+  {
     title: "Revenue Forecast",
     subtitle: "13-week outlook",
     metric: "+18% growth trend",
@@ -18,22 +26,6 @@ const dashboardCards = [
     metric: "78 / 100 health score",
     src: "/dashboards%20for%20website/viusal%203.png",
     alt: "Inventory health dashboard visual",
-    objectPosition: "center top",
-  },
-  {
-    title: "SKU Demand Forecast",
-    subtitle: "Product-level visibility",
-    metric: "245 active SKUs",
-    src: "/dashboards%20for%20website/visual%202.png",
-    alt: "SKU demand forecast dashboard visual",
-    objectPosition: "center top",
-  },
-  {
-    title: "Scenario Planning",
-    subtitle: "Promo and ad spend decisions",
-    metric: "+22% upside case",
-    src: "/dashboards%20for%20website/visual%202s.png",
-    alt: "Scenario planning dashboard visual",
     objectPosition: "center top",
   },
 ] as const;

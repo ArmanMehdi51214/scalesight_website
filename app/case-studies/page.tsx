@@ -7,8 +7,16 @@ import SiteHeader from "@/components/site-header";
 import { PrimaryButton, SecondaryButton, SectionHeader } from "@/components/marketing-primitives";
 
 export const metadata: Metadata = {
-  title: "ScaleSight | Case Studies & Results",
-  description: "Outcome-focused stories showing how ScaleSight improves planning clarity.",
+  title: "ScaleSight | Ecommerce Planning Case Studies",
+  description:
+    "See how Shopify and DTC brands reduced stockouts, freed up cash, and planned with confidence using ScaleSight's managed planning system.",
+  keywords: [
+    "ecommerce planning case studies",
+    "inventory planning results",
+    "stockout reduction",
+    "demand forecasting",
+    "Shopify planning",
+  ],
 };
 
 const studies = [
@@ -159,12 +167,12 @@ export default function CaseStudiesPage() {
           <div className="cta-panel text-center">
             <SectionHeader
               align="center"
-              title="Ready to build your success story?"
-              copy="Bring your team, your planning pain points, and your growth targets. We will help shape the next operating layer."
+              title="Ready to Build Your Success Story?"
+              copy="Start with the 30-Day Planning Pilot. Bring your business and we will build your first planning system."
             />
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-              <PrimaryButton href="/contact">Book a Strategy Call</PrimaryButton>
-              <SecondaryButton href="/services">Explore the Platform</SecondaryButton>
+              <PrimaryButton href="/contact">Book Discovery Call</PrimaryButton>
+              <SecondaryButton href="/30-day-planning-pilot">See How the Pilot Works</SecondaryButton>
             </div>
           </div>
         </section>

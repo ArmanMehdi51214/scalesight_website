@@ -5,9 +5,9 @@ import Link from "next/link";
 import type { PointerEvent } from "react";
 
 const productLinks = [
-  { href: "/plan-with-confidence", label: "Forecasting" },
-  { href: "/plan-with-confidence", label: "Inventory Visibility" },
-  { href: "/plan-with-confidence", label: "Demand Planning" },
+  { href: "/30-day-planning-pilot", label: "30-Day Planning Pilot" },
+  { href: "/30-day-planning-pilot", label: "Inventory Planning" },
+  { href: "/30-day-planning-pilot", label: "Revenue Forecasting" },
 ];
 
 const companyLinks = [
@@ -45,8 +45,8 @@ export default function SiteFooter() {
             />
           </Link>
           <p className="max-w-xs text-sm leading-7 text-[var(--text-secondary)]">
-            Precision demand planning and revenue visibility for teams scaling
-            beyond spreadsheet-driven decisions.
+            A managed planning partner for Shopify and DTC ecommerce brands.
+            Forecast demand, plan inventory, and decide with confidence.
           </p>
           {/* <div className="flex gap-3">
             {[Globe, Share2].map((Icon, index) => (

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Eye, Handshake, Lightbulb, Settings2, Target } from "lucide-react";
+import { Eye, Handshake, Lightbulb, Target } from "lucide-react";
 
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -9,36 +9,47 @@ import {
 } from "@/components/marketing-primitives";
 
 export const metadata: Metadata = {
-  title: "ScaleSight | About the Mission",
+  title: "ScaleSight | Your Ecommerce Planning Partner",
   description:
-    "The mission, values, and operating philosophy behind ScaleSight.",
+    "ScaleSight is a managed planning partner for Shopify and DTC ecommerce brands. We monitor your business, spot problems early, and help your team plan with confidence.",
+  keywords: [
+    "ecommerce planning partner",
+    "managed planning service",
+    "Shopify planning",
+    "inventory planning",
+    "demand forecasting",
+    "DTC ecommerce",
+    "weekly decision support",
+  ],
+  openGraph: {
+    title: "ScaleSight | Your Ecommerce Planning Partner",
+    description:
+      "A managed planning partner for Shopify brands. We monitor your business, spot problems early, and help your team plan with confidence.",
+    type: "website",
+    siteName: "ScaleSight",
+  },
 };
 
 const values = [
   {
-    icon: Lightbulb,
-    title: "Clarity",
-    copy: "We turn complex ecommerce data into clear views that help teams understand what is happening and what needs attention.",
-  },
-  {
     icon: Eye,
-    title: "Visibility",
-    copy: "We help brands see revenue, inventory, demand, and planning signals before they become business problems.",
+    title: "We monitor your business",
+    copy: "We keep a continuous eye on revenue, inventory, and demand so nothing important slips past your team unnoticed.",
   },
   {
-    icon: Settings2,
-    title: "Practicality",
-    copy: "We focus on useful insights that support real operating decisions, not dashboards that only look good.",
-  },
-  {
-    icon: Handshake,
-    title: "Partnership",
-    copy: "We work closely with ecommerce teams to improve planning, reporting, and decision-making as the business grows.",
+    icon: Lightbulb,
+    title: "We identify problems early",
+    copy: "We spot stockouts, overstock, and revenue risks before they happen — so you can act instead of react.",
   },
   {
     icon: Target,
-    title: "Decision-focused thinking",
-    copy: "Every forecast, dashboard, and recommendation is designed to help leaders make better business decisions with more confidence.",
+    title: "We tell you what needs attention",
+    copy: "Every week we surface the decisions that matter most, so your team knows exactly where to focus.",
+  },
+  {
+    icon: Handshake,
+    title: "We help you plan with confidence",
+    copy: "We work alongside your team as a managed planning partner, not a dashboard you have to figure out alone.",
   },
 ];
 
@@ -49,10 +60,10 @@ export default function AboutPage() {
       <main className="px-6 py-20 md:py-24">
         <section className="mx-auto max-w-6xl text-center">
           <SectionHeader
-            eyebrow="Our Vision"
+            eyebrow="Our Mission"
             align="center"
-            title="Helping Ecommerce Brands Scale Without Guesswork."
-            copy="We bridge the gap between data complexity and practical intelligence for operators managing modern retail growth."
+            title="We Become Your Ecommerce Planning Partner."
+            copy="The dashboard is just one part of the experience. The real value is that we monitor your business, identify problems before they happen, and help your team plan with confidence."
           />
         </section>
 
@@ -60,11 +71,11 @@ export default function AboutPage() {
           <div className="surface-card relative overflow-hidden rounded-[2rem] px-8 py-14 text-center md:px-20 md:py-20">
             <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(4,180,253,0.18),transparent_65%)]" />
             <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-semibold italic tracking-tight text-white md:text-5xl">
-              &ldquo;We help businesses make decisions with confidence.&rdquo;
+              &ldquo;We stop saying we build dashboards. We become your planning partner.&rdquo;
             </h2>
             <div className="mx-auto mt-8 h-px w-24 bg-[linear-gradient(90deg,rgba(255,255,255,0),rgba(4,180,253,0.85),rgba(255,255,255,0))]" />
             <p className="mt-6 text-xs uppercase tracking-[0.24em] text-[var(--text-muted)]">
-              Our core mission
+              Our core positioning
             </p>
           </div>
         </section>
@@ -72,8 +83,8 @@ export default function AboutPage() {
         <section className="mx-auto mt-24 max-w-7xl">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <SectionHeader
-              title="The Pillars of Our Success"
-              copy="Built on transparency, technical rigor, and a deep understanding of modern ecommerce planning."
+              title="How We Work With You"
+              copy="Four commitments that make ScaleSight a managed planning partner, not just another tool."
             />
             {/* <a
               className="inline-flex items-center gap-2 text-sm font-medium text-[#8dd9ff] transition hover:text-white"
@@ -116,11 +127,11 @@ export default function AboutPage() {
         <section className="mx-auto mt-24 max-w-5xl border-t border-white/8 pt-20 text-center">
           <SectionHeader
             align="center"
-            title="Ready to transform your business intelligence?"
-            copy="Bring your planning questions, current systems, and growth targets. We will meet you where you are."
+            title="Ready to Plan Growth With Confidence?"
+            copy="Start with the 30-Day Planning Pilot. Bring your business, and we will build your first planning system."
           />
           <div className="mt-10 flex justify-center">
-            <PrimaryButton href="/contact">Book a Strategy Call</PrimaryButton>
+            <PrimaryButton href="/contact">Book Discovery Call</PrimaryButton>
           </div>
         </section>
       </main>
