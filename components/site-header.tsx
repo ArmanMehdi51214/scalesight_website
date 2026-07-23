@@ -9,8 +9,8 @@ import { openCalendlyPopup } from "./marketing-primitives";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/plan-with-confidence", label: "Plan with Confidence" },
+  { href: "/about", label: "About" },
+  { href: "/plan-with-confidence", label: "30-Day Pilot" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/contact", label: "Contact" },
 ];

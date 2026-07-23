@@ -37,18 +37,18 @@ const handleCalendlySubmit = (event: React.FormEvent<HTMLFormElement>) => {
 const expectations = [
   {
     icon: Timer,
-    title: "30-minute introductory call",
-    copy: "A focused discussion to understand your operating model and current planning friction.",
+    title: "30-minute discovery call",
+    copy: "A focused conversation to understand your business, your SKUs, and your current planning challenges.",
   },
   {
     icon: Database,
-    title: "Review current data setup",
-    copy: "We will look at how your demand, inventory, and growth signals are flowing today.",
+    title: "Walk through the 30-day pilot",
+    copy: "We explain exactly what happens week by week and what your planning system will include.",
   },
   {
     icon: Lightbulb,
-    title: "Immediate opportunities",
-    copy: "Leave with practical next steps to improve visibility even before a full rollout.",
+    title: "Clear next steps",
+    copy: "Leave knowing whether the Planning Pilot is the right fit and how to get started.",
   },
 ];
 
@@ -59,14 +59,14 @@ export default function ContactPage() {
       <main className="px-6 py-20 md:py-24">
         <section className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <Eyebrow>Contact Us</Eyebrow>
+            <Eyebrow>Book a Discovery Call</Eyebrow>
             <h1 className="mt-6 text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl">
-              Let&apos;s Talk About{" "}
-              <span className="text-gradient-primary">Visibility.</span>
+              Start Your{" "}
+              <span className="text-gradient-primary">Planning Pilot.</span>
             </h1>
             <p className="section-copy mt-6 max-w-2xl">
-              Tell us about your business. We are ready to dive into your data
-              and uncover the signals hidden in the noise.
+              Tell us about your business. We will walk you through the 30-Day
+              Planning Pilot and how we build your first planning system.
             </p>
           </div>
         </section>
