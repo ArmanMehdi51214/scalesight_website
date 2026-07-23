@@ -55,7 +55,7 @@ const problemCards = [
   {
     icon: Clock,
     title: "Reactive Decisions",
-    copy: "Always fixing problems instead of preventing them.",
+    copy: "Always fixing problems instead of preventing them. No AI buzzwords. Speak business.",
     accentClass: "bg-[#8b5cf6]",
     iconClass: "bg-[#8b5cf6]/12 text-[#c4b5fd]",
     labelClass: "text-[#c4b5fd]",
@@ -221,35 +221,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 3. Who We Help ── */}
-        <section className="px-6 py-20">
-          <div className="mx-auto max-w-7xl">
-            <SectionHeader
-              align="center"
-              eyebrow="Who We Help"
-              title="Built for Growing Ecommerce Brands"
-              copy="We work with Shopify and DTC brands doing $50k–$500k/month in revenue, running paid ads, and managing a growing SKU catalog."
-            />
-            <div className="mt-12 flex flex-wrap justify-center gap-4">
-              {[
-                { label: "✅ Shopify Brands" },
-                { label: "✅ DTC Ecommerce" },
-                { label: "✅ $50k–$500k/month revenue" },
-                { label: "✅ Running paid ads" },
-                { label: "✅ Growing SKU catalog" },
-                { label: "✅ Planning inventory every week" },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-2xl border border-white/8 bg-white/[0.035] px-5 py-3 text-sm font-medium text-white"
-                >
-                  {item.label}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ── 4. Problems We Solve ── */}
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
@@ -266,14 +237,14 @@ export default function Home() {
                     className="group relative overflow-hidden rounded-[1.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(12,23,39,0.98),rgba(8,15,26,0.96))] p-8 transition duration-300 hover:border-white/16"
                   >
                     <div className={`absolute inset-x-0 top-0 h-[3px] opacity-0 transition duration-300 group-hover:opacity-100 ${card.accentClass}`} />
-                    <div className="flex h-full min-h-[14rem] flex-col">
+                    <div className="flex h-full flex-col">
                       <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${card.iconClass}`}>
                         <Icon size={28} strokeWidth={1.9} />
                       </div>
                       <h3 className="mt-6 text-2xl font-semibold tracking-[-0.03em] text-white">
                         {card.title}
                       </h3>
-                      <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
+                      <p className="mt-3 text-base leading-7 text-[var(--text-secondary)]">
                         {card.copy}
                       </p>
                     </div>

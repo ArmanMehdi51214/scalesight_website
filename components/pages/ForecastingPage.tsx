@@ -9,12 +9,6 @@ import {
   TriangleAlert,
   TrendingDown,
   Clock,
-  Store,
-  ShoppingBag,
-  Target,
-  Workflow,
-  Megaphone,
-  PackageSearch,
   X,
   Check,
 } from "lucide-react";
@@ -57,7 +51,7 @@ const problemCards = [
   {
     icon: Clock,
     title: "Reactive Decisions",
-    copy: "Always fixing problems instead of preventing them.",
+    copy: "Always fixing problems instead of preventing them. No AI buzzwords. Speak business.",
     borderClass: "border-l-[#8b5cf6]/60",
     iconClass: "bg-[#8b5cf6]/12 text-[#c4b5fd]",
   },
@@ -108,14 +102,6 @@ const showcaseTabs = [
   },
 ] as const;
 
-const whoItsFor = [
-  { icon: Store, label: "Shopify Brands" },
-  { icon: ShoppingBag, label: "DTC Brands" },
-  { icon: Target, label: "Founders" },
-  { icon: Workflow, label: "Operations Teams" },
-  { icon: Megaphone, label: "Growth Teams" },
-  { icon: PackageSearch, label: "Inventory Managers" },
-] as const;
 
 const beforeItems = [
   "Guessing inventory levels",
@@ -246,7 +232,7 @@ export default function ForecastingPage() {
                 <span className="text-gradient-primary">Planning System</span>
                 {" "}in 30 Days
               </h1>
-              <p className="section-copy mx-auto mt-7 max-w-2xl text-base md:text-lg">
+              <p className="section-copy text-center mx-auto mt-7 max-w-2xl text-base md:text-lg">
                 We become your ecommerce planning partner. We monitor your business, identify problems before they happen, and help your team make better decisions every week.
               </p>
               <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -257,35 +243,6 @@ export default function ForecastingPage() {
           </div>
         </section>
 
-        {/* ── Who We Help ── */}
-        <section className="border-y border-white/6 bg-[rgba(5,15,26,0.88)] px-6 py-16">
-          <div className="mx-auto max-w-7xl">
-            <Reveal className="mx-auto max-w-3xl text-center">
-              <SectionHeader
-                align="center"
-                eyebrow="Who We Help"
-                title="Built for Growing Shopify Brands"
-                copy="We work with Shopify and DTC brands doing $50k–$500k/month, running paid ads, and managing a growing SKU catalog."
-              />
-            </Reveal>
-            <Reveal className="mt-10 flex flex-wrap justify-center gap-4" delay={80}>
-              {whoItsFor.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={item.label}
-                    className="surface-card flex items-center gap-3 rounded-[1.35rem] px-5 py-4"
-                  >
-                    <div className="icon-badge !h-10 !w-10 !rounded-[0.9rem]">
-                      <Icon size={18} />
-                    </div>
-                    <p className="text-sm font-medium text-white">{item.label}</p>
-                  </div>
-                );
-              })}
-            </Reveal>
-          </div>
-        </section>
 
         {/* ── Problems We Solve ── */}
         <section className="px-6 py-24">
