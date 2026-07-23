@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
@@ -19,6 +20,11 @@ import {
   SecondaryButton,
   SectionHeader,
 } from "@/components/marketing-primitives";
+import executiveOverview from "@/public/dashboards for website/visual 111.png";
+import projectedRevenue from "@/public/dashboards for website/visual 1.png";
+import inventoryDashboard from "@/public/dashboards for website/viusal 3.png";
+import skuDemandForecast from "@/public/dashboards for website/visual 2.png";
+import scenarioPlanning from "@/public/dashboards for website/visual 2s.png";
 
 const trustItems = [
   "Shopify Brands",
@@ -77,14 +83,36 @@ const pilotWeeks = [
 ];
 
 const deliverables = [
-  "Revenue Forecast",
-  "Inventory Health",
-  "SKU Forecast",
-  "Stockout Alerts",
-  "Overstock Analysis",
-  "Reorder Priorities",
-  "Executive Dashboard",
-  "Decision Report",
+  {
+    title: "Executive Decision Dashboard",
+    subtitle: "High-level operational picture across revenue, demand alerts, and inventory health.",
+    image: executiveOverview,
+    alt: "Executive Decision Dashboard screenshot",
+  },
+  {
+    title: "Projected Revenue",
+    subtitle: "Forward view of revenue, sales trends, and 13-week confidence boundaries.",
+    image: projectedRevenue,
+    alt: "Projected Revenue forecast screenshot",
+  },
+  {
+    title: "Inventory Health Dashboard",
+    subtitle: "Stock posture, overstock analysis, category risk, and inventory health score.",
+    image: inventoryDashboard,
+    alt: "Inventory Health Dashboard screenshot",
+  },
+  {
+    title: "SKU Demand Forecast",
+    subtitle: "Granular product-level demand forecasting, velocity, and reorder point calculations.",
+    image: skuDemandForecast,
+    alt: "SKU Demand Forecast screenshot",
+  },
+  {
+    title: "Scenario Planning",
+    subtitle: "Interactive simulation for ad spend shifts, promo planning, and supplier lead times.",
+    image: scenarioPlanning,
+    alt: "Scenario Planning screenshot",
+  },
 ];
 
 const beforeItems = [
@@ -320,16 +348,35 @@ export default function Home() {
               align="center"
               eyebrow="Deliverables"
               title="What You'll Receive"
-              copy="Every pilot includes a complete set of planning tools and reports."
+              copy="Every pilot includes a complete set of planning tools, dashboards, and decision reports."
             />
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-              {deliverables.map((item) => (
+            <div className="mt-14 grid gap-8 md:grid-cols-2">
+              {deliverables.map((item, index) => (
                 <div
-                  key={item}
-                  className="group flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.035] px-5 py-4 transition duration-300 hover:border-[#04B4FD]/35 hover:bg-white/[0.06]"
+                  key={item.title}
+                  className={`group surface-card flex flex-col justify-between overflow-hidden rounded-[1.8rem] border border-white/8 p-6 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35 ${
+                    index === 4 ? "md:col-span-2 md:mx-auto md:w-full md:max-w-2xl" : ""
+                  }`}
                 >
-                  <CheckCircle2 size={16} className="shrink-0 text-[#04B4FD]" />
-                  <p className="text-sm font-medium text-white">{item}</p>
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#04B4FD]/12 text-[#8dd9ff]">
+                        <CheckCircle2 size={20} />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                        <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">{item.subtitle}</p>
+                      </div>
+                    </div>
+                    <div className="mt-5 overflow-hidden rounded-[1.2rem] border border-white/8 bg-white">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        placeholder="blur"
+                        className="h-auto w-full object-cover transition duration-300 group-hover:scale-[1.01]"
+                      />
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

@@ -25,6 +25,7 @@ import executiveDashboard from "@/public/dashboards for website/visual 1.png";
 import scenarioPlanning from "@/public/dashboards for website/visual 2s.png";
 import inventoryDashboard from "@/public/dashboards for website/viusal 3.png";
 import executiveOverview from "@/public/dashboards for website/visual 111.png";
+import skuDemandForecast from "@/public/dashboards for website/visual 2.png";
 
 const problemCards = [
   {
@@ -65,15 +66,37 @@ const pilotWeeks = [
 ] as const;
 
 const deliverables = [
-  "Revenue Forecast",
-  "Inventory Health",
-  "SKU Forecast",
-  "Stockout Alerts",
-  "Overstock Analysis",
-  "Reorder Priorities",
-  "Executive Dashboard",
-  "Decision Report",
-] as const;
+  {
+    title: "Executive Decision Dashboard",
+    subtitle: "High-level operational picture across revenue, demand alerts, and inventory health.",
+    image: executiveOverview,
+    alt: "Executive Decision Dashboard screenshot",
+  },
+  {
+    title: "Projected Revenue",
+    subtitle: "Forward view of revenue, sales trends, and 13-week confidence boundaries.",
+    image: executiveDashboard,
+    alt: "Projected Revenue forecast screenshot",
+  },
+  {
+    title: "Inventory Health Dashboard",
+    subtitle: "Stock posture, overstock analysis, category risk, and inventory health score.",
+    image: inventoryDashboard,
+    alt: "Inventory Health Dashboard screenshot",
+  },
+  {
+    title: "SKU Demand Forecast",
+    subtitle: "Granular product-level demand forecasting, velocity, and reorder point calculations.",
+    image: skuDemandForecast,
+    alt: "SKU Demand Forecast screenshot",
+  },
+  {
+    title: "Scenario Planning",
+    subtitle: "Interactive simulation for ad spend shifts, promo planning, and supplier lead times.",
+    image: scenarioPlanning,
+    alt: "Scenario Planning screenshot",
+  },
+];
 
 const showcaseTabs = [
   {
@@ -243,7 +266,73 @@ export default function ForecastingPage() {
           </div>
         </section>
 
+        {/* ── Who We Help ── */}
+        <section className="border-y border-white/6 bg-[rgba(5,15,26,0.88)] px-6 py-20">
+          <div className="mx-auto max-w-7xl">
+            <Reveal className="mx-auto max-w-3xl text-center">
+              <SectionHeader
+                align="center"
+                eyebrow="Who We Help"
+                title="Built for Growing Shopify & DTC Brands"
+                copy="Visitors should know within 10 seconds whether ScaleSight is for them."
+              />
+            </Reveal>
 
+            <Reveal className="mt-12" delay={60}>
+              <div className="mx-auto max-w-4xl space-y-6">
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="surface-card flex items-start gap-4 rounded-[1.5rem] border border-white/8 p-6 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#04B4FD]/12 text-[#04B4FD]">
+                      <CheckCircle2 size={24} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8dd9ff]">Platform fit</p>
+                      <h3 className="mt-1 text-xl font-semibold text-white">Shopify Brands</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+                        Built natively around Shopify data, store structures, and order workflows.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="surface-card flex items-start gap-4 rounded-[1.5rem] border border-white/8 p-6 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#04B4FD]/12 text-[#04B4FD]">
+                      <CheckCircle2 size={24} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8dd9ff]">Business model</p>
+                      <h3 className="mt-1 text-xl font-semibold text-white">DTC Ecommerce</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+                        Direct-to-consumer brands managing active growth, inventory, and purchasing decisions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-[1.5rem] border border-[#04B4FD]/20 bg-[linear-gradient(180deg,rgba(0,94,240,0.08),rgba(8,15,26,0.96))] p-6 md:p-8">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
+                    Requirements & Operating Criteria
+                  </p>
+                  <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    {[
+                      "Revenue: $50k–$500k / mo",
+                      "Running paid ads",
+                      "Growing SKU catalog",
+                      "Planning inventory weekly",
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="flex items-center gap-3 rounded-xl border border-white/8 bg-white/[0.04] px-4 py-3.5 text-sm font-medium text-white transition duration-300 hover:border-[#04B4FD]/30"
+                      >
+                        <Check size={16} className="shrink-0 text-[#04B4FD]" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
         {/* ── Problems We Solve ── */}
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
@@ -348,15 +437,36 @@ export default function ForecastingPage() {
                 align="center"
                 eyebrow="Deliverables"
                 title="What You'll Receive"
-                copy="Every pilot includes a complete set of planning tools and reports."
+                copy="Every pilot includes a complete set of planning tools, dashboards, and decision reports."
               />
             </Reveal>
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+            <div className="mt-14 grid gap-8 md:grid-cols-2">
               {deliverables.map((item, index) => (
-                <Reveal key={item} delay={index * 50}>
-                  <div className="group flex items-center gap-3 rounded-2xl border border-white/8 bg-white/[0.035] px-5 py-4 transition duration-300 hover:border-[#04B4FD]/35 hover:bg-white/[0.06]">
-                    <CheckCircle2 size={16} className="shrink-0 text-[#04B4FD]" />
-                    <p className="text-sm font-medium text-white">{item}</p>
+                <Reveal
+                  key={item.title}
+                  delay={index * 60}
+                  className={index === 4 ? "md:col-span-2 md:mx-auto md:w-full md:max-w-2xl" : ""}
+                >
+                  <div className="group surface-card flex flex-col justify-between overflow-hidden rounded-[1.8rem] border border-white/8 p-6 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35 h-full">
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#04B4FD]/12 text-[#8dd9ff]">
+                          <CheckCircle2 size={20} />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">{item.subtitle}</p>
+                        </div>
+                      </div>
+                      <div className="mt-5 overflow-hidden rounded-[1.2rem] border border-white/8 bg-white">
+                        <Image
+                          src={item.image}
+                          alt={item.alt}
+                          placeholder="blur"
+                          className="h-auto w-full object-cover transition duration-300 group-hover:scale-[1.01]"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </Reveal>
               ))}
