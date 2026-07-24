@@ -861,7 +861,7 @@ export default function ForecastingPage() {
             <Reveal>
               <SectionHeader
                 align="center"
-                eyebrow="Platform"
+                eyebrow="Workspace"
                 title="Your Planning Workspace"
                 copy="Three views that give your team a complete picture every week."
               />

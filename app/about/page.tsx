@@ -9,13 +9,14 @@ import {
 } from "@/components/marketing-primitives";
 
 export const metadata: Metadata = {
-  title: "ScaleSight | Your Ecommerce Planning Partner",
+  title: "About ScaleSight | Managed Ecommerce Intelligence Partner",
   description:
-    "ScaleSight is a managed planning partner for Shopify and DTC ecommerce brands. We monitor your business, spot problems early, and help your team plan with confidence.",
+    "ScaleSight is a Managed Ecommerce Intelligence partner for Shopify and DTC ecommerce brands. We monitor your business, spot problems early, and help your team plan with confidence.",
   alternates: {
     canonical: "/about",
   },
   keywords: [
+    "managed ecommerce intelligence",
     "ecommerce planning partner",
     "managed planning service",
     "Shopify planning",
@@ -25,9 +26,9 @@ export const metadata: Metadata = {
     "weekly decision support",
   ],
   openGraph: {
-    title: "ScaleSight | Your Ecommerce Planning Partner",
+    title: "About ScaleSight | Managed Ecommerce Intelligence Partner",
     description:
-      "A managed planning partner for Shopify brands. We monitor your business, spot problems early, and help your team plan with confidence.",
+      "ScaleSight is a Managed Ecommerce Intelligence partner for Shopify brands. We monitor your business, spot problems early, and help your team plan with confidence.",
     type: "website",
     siteName: "ScaleSight",
     url: "https://scalesight.org/about",

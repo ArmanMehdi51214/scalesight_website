@@ -47,8 +47,9 @@ export default function SiteFooter() {
             />
           </Link>
           <p className="max-w-xs text-sm leading-7 text-[var(--text-secondary)]">
-            A managed planning partner for Shopify and DTC ecommerce brands.
-            Forecast demand, plan inventory, and decide with confidence.
+            ScaleSight helps Shopify and DTC brands forecast demand, plan
+            inventory, and make better business decisions through managed
+            ecommerce intelligence.
           </p>
           {/* <div className="flex gap-3">
             {[Globe, Share2].map((Icon, index) => (
