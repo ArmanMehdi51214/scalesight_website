@@ -206,10 +206,10 @@ const businessImpacts = [
 ];
 
 const comparisonRows = [
-  { others: "Dashboard Freelancer", scalesight: "Managed Planning" },
-  { others: "Software Tool", scalesight: "Weekly Recommendations" },
-  { others: "Internal Analyst", scalesight: "Platform + Analyst" },
-  { others: "BI Agency", scalesight: "Productized System" },
+  { others: "Build dashboards", scalesight: "Build + monitor your planning system" },
+  { others: "Deliver reports", scalesight: "Deliver recommendations and guidance" },
+  { others: "Project-based", scalesight: "Ongoing planning partner" },
+  { others: "Show data", scalesight: "Help you decide what to do next" },
 ];
 
 const afterPilotSteps = [

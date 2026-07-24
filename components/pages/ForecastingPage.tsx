@@ -57,7 +57,7 @@ const problemCards = [
   {
     icon: Clock,
     title: "Reactive Decisions",
-    copy: "Always fixing problems instead of preventing them. No AI buzzwords. Speak business.",
+    copy: "Always fixing problems instead of preventing them.",
     borderClass: "border-l-[#8b5cf6]/60",
     iconClass: "bg-[#8b5cf6]/12 text-[#c4b5fd]",
   },
@@ -235,6 +235,13 @@ const outcomes = [
   "Know revenue before it happens",
   "Save hours every week",
   "Make faster decisions",
+];
+
+const comparisonRows = [
+  { others: "Build dashboards", scalesight: "Build + monitor your planning system" },
+  { others: "Deliver reports", scalesight: "Deliver recommendations and guidance" },
+  { others: "Project-based", scalesight: "Ongoing planning partner" },
+  { others: "Show data", scalesight: "Help you decide what to do next" },
 ];
 
 const afterPilotSteps = [
@@ -848,6 +855,47 @@ export default function ForecastingPage() {
                     <span className="text-base font-semibold text-white">
                       {item}
                     </span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ── Why Businesses Choose ScaleSight (Outcome Comparison) ── */}
+        <section className="bg-[rgba(18,28,40,0.56)] px-6 py-24">
+          <div className="mx-auto max-w-5xl">
+            <Reveal>
+              <SectionHeader
+                align="center"
+                eyebrow="Why ScaleSight"
+                title="Why Businesses Choose ScaleSight"
+                copy="More than dashboards—Managed Ecommerce Intelligence focused on outcomes."
+              />
+            </Reveal>
+            <Reveal className="mt-14" delay={60}>
+              <div className="overflow-hidden rounded-[1.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(12,23,39,0.98),rgba(8,15,26,0.96))] shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
+                <div className="grid grid-cols-2 border-b border-white/8 bg-white/[0.03]">
+                  <div className="px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
+                    Others
+                  </div>
+                  <div className="border-l border-white/8 px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
+                    ScaleSight
+                  </div>
+                </div>
+                {comparisonRows.map((row) => (
+                  <div
+                    key={row.others}
+                    className="grid grid-cols-2 border-b border-white/6 last:border-0 transition hover:bg-white/[0.02]"
+                  >
+                    <div className="flex items-center gap-3 px-8 py-5 text-sm text-[var(--text-secondary)]">
+                      <X size={16} className="shrink-0 text-[#f43f5e]/70" />
+                      {row.others}
+                    </div>
+                    <div className="flex items-center gap-3 border-l border-white/8 px-8 py-5 text-sm font-medium text-white">
+                      <Check size={16} className="shrink-0 text-[#04B4FD]" />
+                      {row.scalesight}
+                    </div>
                   </div>
                 ))}
               </div>
