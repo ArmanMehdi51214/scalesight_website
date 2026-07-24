@@ -27,10 +27,10 @@ import skuDemandForecast from "@/public/dashboards for website/visual 2.png";
 import scenarioPlanning from "@/public/dashboards for website/visual 2s.png";
 
 const trustItems = [
-  "Shopify Brands",
-  "Sales Forecasting",
-  "Inventory Planning",
-  "Weekly Decision Support",
+  "Built for Shopify Brands",
+  "Revenue Forecasting",
+  "Inventory Intelligence",
+  "Weekly Planning Recommendations",
 ];
 
 const problemCards = [
@@ -243,9 +243,10 @@ export default function Home() {
                 <span className="text-gradient-primary">Start Planning.</span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-[var(--text-secondary)] md:text-lg md:leading-8">
-                Help your ecommerce team forecast demand, identify inventory
-                risks, and make better business decisions with a managed
-                planning system.
+                Gain a complete planning system backed by ongoing analysis,
+                expert recommendations, and strategic guidance so your team can
+                forecast demand, avoid inventory mistakes, and make confident
+                business decisions every week.
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
