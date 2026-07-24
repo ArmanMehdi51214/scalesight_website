@@ -58,6 +58,7 @@ export default function DashboardGridShowcase() {
             >
               <Image
                 alt={card.alt}
+                title={`${card.title} - ScaleSight Dashboard`}
                 className="h-[15.5rem] w-full object-cover"
                 height={1024}
                 src={card.src}
@@ -97,6 +98,7 @@ export default function DashboardGridShowcase() {
             <div className="overflow-hidden rounded-[1.5rem] border border-white/8 bg-white">
               <Image
                 alt={selectedCard.alt}
+                title={`${selectedCard.title} - ScaleSight Dashboard`}
                 className="h-auto max-h-[75vh] w-full object-contain"
                 height={1024}
                 priority

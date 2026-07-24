@@ -44,6 +44,7 @@ function ShowcaseCard({
     <div className={`absolute ${className}`}>
       <Image
         alt={alt}
+        title={alt}
         className="h-auto w-full object-contain drop-shadow-[0_28px_60px_rgba(0,0,0,0.28)]"
         placeholder="blur"
         priority={priority}

@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   title: "Partner with ScaleSight | Managed Ecommerce Intelligence",
   description:
     "ScaleSight helps consultants, agencies, and fractional operators deliver better planning, forecasting, and operational insights without adding analysts or building dashboards from scratch.",
+  alternates: {
+    canonical: "/partners",
+  },
   keywords: [
     "ecommerce partner program",
     "consultant partnership",
@@ -50,6 +53,7 @@ export const metadata: Metadata = {
       "Strengthen your advisory with managed ecommerce intelligence. Partner with ScaleSight to deliver executive planning and forecasting to your clients.",
     type: "website",
     siteName: "ScaleSight",
+    url: "https://scalesight.org/partners",
   },
 };
 

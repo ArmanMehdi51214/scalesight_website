@@ -62,7 +62,8 @@ export default function SiteHeader() {
           href="/"
         >
           <Image
-            alt="ScaleSight"
+            alt="ScaleSight Logo - Managed Ecommerce Intelligence"
+            title="ScaleSight - Managed Ecommerce Intelligence"
             className="h-auto w-[9.5rem] md:w-[10.5rem]"
             height={1216}
             priority

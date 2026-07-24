@@ -377,8 +377,8 @@ export default function ForecastingPage() {
               <SectionHeader
                 align="center"
                 eyebrow="Who We Help"
-                title="Built for Growing Shopify & DTC Brands"
-                copy="Visitors should know within 10 seconds whether ScaleSight is for them."
+                title="Built for Growing & Established DTC Brands"
+                copy="Designed specifically for Shopify merchants navigating complex inventory, scaling catalog lines, and multi-channel demand forecasting."
               />
             </Reveal>
 
@@ -391,14 +391,14 @@ export default function ForecastingPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8dd9ff]">
-                        Platform fit
+                        Platform Fit
                       </p>
                       <h3 className="mt-1 text-xl font-semibold text-white">
-                        Shopify Brands
+                        Shopify & DTC Brands
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                        Built natively around Shopify data, store structures,
-                        and order workflows.
+                        Built natively around Shopify data, multi-channel
+                        workflows, and direct-to-consumer operations.
                       </p>
                     </div>
                   </div>
@@ -409,14 +409,14 @@ export default function ForecastingPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8dd9ff]">
-                        Business model
+                        Operating Profile
                       </p>
                       <h3 className="mt-1 text-xl font-semibold text-white">
-                        DTC Ecommerce
+                        Scaling Operations
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                        Direct-to-consumer brands managing active growth,
-                        inventory, and purchasing decisions.
+                        Active brands managing inventory commitments, cash flow
+                        planning, and weekly purchasing decisions.
                       </p>
                     </div>
                   </div>
@@ -424,14 +424,14 @@ export default function ForecastingPage() {
 
                 <div className="rounded-[1.5rem] border border-[#04B4FD]/20 bg-[linear-gradient(180deg,rgba(0,94,240,0.08),rgba(8,15,26,0.96))] p-6 md:p-8">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
-                    Requirements & Operating Criteria
+                    Ideal Operating Criteria
                   </p>
                   <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     {[
-                      "Revenue: $50k–$500k / mo",
-                      "Running paid ads",
-                      "Growing SKU catalog",
-                      "Planning inventory weekly",
+                      "$50k+ Monthly Revenue",
+                      "Active Ad & Growth Spend",
+                      "Expanding SKU Catalog",
+                      "Weekly Purchasing Needs",
                     ].map((item) => (
                       <div
                         key={item}
@@ -693,6 +693,7 @@ export default function ForecastingPage() {
                         <Image
                           src={item.image}
                           alt={item.alt}
+                          title={`${item.title} - ScaleSight Deliverable`}
                           placeholder="blur"
                           className="h-auto w-full object-cover transition duration-300 group-hover:scale-[1.01]"
                         />
@@ -896,7 +897,8 @@ export default function ForecastingPage() {
                 </div>
                 <div className="overflow-hidden rounded-[1.5rem] border border-white/8 bg-white">
                   <Image
-                    alt={activeShowcase.label}
+                    alt={`${activeShowcase.label} - ScaleSight Planning Workspace`}
+                    title={activeShowcase.title}
                     className="h-auto w-full"
                     placeholder="blur"
                     src={activeShowcase.image}
@@ -1038,7 +1040,8 @@ export default function ForecastingPage() {
               <div className="cta-panel relative mx-auto max-w-6xl text-center">
                 <div className="absolute inset-0 overflow-hidden rounded-[2.2rem]">
                   <Image
-                    alt=""
+                    alt="ScaleSight Scenario Planning CTA Background"
+                    title="ScaleSight Scenario Planning"
                     aria-hidden="true"
                     className="absolute inset-0 h-full w-full object-cover opacity-[0.08]"
                     placeholder="blur"

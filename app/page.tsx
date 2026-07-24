@@ -419,6 +419,7 @@ export default function Home() {
                       <Image
                         src={item.image}
                         alt={item.alt}
+                        title={`${item.title} - ScaleSight Feature`}
                         placeholder="blur"
                         className="h-auto w-full object-cover transition duration-300 group-hover:scale-[1.01]"
                       />

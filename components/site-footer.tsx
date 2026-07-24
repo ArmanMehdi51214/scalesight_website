@@ -37,7 +37,8 @@ export default function SiteFooter() {
         <div className="space-y-5">
           <Link className="inline-flex items-center text-white" href="/">
             <Image
-              alt="ScaleSight"
+              alt="ScaleSight Logo - Ecommerce Planning Partner"
+              title="ScaleSight - Managed Ecommerce Intelligence"
               className="h-auto w-[9.5rem] md:w-[10.5rem]"
               height={1216}
               src="/logo.png"
@@ -100,7 +101,8 @@ export default function SiteFooter() {
         <div className="footer-brand-stage__shine" />
         <div className="footer-brand-stage__grid" />
         <Image
-          alt="ScaleSight"
+          alt="ScaleSight Brand Watermark"
+          title="ScaleSight"
           className="footer-brand-image footer-brand-image--base"
           height={1216}
           priority={false}
@@ -108,7 +110,8 @@ export default function SiteFooter() {
           width={4345}
         />
         <Image
-          alt=""
+          alt="ScaleSight Colored Brand Watermark"
+          title="ScaleSight"
           aria-hidden="true"
           className="footer-brand-image footer-brand-image--color"
           height={1216}

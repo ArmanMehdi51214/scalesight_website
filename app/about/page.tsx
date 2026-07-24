@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "ScaleSight | Your Ecommerce Planning Partner",
   description:
     "ScaleSight is a managed planning partner for Shopify and DTC ecommerce brands. We monitor your business, spot problems early, and help your team plan with confidence.",
+  alternates: {
+    canonical: "/about",
+  },
   keywords: [
     "ecommerce planning partner",
     "managed planning service",
@@ -27,6 +30,7 @@ export const metadata: Metadata = {
       "A managed planning partner for Shopify brands. We monitor your business, spot problems early, and help your team plan with confidence.",
     type: "website",
     siteName: "ScaleSight",
+    url: "https://scalesight.org/about",
   },
 };
 
