@@ -11,6 +11,11 @@ import {
   Clock,
   X,
   Check,
+  HelpCircle,
+  Sparkles,
+  LayoutDashboard,
+  ShieldCheck,
+  Zap,
 } from "lucide-react";
 
 import ShaderBackdrop from "@/components/ShaderBackdrop";
@@ -67,17 +72,17 @@ const pilotWeeks = [
   {
     week: "Week 2",
     title: "Forecasting",
-    copy: "We build your demand and revenue forecast.",
+    copy: "We forecast future demand, revenue, and inventory requirements.",
   },
   {
     week: "Week 3",
     title: "Planning Workspace",
-    copy: "We deliver your inventory and planning dashboard.",
+    copy: "We build your operational planning workspace with complete visibility into revenue, inventory, and purchasing priorities.",
   },
   {
     week: "Week 4",
     title: "Executive Review",
-    copy: "We present findings, insights, and your ongoing planning system.",
+    copy: "We review your results, present strategic recommendations, and hand over a planning system your team can immediately begin using.",
   },
 ] as const;
 
@@ -117,6 +122,69 @@ const deliverables = [
     image: scenarioPlanning,
     alt: "Scenario Planning screenshot",
   },
+];
+
+const planningQuestions = [
+  {
+    question: "Will we stock out next month?",
+    answer: "We identify products at risk before they become expensive.",
+  },
+  {
+    question: "Which products should we reorder first?",
+    answer: "Prioritized recommendations based on demand.",
+  },
+  {
+    question: "Can inventory support our next campaign?",
+    answer: "Scenario planning before promotions launch.",
+  },
+  {
+    question: "Are we on track to hit revenue goals?",
+    answer: "Weekly revenue outlook and executive summaries.",
+  },
+  {
+    question: "Should we change purchasing plans?",
+    answer: "Strategic recommendations backed by your business data.",
+  },
+];
+
+const planningSystemDeliverables = [
+  "Executive Overview",
+  "Revenue Outlook",
+  "Inventory Health",
+  "SKU Planning",
+  "Scenario Planning",
+];
+
+const ongoingDecisionSupport = [
+  "Weekly Business Analysis",
+  "Executive Reports",
+  "Planning Recommendations",
+  "Strategy Meetings",
+  "Operational Guidance",
+];
+
+const systemVsServiceLeft = [
+  "Planning workspace",
+  "Revenue forecasting",
+  "Inventory visibility",
+  "Scenario planning",
+];
+
+const systemVsServiceRight = [
+  "Analyze your latest business performance",
+  "Identify inventory and demand risks",
+  "Deliver executive summaries and recommendations",
+  "Review priorities with your team",
+  "Help you make better operational decisions",
+];
+
+const scaleSightDifferences = [
+  "Review your business performance",
+  "Analyze demand trends",
+  "Identify inventory risks",
+  "Prioritize planning decisions",
+  "Deliver executive recommendations",
+  "Meet with your team",
 ];
 
 const showcaseTabs = [
@@ -171,7 +239,7 @@ const outcomes = [
 
 const afterPilotSteps = [
   "Platform stays active",
-  "Weekly bussiness review",
+  "Weekly business review",
   "Weekly reports",
   "Monthly planning meetings",
   "Continuous forecasting",
@@ -184,6 +252,21 @@ const faqs = [
       "The 30-Day Planning Pilot runs for exactly 30 days. By the end of week four you have a working planning system, a completed executive review, and a clear picture of how ScaleSight supports your business going forward.",
   },
   {
+    question: "How much time does this require from my team?",
+    answer:
+      "Most clients spend 1–2 hours during onboarding, then around 30–60 minutes each week reviewing recommendations.",
+  },
+  {
+    question: "What data do you need?",
+    answer:
+      "We connect to your Shopify store and operational systems using secure, read-only API access to analyze sales history, inventory posture, purchase orders, and product velocity.",
+  },
+  {
+    question: "What exactly do you do every week?",
+    answer:
+      "Every week we review your business performance, update forecasts, identify inventory risks, prepare executive reports, prioritize planning decisions, and meet with your team to discuss recommendations.",
+  },
+  {
     question: "Do I need Shopify?",
     answer:
       "Shopify is our primary platform and where we do our best work. If you run a DTC ecommerce business on Shopify, you are a strong fit. Reach out if you are on a different platform and we can discuss what is possible.",
@@ -192,11 +275,6 @@ const faqs = [
     question: "Do you replace my analyst?",
     answer:
       "No. ScaleSight works alongside your team. We provide the planning system, the weekly insights, and the analyst support — so your team can focus on decisions rather than data preparation.",
-  },
-  {
-    question: "Can you connect my data?",
-    answer:
-      "Yes. We connect to your Shopify store, inventory data, and other operational sources during onboarding. Most connections are set up within the first week.",
   },
   {
     question: "What happens after the pilot?",
@@ -258,7 +336,7 @@ export default function ForecastingPage() {
     <>
       <SiteHeader />
       <main className="relative overflow-hidden">
-        {/* ── Hero ── */}
+        {/* ── 1. Hero Section ── */}
         <section className="relative px-6 pb-20 pt-8 md:pb-24 md:pt-10">
           <ShaderBackdrop />
           <div className="pointer-events-none absolute inset-x-0 top-8 z-0 mx-auto h-[26rem] max-w-5xl rounded-full bg-[radial-gradient(circle,rgba(4,180,253,0.16),rgba(0,94,240,0.06),transparent_70%)] blur-3xl" />
@@ -274,10 +352,11 @@ export default function ForecastingPage() {
                 <span className="text-gradient-primary">Planning System</span>{" "}
                 in 30 Days
               </h1>
-              <p className="text-center mx-auto mt-7 max-w-2xl text-base md:text-lg">
-                We become your ecommerce planning partner. We monitor your
-                business, identify problems before they happen, and help your
-                team make better decisions every week.
+              <p className="mx-auto mt-7 max-w-3xl text-center text-base leading-7 text-[var(--text-secondary)] md:text-lg md:leading-8">
+                We build your planning system, continuously analyze your
+                business, and deliver the insights, recommendations, and
+                strategic guidance your team needs to make better decisions
+                every week.
               </p>
               <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <PrimaryButton href="/contact">
@@ -368,6 +447,7 @@ export default function ForecastingPage() {
             </Reveal>
           </div>
         </section>
+
         {/* ── Problems We Solve ── */}
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
@@ -497,7 +577,7 @@ export default function ForecastingPage() {
           </div>
         </section>
 
-        {/* ── What You'll Receive ── */}
+        {/* ── 3. Deliverables Section Restructure ("What You'll Receive") ── */}
         <section className="bg-[rgba(5,15,26,0.96)] px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <Reveal>
@@ -505,9 +585,84 @@ export default function ForecastingPage() {
                 align="center"
                 eyebrow="Deliverables"
                 title="What You'll Receive"
-                copy="Every pilot includes a complete set of planning tools, workspaces, and decision reports."
+                copy="Every pilot includes the planning system and the intelligence your team needs to use it effectively."
               />
             </Reveal>
+
+            {/* Split into clear 2-Column comparison/grid container */}
+            <Reveal className="mt-14" delay={60}>
+              <div className="grid gap-8 md:grid-cols-2">
+                {/* Column 1: Your Planning System */}
+                <div className="surface-card overflow-hidden rounded-[1.8rem] border border-white/8 p-8 transition duration-300 hover:border-[#04B4FD]/35">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#04B4FD]/14 text-[#8dd9ff]">
+                      <LayoutDashboard size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold text-white">
+                        Your Planning System
+                      </h3>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[var(--text-muted)]">
+                        Platform Infrastructure
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 space-y-3.5">
+                    {planningSystemDeliverables.map((item) => (
+                      <div
+                        key={item}
+                        className="flex items-center gap-3.5 rounded-xl border border-white/6 bg-white/[0.025] px-4 py-3.5"
+                      >
+                        <CheckCircle2
+                          size={18}
+                          className="shrink-0 text-[#04B4FD]"
+                        />
+                        <span className="text-base font-medium text-white">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Column 2: Ongoing Decision Support */}
+                <div className="surface-card overflow-hidden rounded-[1.8rem] border border-white/8 p-8 transition duration-300 hover:border-[#04B4FD]/35">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#005EF0]/20 text-[#8dd9ff]">
+                      <ShieldCheck size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold text-white">
+                        Ongoing Decision Support
+                      </h3>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[var(--text-muted)]">
+                        Analyst & Insights Layer
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 space-y-3.5">
+                    {ongoingDecisionSupport.map((item) => (
+                      <div
+                        key={item}
+                        className="flex items-center gap-3.5 rounded-xl border border-white/6 bg-white/[0.025] px-4 py-3.5"
+                      >
+                        <CheckCircle2
+                          size={18}
+                          className="shrink-0 text-[#8dd9ff]"
+                        />
+                        <span className="text-base font-medium text-white">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Visual Screenshot Cards */}
             <div className="mt-14 grid gap-8 md:grid-cols-2">
               {deliverables.map((item, index) => (
                 <Reveal
@@ -550,8 +705,155 @@ export default function ForecastingPage() {
           </div>
         </section>
 
-        {/* ── Dashboard Showcase ── */}
+        {/* ── 2. NEW SECTION (Placed immediately after "What You'll Receive"): "Every Week, We Help You Answer Questions Like..." ── */}
         <section className="px-6 py-24">
+          <div className="mx-auto max-w-7xl">
+            <Reveal>
+              <SectionHeader
+                align="center"
+                eyebrow="Weekly Intelligence"
+                title="Every Week, We Help You Answer Questions Like..."
+                copy="Clear answers to your team's most critical weekly operational decisions."
+              />
+            </Reveal>
+
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {planningQuestions.map((q, index) => (
+                <Reveal key={q.question} delay={index * 60}>
+                  <div className="group surface-card relative h-full overflow-hidden rounded-[1.6rem] border border-white/8 p-7 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
+                    <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#04B4FD] to-[#005EF0] opacity-0 transition duration-300 group-hover:opacity-100" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#04B4FD]/12 text-[#8dd9ff]">
+                      <HelpCircle size={20} />
+                    </div>
+                    <h3 className="mt-5 text-lg font-semibold tracking-[-0.01em] text-[#8dd9ff]">
+                      &ldquo;{q.question}&rdquo;
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-white">
+                      {q.answer}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 4. NEW SECTION: "More Than a Dashboard. An Ongoing Planning Partner." ── */}
+        <section className="bg-[rgba(18,28,40,0.56)] px-6 py-24">
+          <div className="mx-auto max-w-7xl">
+            <Reveal>
+              <SectionHeader
+                align="center"
+                eyebrow="System + Service"
+                title="More Than a Dashboard. An Ongoing Planning Partner."
+                copy="Software tools give you charts. ScaleSight combines tailored planning software with weekly operational analysis."
+              />
+            </Reveal>
+
+            <Reveal className="mt-14" delay={60}>
+              <div className="grid gap-8 md:grid-cols-2">
+                {/* Left Column: What You Receive */}
+                <div className="surface-card rounded-[1.8rem] border border-white/8 p-8">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#04B4FD]/14 text-[#8dd9ff]">
+                      <LayoutDashboard size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold text-white">
+                        What You Receive
+                      </h3>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[var(--text-muted)]">
+                        The System
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 space-y-4">
+                    {systemVsServiceLeft.map((item) => (
+                      <div
+                        key={item}
+                        className="flex items-center gap-3.5 text-base font-medium text-white"
+                      >
+                        <CheckCircle2
+                          size={18}
+                          className="shrink-0 text-[#04B4FD]"
+                        />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right Column: What We Do Every Week */}
+                <div className="rounded-[1.8rem] border border-[#04B4FD]/28 bg-[linear-gradient(180deg,rgba(0,94,240,0.12),rgba(8,15,26,0.98))] p-8">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#04B4FD]/20 text-[#8dd9ff]">
+                      <Sparkles size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold text-white">
+                        What We Do Every Week
+                      </h3>
+                      <p className="text-xs uppercase tracking-[0.18em] text-[#8dd9ff]">
+                        The Managed Service
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 space-y-4">
+                    {systemVsServiceRight.map((item) => (
+                      <div
+                        key={item}
+                        className="flex items-start gap-3.5 text-base font-medium text-white"
+                      >
+                        <Check
+                          size={18}
+                          className="mt-0.5 shrink-0 text-[#04B4FD]"
+                        />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ── 5. NEW SECTION: "What Makes ScaleSight Different?" ── */}
+        <section className="px-6 py-24">
+          <div className="mx-auto max-w-7xl">
+            <Reveal>
+              <SectionHeader
+                align="center"
+                eyebrow="Core Commitments"
+                title="What Makes ScaleSight Different?"
+                copy="We combine software precision with dedicated weekly analyst guidance."
+              />
+            </Reveal>
+
+            <Reveal className="mt-14" delay={60}>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {scaleSightDifferences.map((item) => (
+                  <div
+                    key={item}
+                    className="group surface-card flex items-center gap-4 rounded-[1.4rem] border border-white/8 p-6 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#04B4FD]/14 text-[#04B4FD] transition duration-300 group-hover:bg-[#04B4FD] group-hover:text-white">
+                      <Check size={20} strokeWidth={2.5} />
+                    </div>
+                    <span className="text-base font-semibold text-white">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ── Dashboard Showcase ── */}
+        <section className="bg-[rgba(5,15,26,0.96)] px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <Reveal>
               <SectionHeader
@@ -606,7 +908,7 @@ export default function ForecastingPage() {
         </section>
 
         {/* ── Business Outcomes ── */}
-        <section className="bg-[rgba(18,28,40,0.56)] px-6 py-24">
+        <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <Reveal>
               <SectionHeader
@@ -671,7 +973,7 @@ export default function ForecastingPage() {
         </section>
 
         {/* ── After the Pilot ── */}
-        <section className="px-6 py-24">
+        <section className="bg-[rgba(18,28,40,0.56)] px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <Reveal>
               <SectionHeader
