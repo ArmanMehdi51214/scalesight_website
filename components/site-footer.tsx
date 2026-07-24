@@ -40,9 +40,10 @@ export default function SiteFooter() {
               alt="ScaleSight Logo - Ecommerce Planning Partner"
               title="ScaleSight - Managed Ecommerce Intelligence"
               className="h-auto w-[9.5rem] md:w-[10.5rem]"
-              height={1216}
+              height={85}
+              width={304}
+              quality={85}
               src="/logo.png"
-              width={4345}
             />
           </Link>
           <p className="max-w-xs text-sm leading-7 text-[var(--text-secondary)]">
@@ -104,20 +105,22 @@ export default function SiteFooter() {
           alt="ScaleSight Brand Watermark"
           title="ScaleSight"
           className="footer-brand-image footer-brand-image--base"
-          height={1216}
+          height={85}
+          width={304}
+          quality={85}
           priority={false}
           src="/logo.png"
-          width={4345}
         />
         <Image
           alt="ScaleSight Colored Brand Watermark"
           title="ScaleSight"
           aria-hidden="true"
           className="footer-brand-image footer-brand-image--color"
-          height={1216}
+          height={85}
+          width={304}
+          quality={85}
           priority={false}
           src="/logo.png"
-          width={4345}
         />
       </div>
     </footer>

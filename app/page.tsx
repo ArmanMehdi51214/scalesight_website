@@ -421,6 +421,8 @@ export default function Home() {
                         alt={item.alt}
                         title={`${item.title} - ScaleSight Feature`}
                         placeholder="blur"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={80}
                         className="h-auto w-full object-cover transition duration-300 group-hover:scale-[1.01]"
                       />
                     </div>

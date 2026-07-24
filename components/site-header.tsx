@@ -65,10 +65,11 @@ export default function SiteHeader() {
             alt="ScaleSight Logo - Managed Ecommerce Intelligence"
             title="ScaleSight - Managed Ecommerce Intelligence"
             className="h-auto w-[9.5rem] md:w-[10.5rem]"
-            height={1216}
+            height={85}
+            width={304}
+            quality={85}
             priority
             src="/logo.png"
-            width={4345}
           />
         </Link>
 

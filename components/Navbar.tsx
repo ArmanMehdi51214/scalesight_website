@@ -19,8 +19,9 @@ export default function Navbar() {
             src="/images/logo.png"
             alt="ScaleSight Logo - Managed Ecommerce Intelligence"
             title="ScaleSight - Managed Ecommerce Intelligence"
-            width={176}
-            height={38}
+            width={304}
+            height={85}
+            quality={85}
             priority
           />
         </Link>

@@ -695,6 +695,8 @@ export default function ForecastingPage() {
                           alt={item.alt}
                           title={`${item.title} - ScaleSight Deliverable`}
                           placeholder="blur"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          quality={80}
                           className="h-auto w-full object-cover transition duration-300 group-hover:scale-[1.01]"
                         />
                       </div>
@@ -901,6 +903,8 @@ export default function ForecastingPage() {
                     title={activeShowcase.title}
                     className="h-auto w-full"
                     placeholder="blur"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={80}
                     src={activeShowcase.image}
                   />
                 </div>
