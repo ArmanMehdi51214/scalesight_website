@@ -238,8 +238,14 @@ const outcomes = [
 ];
 
 const comparisonRows = [
-  { others: "Build dashboards", scalesight: "Build + monitor your planning system" },
-  { others: "Deliver reports", scalesight: "Deliver recommendations and guidance" },
+  {
+    others: "Build dashboards",
+    scalesight: "Build + monitor your planning system",
+  },
+  {
+    others: "Deliver reports",
+    scalesight: "Deliver recommendations and guidance",
+  },
   { others: "Project-based", scalesight: "Ongoing planning partner" },
   { others: "Show data", scalesight: "Help you decide what to do next" },
 ];
@@ -254,6 +260,11 @@ const afterPilotSteps = [
 
 const faqs = [
   {
+    question: "What exactly do you do every week?",
+    answer:
+      "Every week we review your business performance, update forecasts, identify inventory risks, prepare executive reports, prioritize planning decisions, and meet with your team to discuss recommendations.",
+  },
+  {
     question: "How long does the pilot take?",
     answer:
       "The 30-Day Planning Pilot runs for exactly 30 days. By the end of week four you have a working planning system, a completed executive review, and a clear picture of how ScaleSight supports your business going forward.",
@@ -267,11 +278,6 @@ const faqs = [
     question: "What data do you need?",
     answer:
       "We connect to your Shopify store and operational systems using secure, read-only API access to analyze sales history, inventory posture, purchase orders, and product velocity.",
-  },
-  {
-    question: "What exactly do you do every week?",
-    answer:
-      "Every week we review your business performance, update forecasts, identify inventory risks, prepare executive reports, prioritize planning decisions, and meet with your team to discuss recommendations.",
   },
   {
     question: "Do I need Shopify?",
