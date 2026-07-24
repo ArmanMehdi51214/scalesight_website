@@ -11,7 +11,6 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/30-day-planning-pilot", label: "30-Day Pilot" },
-  { href: "/case-studies", label: "Case Studies" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -20,7 +19,10 @@ function isActive(pathname: string, href: string) {
     return pathname === "/";
   }
 
-  if (href === "/30-day-planning-pilot" && pathname === "/30-day-planning-pilot/") {
+  if (
+    href === "/30-day-planning-pilot" &&
+    pathname === "/30-day-planning-pilot/"
+  ) {
     return true;
   }
 

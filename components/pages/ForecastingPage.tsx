@@ -59,40 +59,61 @@ const problemCards = [
 ] as const;
 
 const pilotWeeks = [
-  { week: "Week 1", title: "Business Review", copy: "We review your operations, data sources, and planning challenges." },
-  { week: "Week 2", title: "Forecasting", copy: "We build your demand and revenue forecasting models." },
-  { week: "Week 3", title: "Planning Workspace", copy: "We deliver your inventory and planning dashboard." },
-  { week: "Week 4", title: "Executive Review", copy: "We present findings, insights, and your ongoing planning system." },
+  {
+    week: "Week 1",
+    title: "Business Review",
+    copy: "We review your operations, data sources, and planning challenges.",
+  },
+  {
+    week: "Week 2",
+    title: "Forecasting",
+    copy: "We build your demand and revenue forecast.",
+  },
+  {
+    week: "Week 3",
+    title: "Planning Workspace",
+    copy: "We deliver your inventory and planning dashboard.",
+  },
+  {
+    week: "Week 4",
+    title: "Executive Review",
+    copy: "We present findings, insights, and your ongoing planning system.",
+  },
 ] as const;
 
 const deliverables = [
   {
     title: "Executive Decision Dashboard",
-    subtitle: "High-level operational picture across revenue, demand alerts, and inventory health.",
+    subtitle:
+      "High-level operational picture across revenue, demand alerts, and inventory health.",
     image: executiveOverview,
     alt: "Executive Decision Dashboard screenshot",
   },
   {
     title: "Projected Revenue",
-    subtitle: "Forward view of revenue, sales trends, and 13-week confidence boundaries.",
+    subtitle:
+      "Forward view of revenue, sales trends, and 13-week confidence boundaries.",
     image: executiveDashboard,
     alt: "Projected Revenue forecast screenshot",
   },
   {
     title: "Inventory Health Dashboard",
-    subtitle: "Stock posture, overstock analysis, category risk, and inventory health score.",
+    subtitle:
+      "Stock posture, overstock analysis, category risk, and inventory health score.",
     image: inventoryDashboard,
     alt: "Inventory Health Dashboard screenshot",
   },
   {
     title: "SKU Demand Forecast",
-    subtitle: "Granular product-level demand forecasting, velocity, and reorder point calculations.",
+    subtitle:
+      "Granular product-level demand forecasting, velocity, and reorder point calculations.",
     image: skuDemandForecast,
     alt: "SKU Demand Forecast screenshot",
   },
   {
     title: "Scenario Planning",
-    subtitle: "Interactive simulation for ad spend shifts, promo planning, and supplier lead times.",
+    subtitle:
+      "Interactive simulation for ad spend shifts, promo planning, and supplier lead times.",
     image: scenarioPlanning,
     alt: "Scenario Planning screenshot",
   },
@@ -125,7 +146,6 @@ const showcaseTabs = [
   },
 ] as const;
 
-
 const beforeItems = [
   "Guessing inventory levels",
   "Spreadsheet-based planning",
@@ -151,7 +171,7 @@ const outcomes = [
 
 const afterPilotSteps = [
   "Platform stays active",
-  "Weekly analyst review",
+  "Weekly bussiness review",
   "Weekly reports",
   "Monthly planning meetings",
   "Continuous forecasting",
@@ -181,7 +201,7 @@ const faqs = [
   {
     question: "What happens after the pilot?",
     answer:
-      "After the pilot your planning workspace stays active. We continue with weekly analyst reviews, weekly reports, monthly planning meetings, and continuous forecasting — so your business always has a forward view.",
+      "After the pilot your planning workspace stays active. We continue with weekly business reviews, weekly reports, monthly planning meetings, and continuous forecasting — so your business always has a forward view.",
   },
 ];
 
@@ -238,7 +258,6 @@ export default function ForecastingPage() {
     <>
       <SiteHeader />
       <main className="relative overflow-hidden">
-
         {/* ── Hero ── */}
         <section className="relative px-6 pb-20 pt-8 md:pb-24 md:pt-10">
           <ShaderBackdrop />
@@ -252,15 +271,21 @@ export default function ForecastingPage() {
               </div>
               <h1 className="mt-6 text-5xl font-semibold tracking-[-0.07em] text-white md:text-7xl lg:text-[5.35rem] lg:leading-[0.95]">
                 Build Your First{" "}
-                <span className="text-gradient-primary">Planning System</span>
-                {" "}in 30 Days
+                <span className="text-gradient-primary">Planning System</span>{" "}
+                in 30 Days
               </h1>
-              <p className="section-copy text-center mx-auto mt-7 max-w-2xl text-base md:text-lg">
-                We become your ecommerce planning partner. We monitor your business, identify problems before they happen, and help your team make better decisions every week.
+              <p className="text-center mx-auto mt-7 max-w-2xl text-base md:text-lg">
+                We become your ecommerce planning partner. We monitor your
+                business, identify problems before they happen, and help your
+                team make better decisions every week.
               </p>
               <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <PrimaryButton href="/contact">Book Discovery Call</PrimaryButton>
-                <SecondaryButton href="#how-it-works">See How It Works</SecondaryButton>
+                <PrimaryButton href="/contact">
+                  Book Discovery Call
+                </PrimaryButton>
+                <SecondaryButton href="#how-it-works">
+                  See How It Works
+                </SecondaryButton>
               </div>
             </Reveal>
           </div>
@@ -286,10 +311,15 @@ export default function ForecastingPage() {
                       <CheckCircle2 size={24} />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8dd9ff]">Platform fit</p>
-                      <h3 className="mt-1 text-xl font-semibold text-white">Shopify Brands</h3>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8dd9ff]">
+                        Platform fit
+                      </p>
+                      <h3 className="mt-1 text-xl font-semibold text-white">
+                        Shopify Brands
+                      </h3>
                       <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                        Built natively around Shopify data, store structures, and order workflows.
+                        Built natively around Shopify data, store structures,
+                        and order workflows.
                       </p>
                     </div>
                   </div>
@@ -299,10 +329,15 @@ export default function ForecastingPage() {
                       <CheckCircle2 size={24} />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8dd9ff]">Business model</p>
-                      <h3 className="mt-1 text-xl font-semibold text-white">DTC Ecommerce</h3>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8dd9ff]">
+                        Business model
+                      </p>
+                      <h3 className="mt-1 text-xl font-semibold text-white">
+                        DTC Ecommerce
+                      </h3>
                       <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                        Direct-to-consumer brands managing active growth, inventory, and purchasing decisions.
+                        Direct-to-consumer brands managing active growth,
+                        inventory, and purchasing decisions.
                       </p>
                     </div>
                   </div>
@@ -350,12 +385,18 @@ export default function ForecastingPage() {
                     <article
                       className={`surface-card flex gap-5 rounded-[1.6rem] border-l-2 p-7 ${card.borderClass}`}
                     >
-                      <div className={`mt-1 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${card.iconClass}`}>
+                      <div
+                        className={`mt-1 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${card.iconClass}`}
+                      >
                         <Icon size={22} strokeWidth={1.9} />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-white">{card.title}</h3>
-                        <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">{card.copy}</p>
+                        <h3 className="text-lg font-semibold text-white">
+                          {card.title}
+                        </h3>
+                        <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
+                          {card.copy}
+                        </p>
                       </div>
                     </article>
                   </Reveal>
@@ -366,7 +407,10 @@ export default function ForecastingPage() {
         </section>
 
         {/* ── How It Works ── */}
-        <section className="bg-[rgba(18,28,40,0.9)] px-6 py-24" id="how-it-works">
+        <section
+          className="bg-[rgba(18,28,40,0.9)] px-6 py-24"
+          id="how-it-works"
+        >
           <div className="mx-auto max-w-7xl">
             <Reveal>
               <SectionHeader
@@ -377,10 +421,26 @@ export default function ForecastingPage() {
             </Reveal>
             <div className="mt-14 grid gap-8 md:grid-cols-4">
               {[
-                ["01", "Connect Your Data", "We connect to your Shopify store and operational data sources."],
-                ["02", "Build Your Planning Workspace", "We build a forecasting and planning system tailored to your business."],
-                ["03", "Receive Weekly Insights", "Every week you receive clear recommendations and planning priorities."],
-                ["04", "Make Better Decisions", "Your team plans inventory, purchasing, and growth with confidence."],
+                [
+                  "01",
+                  "Connect Your Data",
+                  "We connect to your Shopify store and operational data sources.",
+                ],
+                [
+                  "02",
+                  "Build Your Planning Workspace",
+                  "We build a forecasting and planning system tailored to your business.",
+                ],
+                [
+                  "03",
+                  "Receive Weekly Insights",
+                  "Every week you receive clear recommendations and planning priorities.",
+                ],
+                [
+                  "04",
+                  "Make Better Decisions",
+                  "Your team plans inventory, purchasing, and growth with confidence.",
+                ],
               ].map(([number, title, copy], index) => (
                 <Reveal key={title} delay={index * 80}>
                   <article className="relative text-center">
@@ -390,8 +450,12 @@ export default function ForecastingPage() {
                     <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-[rgba(18,28,40,0.92)] text-xl font-semibold text-[#8dd9ff]">
                       {number}
                     </div>
-                    <h3 className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-white">{title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">{copy}</p>
+                    <h3 className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-white">
+                      {title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">
+                      {copy}
+                    </p>
                   </article>
                 </Reveal>
               ))}
@@ -417,8 +481,12 @@ export default function ForecastingPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
                       {item.week}
                     </p>
-                    <h3 className="mt-5 text-xl font-semibold text-white">{item.title}</h3>
-                    <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">{item.copy}</p>
+                    <h3 className="mt-5 text-xl font-semibold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
+                      {item.copy}
+                    </p>
                   </article>
                 </Reveal>
               ))}
@@ -437,7 +505,7 @@ export default function ForecastingPage() {
                 align="center"
                 eyebrow="Deliverables"
                 title="What You'll Receive"
-                copy="Every pilot includes a complete set of planning tools, dashboards, and decision reports."
+                copy="Every pilot includes a complete set of planning tools, workspaces, and decision reports."
               />
             </Reveal>
             <div className="mt-14 grid gap-8 md:grid-cols-2">
@@ -445,7 +513,11 @@ export default function ForecastingPage() {
                 <Reveal
                   key={item.title}
                   delay={index * 60}
-                  className={index === 4 ? "md:col-span-2 md:mx-auto md:w-full md:max-w-2xl" : ""}
+                  className={
+                    index === 4
+                      ? "md:col-span-2 md:mx-auto md:w-full md:max-w-2xl"
+                      : ""
+                  }
                 >
                   <div className="group surface-card flex flex-col justify-between overflow-hidden rounded-[1.8rem] border border-white/8 p-6 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35 h-full">
                     <div>
@@ -454,8 +526,12 @@ export default function ForecastingPage() {
                           <CheckCircle2 size={20} />
                         </div>
                         <div>
-                          <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">{item.subtitle}</p>
+                          <h3 className="text-lg font-semibold text-white">
+                            {item.title}
+                          </h3>
+                          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
+                            {item.subtitle}
+                          </p>
                         </div>
                       </div>
                       <div className="mt-5 overflow-hidden rounded-[1.2rem] border border-white/8 bg-white">
@@ -486,11 +562,18 @@ export default function ForecastingPage() {
               />
             </Reveal>
 
-            <Reveal className="mt-10 flex flex-wrap justify-center gap-3" delay={60}>
+            <Reveal
+              className="mt-10 flex flex-wrap justify-center gap-3"
+              delay={60}
+            >
               {showcaseTabs.map((tab) => (
                 <button
                   key={tab.id}
-                  className={activeShowcase.id === tab.id ? "tab-pill tab-pill--active" : "tab-pill"}
+                  className={
+                    activeShowcase.id === tab.id
+                      ? "tab-pill tab-pill--active"
+                      : "tab-pill"
+                  }
                   onClick={() => startTransition(() => setActiveShowcase(tab))}
                   type="button"
                 >
@@ -502,8 +585,12 @@ export default function ForecastingPage() {
             <Reveal className="mt-10" delay={100}>
               <div className="surface-card overflow-hidden rounded-[2rem] p-4 md:p-6">
                 <div className="mb-5 text-center">
-                  <h3 className="text-lg font-semibold text-white">{activeShowcase.title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">{activeShowcase.description}</p>
+                  <h3 className="text-lg font-semibold text-white">
+                    {activeShowcase.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
+                    {activeShowcase.description}
+                  </p>
                 </div>
                 <div className="overflow-hidden rounded-[1.5rem] border border-white/8 bg-white">
                   <Image
@@ -536,7 +623,10 @@ export default function ForecastingPage() {
                   </p>
                   <div className="space-y-4">
                     {beforeItems.map((item) => (
-                      <div key={item} className="flex items-center gap-3 text-sm text-[var(--text-secondary)]">
+                      <div
+                        key={item}
+                        className="flex items-center gap-3 text-sm text-[var(--text-secondary)]"
+                      >
                         <X size={16} className="shrink-0 text-[#f43f5e]" />
                         {item}
                       </div>
@@ -551,7 +641,10 @@ export default function ForecastingPage() {
                   </p>
                   <div className="space-y-4">
                     {afterItems.map((item) => (
-                      <div key={item} className="flex items-center gap-3 text-sm text-white">
+                      <div
+                        key={item}
+                        className="flex items-center gap-3 text-sm text-white"
+                      >
                         <Check size={16} className="shrink-0 text-[#04B4FD]" />
                         {item}
                       </div>
@@ -560,9 +653,15 @@ export default function ForecastingPage() {
                 </div>
               </Reveal>
             </div>
-            <Reveal className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3" delay={60}>
+            <Reveal
+              className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3"
+              delay={60}
+            >
               {outcomes.map((item) => (
-                <div key={item} className="flex items-center gap-3 text-base text-white">
+                <div
+                  key={item}
+                  className="flex items-center gap-3 text-base text-white"
+                >
                   <CheckCircle2 size={18} className="shrink-0 text-[#8dd9ff]" />
                   {item}
                 </div>
@@ -609,7 +708,10 @@ export default function ForecastingPage() {
           </div>
           <div className="relative mx-auto max-w-4xl">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <SectionHeader align="center" title="Frequently Asked Questions" />
+              <SectionHeader
+                align="center"
+                title="Frequently Asked Questions"
+              />
             </Reveal>
             <div className="mt-12 space-y-4">
               {faqs.map((item, index) => (
@@ -650,14 +752,15 @@ export default function ForecastingPage() {
                     copy="Let's build your first planning system."
                   />
                   <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                    <PrimaryButton href="/contact">Book Strategy Call</PrimaryButton>
+                    <PrimaryButton href="/contact">
+                      Book Strategy Call
+                    </PrimaryButton>
                   </div>
                 </div>
               </div>
             </Reveal>
           </div>
         </section>
-
       </main>
       <SiteFooter />
     </>

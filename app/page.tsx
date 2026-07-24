@@ -69,47 +69,84 @@ const problemCards = [
 ];
 
 const processSteps = [
-  ["01", "Connect Your Data", "We connect to your Shopify store and operational data sources."],
-  ["02", "Build Your Planning Workspace", "We build a forecasting and planning system tailored to your business."],
-  ["03", "Receive Weekly Insights", "Every week you receive clear recommendations and planning priorities."],
-  ["04", "Make Better Decisions", "Your team plans inventory, purchasing, and growth with confidence."],
+  [
+    "01",
+    "Connect Your Data",
+    "We connect to your Shopify store and operational data sources.",
+  ],
+  [
+    "02",
+    "Build Your Planning Workspace",
+    "We build a forecasting and planning system tailored to your business.",
+  ],
+  [
+    "03",
+    "Receive Weekly Insights",
+    "Every week you receive clear recommendations and planning priorities.",
+  ],
+  [
+    "04",
+    "Make Better Decisions",
+    "Your team plans inventory, purchasing, and growth with confidence.",
+  ],
 ];
 
 const pilotWeeks = [
-  { week: "Week 1", title: "Business Review", copy: "We review your operations, data, and planning challenges." },
-  { week: "Week 2", title: "Forecasting", copy: "We build your demand and revenue forecasting models." },
-  { week: "Week 3", title: "Planning Workspace", copy: "We deliver your inventory and planning dashboard." },
-  { week: "Week 4", title: "Executive Review", copy: "We present findings, insights, and your ongoing planning system." },
+  {
+    week: "Week 1",
+    title: "Business Review",
+    copy: "We review your operations, data, and planning challenges.",
+  },
+  {
+    week: "Week 2",
+    title: "Forecasting",
+    copy: "We build your demand and revenue forecast.",
+  },
+  {
+    week: "Week 3",
+    title: "Planning Workspace",
+    copy: "We deliver your inventory and planning dashboard.",
+  },
+  {
+    week: "Week 4",
+    title: "Executive Review",
+    copy: "We present findings, insights, and your ongoing planning system.",
+  },
 ];
 
 const deliverables = [
   {
     title: "Executive Decision Dashboard",
-    subtitle: "High-level operational picture across revenue, demand alerts, and inventory health.",
+    subtitle:
+      "High-level operational picture across revenue, demand alerts, and inventory health.",
     image: executiveOverview,
     alt: "Executive Decision Dashboard screenshot",
   },
   {
     title: "Projected Revenue",
-    subtitle: "Forward view of revenue, sales trends, and 13-week confidence boundaries.",
+    subtitle:
+      "Forward view of revenue, sales trends, and 13-week confidence boundaries.",
     image: projectedRevenue,
     alt: "Projected Revenue forecast screenshot",
   },
   {
     title: "Inventory Health Dashboard",
-    subtitle: "Stock posture, overstock analysis, category risk, and inventory health score.",
+    subtitle:
+      "Stock posture, overstock analysis, category risk, and inventory health score.",
     image: inventoryDashboard,
     alt: "Inventory Health Dashboard screenshot",
   },
   {
     title: "SKU Demand Forecast",
-    subtitle: "Granular product-level demand forecasting, velocity, and reorder point calculations.",
+    subtitle:
+      "Granular product-level demand forecasting, velocity, and reorder point calculations.",
     image: skuDemandForecast,
     alt: "SKU Demand Forecast screenshot",
   },
   {
     title: "Scenario Planning",
-    subtitle: "Interactive simulation for ad spend shifts, promo planning, and supplier lead times.",
+    subtitle:
+      "Interactive simulation for ad spend shifts, promo planning, and supplier lead times.",
     image: scenarioPlanning,
     alt: "Scenario Planning screenshot",
   },
@@ -147,7 +184,7 @@ const comparisonRows = [
 
 const afterPilotSteps = [
   "Platform stays active",
-  "Weekly analyst review",
+  "Weekly bussiness review",
   "Weekly reports",
   "Monthly planning meetings",
   "Continuous forecasting",
@@ -177,7 +214,7 @@ const faqs = [
   {
     question: "What happens after the pilot?",
     answer:
-      "After the pilot your planning workspace stays active. We continue with weekly analyst reviews, weekly reports, monthly planning meetings, and continuous forecasting — so your business always has a forward view.",
+      "After the pilot your planning workspace stays active. We continue with weekly business reviews, weekly reports, monthly planning meetings, and continuous forecasting — so your business always has a forward view.",
   },
 ];
 
@@ -186,7 +223,6 @@ export default function Home() {
     <>
       <SiteHeader />
       <main className="relative overflow-hidden">
-
         {/* ── 1. Hero ── */}
         <section className="relative px-6 pb-16 pt-8 md:pb-20 md:pt-10">
           <ShaderBackdrop />
@@ -207,11 +243,15 @@ export default function Home() {
                 <span className="text-gradient-primary">Start Planning.</span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-[var(--text-secondary)] md:text-lg md:leading-8">
-                Help your ecommerce team forecast demand, identify inventory risks, and make better business decisions with a managed planning system.
+                Help your ecommerce team forecast demand, identify inventory
+                risks, and make better business decisions with a managed
+                planning system.
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <PrimaryButton href="/contact">Book a Strategy Call</PrimaryButton>
+                <PrimaryButton href="/contact">
+                  Book a Strategy Call
+                </PrimaryButton>
                 <SecondaryButton href="/30-day-planning-pilot">
                   See How the Pilot Works
                 </SecondaryButton>
@@ -264,9 +304,13 @@ export default function Home() {
                     key={card.title}
                     className="group relative overflow-hidden rounded-[1.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(12,23,39,0.98),rgba(8,15,26,0.96))] p-8 transition duration-300 hover:border-white/16"
                   >
-                    <div className={`absolute inset-x-0 top-0 h-[3px] opacity-0 transition duration-300 group-hover:opacity-100 ${card.accentClass}`} />
+                    <div
+                      className={`absolute inset-x-0 top-0 h-[3px] opacity-0 transition duration-300 group-hover:opacity-100 ${card.accentClass}`}
+                    />
                     <div className="flex h-full flex-col">
-                      <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${card.iconClass}`}>
+                      <div
+                        className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${card.iconClass}`}
+                      >
                         <Icon size={28} strokeWidth={1.9} />
                       </div>
                       <h3 className="mt-6 text-2xl font-semibold tracking-[-0.03em] text-white">
@@ -286,10 +330,7 @@ export default function Home() {
         {/* ── 5. How ScaleSight Works ── */}
         <section className="bg-[rgba(18,28,40,0.9)] px-6 py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionHeader
-              align="center"
-              title="How ScaleSight Works"
-            />
+            <SectionHeader align="center" title="How ScaleSight Works" />
             <div className="mt-14 grid gap-8 md:grid-cols-4">
               {processSteps.map(([number, title, copy], index) => (
                 <article key={title} className="relative text-center">
@@ -348,14 +389,16 @@ export default function Home() {
               align="center"
               eyebrow="Deliverables"
               title="What You'll Receive"
-              copy="Every pilot includes a complete set of planning tools, dashboards, and decision reports."
+              copy="Every pilot includes a complete set of planning tools, workspace, and decision reports."
             />
             <div className="mt-14 grid gap-8 md:grid-cols-2">
               {deliverables.map((item, index) => (
                 <div
                   key={item.title}
                   className={`group surface-card flex flex-col justify-between overflow-hidden rounded-[1.8rem] border border-white/8 p-6 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35 ${
-                    index === 4 ? "md:col-span-2 md:mx-auto md:w-full md:max-w-2xl" : ""
+                    index === 4
+                      ? "md:col-span-2 md:mx-auto md:w-full md:max-w-2xl"
+                      : ""
                   }`}
                 >
                   <div>
@@ -364,8 +407,12 @@ export default function Home() {
                         <CheckCircle2 size={20} />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                        <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">{item.subtitle}</p>
+                        <h3 className="text-lg font-semibold text-white">
+                          {item.title}
+                        </h3>
+                        <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
+                          {item.subtitle}
+                        </p>
                       </div>
                     </div>
                     <div className="mt-5 overflow-hidden rounded-[1.2rem] border border-white/8 bg-white">
@@ -398,7 +445,10 @@ export default function Home() {
                 </p>
                 <div className="space-y-4">
                   {beforeItems.map((item) => (
-                    <div key={item} className="flex items-center gap-3 text-sm text-[var(--text-secondary)]">
+                    <div
+                      key={item}
+                      className="flex items-center gap-3 text-sm text-[var(--text-secondary)]"
+                    >
                       <X size={16} className="shrink-0 text-[#f43f5e]" />
                       {item}
                     </div>
@@ -411,7 +461,10 @@ export default function Home() {
                 </p>
                 <div className="space-y-4">
                   {afterItems.map((item) => (
-                    <div key={item} className="flex items-center gap-3 text-sm text-white">
+                    <div
+                      key={item}
+                      className="flex items-center gap-3 text-sm text-white"
+                    >
                       <Check size={16} className="shrink-0 text-[#04B4FD]" />
                       {item}
                     </div>
@@ -421,7 +474,10 @@ export default function Home() {
             </div>
             <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
               {outcomes.map((item) => (
-                <div key={item} className="flex items-center gap-3 text-base text-white">
+                <div
+                  key={item}
+                  className="flex items-center gap-3 text-base text-white"
+                >
                   <CheckCircle2 size={18} className="shrink-0 text-[#8dd9ff]" />
                   {item}
                 </div>
@@ -455,11 +511,18 @@ export default function Home() {
             />
             <div className="mt-14 overflow-hidden rounded-[1.6rem] border border-white/8">
               <div className="grid grid-cols-2 border-b border-white/8 bg-white/[0.03]">
-                <div className="px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">Others</div>
-                <div className="border-l border-white/8 px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">ScaleSight</div>
+                <div className="px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
+                  Others
+                </div>
+                <div className="border-l border-white/8 px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
+                  ScaleSight
+                </div>
               </div>
               {comparisonRows.map((row) => (
-                <div key={row.others} className="grid grid-cols-2 border-b border-white/6 last:border-0 transition hover:bg-white/[0.02]">
+                <div
+                  key={row.others}
+                  className="grid grid-cols-2 border-b border-white/6 last:border-0 transition hover:bg-white/[0.02]"
+                >
                   <div className="flex items-center gap-3 px-8 py-5 text-sm text-[var(--text-secondary)]">
                     <X size={14} className="shrink-0 text-[#f43f5e]/70" />
                     {row.others}
@@ -533,7 +596,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
       </main>
       <SiteFooter />
     </>
