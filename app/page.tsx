@@ -8,6 +8,12 @@ import {
   Clock,
   X,
   Check,
+  TrendingUp,
+  ShieldAlert,
+  Wallet,
+  Zap,
+  BarChart3,
+  CalendarCheck,
 } from "lucide-react";
 
 import DashboardGridShowcase from "@/components/DashboardGridShowcase";
@@ -27,10 +33,10 @@ import skuDemandForecast from "@/public/dashboards for website/visual 2.png";
 import scenarioPlanning from "@/public/dashboards for website/visual 2s.png";
 
 const trustItems = [
-  "Shopify Brands",
-  "Sales Forecasting",
-  "Inventory Planning",
-  "Weekly Decision Support",
+  "Built for Shopify Brands",
+  "Revenue Forecasting",
+  "Inventory Intelligence",
+  "Weekly Planning Recommendations",
 ];
 
 const problemCards = [
@@ -61,7 +67,7 @@ const problemCards = [
   {
     icon: Clock,
     title: "Reactive Decisions",
-    copy: "Always fixing problems instead of preventing them. No AI buzzwords. Speak business.",
+    copy: "Always fixing problems instead of preventing them.",
     accentClass: "bg-[#8b5cf6]",
     iconClass: "bg-[#8b5cf6]/12 text-[#c4b5fd]",
     labelClass: "text-[#c4b5fd]",
@@ -69,47 +75,84 @@ const problemCards = [
 ];
 
 const processSteps = [
-  ["01", "Connect Your Data", "We connect to your Shopify store and operational data sources."],
-  ["02", "Build Your Planning Workspace", "We build a forecasting and planning system tailored to your business."],
-  ["03", "Receive Weekly Insights", "Every week you receive clear recommendations and planning priorities."],
-  ["04", "Make Better Decisions", "Your team plans inventory, purchasing, and growth with confidence."],
+  [
+    "01",
+    "Connect Your Data",
+    "We connect to your Shopify store and operational data sources.",
+  ],
+  [
+    "02",
+    "Build Your Planning Workspace",
+    "We build a planning system that gives your team complete visibility into future demand and inventory.",
+  ],
+  [
+    "03",
+    "Receive Weekly Insights",
+    "Every week you receive clear recommendations and planning priorities.",
+  ],
+  [
+    "04",
+    "Make Better Decisions",
+    "Your team plans inventory, purchasing, and growth with confidence.",
+  ],
 ];
 
 const pilotWeeks = [
-  { week: "Week 1", title: "Business Review", copy: "We review your operations, data, and planning challenges." },
-  { week: "Week 2", title: "Forecasting", copy: "We build your demand and revenue forecasting models." },
-  { week: "Week 3", title: "Planning Workspace", copy: "We deliver your inventory and planning dashboard." },
-  { week: "Week 4", title: "Executive Review", copy: "We present findings, insights, and your ongoing planning system." },
+  {
+    week: "Week 1",
+    title: "Business Review",
+    copy: "We review your operations, data, and planning challenges.",
+  },
+  {
+    week: "Week 2",
+    title: "Forecasting",
+    copy: "We forecast future demand, revenue, and inventory requirements.",
+  },
+  {
+    week: "Week 3",
+    title: "Planning Workspace",
+    copy: "We deliver your planning workspace with complete visibility into revenue and inventory.",
+  },
+  {
+    week: "Week 4",
+    title: "Executive Review",
+    copy: "We present findings, insights, and hand over your ongoing planning system.",
+  },
 ];
 
 const deliverables = [
   {
-    title: "Executive Decision Dashboard",
-    subtitle: "High-level operational picture across revenue, demand alerts, and inventory health.",
+    title: "Executive Overview",
+    subtitle:
+      "High-level operational picture across revenue, demand alerts, and inventory health.",
     image: executiveOverview,
-    alt: "Executive Decision Dashboard screenshot",
+    alt: "Executive Overview screenshot",
   },
   {
-    title: "Projected Revenue",
-    subtitle: "Forward view of revenue, sales trends, and 13-week confidence boundaries.",
+    title: "Revenue Outlook",
+    subtitle:
+      "Forward view of revenue, sales trends, and 13-week confidence boundaries.",
     image: projectedRevenue,
-    alt: "Projected Revenue forecast screenshot",
+    alt: "Revenue Outlook forecast screenshot",
   },
   {
-    title: "Inventory Health Dashboard",
-    subtitle: "Stock posture, overstock analysis, category risk, and inventory health score.",
+    title: "Inventory Health",
+    subtitle:
+      "Stock posture, overstock analysis, category risk, and inventory health score.",
     image: inventoryDashboard,
-    alt: "Inventory Health Dashboard screenshot",
+    alt: "Inventory Health screenshot",
   },
   {
-    title: "SKU Demand Forecast",
-    subtitle: "Granular product-level demand forecasting, velocity, and reorder point calculations.",
+    title: "SKU Planning",
+    subtitle:
+      "Granular product-level demand forecasting, velocity, and reorder point calculations.",
     image: skuDemandForecast,
-    alt: "SKU Demand Forecast screenshot",
+    alt: "SKU Planning forecast screenshot",
   },
   {
     title: "Scenario Planning",
-    subtitle: "Interactive simulation for ad spend shifts, promo planning, and supplier lead times.",
+    subtitle:
+      "Interactive simulation for ad spend shifts, promo planning, and supplier lead times.",
     image: scenarioPlanning,
     alt: "Scenario Planning screenshot",
   },
@@ -129,25 +172,49 @@ const afterItems = [
   "Better purchasing decisions",
 ];
 
-const outcomes = [
-  "Plan inventory with confidence",
-  "Reduce stockouts",
-  "Improve cash flow",
-  "Know revenue before it happens",
-  "Save hours every week",
-  "Make faster decisions",
+const businessImpacts = [
+  {
+    icon: TrendingUp,
+    title: "Plan inventory with confidence",
+    copy: "Align purchasing schedules directly with forecasted customer demand.",
+  },
+  {
+    icon: ShieldAlert,
+    title: "Reduce stockouts",
+    copy: "Identify top-selling products at risk before expensive stockouts occur.",
+  },
+  {
+    icon: Wallet,
+    title: "Protect cash flow",
+    copy: "Avoid tying up operational capital in stagnant overstock items.",
+  },
+  {
+    icon: BarChart3,
+    title: "See revenue before month-end",
+    copy: "Track 13-week revenue projections with clear confidence boundaries.",
+  },
+  {
+    icon: Zap,
+    title: "Save hours every week",
+    copy: "Eliminate manual spreadsheet updates with an automated planning workflow.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Make faster planning decisions",
+    copy: "Empower leadership with weekly strategic guidance and executive summaries.",
+  },
 ];
 
 const comparisonRows = [
-  { others: "Dashboard Freelancer", scalesight: "Managed Planning" },
-  { others: "Software Tool", scalesight: "Weekly Recommendations" },
-  { others: "Internal Analyst", scalesight: "Platform + Analyst" },
-  { others: "BI Agency", scalesight: "Productized System" },
+  { others: "Build dashboards", scalesight: "Build + monitor your planning system" },
+  { others: "Deliver reports", scalesight: "Deliver recommendations and guidance" },
+  { others: "Project-based", scalesight: "Ongoing planning partner" },
+  { others: "Show data", scalesight: "Help you decide what to do next" },
 ];
 
 const afterPilotSteps = [
   "Platform stays active",
-  "Weekly analyst review",
+  "Weekly business review",
   "Weekly reports",
   "Monthly planning meetings",
   "Continuous forecasting",
@@ -160,6 +227,16 @@ const faqs = [
       "The 30-Day Planning Pilot runs for exactly 30 days. By the end of week four you have a working planning system, a completed executive review, and a clear picture of how ScaleSight supports your business going forward.",
   },
   {
+    question: "How much time does this require from my team?",
+    answer:
+      "Most clients spend 1–2 hours during onboarding, then around 30–60 minutes each week reviewing recommendations.",
+  },
+  {
+    question: "What data do you need?",
+    answer:
+      "We connect to your Shopify store and operational systems using secure, read-only API access to analyze sales history, inventory posture, purchase orders, and product velocity.",
+  },
+  {
     question: "Do I need Shopify?",
     answer:
       "Shopify is our primary platform and where we do our best work. If you run a DTC ecommerce business on Shopify, you are a strong fit. Reach out if you are on a different platform and we can discuss what is possible.",
@@ -170,14 +247,9 @@ const faqs = [
       "No. ScaleSight works alongside your team. We provide the planning system, the weekly insights, and the analyst support — so your team can focus on decisions rather than data preparation.",
   },
   {
-    question: "Can you connect my data?",
-    answer:
-      "Yes. We connect to your Shopify store, inventory data, and other operational sources during onboarding. Most connections are set up within the first week.",
-  },
-  {
     question: "What happens after the pilot?",
     answer:
-      "After the pilot your planning workspace stays active. We continue with weekly analyst reviews, weekly reports, monthly planning meetings, and continuous forecasting — so your business always has a forward view.",
+      "After the pilot your planning workspace stays active. We continue with weekly business reviews, weekly reports, monthly planning meetings, and continuous forecasting — so your business always has a forward view.",
   },
 ];
 
@@ -186,7 +258,6 @@ export default function Home() {
     <>
       <SiteHeader />
       <main className="relative overflow-hidden">
-
         {/* ── 1. Hero ── */}
         <section className="relative px-6 pb-16 pt-8 md:pb-20 md:pt-10">
           <ShaderBackdrop />
@@ -199,7 +270,7 @@ export default function Home() {
             <div className="mx-auto max-w-4xl text-center">
               <div className="inline-flex items-center gap-2 rounded-full border border-[#04B4FD]/28 bg-[rgba(0,94,240,0.12)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
                 <span className="h-2 w-2 rounded-full bg-[#04B4FD] shadow-[0_0_10px_rgba(4,180,253,0.8)]" />
-                30-Day Planning Pilot
+                MANAGED ECOMMERCE INTELLIGENCE
               </div>
 
               <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.07em] text-white md:text-6xl lg:text-[5.25rem]">
@@ -207,11 +278,16 @@ export default function Home() {
                 <span className="text-gradient-primary">Start Planning.</span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-[var(--text-secondary)] md:text-lg md:leading-8">
-                Help your ecommerce team forecast demand, identify inventory risks, and make better business decisions with a managed planning system.
+                Gain a complete planning system backed by ongoing analysis,
+                expert recommendations, and strategic guidance so your team can
+                forecast demand, avoid inventory mistakes, and make confident
+                business decisions every week.
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <PrimaryButton href="/contact">Book a Strategy Call</PrimaryButton>
+                <PrimaryButton href="/contact">
+                  Book a Strategy Call
+                </PrimaryButton>
                 <SecondaryButton href="/30-day-planning-pilot">
                   See How the Pilot Works
                 </SecondaryButton>
@@ -264,9 +340,13 @@ export default function Home() {
                     key={card.title}
                     className="group relative overflow-hidden rounded-[1.6rem] border border-white/8 bg-[linear-gradient(180deg,rgba(12,23,39,0.98),rgba(8,15,26,0.96))] p-8 transition duration-300 hover:border-white/16"
                   >
-                    <div className={`absolute inset-x-0 top-0 h-[3px] opacity-0 transition duration-300 group-hover:opacity-100 ${card.accentClass}`} />
+                    <div
+                      className={`absolute inset-x-0 top-0 h-[3px] opacity-0 transition duration-300 group-hover:opacity-100 ${card.accentClass}`}
+                    />
                     <div className="flex h-full flex-col">
-                      <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${card.iconClass}`}>
+                      <div
+                        className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${card.iconClass}`}
+                      >
                         <Icon size={28} strokeWidth={1.9} />
                       </div>
                       <h3 className="mt-6 text-2xl font-semibold tracking-[-0.03em] text-white">
@@ -286,10 +366,7 @@ export default function Home() {
         {/* ── 5. How ScaleSight Works ── */}
         <section className="bg-[rgba(18,28,40,0.9)] px-6 py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionHeader
-              align="center"
-              title="How ScaleSight Works"
-            />
+            <SectionHeader align="center" title="How ScaleSight Works" />
             <div className="mt-14 grid gap-8 md:grid-cols-4">
               {processSteps.map(([number, title, copy], index) => (
                 <article key={title} className="relative text-center">
@@ -321,7 +398,7 @@ export default function Home() {
               copy="We set up your entire planning system in one month. No long contracts. No guesswork."
             />
             <div className="mt-14 grid gap-6 md:grid-cols-4">
-              {pilotWeeks.map((item, index) => (
+              {pilotWeeks.map((item) => (
                 <article key={item.week} className="story-card">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
                     {item.week}
@@ -348,14 +425,16 @@ export default function Home() {
               align="center"
               eyebrow="Deliverables"
               title="What You'll Receive"
-              copy="Every pilot includes a complete set of planning tools, dashboards, and decision reports."
+              copy="Every pilot includes a complete set of planning tools, workspace, and decision reports."
             />
             <div className="mt-14 grid gap-8 md:grid-cols-2">
               {deliverables.map((item, index) => (
                 <div
                   key={item.title}
                   className={`group surface-card flex flex-col justify-between overflow-hidden rounded-[1.8rem] border border-white/8 p-6 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35 ${
-                    index === 4 ? "md:col-span-2 md:mx-auto md:w-full md:max-w-2xl" : ""
+                    index === 4
+                      ? "md:col-span-2 md:mx-auto md:w-full md:max-w-2xl"
+                      : ""
                   }`}
                 >
                   <div>
@@ -364,15 +443,22 @@ export default function Home() {
                         <CheckCircle2 size={20} />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                        <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">{item.subtitle}</p>
+                        <h3 className="text-lg font-semibold text-white">
+                          {item.title}
+                        </h3>
+                        <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
+                          {item.subtitle}
+                        </p>
                       </div>
                     </div>
                     <div className="mt-5 overflow-hidden rounded-[1.2rem] border border-white/8 bg-white">
                       <Image
                         src={item.image}
                         alt={item.alt}
+                        title={`${item.title} - ScaleSight Feature`}
                         placeholder="blur"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={80}
                         className="h-auto w-full object-cover transition duration-300 group-hover:scale-[1.01]"
                       />
                     </div>
@@ -383,12 +469,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 8. Business Outcomes (Before / After) ── */}
+        {/* ── 8. Transformation & Business Outcomes ── */}
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
+            {/* Part 1: Transformation */}
             <SectionHeader
               align="center"
-              eyebrow="Business Outcomes"
+              eyebrow="Transformation"
               title="From Reactive to Planned"
             />
             <div className="mt-14 grid gap-8 md:grid-cols-2">
@@ -398,7 +485,10 @@ export default function Home() {
                 </p>
                 <div className="space-y-4">
                   {beforeItems.map((item) => (
-                    <div key={item} className="flex items-center gap-3 text-sm text-[var(--text-secondary)]">
+                    <div
+                      key={item}
+                      className="flex items-center gap-3 text-sm text-[var(--text-secondary)]"
+                    >
                       <X size={16} className="shrink-0 text-[#f43f5e]" />
                       {item}
                     </div>
@@ -411,7 +501,10 @@ export default function Home() {
                 </p>
                 <div className="space-y-4">
                   {afterItems.map((item) => (
-                    <div key={item} className="flex items-center gap-3 text-sm text-white">
+                    <div
+                      key={item}
+                      className="flex items-center gap-3 text-sm text-white"
+                    >
                       <Check size={16} className="shrink-0 text-[#04B4FD]" />
                       {item}
                     </div>
@@ -419,23 +512,46 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {outcomes.map((item) => (
-                <div key={item} className="flex items-center gap-3 text-base text-white">
-                  <CheckCircle2 size={18} className="shrink-0 text-[#8dd9ff]" />
-                  {item}
-                </div>
-              ))}
+
+            {/* Part 2: What This Means for Your Business */}
+            <div className="mt-24">
+              <SectionHeader
+                align="center"
+                eyebrow="Business Impact"
+                title="What This Means for Your Business"
+              />
+              <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {businessImpacts.map((impact) => {
+                  const Icon = impact.icon;
+                  return (
+                    <div
+                      key={impact.title}
+                      className="group surface-card flex items-start gap-4 rounded-[1.4rem] border border-white/8 p-6 transition duration-300 hover:-translate-y-1 hover:border-[#04B4FD]/35"
+                    >
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#04B4FD]/12 text-[#8dd9ff] transition duration-300 group-hover:bg-[#04B4FD] group-hover:text-white">
+                        <Icon size={22} />
+                      </div>
+                      <div>
+                        <h4 className="text-base font-semibold text-white">
+                          {impact.title}
+                        </h4>
+                        <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
+                          {impact.copy}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── 9. Dashboard Showcase ── */}
+        {/* ── 9. Planning Workspace ── */}
         <section className="bg-[rgba(5,15,26,0.96)] px-6 py-24">
           <div className="mx-auto max-w-7xl text-center">
             <SectionHeader
               align="center"
-              eyebrow="Platform"
               title="Your Planning Workspace"
               copy="Three views that give your team a complete picture every week."
             />
@@ -445,21 +561,29 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 10. Why ScaleSight ── */}
+        {/* ── 10. Why Businesses Choose ScaleSight ── */}
         <section className="px-6 py-24">
           <div className="mx-auto max-w-5xl">
             <SectionHeader
               align="center"
               eyebrow="Why ScaleSight"
-              title="Not a Tool. A Planning Partner."
+              title="Why Businesses Choose ScaleSight"
+              copy="More than dashboards—Managed Ecommerce Intelligence."
             />
             <div className="mt-14 overflow-hidden rounded-[1.6rem] border border-white/8">
               <div className="grid grid-cols-2 border-b border-white/8 bg-white/[0.03]">
-                <div className="px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">Others</div>
-                <div className="border-l border-white/8 px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">ScaleSight</div>
+                <div className="px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
+                  Others
+                </div>
+                <div className="border-l border-white/8 px-8 py-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#8dd9ff]">
+                  ScaleSight
+                </div>
               </div>
               {comparisonRows.map((row) => (
-                <div key={row.others} className="grid grid-cols-2 border-b border-white/6 last:border-0 transition hover:bg-white/[0.02]">
+                <div
+                  key={row.others}
+                  className="grid grid-cols-2 border-b border-white/6 last:border-0 transition hover:bg-white/[0.02]"
+                >
                   <div className="flex items-center gap-3 px-8 py-5 text-sm text-[var(--text-secondary)]">
                     <X size={14} className="shrink-0 text-[#f43f5e]/70" />
                     {row.others}
@@ -481,7 +605,7 @@ export default function Home() {
               align="center"
               eyebrow="After the Pilot"
               title="What Happens Next"
-              copy="The pilot is just the beginning. Your planning system keeps running."
+              copy="Your planning system stays active so your team continues receiving updated forecasts, inventory insights, and weekly planning recommendations."
             />
             <div className="mt-14 flex flex-col items-center gap-0">
               <div className="rounded-2xl border border-[#04B4FD]/30 bg-[rgba(0,94,240,0.12)] px-8 py-4 text-sm font-semibold text-white">
@@ -526,14 +650,13 @@ export default function Home() {
             <SectionHeader
               align="center"
               title="Ready to Plan Growth With Confidence?"
-              copy="Let's build your first planning system."
+              copy="Let's build a planning system that helps your business forecast demand, reduce inventory risk, and grow with confidence."
             />
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <PrimaryButton href="/contact">Book Strategy Call</PrimaryButton>
             </div>
           </div>
         </section>
-
       </main>
       <SiteFooter />
     </>

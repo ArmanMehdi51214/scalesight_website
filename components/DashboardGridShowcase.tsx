@@ -7,15 +7,13 @@ const dashboardCards = [
   {
     title: "Executive Overview",
     subtitle: "Full business picture at a glance",
-    metric: "Weekly summary",
     src: "/dashboards%20for%20website/visual%20111.png",
     alt: "Executive overview dashboard visual",
     objectPosition: "center top",
   },
   {
     title: "Revenue Forecast",
-    subtitle: "13-week outlook",
-    metric: "+18% growth trend",
+    subtitle: "Forward demand and growth trends",
     src: "/dashboards%20for%20website/visual%201.png",
     alt: "Revenue forecasting dashboard visual",
     objectPosition: "center top",
@@ -23,7 +21,6 @@ const dashboardCards = [
   {
     title: "Inventory Health",
     subtitle: "Risk, value, and stock posture",
-    metric: "78 / 100 health score",
     src: "/dashboards%20for%20website/viusal%203.png",
     alt: "Inventory health dashboard visual",
     objectPosition: "center top",
@@ -45,9 +42,6 @@ export default function DashboardGridShowcase() {
                 <p className="dashboard-card__title">{card.title}</p>
                 <p className="dashboard-card__subtle">{card.subtitle}</p>
               </div>
-              <span className="dashboard-pill dashboard-pill--cyan">
-                {card.metric}
-              </span>
             </div>
 
             <button
@@ -58,9 +52,12 @@ export default function DashboardGridShowcase() {
             >
               <Image
                 alt={card.alt}
+                title={`${card.title} - ScaleSight Planning Workspace`}
                 className="h-[15.5rem] w-full object-cover"
                 height={1024}
                 src={card.src}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={80}
                 style={{ objectPosition: card.objectPosition }}
                 width={1536}
               />
@@ -89,18 +86,18 @@ export default function DashboardGridShowcase() {
                   {selectedCard.subtitle}
                 </p>
               </div>
-              <span className="dashboard-pill dashboard-pill--cyan">
-                {selectedCard.metric}
-              </span>
             </div>
 
             <div className="overflow-hidden rounded-[1.5rem] border border-white/8 bg-white">
               <Image
                 alt={selectedCard.alt}
+                title={`${selectedCard.title} - ScaleSight Planning Workspace`}
                 className="h-auto max-h-[75vh] w-full object-contain"
                 height={1024}
                 priority
                 src={selectedCard.src}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={80}
                 style={{ objectPosition: selectedCard.objectPosition }}
                 width={1536}
               />

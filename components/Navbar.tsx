@@ -17,9 +17,11 @@ export default function Navbar() {
         <Link className="flex items-center" href="/">
           <Image
             src="/images/logo.png"
-            alt="ScaleSight"
-            width={176}
-            height={38}
+            alt="ScaleSight Logo - Managed Ecommerce Intelligence"
+            title="ScaleSight - Managed Ecommerce Intelligence"
+            width={304}
+            height={85}
+            quality={85}
             priority
           />
         </Link>

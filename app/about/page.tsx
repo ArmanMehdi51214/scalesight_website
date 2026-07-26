@@ -9,10 +9,14 @@ import {
 } from "@/components/marketing-primitives";
 
 export const metadata: Metadata = {
-  title: "ScaleSight | Your Ecommerce Planning Partner",
+  title: "About ScaleSight | Managed Ecommerce Intelligence Partner",
   description:
-    "ScaleSight is a managed planning partner for Shopify and DTC ecommerce brands. We monitor your business, spot problems early, and help your team plan with confidence.",
+    "ScaleSight is a Managed Ecommerce Intelligence partner for Shopify and DTC ecommerce brands. We monitor your business, spot problems early, and help your team plan with confidence.",
+  alternates: {
+    canonical: "/about",
+  },
   keywords: [
+    "managed ecommerce intelligence",
     "ecommerce planning partner",
     "managed planning service",
     "Shopify planning",
@@ -22,11 +26,12 @@ export const metadata: Metadata = {
     "weekly decision support",
   ],
   openGraph: {
-    title: "ScaleSight | Your Ecommerce Planning Partner",
+    title: "About ScaleSight | Managed Ecommerce Intelligence Partner",
     description:
-      "A managed planning partner for Shopify brands. We monitor your business, spot problems early, and help your team plan with confidence.",
+      "ScaleSight is a Managed Ecommerce Intelligence partner for Shopify brands. We monitor your business, spot problems early, and help your team plan with confidence.",
     type: "website",
     siteName: "ScaleSight",
+    url: "https://scalesight.org/about",
   },
 };
 
@@ -71,7 +76,8 @@ export default function AboutPage() {
           <div className="surface-card relative overflow-hidden rounded-[2rem] px-8 py-14 text-center md:px-20 md:py-20">
             <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(4,180,253,0.18),transparent_65%)]" />
             <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-semibold italic tracking-tight text-white md:text-5xl">
-              &ldquo;We stop saying we build dashboards. We become your planning partner.&rdquo;
+              &ldquo;We stop saying we build workspaces. We become your planning
+              partner.&rdquo;
             </h2>
             <div className="mx-auto mt-8 h-px w-24 bg-[linear-gradient(90deg,rgba(255,255,255,0),rgba(4,180,253,0.85),rgba(255,255,255,0))]" />
             <p className="mt-6 text-xs uppercase tracking-[0.24em] text-[var(--text-muted)]">

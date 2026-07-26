@@ -2,7 +2,6 @@ import Image, { type StaticImageData } from "next/image";
 
 import visualTwo from "@/public/dashboards for website/visual 2.png";
 import visualTwos from "@/public/dashboards for website/visual 2s.png";
-// import visualThree from "@/public/dashboards for website/viusal 3.png";
 import visualoneone from "@/public/dashboards for website/visual 111.png";
 
 const showcaseCards = [
@@ -44,10 +43,13 @@ function ShowcaseCard({
     <div className={`absolute ${className}`}>
       <Image
         alt={alt}
+        title={alt}
         className="h-auto w-full object-contain drop-shadow-[0_28px_60px_rgba(0,0,0,0.28)]"
         placeholder="blur"
         priority={priority}
-        sizes="(max-width: 640px) 62vw, (max-width: 1024px) 48vw, 34vw"
+        fetchPriority={priority ? "high" : "auto"}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        quality={80}
         src={image}
       />
     </div>
