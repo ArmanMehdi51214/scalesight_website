@@ -67,6 +67,7 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="Our Mission"
             align="center"
+            as="h1"
             title="We Become Your Ecommerce Planning Partner."
             copy="The dashboard is just one part of the experience. The real value is that we monitor your business, identify problems before they happen, and help your team plan with confidence."
           />

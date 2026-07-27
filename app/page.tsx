@@ -457,7 +457,7 @@ export default function Home() {
                         alt={item.alt}
                         title={`${item.title} - ScaleSight Feature`}
                         placeholder="blur"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                         quality={80}
                         className="h-auto w-full object-cover transition duration-300 group-hover:scale-[1.01]"
                       />
@@ -532,9 +532,9 @@ export default function Home() {
                         <Icon size={22} />
                       </div>
                       <div>
-                        <h4 className="text-base font-semibold text-white">
+                        <h3 className="text-base font-semibold text-white">
                           {impact.title}
-                        </h4>
+                        </h3>
                         <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
                           {impact.copy}
                         </p>

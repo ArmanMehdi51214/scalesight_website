@@ -56,7 +56,7 @@ export default function DashboardGridShowcase() {
                 className="h-[15.5rem] w-full object-cover"
                 height={1024}
                 src={card.src}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 quality={80}
                 style={{ objectPosition: card.objectPosition }}
                 width={1536}
@@ -96,7 +96,7 @@ export default function DashboardGridShowcase() {
                 height={1024}
                 priority
                 src={selectedCard.src}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
                 quality={80}
                 style={{ objectPosition: selectedCard.objectPosition }}
                 width={1536}
