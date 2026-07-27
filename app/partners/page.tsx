@@ -287,9 +287,9 @@ export default function PartnersPage() {
                         <Icon size={20} />
                       </div>
                       <div>
-                        <h4 className="text-base font-semibold text-white">
+                        <h3 className="text-base font-semibold text-white">
                           {point.title}
-                        </h4>
+                        </h3>
                         <p className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
                           {point.copy}
                         </p>

@@ -64,7 +64,7 @@ export default function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="footer-heading">Platform</h3>
+          <h2 className="footer-heading">Platform</h2>
           <div className="mt-5 space-y-3">
             {productLinks.map((item) => (
               <Link key={item.label} className="footer-link" href={item.href}>
@@ -75,7 +75,7 @@ export default function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="footer-heading">Company</h3>
+          <h2 className="footer-heading">Company</h2>
           <div className="mt-5 space-y-3">
             {companyLinks.map((item) => (
               <Link key={item.label} className="footer-link" href={item.href}>
@@ -86,7 +86,7 @@ export default function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="footer-heading">Contact</h3>
+          <h2 className="footer-heading">Contact</h2>
           <div className="mt-5 space-y-3 text-sm text-[var(--text-secondary)]">
             <p>arman@scalesight.org</p>
             <p>Lahore, PK</p>

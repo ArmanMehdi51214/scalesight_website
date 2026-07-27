@@ -6,6 +6,7 @@ type SectionHeaderProps = {
   title: string;
   copy?: string;
   align?: "left" | "center";
+  as?: "h1" | "h2" | "h3" | "h4";
 };
 
 type ButtonProps = {
@@ -14,10 +15,16 @@ type ButtonProps = {
 };
 
 export function openCalendlyPopup() {
-  if (typeof window !== "undefined" && (window as any).Calendly) {
-    (window as any).Calendly.initPopupWidget({
-      url: process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/kazmiarmanmehdi/30min",
-    });
+  if (typeof window !== "undefined") {
+    const link = document.getElementById("calendly-css") as HTMLLinkElement | null;
+    if (link) {
+      link.media = "all";
+    }
+    if ((window as any).Calendly) {
+      (window as any).Calendly.initPopupWidget({
+        url: process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/kazmiarmanmehdi/30min",
+      });
+    }
   }
 }
 
@@ -30,13 +37,14 @@ export function SectionHeader({
   title,
   copy,
   align = "left",
+  as: Component = "h2",
 }: SectionHeaderProps) {
   const centered = align === "center";
 
   return (
     <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-      <h2 className="section-title mt-4">{title}</h2>
+      <Component className="section-title mt-4">{title}</Component>
       {copy ? <p className="section-copy mt-5">{copy}</p> : null}
     </div>
   );

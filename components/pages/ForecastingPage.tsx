@@ -708,7 +708,7 @@ export default function ForecastingPage() {
                           alt={item.alt}
                           title={`${item.title} - ScaleSight Deliverable`}
                           placeholder="blur"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                           quality={80}
                           className="h-auto w-full object-cover transition duration-300 group-hover:scale-[1.01]"
                         />
@@ -957,7 +957,7 @@ export default function ForecastingPage() {
                     title={activeShowcase.title}
                     className="h-auto w-full"
                     placeholder="blur"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
                     quality={80}
                     src={activeShowcase.image}
                   />
@@ -1103,6 +1103,7 @@ export default function ForecastingPage() {
                     aria-hidden="true"
                     className="absolute inset-0 h-full w-full object-cover opacity-[0.08]"
                     placeholder="blur"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
                     src={scenarioPlanning}
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.56),rgba(7,17,31,0.92))]" />

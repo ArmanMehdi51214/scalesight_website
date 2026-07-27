@@ -94,8 +94,17 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link
+          id="calendly-css"
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
+          media="print"
+        />
+        <Script
+          id="calendly-css-loader"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var l=document.getElementById('calendly-css');if(l)l.media='all';})();`,
+          }}
         />
         <script
           type="application/ld+json"

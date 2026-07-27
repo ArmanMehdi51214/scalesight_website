@@ -41,17 +41,28 @@ function ShowcaseCard({
 }: (typeof showcaseCards)[number]) {
   return (
     <div className={`absolute ${className}`}>
-      <Image
-        alt={alt}
-        title={alt}
-        className="h-auto w-full object-contain drop-shadow-[0_28px_60px_rgba(0,0,0,0.28)]"
-        placeholder="blur"
-        priority={priority}
-        fetchPriority={priority ? "high" : "auto"}
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        quality={80}
-        src={image}
-      />
+      {priority ? (
+        <Image
+          alt="Executive decision dashboard preview"
+          className="h-auto w-full object-contain drop-shadow-[0_28px_60px_rgba(0,0,0,0.28)]"
+          fetchPriority="high"
+          loading="eager"
+          priority
+          quality={80}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+          src={image}
+        />
+      ) : (
+        <Image
+          alt={alt}
+          title={alt}
+          className="h-auto w-full object-contain drop-shadow-[0_28px_60px_rgba(0,0,0,0.28)]"
+          placeholder="blur"
+          quality={80}
+          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 45vw, 450px"
+          src={image}
+        />
+      )}
     </div>
   );
 }
