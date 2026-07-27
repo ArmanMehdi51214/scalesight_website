@@ -12,7 +12,7 @@ const productLinks = [
 
 const companyLinks = [
   { href: "/about", label: "About" },
-  { href: "/partners", label: "Partners" },
+  { href: "/partners", label: "Partner with ScaleSight" },
   { href: "/contact", label: "Contact" },
 ];
 
