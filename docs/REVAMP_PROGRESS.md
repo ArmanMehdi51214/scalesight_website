@@ -61,3 +61,7 @@
 ## Visual redesign — B
 - Built the layered hero using the approved brief source, equal comparison bars and visible synthetic disclosure.
 - Centralized tokens; retained Geist, logo and all original hero copy/links.
+
+## Visual redesign — C
+- Added reusable schematic visuals, pillars, ownership handoff, process path, accessible tabs and progressive brief index.
+- Tabs retain every panel in server HTML and DOM; no-JS shows all panels. Brief index is decorative and falls back to stacked fields for keyboard/reduced motion/mobile.

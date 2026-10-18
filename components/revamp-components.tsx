@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ProcessPath, TimelineStrip } from "@/components/brief-visuals";
+import { BriefFieldLayout } from "@/components/visual-interactions";
 import type { ReactNode } from "react";
 import { sampleBrief } from "@/lib/sample-brief";
 import { siteConfig } from "@/lib/site-config";
@@ -69,7 +71,7 @@ export function DecisionBrief({ compact = false }: { compact?: boolean }) {
     : sampleBrief.fields;
 
   return (
-    <article id={compact ? undefined : "sample-brief"} className="decision-brief">
+    <BriefFieldLayout labels={fields.map(field => field.label)}><article id={compact ? undefined : "sample-brief"} className="decision-brief">
       <p className="decision-brief__disclosure">{sampleBrief.disclosure}</p>
       <p className="decision-brief__context">{sampleBrief.context}</p>
       <dl className="decision-brief__fields">
@@ -84,7 +86,7 @@ export function DecisionBrief({ compact = false }: { compact?: boolean }) {
         <div><dt>Decision owner</dt><dd>{sampleBrief.decisionOwner}</dd></div>
         {sampleBrief.reviewDate ? <div><dt>Review date</dt><dd>{sampleBrief.reviewDate}</dd></div> : null}
       </dl> : null}
-    </article>
+    </article></BriefFieldLayout>
   );
 }
 
@@ -114,7 +116,8 @@ export function DecisionCard({
   const configuredDemo = demoKey ? siteConfig.exampleDemoLinks[demoKey] : undefined;
 
   return (
-    <article className="surface-card rounded-3xl border border-white/10 p-6" id={anchorId}>
+    <article className="surface-card decision-view rounded-3xl border border-white/10 p-6" id={anchorId}>
+      <TimelineStrip variant={demoKey === "launchDemand" ? "launch" : demoKey === "sizeDepth" ? "size" : "supply"} />
       {tag ? <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--blue-soft)]">{tag}</p> : null}
       <h3 className="mt-5 text-2xl font-semibold text-white">{question}</h3>
       <dl className="mt-6 grid gap-4 text-base leading-7 text-[var(--text-secondary)] md:grid-cols-3">
@@ -135,7 +138,7 @@ export function DecisionCard({
 export const ExampleCard = DecisionCard;
 
 export function ProcessSteps({ steps }: { steps: { title: string; body: string }[] }) {
-  return <ol className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">{steps.map((step, index) => <li className="flex min-h-full items-start gap-4 border-l-2 border-[var(--blue-secondary)] py-4 pl-4" key={step.title}><span aria-hidden="true" className="text-sm font-bold tracking-widest text-[var(--blue-soft)]">{String(index + 1).padStart(2, "0")}</span><div><h3 className="text-lg font-semibold leading-7 text-white">{step.title}</h3>{step.body ? <p className="mt-2 leading-7 text-[var(--text-secondary)]">{step.body}</p> : null}</div></li>)}</ol>;
+  return <ProcessPath steps={steps} />;
 }
 
 export function ResponsibilityGrid({
@@ -143,7 +146,7 @@ export function ResponsibilityGrid({
 }: {
   responsibilities: { party: string; actions: string[] }[];
 }) {
-  return <div className="grid gap-4 md:grid-cols-2">{responsibilities.map((item) => <section className="surface-card rounded-2xl p-6" key={item.party}><h3 className="text-xl font-semibold text-white">{item.party}</h3><ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-[var(--text-secondary)]">{item.actions.map((action) => <li key={action}>{action}</li>)}</ul></section>)}</div>;
+  return <div className="responsibility-grid grid gap-4 md:grid-cols-2">{responsibilities.map((item) => <section className="surface-card rounded-2xl p-6" key={item.party}><h3 className="text-xl font-semibold text-white">{item.party}</h3><ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-[var(--text-secondary)]">{item.actions.map((action) => <li key={action}>{action}</li>)}</ul></section>)}</div>;
 }
 
 export function ContactForm({ children }: { children?: ReactNode }) {
