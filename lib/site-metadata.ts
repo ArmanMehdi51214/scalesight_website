@@ -16,9 +16,9 @@ export const routeMetadata = {
     canonical: "/how-we-work",
   },
   examples: {
-    title: "Illustrative examples | ScaleSight",
+    title: "Illustrative Planning Examples | ScaleSight",
     description:
-      "Review synthetic examples of demand, inventory and supply decisions for growing consumer brands.",
+      "Explore synthetic examples of supply timing, launch demand and size-depth decisions. See the evidence and trade-offs behind a planning brief.",
     canonical: "/examples",
   },
   pilot: {
@@ -28,15 +28,15 @@ export const routeMetadata = {
     canonical: "/30-day-planning-pilot",
   },
   about: {
-    title: "About | ScaleSight",
+    title: "About ScaleSight | Analysis Behind the Commitment",
     description:
-      "ScaleSight helps growing consumer brands review decisions about demand, inventory and incoming supply.",
+      "Meet the founder and understand how ScaleSight connects data-science analysis with planning review for growing consumer brands.",
     canonical: "/about",
   },
   partners: {
-    title: "Partners | ScaleSight",
+    title: "Partner with ScaleSight | Analytical Planning Support",
     description:
-      "Learn about working with ScaleSight to support planning decisions for growing consumer brands.",
+      "Discuss scoped planning analysis and decision support for consumer-brand clients, with clear roles and delivery boundaries.",
     canonical: "/partners",
   },
   contact: {

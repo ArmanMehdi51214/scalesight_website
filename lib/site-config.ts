@@ -11,9 +11,21 @@ export const siteConfig = {
     active: process.env.NEXT_PUBLIC_PARTNERS_ACTIVE !== "false",
   },
   exampleDemoLinks: {
-    supplyTiming: { enabled: false, url: "", label: "" },
-    launchDemand: { enabled: false, url: "", label: "" },
-    sizeDepth: { enabled: false, url: "", label: "" },
+    supplyTiming: {
+      enabled: false,
+      url: "https://scalesight-fishwife-demo.vercel.app/po-intervention",
+      label: "Open illustrative workspace",
+    },
+    launchDemand: {
+      enabled: false,
+      url: "https://scalesight-alecs-demo.vercel.app/incrementality",
+      label: "Open illustrative workspace",
+    },
+    sizeDepth: {
+      enabled: false,
+      url: "https://scalesight-understatement-demo.vercel.app/",
+      label: "Open illustrative workspace",
+    },
   },
   analytics: {
     enabled: process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === "true",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { sampleBrief } from "@/lib/sample-brief";
+import { siteConfig } from "@/lib/site-config";
 
 type ActionLink = { href: string; label: string };
 
@@ -88,32 +89,45 @@ export function DecisionBrief({ compact = false }: { compact?: boolean }) {
 }
 
 export function DecisionCard({
+  anchorId,
+  tag,
   question,
   evidence,
   options,
   output,
   disclosure,
   destination,
+  demoKey,
   approvedDemo = false,
 }: {
+  anchorId?: string;
+  tag?: string;
   question: string;
   evidence: ReactNode;
   options: ReactNode;
   output: ReactNode;
   disclosure: string;
   destination?: ActionLink;
+  demoKey?: keyof typeof siteConfig.exampleDemoLinks;
   approvedDemo?: boolean;
 }) {
+  const configuredDemo = demoKey ? siteConfig.exampleDemoLinks[demoKey] : undefined;
+
   return (
-    <article className="surface-card rounded-3xl border border-white/10 p-6">
-      <p className="eyebrow-chip">{disclosure}</p>
+    <article className="surface-card rounded-3xl border border-white/10 p-6" id={anchorId}>
+      {tag ? <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--blue-soft)]">{tag}</p> : null}
       <h3 className="mt-5 text-2xl font-semibold text-white">{question}</h3>
-      <dl className="mt-6 space-y-5 text-base leading-7 text-[var(--text-secondary)]">
+      <dl className="mt-6 grid gap-4 text-base leading-7 text-[var(--text-secondary)] md:grid-cols-3">
         <div><dt className="font-semibold text-white">Evidence</dt><dd>{evidence}</dd></div>
         <div><dt className="font-semibold text-white">Options</dt><dd>{options}</dd></div>
         <div><dt className="font-semibold text-white">Output</dt><dd>{output}</dd></div>
       </dl>
-      {approvedDemo && destination ? <Link className="secondary-button mt-6 min-h-11" href={destination.href}>{destination.label}</Link> : null}
+      <p className="mt-6 border-t border-white/10 pt-4 text-sm font-medium text-[var(--text-secondary)]">{disclosure}</p>
+      {approvedDemo && configuredDemo?.enabled && configuredDemo.url ? (
+        <a aria-label={`Open illustrative workspace for ${question} (opens in a new tab)`} className="secondary-button mt-5 min-h-11" href={configuredDemo.url} rel="noopener noreferrer" target="_blank">
+          {configuredDemo.label || "Open illustrative workspace"}
+        </a>
+      ) : destination ? <Link className="secondary-button mt-5 min-h-11" href={destination.href}>{destination.label}</Link> : null}
     </article>
   );
 }
