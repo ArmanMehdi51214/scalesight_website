@@ -65,3 +65,7 @@
 ## Visual redesign — C
 - Added reusable schematic visuals, pillars, ownership handoff, process path, accessible tabs and progressive brief index.
 - Tabs retain every panel in server HTML and DOM; no-JS shows all panels. Brief index is decorative and falls back to stacked fields for keyboard/reduced motion/mobile.
+
+## Visual redesign — D
+- Home now includes schematic pillars, the shared review path, a six-field indexed brief, dark ownership lanes and audience tiles, progressive example tabs, and closing wash.
+- Original copy and destinations retained; added only requested artifact/diagram labels and source brief repetitions.

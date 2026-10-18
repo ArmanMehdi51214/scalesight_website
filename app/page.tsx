@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { HeroArtifact } from "@/components/brief-visuals";
+import { TabPanel } from "@/components/visual-interactions";
+import { HeroArtifact, PillarFeature, OwnershipSplit, TimelineStrip } from "@/components/brief-visuals";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { FAQAccordion } from "@/components/faq-accordion";
@@ -110,14 +111,8 @@ export default function HomePage() {
             <p className="eyebrow-chip">DECISIONS THAT NEED CONTEXT</p>
             <h2 className="section-title mt-4" id="decision-signals-heading">A signal still leaves a decision to make.</h2>
           </div>
-          <div className="mt-9 divide-y divide-white/10 border-y border-white/10">
-            {decisionSignals.map((item, index) => (
-              <article className="grid gap-3 py-6 sm:grid-cols-[4rem_0.8fr_1.2fr] sm:items-start sm:gap-6 md:py-8" key={item.title}>
-                <span aria-hidden="true" className="text-sm font-semibold tracking-widest text-[var(--blue-soft)]">0{index + 1}</span>
-                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                <p className="max-w-2xl text-base leading-7 text-[var(--text-secondary)]">{item.question}</p>
-              </article>
-            ))}
+          <div className="pillar-grid mt-9">
+            {decisionSignals.map((item, index) => <PillarFeature key={item.title} title={item.title} question={item.question} variant={index === 0 ? "launch" : index === 1 ? "size" : "supply"} />)}
           </div>
         </section>
 
@@ -138,13 +133,14 @@ export default function HomePage() {
           <p className="mt-4 max-w-3xl text-sm leading-6 text-[var(--text-muted)]">A reviewed recommendation is a service output, not a guarantee that a recommendation is correct.</p>
         </section>
 
-        <section className="border-y border-white/10 bg-[var(--bg-soft)]" aria-labelledby="capacity-heading">
+        <section className="dark-section" aria-labelledby="capacity-heading">
           <div className="content-shell px-4 py-16 sm:px-6 md:py-20">
             <p className="eyebrow-chip">AROUND YOUR PLANNING</p>
             <h2 className="section-title mt-4 max-w-3xl" id="capacity-heading">More analytical capacity around the planning you have.</h2>
-            <div className="mt-9 grid gap-4 lg:grid-cols-3">
+            <div className="mt-9"><OwnershipSplit /></div>
+            <div className="audience-tiles grid gap-4 lg:grid-cols-3">
               {capacityOptions.map((item) => (
-                <article className="relative border-t-2 border-[var(--blue-primary)] bg-white/[0.035] p-6 sm:p-7" key={item.number}>
+                <article className="audience-tile p-6 sm:p-7" key={item.number}>
                   <p className="text-sm font-semibold tracking-[0.18em] text-[var(--blue-soft)]">{item.number}</p>
                   <h3 className="mt-5 text-xl font-semibold leading-snug text-white">{item.title}</h3>
                   <p className="mt-4 text-base leading-7 text-[var(--text-secondary)]">{item.body}</p>
@@ -158,16 +154,13 @@ export default function HomePage() {
         <section className="content-shell px-4 py-16 sm:px-6 md:py-20" aria-labelledby="examples-heading">
           <p className="eyebrow-chip">ILLUSTRATIVE EXAMPLES USING SYNTHETIC DATA. THESE ARE NOT CLIENT RESULTS.</p>
           <h2 className="section-title mt-4 max-w-3xl" id="examples-heading">See the reasoning behind the recommendation.</h2>
-          <div className="mt-9 grid gap-4 md:grid-cols-3">
-            {examples.map((example, index) => (
-              <article className="flex min-h-full flex-col border-l border-white/15 bg-[var(--panel)] p-6" key={example.href}>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-muted)]">Example 0{index + 1}</p>
-                <h3 className="mt-4 text-xl font-semibold leading-snug text-white">{example.title}</h3>
-                <p className="mt-4 flex-1 text-base leading-7 text-[var(--text-secondary)]">{example.output}</p>
-                <Link className="mt-6 inline-flex min-h-11 items-center font-semibold text-[var(--blue-soft)] underline decoration-white/30 underline-offset-4 hover:text-white" href={example.href}>Explore this example</Link>
-              </article>
-            ))}
-          </div>
+          <div className="mt-9"><TabPanel items={examples.map((example, index) => ({
+            label: `Example 0${index + 1}`,
+            content: <article className="example-view">
+              <TimelineStrip variant={index === 0 ? "supply" : index === 1 ? "launch" : "size"}/>
+              <div><h3>{example.title}</h3><p>{example.output}</p><Link className="mt-6 inline-flex min-h-11 items-center font-semibold text-[var(--blue-soft)] underline decoration-white/30 underline-offset-4 hover:text-white" href={example.href}>Explore this example</Link></div>
+            </article>
+          }))} /></div>
         </section>
 
         <CTABand eyebrow="ONE UPCOMING DECISION" heading="Test the approach on one upcoming decision." body="Choose a buy, production run or allocation decision and explore whether maintained analysis and review improve the process." primary={{ href: "/30-day-planning-pilot", label: "Explore the 30-day pilot" }} />
@@ -180,7 +173,7 @@ export default function HomePage() {
           <div className="mt-8 max-w-4xl"><FAQAccordion items={faqs} /></div>
         </section>
 
-        <section className="border-t border-white/10 bg-[radial-gradient(ellipse_at_80%_0%,rgba(4,180,253,0.12),transparent_36%)]">
+        <section className="closing-section">
           <div className="content-shell px-4 py-16 sm:px-6 md:py-20">
             <p className="eyebrow-chip">NEXT DECISION</p>
             <h2 className="section-title mt-4 max-w-3xl">Have an upcoming commitment still open?</h2>
