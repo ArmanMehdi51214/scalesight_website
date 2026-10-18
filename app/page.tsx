@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroArtifact } from "@/components/brief-visuals";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { FAQAccordion } from "@/components/faq-accordion";
@@ -85,7 +86,7 @@ export default function HomePage() {
     <>
       <SiteHeader />
       <main id="main-content" tabIndex={-1}>
-        <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(ellipse_at_78%_18%,rgba(0,94,240,0.18),transparent_38%),linear-gradient(180deg,#07111f,#0a141f)]">
+        <section className="home-hero">
           <div className="content-shell grid items-center gap-10 px-4 py-12 sm:px-6 md:py-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
             <div>
               <p className="eyebrow-chip">FOR GROWING CONSUMER BRANDS</p>
@@ -93,13 +94,13 @@ export default function HomePage() {
               <h1 className="mt-5 max-w-2xl text-[2.25rem] font-semibold leading-[1.08] tracking-[-0.045em] text-white sm:text-5xl lg:text-[3.5rem]">Before the next PO, know what deserves the cash.</h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-[var(--text-secondary)] sm:text-lg sm:leading-8">We connect demand, inventory and incoming supply to weekly, specialist-reviewed recommendations on quantity, timing and cash.</p>
               <p className="mt-4 text-sm leading-6 text-white sm:text-base">Data science + supply-chain expertise, maintained for you. Your team decides.</p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="hero-actions mt-7 flex flex-col gap-3 sm:flex-row">
                 <Link className="primary-button min-h-11 justify-center" href="/examples#sample-brief">See an illustrative planning brief</Link>
                 <Link className="secondary-button min-h-11 justify-center" href="/30-day-planning-pilot">Explore the 30-day pilot</Link>
               </div>
             </div>
             <div className="min-w-0">
-              <DecisionBrief compact />
+              <HeroArtifact />
             </div>
           </div>
         </section>

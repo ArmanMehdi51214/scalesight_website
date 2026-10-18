@@ -53,3 +53,11 @@
 - **Owner: Wahib** — In a permitted browser environment, complete the local stub cases, keyboard/mobile/form checks, 200% zoom, viewport matrix, direct-refresh/redirect checks, and one lab performance run; record actual LCP/INP/CLS values.
 - **Owner: Wahib** — Confirm HTTPS host normalization and trailing-slash redirects at the hosting layer; these were outside the local HTTP checks.
 - **Owner: Arman + Wahib** — Choose and configure an analytics collection destination only after privacy approval; analytics currently emits no data to an external provider.
+
+## Visual redesign — A
+- Design direction documented; tokens will be centralized in globals.css.
+- Baseline: 40e4f3e; branch revamp/managed-service. Existing copy, fonts, config and contact flow locked.
+
+## Visual redesign — B
+- Built the layered hero using the approved brief source, equal comparison bars and visible synthetic disclosure.
+- Centralized tokens; retained Geist, logo and all original hero copy/links.
