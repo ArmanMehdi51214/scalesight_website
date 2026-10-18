@@ -1,45 +1,22 @@
 "use client";
 
-import { FormEvent, ReactNode, useEffect, useRef, useState } from "react";
+import { FormEvent, ReactNode, useRef, useState } from "react";
 import Link from "next/link";
-import { siteConfig } from "@/lib/site-config";
 import { trackEvent } from "@/lib/analytics";
+import BookingPanel from "@/components/booking-panel";
 
 type Intent = "planning" | "pilot" | "partner";
 type FormValues = { name: string; email: string; brand: string; website: string; role: string; channels: string[]; decision: string; companyFax: string };
 type Status = "idle" | "sending" | "success" | "failure";
 const initialValues: FormValues = { name: "", email: "", brand: "", website: "", role: "", channels: [], decision: "", companyFax: "" };
 
-declare global {
-  interface Window {
-    Calendly?: { initPopupWidget: (options: { url: string }) => void };
-  }
-}
-
 export default function ContactForm({ intent }: { intent: Intent }) {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<Status>("idle");
-  const [calendarUnavailable, setCalendarUnavailable] = useState(false);
-  const [meetingBooked, setMeetingBooked] = useState(false);
   const sending = useRef(false);
   const started = useRef(false);
   const partner = intent === "partner";
-  const durationMatches = siteConfig.calendar.durationLabel === "30-minute discovery call";
-  const bookingLabel = `Choose a ${durationMatches ? "30-minute " : ""}conversation`;
-
-  useEffect(() => {
-    const onMessage = (event: MessageEvent) => {
-      let host = "";
-      try { host = new URL(event.origin).hostname; } catch { return; }
-      if (!(host === "calendly.com" || host.endsWith(".calendly.com")) || event.data?.event !== "calendly.event_scheduled") return;
-      setMeetingBooked(true);
-      trackEvent("booking_completed", { route: "/contact", ctaLocation: "booking-panel" });
-    };
-    window.addEventListener("message", onMessage);
-    return () => window.removeEventListener("message", onMessage);
-  }, []);
-
   function update<K extends keyof FormValues>(key: K, value: FormValues[K]) {
     setValues((current) => ({ ...current, [key]: value }));
     setErrors((current) => ({ ...current, [key]: "" }));
@@ -87,43 +64,6 @@ export default function ContactForm({ intent }: { intent: Intent }) {
     }
   }
 
-  async function openCalendar() {
-    setCalendarUnavailable(false);
-    trackEvent("booking_link_click", { route: "/contact", ctaLocation: "booking-panel" });
-    try {
-      if (!window.Calendly) {
-        if (!document.querySelector('link[data-calendly-widget="true"]')) {
-          const stylesheet = document.createElement("link");
-          stylesheet.rel = "stylesheet";
-          stylesheet.href = "https://assets.calendly.com/assets/external/widget.css";
-          stylesheet.dataset.calendlyWidget = "true";
-          document.head.appendChild(stylesheet);
-        }
-        await new Promise<void>((resolve, reject) => {
-          const existing = document.querySelector<HTMLScriptElement>('script[data-calendly-widget="true"]');
-          if (existing) {
-            existing.addEventListener("load", () => resolve(), { once: true });
-            existing.addEventListener("error", () => reject(new Error("calendar unavailable")), { once: true });
-            window.setTimeout(() => window.Calendly ? resolve() : reject(new Error("calendar unavailable")), 5000);
-            return;
-          }
-          const script = document.createElement("script");
-          script.src = "https://assets.calendly.com/assets/external/widget.js";
-          script.async = true;
-          script.dataset.calendlyWidget = "true";
-          script.onload = () => resolve();
-          script.onerror = () => reject(new Error("calendar unavailable"));
-          document.head.appendChild(script);
-          window.setTimeout(() => window.Calendly ? resolve() : reject(new Error("calendar unavailable")), 5000);
-        });
-      }
-      if (!window.Calendly) throw new Error("calendar unavailable");
-      window.Calendly.initPopupWidget({ url: siteConfig.calendar.url });
-    } catch {
-      setCalendarUnavailable(true);
-    }
-  }
-
   const fieldProps = (key: keyof FormValues) => ({
     id: key,
     "aria-invalid": Boolean(errors[key]),
@@ -136,17 +76,7 @@ export default function ContactForm({ intent }: { intent: Intent }) {
     },
   });
 
-  if (status === "success") return (
-    <section className="surface-card rounded-3xl p-6 md:p-9" aria-labelledby="enquiry-success">
-      <h2 id="enquiry-success" className="text-2xl font-semibold text-white">Thanks - your enquiry has been received. You can now choose a time for a conversation.</h2>
-      <div className="mt-6 flex flex-wrap gap-3">
-        <button className="primary-button min-h-11" type="button" onClick={openCalendar}>{bookingLabel}</button>
-        <a className="secondary-button min-h-11" href={siteConfig.calendar.url} target="_blank" rel="noreferrer" onClick={() => trackEvent("booking_link_click", { route: "/contact", ctaLocation: "booking-panel" })}>Open booking page</a>
-      </div>
-      {meetingBooked ? <p className="mt-4 font-semibold text-white" role="status">Meeting booked</p> : null}
-      {calendarUnavailable ? <p className="mt-4 text-sm text-[var(--text-secondary)]" role="status">Your enquiry has been received. The booking calendar is unavailable here. Open the booking page or email us to arrange a time.</p> : null}
-    </section>
-  );
+  if (status === "success") return <BookingPanel name={values.name} email={values.email} />;
 
   const field = (key: keyof FormValues, label: string, control: ReactNode) => <div className="field-group" key={key}><label htmlFor={key}>{label}{["name", "email", "brand"].includes(key) ? <span aria-hidden="true"> *</span> : null}</label>{control}{errors[key] ? <p id={`${key}-error`} className="text-sm text-rose-300" role="alert">{errors[key]}</p> : null}</div>;
 

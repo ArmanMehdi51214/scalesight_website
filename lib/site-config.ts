@@ -2,9 +2,7 @@ export const siteConfig = {
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || undefined,
   notificationDestination: process.env.CONTACT_NOTIFICATION_DESTINATION || undefined,
   calendar: {
-    url:
-      process.env.NEXT_PUBLIC_CALENDLY_URL ||
-      "https://calendly.com/kazmiarmanmehdi/30min",
+    url: getCalendlyUrl(process.env.NEXT_PUBLIC_CALENDLY_URL),
     durationLabel: "30-minute discovery call",
   },
   partners: {
@@ -36,3 +34,15 @@ export const siteConfig = {
   locationText: "Lahore, PK",
   sampleBriefReviewDate: process.env.NEXT_PUBLIC_SAMPLE_BRIEF_REVIEW_DATE || undefined,
 } as const;
+
+function getCalendlyUrl(value: string | undefined): string | undefined {
+  if (!value) return undefined;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" && url.hostname === "calendly.com" && url.pathname.length > 1
+      ? url.toString()
+      : undefined;
+  } catch {
+    return undefined;
+  }
+}

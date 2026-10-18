@@ -32,6 +32,7 @@
 - Keyboard-only interaction, form interaction, 200% zoom, viewport overflow at 360/390/768/1024/1440, direct URL refresh, staging runtime headers, and redirect responses were not browser-tested. Local production server startup was blocked by sandbox port restrictions; the requested escalation was rejected.
 - No lab LCP/INP/CLS values were collected because a browser-accessible production build could not be served. No field performance claim is made. Analytics is disabled by default and requires both analytics and privacy approval flags; no collection provider is configured. No real enquiries or meetings were sent or booked.
 - Final verification reran lint, typecheck and production build successfully. The production build emitted seven static pages plus dynamic `/contact` and `/api/contact`; built-output checks confirmed public static route metadata, one H1 and main landmark, sample brief labels/order/disclosure, production sitemap/robots, disabled demo flags and unset email. The allowed Shopify FAQ and guarantee caveat are the only matching permitted terms in the built HTML. Browser verification was not completed: port 3000 is a non-production server, starting production output on another port was rejected, and Playwright/Puppeteer/Lighthouse/axe are unavailable. See `docs/QA_REPORT.md` for route-level PASS/FAIL and manual checks. A branded `app/not-found.tsx` now supplies a main landmark and home navigation for unknown URLs.
+- Calendly booking now reads only `NEXT_PUBLIC_CALENDLY_URL` through `siteConfig.calendar.url`, validates an HTTPS `calendly.com` URL, loads the official widget assets only after enquiry success and an explicit booking click, passes only name/email as prefill, and confirms booking only on the exact-origin `calendly.event_scheduled` message. `.env.example` documents the URL; ignored `.env.local` is set for local development. No CSP exists, so security headers were left unchanged. Lint, typecheck and production build for this integration pass. No real enquiry or booking was sent.
 
 ## OPEN_ITEMS
 
@@ -39,6 +40,8 @@
 - **Owner: Arman** — Approve and provide the Privacy Notice page. Exact blocker: owner-approved privacy page required before the form and analytics go live.
 - **Owner: Arman + Wahib** — Configure and verify the server-side notification destination after privacy approval; it is unset, so production submissions are not delivered.
 - **Owner: Arman** — Verify the configured calendar URL and event duration before retaining “30-minute” booking copy.
+- **Owner: Wahib** — Set `NEXT_PUBLIC_CALENDLY_URL=https://calendly.com/kazmiarmanmehdi/30min` in the hosting provider's environment settings; `.env.local` only configures local development.
+- **Owner: Arman** — Update the approved Privacy Notice to disclose that the user's name and email are passed to Calendly for booking.
 - **Owner: Arman** — Set `sampleBriefReviewDate` only if a review date is approved; the field is hidden while unset.
 - **Owner: Arman** — Decide whether About should use a portrait or retain the typography treatment.
 - **Owner: Arman** — Confirm whether Partners should remain active.
