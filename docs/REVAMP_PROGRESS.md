@@ -74,3 +74,7 @@
 - Work: six-step path and framed input documents. Pilot: staggered four-week journey and responsibility lanes.
 - Examples: large schematic views with evidence/options/output rails. About: founder monogram composition. Partners: connected division diagram.
 - Contact: elevated form and separate expectation/success-booking surfaces. Contact handlers, fields and Calendly implementation unchanged.
+
+## Visual redesign — F
+- Translucent navy header preserves contrast with the original white logo; scroll adds a hairline and shadow.
+- Existing contact CTA stays visible on mobile. Approved nav/link destinations and footer columns retained.
