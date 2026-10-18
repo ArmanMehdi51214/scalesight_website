@@ -7,6 +7,7 @@
 - [x] Step 4 — Examples, About, and conditional Partners
 - [x] Step 5 — Contact, guarded submission, SEO/staging, and disabled measurement
 - [x] Step 6 — Copy sweep, build/source QA, and handoff (browser/lab runs blocked by local-server approval)
+- [x] Final verification — lint, typecheck, production build and generated-output audit passed; browser/lab verification remains blocked (see `docs/QA_REPORT.md`)
 
 ## Route inventory
 
@@ -30,6 +31,7 @@
 - Source inspection confirms the skip link targets each route's `<main>`, the mobile navigation exposes `aria-expanded`, FAQ controls are buttons with `aria-controls`/`aria-expanded`, and form labels/errors are associated. Key token contrast calculations: white/background 18.94:1; secondary/background 10.43:1; muted/background 5.57:1; soft blue/background 12.17:1; white/primary button 5.44:1.
 - Keyboard-only interaction, form interaction, 200% zoom, viewport overflow at 360/390/768/1024/1440, direct URL refresh, staging runtime headers, and redirect responses were not browser-tested. Local production server startup was blocked by sandbox port restrictions; the requested escalation was rejected.
 - No lab LCP/INP/CLS values were collected because a browser-accessible production build could not be served. No field performance claim is made. Analytics is disabled by default and requires both analytics and privacy approval flags; no collection provider is configured. No real enquiries or meetings were sent or booked.
+- Final verification reran lint, typecheck and production build successfully. The production build emitted seven static pages plus dynamic `/contact` and `/api/contact`; built-output checks confirmed public static route metadata, one H1 and main landmark, sample brief labels/order/disclosure, production sitemap/robots, disabled demo flags and unset email. The allowed Shopify FAQ and guarantee caveat are the only matching permitted terms in the built HTML. Browser verification was not completed: port 3000 is a non-production server, starting production output on another port was rejected, and Playwright/Puppeteer/Lighthouse/axe are unavailable. See `docs/QA_REPORT.md` for route-level PASS/FAIL and manual checks. A branded `app/not-found.tsx` now supplies a main landmark and home navigation for unknown URLs.
 
 ## OPEN_ITEMS
 
@@ -38,6 +40,8 @@
 - **Owner: Arman + Wahib** — Configure and verify the server-side notification destination after privacy approval; it is unset, so production submissions are not delivered.
 - **Owner: Arman** — Verify the configured calendar URL and event duration before retaining “30-minute” booking copy.
 - **Owner: Arman** — Set `sampleBriefReviewDate` only if a review date is approved; the field is hidden while unset.
+- **Owner: Arman** — Decide whether About should use a portrait or retain the typography treatment.
+- **Owner: Arman** — Confirm whether Partners should remain active.
 - **Owner: Arman** — Verify the supply-timing demo URL and synthetic disclosure before enabling it.
 - **Owner: Arman** — Verify the launch-demand demo URL and visible label/disclosure before enabling it.
 - **Owner: Arman** — Verify the size-depth demo's Fit Movement → Size Depth label/disclosure before enabling it; do not guess a deep link.
