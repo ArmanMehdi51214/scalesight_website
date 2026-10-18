@@ -82,3 +82,13 @@
 ## Visual redesign — G
 - Added one-time scroll reveals, connected-path drawing, gentle hover lifts and tab crossfades; reduced motion disables all.
 - Default server render keeps every essential surface visible. Inactive tabs remain in DOM; no-JS renders all panels without a hydration layout shift.
+
+## Visual redesign — verification
+- Completed A/B, C, D, E, F and G as separate commits on the required branch; no deployment or dependency changes.
+- Lint, typecheck and production build pass. Browser verification covers all page routes at 360/390/768/1024/1440 and equivalent 200% desktop reflow.
+- No original rendered lines removed; literal link text/targets, metadata and form fields match baseline. Only required visual labels, equivalents and approved-brief repetitions were added.
+- Contact validation/failure/success, partner intent, Calendly prefill/scheduled event and blocked-widget fallback verified with intercepted requests.
+- Full methodology and existing privacy-route limitation: docs/REVAMP_VISUAL_QA.md.
+- Final automated audit: zero runtime errors, zero horizontal-overflow failures and zero axe WCAG violations; all original rendered lines and literal links/fields/meta retained across all nine tested destinations.
+- Final production lab measurements across seven service pages at 390/1440: LCP 692–976ms; CLS 0 throughout (4× CPU, 150ms latency, 1.6Mbps download, fresh browser contexts).
+- Keyboard tabs/Home/End, keyboard brief fallback, reduced motion and three visible no-JS panels all pass. Review home at 390px, the full brief and contact success first.
