@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  if (siteConfig.staging) return [];
   const baseUrl = "https://scalesight.org";
 
   const routes: MetadataRoute.Sitemap = [

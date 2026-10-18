@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
 import { getRouteMetadata } from "@/lib/site-metadata";
+import { siteConfig } from "@/lib/site-config";
+import AnalyticsListener from "@/components/analytics-listener";
 
 import "./globals.css";
 
@@ -14,11 +15,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://scalesight.org"),
   ...getRouteMetadata("home"),
   robots: {
-    index: true,
-    follow: true,
+    index: !siteConfig.staging,
+    follow: !siteConfig.staging,
     googleBot: {
-      index: true,
-      follow: true,
+      index: !siteConfig.staging,
+      follow: !siteConfig.staging,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -42,19 +43,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://assets.calendly.com/assets/external/widget.css"
-          rel="stylesheet"
-        />
-      </head>
       <body className={geist.variable}>
         <a className="skip-link" href="#main-content">Skip to main content</a>
         <div id="main-content" tabIndex={-1}>{children}</div>
-        <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="afterInteractive"
-        />
+        <AnalyticsListener />
       </body>
     </html>
   );

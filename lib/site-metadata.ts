@@ -40,8 +40,8 @@ export const routeMetadata = {
     canonical: "/partners",
   },
   contact: {
-    title: "Contact | ScaleSight",
-    description: "Talk through a planning decision with ScaleSight.",
+    title: "Discuss a Planning Decision | ScaleSight",
+    description: "Tell us the buy, production or allocation choice your team is weighing and explore whether a focused planning review fits.",
     canonical: "/contact",
   },
   privacy: {

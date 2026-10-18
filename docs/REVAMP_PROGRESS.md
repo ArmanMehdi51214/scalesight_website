@@ -5,7 +5,7 @@
 - [x] Step 2 — Home (/)
 - [x] Step 3 — How we work and 30-day pilot (visual preview blocked by local-server approval)
 - [x] Step 4 — Examples, About, and conditional Partners (visual preview blocked by local-server approval)
-- [ ] Step 5
+- [x] Step 5 — Contact, guarded submission, SEO/staging, and disabled measurement (local HTTP stub demonstration blocked by approval)
 - [ ] Step 6
 
 ## OPEN_ITEMS
@@ -17,4 +17,10 @@
 - Verify the launch-demand demo at `https://scalesight-alecs-demo.vercel.app/incrementality` and its live label/disclosure before enabling it.
 - Verify the size-depth demo at `https://scalesight-understatement-demo.vercel.app/` and its Fit Movement → Size Depth label/disclosure before enabling it; do not guess a deep link.
 - Confirm the supply-chain review capability with Arman before retaining it as a public capability claim.
+- Owner-approved privacy page required before the form and analytics go live.
+- Notification delivery is not configured; provide an approved server-side destination before enabling production submissions.
+- Verify the configured calendar URL and its event duration before retaining “30-minute” booking copy.
+- Analytics remains disabled by default; no analytics destination/provider is configured.
+- Staging noindex relies on `NEXT_PUBLIC_SITE_ENV=staging` or `VERCEL_ENV=preview`; confirm the actual staging environment sets one.
+- Local stub HTTP scenarios were not run: the sandbox blocked binding a local port and approval to run the dev server was rejected. No real enquiry or meeting was sent/booked.
 

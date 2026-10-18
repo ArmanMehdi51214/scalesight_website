@@ -28,8 +28,11 @@ export const siteConfig = {
     },
   },
   analytics: {
-    enabled: process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === "true",
+    enabled:
+      process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === "true" &&
+      process.env.NEXT_PUBLIC_PRIVACY_NOTICE_APPROVED === "true",
   },
+  staging: process.env.NEXT_PUBLIC_SITE_ENV === "staging" || process.env.VERCEL_ENV === "preview",
   locationText: "Lahore, PK",
   sampleBriefReviewDate: process.env.NEXT_PUBLIC_SAMPLE_BRIEF_REVIEW_DATE || undefined,
 } as const;

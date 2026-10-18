@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "X-Robots-Tag",
-            value: "index, follow",
+            value: siteConfig.staging ? "noindex, nofollow" : "index, follow",
           },
         ],
       },
