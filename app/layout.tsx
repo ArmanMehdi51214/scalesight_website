@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { getRouteMetadata } from "@/lib/site-metadata";
 import { siteConfig } from "@/lib/site-config";
+import { MotionEnhancements } from "@/components/visual-interactions";
 import AnalyticsListener from "@/components/analytics-listener";
 
 import "./globals.css";
@@ -42,11 +43,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{ __html: 'document.documentElement.dataset.js="true";' }} /></head>
       <body className={geist.variable}>
         <a className="skip-link" href="#main-content">Skip to main content</a>
         {children}
         <AnalyticsListener />
+        <MotionEnhancements />
       </body>
     </html>
   );

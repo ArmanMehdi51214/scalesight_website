@@ -11,10 +11,11 @@ export function OptionComparison() {
 
 export function HeroArtifact() {
   return <div className="artifact-stage" aria-label="Illustrative reviewed brief artifacts">
-    <p className="artifact-disclosure">{sampleBrief.disclosure}</p>
+    <p className="artifact-disclosure">{sampleBrief.disclosure}</p><p className="artifact-context">{sampleBrief.context}</p>
     <ArtifactCard title="What changed" className="artifact-evidence"><div className="sales-pair" aria-hidden="true"><div><span>Flavor A</span><strong>1,200</strong><i className="sales-bar sales-bar--a"/></div><div><span>Flavor B</span><strong>800</strong><i className="sales-bar sales-bar--b"/></div></div><p className="artifact-note">{sampleBrief.fields[0].value}</p></ArtifactCard>
     <ArtifactCard title="Quantity and timing" className="artifact-options"><OptionComparison/><p className="artifact-note">{sampleBrief.fields[3].value}</p></ArtifactCard>
     <ArtifactCard title="Recommended action" className="artifact-action"><p>{sampleBrief.fields[2].value}</p><div className="artifact-signature" aria-hidden="true"><span/><span/><span/></div></ArtifactCard>
+    <p className="artifact-context artifact-footer">Three of six review fields · full brief below</p>
   </div>;
 }
 
@@ -30,8 +31,8 @@ export function TimelineStrip({ variant = "supply" }: { variant?: "supply" | "la
   </svg></figure>;
 }
 
-export function PillarFeature({ title, question, variant }: { title: string; question: string; variant: "supply" | "launch" | "size" }) {
-  return <article className="pillar-feature"><TimelineStrip variant={variant}/><h3>{title}</h3><p>{question}</p></article>;
+export function PillarFeature({ title, question, number, variant }: { title: string; question: string; number: string; variant: "supply" | "launch" | "size" }) {
+  return <article className="pillar-feature"><TimelineStrip variant={variant}/><span className="pillar-number" aria-hidden="true">{number}</span><h3>{title}</h3><p>{question}</p></article>;
 }
 
 export function OwnershipSplit({ children }: { children?: ReactNode }) {

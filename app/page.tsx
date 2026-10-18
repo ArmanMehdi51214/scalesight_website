@@ -112,7 +112,7 @@ export default function HomePage() {
             <h2 className="section-title mt-4" id="decision-signals-heading">A signal still leaves a decision to make.</h2>
           </div>
           <div className="pillar-grid mt-9">
-            {decisionSignals.map((item, index) => <PillarFeature key={item.title} title={item.title} question={item.question} variant={index === 0 ? "launch" : index === 1 ? "size" : "supply"} />)}
+            {decisionSignals.map((item, index) => <PillarFeature key={item.title} title={item.title} question={item.question} number={`0${index + 1}`} variant={index === 0 ? "launch" : index === 1 ? "size" : "supply"} />)}
           </div>
         </section>
 

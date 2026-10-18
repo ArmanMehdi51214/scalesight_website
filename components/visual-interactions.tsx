@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, useSyncExternalStore, type ReactNode, type KeyboardEvent } from "react";
-const subscribe = () => () => {};
+import { usePathname } from "next/navigation";
+import { useEffect, useId, useRef, useState, type ReactNode, type KeyboardEvent } from "react";
 
 export function TabPanel({ items }: { items: { label: string; content: ReactNode }[] }) {
   const [active, setActive] = useState(0);
-  const enhanced = useSyncExternalStore(subscribe, () => true, () => false);
+  const enhanced = true;
   const id = useId();
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   function navigate(event: KeyboardEvent<HTMLButtonElement>, index: number) {
@@ -17,7 +17,7 @@ export function TabPanel({ items }: { items: { label: string; content: ReactNode
     else return;
     event.preventDefault(); setActive(next); buttons.current[next]?.focus();
   }
-  return <div className="story-tabs" data-enhanced={enhanced}><div className="story-tablist" role={enhanced ? "tablist" : undefined} aria-label="Illustrative examples">{items.map((item,index)=><button key={item.label} ref={node=>{buttons.current[index]=node;}} id={`${id}-tab-${index}`} role={enhanced ? "tab" : undefined} aria-selected={enhanced ? active===index : undefined} aria-controls={`${id}-panel-${index}`} tabIndex={enhanced && active!==index ? -1 : 0} onKeyDown={e=>navigate(e,index)} onClick={()=>setActive(index)} type="button">{item.label}</button>)}</div>{items.map((item,index)=><div className="story-tabpanel" key={item.label} role={enhanced ? "tabpanel" : undefined} id={`${id}-panel-${index}`} aria-labelledby={`${id}-tab-${index}`} hidden={enhanced && active!==index} tabIndex={0}>{item.content}</div>)}</div>;
+  return <div className="story-tabs" data-enhanced={enhanced}><div className="story-tablist" role={enhanced ? "tablist" : undefined} aria-label="Illustrative examples">{items.map((item,index)=><button key={item.label} ref={node=>{buttons.current[index]=node;}} id={`${id}-tab-${index}`} role={enhanced ? "tab" : undefined} aria-selected={enhanced ? active===index : undefined} aria-controls={`${id}-panel-${index}`} tabIndex={enhanced && active!==index ? -1 : 0} onKeyDown={e=>navigate(e,index)} onClick={()=>setActive(index)} type="button">{item.label}</button>)}</div>{items.map((item,index)=><div className="story-tabpanel" key={item.label} role={enhanced ? "tabpanel" : undefined} id={`${id}-panel-${index}`} aria-labelledby={`${id}-tab-${index}`} data-panel-active={active===index} tabIndex={0}>{item.content}</div>)}</div>;
 }
 
 export function BriefFieldLayout({ labels, children }: { labels: string[]; children: ReactNode }) {
@@ -35,4 +35,18 @@ export function BriefFieldLayout({ labels, children }: { labels: string[]; child
     return()=>{observer.disconnect();window.removeEventListener('keydown',keyboard);window.removeEventListener('pointerdown',pointer);};
   },[]);
   return <div className="brief-layout" ref={root}><div className="brief-index" aria-hidden="true">{labels.map((label,i)=><div key={label} data-field-label data-active={i===0}><span className="brief-index-dot"/>{label}</div>)}</div><div className="brief-content">{children}</div></div>;
+}
+
+
+export function MotionEnhancements() {
+  const pathname = usePathname();
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !window.IntersectionObserver) return;
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add("is-revealed"); observer.unobserve(entry.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll("[data-reveal], .pillar-feature, .decision-view, .inputs-panel, .pilot-journey, .founder-block").forEach(node => observer.observe(node));
+    return () => observer.disconnect();
+  }, [pathname]);
+  return null;
 }

@@ -78,3 +78,7 @@
 ## Visual redesign — F
 - Translucent navy header preserves contrast with the original white logo; scroll adds a hairline and shadow.
 - Existing contact CTA stays visible on mobile. Approved nav/link destinations and footer columns retained.
+
+## Visual redesign — G
+- Added one-time scroll reveals, connected-path drawing, gentle hover lifts and tab crossfades; reduced motion disables all.
+- Default server render keeps every essential surface visible. Inactive tabs remain in DOM; no-JS renders all panels without a hydration layout shift.
