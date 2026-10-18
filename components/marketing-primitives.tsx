@@ -1,5 +1,14 @@
 "use client";
 import Link from "next/link";
+import { siteConfig } from "@/lib/site-config";
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: { url: string }) => void;
+    };
+  }
+}
 
 type SectionHeaderProps = {
   eyebrow?: string;
@@ -14,9 +23,9 @@ type ButtonProps = {
 };
 
 export function openCalendlyPopup() {
-  if (typeof window !== "undefined" && (window as any).Calendly) {
-    (window as any).Calendly.initPopupWidget({
-      url: process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/kazmiarmanmehdi/30min",
+  if (typeof window !== "undefined" && window.Calendly) {
+    window.Calendly.initPopupWidget({
+      url: siteConfig.calendar.url,
     });
   }
 }
@@ -43,35 +52,9 @@ export function SectionHeader({
 }
 
 export function PrimaryButton({ href, children }: ButtonProps) {
-  const isCalendly = href === "/contact" || href === "#book-call";
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (isCalendly) {
-      e.preventDefault();
-      openCalendlyPopup();
-    }
-  };
-
-  return (
-    <Link className="primary-button" href={href} onClick={handleClick}>
-      {children}
-    </Link>
-  );
+  return <Link className="primary-button" href={href}>{children}</Link>;
 }
 
 export function SecondaryButton({ href, children }: ButtonProps) {
-  const isCalendly = href === "/contact" || href === "#book-call";
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (isCalendly) {
-      e.preventDefault();
-      openCalendlyPopup();
-    }
-  };
-
-  return (
-    <Link className="secondary-button" href={href} onClick={handleClick}>
-      {children}
-    </Link>
-  );
+  return <Link className="secondary-button" href={href}>{children}</Link>;
 }

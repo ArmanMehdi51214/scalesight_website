@@ -9,7 +9,7 @@ import {
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { Eyebrow } from "@/components/marketing-primitives";
-import process from "process";
+import { siteConfig } from "@/lib/site-config";
 
 // export const metadata: Metadata = {
 //   title: "ScaleSight | Book Your Strategy Call",
@@ -17,7 +17,7 @@ import process from "process";
 //     "Contact ScaleSight to discuss forecasting, planning, and operating visibility.",
 // };
 
-const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL;
+const CALENDLY_URL = siteConfig.calendar.url;
 
 const handleCalendlySubmit = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
@@ -37,7 +37,7 @@ const handleCalendlySubmit = (event: React.FormEvent<HTMLFormElement>) => {
 const expectations = [
   {
     icon: Timer,
-    title: "30-minute discovery call",
+    title: siteConfig.calendar.durationLabel,
     copy: "A focused conversation to understand your business, your SKUs, and your current planning challenges.",
   },
   {
@@ -217,17 +217,14 @@ export default function ContactPage() {
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">
-              <div>
-                <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-muted)]">
-                  Email directly
-                </p>
-                <a
-                  className="mt-2 inline-block text-base font-semibold text-[#8dd9ff] transition hover:text-white"
-                  href="mailto:hello@scalesight.io"
-                >
-                  arman@scalesight.org
-                </a>
-              </div>
+              {siteConfig.contactEmail ? (
+                <div>
+                  <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-muted)]">Email directly</p>
+                  <a className="mt-2 inline-block min-h-11 py-2 text-base font-semibold text-[#8dd9ff] transition hover:text-white" href={`mailto:${siteConfig.contactEmail}`}>
+                    {siteConfig.contactEmail}
+                  </a>
+                </div>
+              ) : null}
               {/* <div>
                 <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-muted)]">
                   Office

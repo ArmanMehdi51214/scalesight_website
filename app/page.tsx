@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 
 import DashboardGridShowcase from "@/components/DashboardGridShowcase";
+import { DecisionBrief } from "@/components/revamp-components";
 import PerspectiveShowcase from "@/components/PerspectiveShowcase";
 import ShaderBackdrop from "@/components/ShaderBackdrop";
 import SiteFooter from "@/components/site-footer";
@@ -621,6 +622,15 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* ── 12. FAQ ── */}
+        <section className="content-shell px-4 py-16 sm:px-6" aria-labelledby="sample-decision-heading">
+          <div className="mb-8 max-w-3xl">
+            <p className="eyebrow-chip">A decision in practice</p>
+            <h2 className="section-title mt-4" id="sample-decision-heading">Compare the options before the next run.</h2>
+          </div>
+          <DecisionBrief />
         </section>
 
         {/* ── 12. FAQ ── */}

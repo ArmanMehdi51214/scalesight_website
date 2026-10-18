@@ -23,6 +23,7 @@
   --blue-primary: var(--brand-blue-primary);
   --blue-secondary: var(--brand-blue-secondary);
   --blue-soft: #8dd9ff;
+  --accent-brand: #4f49f3;
   --font-brand: var(--font-geist-sans), sans-serif;
 }
 
@@ -32,6 +33,49 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue-soft);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  color: #07111f;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.content-shell {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+.site-header {
+  background: rgba(7, 17, 31, 0.94);
+  backdrop-filter: blur(14px);
 }
 
 body {
@@ -601,6 +645,79 @@ button {
   padding: 0 1.4rem 1.35rem;
   color: var(--text-secondary);
   line-height: 1.85;
+}
+
+.decision-brief {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, var(--panel), var(--bg-soft));
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.decision-brief__disclosure {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(4, 180, 253, 0.12);
+  padding: 0.5rem 1rem;
+  color: var(--blue-soft);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.decision-brief__context {
+  max-width: 70ch;
+  margin-block: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.decision-brief__fields {
+  border-top: 1px solid var(--border);
+}
+
+.decision-brief__row {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.75fr) minmax(0, 1.5fr);
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-block: 1.25rem;
+}
+
+.decision-brief__row dt,
+.decision-brief__supporting dt {
+  color: white;
+  font-weight: 650;
+}
+
+.decision-brief__row dd,
+.decision-brief__supporting dd {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.decision-brief__supporting {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 1.5rem;
+}
+
+.decision-brief__supporting > div {
+  display: grid;
+  gap: 0.4rem;
+}
+
+@media (max-width: 640px) {
+  .decision-brief__row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
 }
 
 .field-group {

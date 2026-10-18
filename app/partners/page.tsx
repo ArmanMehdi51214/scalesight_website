@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import {
   Activity,
   AlertTriangle,
@@ -24,38 +23,14 @@ import {
 import ShaderBackdrop from "@/components/ShaderBackdrop";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
+import { getRouteMetadata } from "@/lib/site-metadata";
 import {
   PrimaryButton,
   SecondaryButton,
   SectionHeader,
 } from "@/components/marketing-primitives";
 
-export const metadata: Metadata = {
-  title: "Partner with ScaleSight | Managed Ecommerce Intelligence",
-  description:
-    "ScaleSight helps consultants, agencies, and fractional operators deliver better planning, forecasting, and operational insights without adding analysts or building dashboards from scratch.",
-  alternates: {
-    canonical: "/partners",
-  },
-  keywords: [
-    "ecommerce partner program",
-    "consultant partnership",
-    "managed ecommerce intelligence",
-    "Shopify agency partner",
-    "fractional COO tools",
-    "inventory planning for agencies",
-    "demand forecasting service",
-    "ecommerce advisory",
-  ],
-  openGraph: {
-    title: "Partner with ScaleSight | Managed Ecommerce Intelligence",
-    description:
-      "Strengthen your advisory with managed ecommerce intelligence. Partner with ScaleSight to deliver executive planning and forecasting to your clients.",
-    type: "website",
-    siteName: "ScaleSight",
-    url: "https://scalesight.org/partners",
-  },
-};
+export const metadata = getRouteMetadata("partners");
 
 const partnerTypes = [
   {

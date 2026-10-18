@@ -1,39 +1,14 @@
-import type { Metadata } from "next";
 import { Eye, Handshake, Lightbulb, Target } from "lucide-react";
 
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
+import { getRouteMetadata } from "@/lib/site-metadata";
 import {
   PrimaryButton,
   SectionHeader,
 } from "@/components/marketing-primitives";
 
-export const metadata: Metadata = {
-  title: "About ScaleSight | Managed Ecommerce Intelligence Partner",
-  description:
-    "ScaleSight is a Managed Ecommerce Intelligence partner for Shopify and DTC ecommerce brands. We monitor your business, spot problems early, and help your team plan with confidence.",
-  alternates: {
-    canonical: "/about",
-  },
-  keywords: [
-    "managed ecommerce intelligence",
-    "ecommerce planning partner",
-    "managed planning service",
-    "Shopify planning",
-    "inventory planning",
-    "demand forecasting",
-    "DTC ecommerce",
-    "weekly decision support",
-  ],
-  openGraph: {
-    title: "About ScaleSight | Managed Ecommerce Intelligence Partner",
-    description:
-      "ScaleSight is a Managed Ecommerce Intelligence partner for Shopify brands. We monitor your business, spot problems early, and help your team plan with confidence.",
-    type: "website",
-    siteName: "ScaleSight",
-    url: "https://scalesight.org/about",
-  },
-};
+export const metadata = getRouteMetadata("about");
 
 const values = [
   {
