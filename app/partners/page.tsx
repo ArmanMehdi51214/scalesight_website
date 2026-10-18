@@ -15,7 +15,7 @@ const partnerSteps = [
 export default function PartnersPage() {
   return <>
     <SiteHeader />
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <Hero eyebrow="PARTNER ENGAGEMENTS" heading="Add analytical planning capacity to the work you already lead." body="ScaleSight can support an advisor’s client with scoped demand, inventory and supply analysis, reviewed recommendations and a decision brief. We agree the roles and working arrangement before delivery begins." primary={{ href: "/contact?intent=partner", label: "Discuss a partner engagement" }} />
 
       <section className="border-y border-white/10 bg-[var(--bg-soft)]" aria-labelledby="advisor-fit-heading">

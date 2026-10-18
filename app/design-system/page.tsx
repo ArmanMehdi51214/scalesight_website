@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
 import ShaderBackdrop from "@/components/ShaderBackdrop";
+import { getRouteMetadata } from "@/lib/site-metadata";
 
-export const metadata: Metadata = {
-  title: "ScaleSight Design System",
-  description: "Design system and shader study for the ScaleSight marketing site.",
+export const metadata = {
+  ...getRouteMetadata("designSystem"),
+  robots: { index: false, follow: false },
 };
 
 const colors = [
@@ -19,7 +19,7 @@ const colors = [
 
 export default function DesignSystemPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[var(--bg)] px-6 py-16 text-white">
+    <main id="main-content" tabIndex={-1} className="relative min-h-screen overflow-hidden bg-[var(--bg)] px-6 py-16 text-white">
       <ShaderBackdrop />
 
       <div className="relative mx-auto max-w-6xl">

@@ -47,7 +47,7 @@ const faqs = [
 export default function ForecastingPage() {
   return <>
     <SiteHeader />
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <Hero eyebrow="30-DAY FOCUSED PLANNING PILOT" heading="Test the managed planning approach on one real decision." body="Choose one upcoming buy, production run or allocation decision. ScaleSight uses agreed inputs to investigate the signal, compare options and bring reviewed recommendations. At the end, decide whether ongoing review is useful enough to make recurring." primary={{ href: "/contact?intent=pilot", label: "Talk through a planning decision" }} />
 
       <section className="border-y border-white/10 bg-[var(--bg-soft)]" aria-labelledby="starting-point-heading">

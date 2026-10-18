@@ -49,6 +49,11 @@ export const routeMetadata = {
     description: "Read the ScaleSight privacy policy.",
     canonical: "/privacy",
   },
+  designSystem: {
+    title: "ScaleSight Design System",
+    description: "Visual primitives and brand tokens used by the ScaleSight website.",
+    canonical: "/design-system",
+  },
 } as const;
 
 export type RouteMetadataKey = keyof typeof routeMetadata;

@@ -1,14 +1,5 @@
 "use client";
 import Link from "next/link";
-import { siteConfig } from "@/lib/site-config";
-
-declare global {
-  interface Window {
-    Calendly?: {
-      initPopupWidget: (options: { url: string }) => void;
-    };
-  }
-}
 
 type SectionHeaderProps = {
   eyebrow?: string;
@@ -21,14 +12,6 @@ type ButtonProps = {
   href: string;
   children: React.ReactNode;
 };
-
-export function openCalendlyPopup() {
-  if (typeof window !== "undefined" && window.Calendly) {
-    window.Calendly.initPopupWidget({
-      url: siteConfig.calendar.url,
-    });
-  }
-}
 
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return <p className="eyebrow-chip">{children}</p>;

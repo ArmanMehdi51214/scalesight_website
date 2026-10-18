@@ -145,7 +145,6 @@ export default function ContactForm({ intent }: { intent: Intent }) {
       </div>
       {meetingBooked ? <p className="mt-4 font-semibold text-white" role="status">Meeting booked</p> : null}
       {calendarUnavailable ? <p className="mt-4 text-sm text-[var(--text-secondary)]" role="status">Your enquiry has been received. The booking calendar is unavailable here. Open the booking page or email us to arrange a time.</p> : null}
-      {siteConfig.contactEmail ? <p className="mt-5 text-sm text-[var(--text-secondary)]">Prefer email? Contact us directly. <a className="underline underline-offset-4" href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a></p> : null}
     </section>
   );
 
@@ -169,7 +168,6 @@ export default function ContactForm({ intent }: { intent: Intent }) {
     <div className="md:col-span-2">
       <p className="text-sm leading-6 text-[var(--text-secondary)]">We use these details to respond to your enquiry. Read our <Link className="underline underline-offset-4" href="/privacy">Privacy Notice</Link>.</p>
       <button className="primary-button mt-5 min-h-11 w-full justify-center md:w-auto" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Send planning enquiry"}</button>
-      <p className="mt-3 text-sm text-[var(--text-secondary)]">Start with a few details. After sending your enquiry, you can choose a time for a {durationMatches ? "30-minute " : ""}conversation.</p>
     </div>
   </form>;
 }

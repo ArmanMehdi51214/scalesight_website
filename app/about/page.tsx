@@ -15,7 +15,7 @@ const principles = [
 export default function AboutPage() {
   return <>
     <SiteHeader />
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <section className="content-shell px-4 py-16 sm:px-6 md:py-24">
         <p className="eyebrow-chip">ABOUT SCALESIGHT</p>
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">

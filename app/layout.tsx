@@ -45,7 +45,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={geist.variable}>
         <a className="skip-link" href="#main-content">Skip to main content</a>
-        <div id="main-content" tabIndex={-1}>{children}</div>
+        {children}
         <AnalyticsListener />
       </body>
     </html>

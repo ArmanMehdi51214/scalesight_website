@@ -10,7 +10,7 @@ const syntheticDisclosure = "Illustrative · synthetic data";
 export default function ExamplesPage() {
   return <>
     <SiteHeader />
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <Hero eyebrow="ILLUSTRATIVE PLANNING EXAMPLES" heading="See how a planning question becomes a decision." body="These are illustrative workspaces built with synthetic data. They show how ScaleSight may structure an investigation. They are not client results or client operating data." primary={{ href: "/contact?intent=planning", label: "Talk through a planning decision" }} />
 
       <section className="border-y border-white/10 bg-[var(--bg-soft)]" aria-labelledby="brief-heading">

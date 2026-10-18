@@ -26,7 +26,7 @@ const faqs = [
 export default function HowWeWorkPage() {
   return <>
     <SiteHeader />
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <Hero eyebrow="HOW WE WORK" heading="From a demand signal to a decision your team can act on" body="ScaleSight works with the data and planning context you already have. We investigate what changed, compare the available options, and bring your team a reviewed recommendation. The workspace supports the service; your team does not have another planning tool to operate." primary={{ href: "/contact", label: "Talk through a planning decision" }} />
 
       <section className="border-y border-white/10 bg-[var(--bg-soft)]" aria-labelledby="steps-heading">

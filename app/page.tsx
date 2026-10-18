@@ -84,7 +84,7 @@ export default function HomePage() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(ellipse_at_78%_18%,rgba(0,94,240,0.18),transparent_38%),linear-gradient(180deg,#07111f,#0a141f)]">
           <div className="content-shell grid items-center gap-10 px-4 py-12 sm:px-6 md:py-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
             <div>
