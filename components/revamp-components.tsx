@@ -41,7 +41,7 @@ export function CTABand({
 }: {
   eyebrow?: string;
   heading: string;
-  body: string;
+  body?: string;
   primary: ActionLink;
   secondary?: ActionLink;
 }) {
@@ -50,7 +50,7 @@ export function CTABand({
       <div className="cta-panel p-8 md:p-12">
         {eyebrow ? <p className="eyebrow-chip">{eyebrow}</p> : null}
         <h2 className="section-title mt-4">{heading}</h2>
-        <p className="section-copy mt-4">{body}</p>
+        {body ? <p className="section-copy mt-4">{body}</p> : null}
         <div className="mt-7 flex flex-wrap gap-3">
           <Link className="primary-button min-h-11" href={primary.href}>{primary.label}</Link>
           {secondary ? <Link className="secondary-button min-h-11" href={secondary.href}>{secondary.label}</Link> : null}

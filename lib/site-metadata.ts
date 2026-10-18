@@ -10,9 +10,9 @@ export const routeMetadata = {
     canonical: "/",
   },
   howWeWork: {
-    title: "How we work | ScaleSight",
+    title: "How ScaleSight Works | Managed Planning",
     description:
-      "See how ScaleSight maintains analysis and review while the client decides and executes.",
+      "See how ScaleSight investigates demand signals, compares practical options and brings your team a reviewed planning recommendation.",
     canonical: "/how-we-work",
   },
   examples: {
@@ -22,9 +22,9 @@ export const routeMetadata = {
     canonical: "/examples",
   },
   pilot: {
-    title: "30-day planning pilot | ScaleSight",
+    title: "30-Day Planning Pilot | ScaleSight",
     description:
-      "Explore ScaleSight’s 30-day planning pilot for growing consumer brands.",
+      "Test managed analytical planning on one upcoming buy, production run or allocation decision with an agreed scope and review process.",
     canonical: "/30-day-planning-pilot",
   },
   about: {

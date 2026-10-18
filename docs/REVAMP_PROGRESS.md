@@ -3,7 +3,7 @@
 - [x] Step 0 — Inventory and rules (read-only for site code)
 - [x] Step 1 — Shared shell, config, components
 - [x] Step 2 — Home (/)
-- [ ] Step 3
+- [x] Step 3 — How we work and 30-day pilot (visual preview blocked by local-server approval)
 - [ ] Step 4
 - [ ] Step 5
 - [ ] Step 6
