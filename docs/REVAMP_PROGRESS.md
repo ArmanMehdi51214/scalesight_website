@@ -2,7 +2,7 @@
 
 - [x] Step 0 — Inventory and rules (read-only for site code)
 - [x] Step 1 — Shared shell, config, components
-- [ ] Step 2
+- [x] Step 2 — Home (/)
 - [ ] Step 3
 - [ ] Step 4
 - [ ] Step 5

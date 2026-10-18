@@ -60,22 +60,29 @@ export function CTABand({
   );
 }
 
-export function DecisionBrief() {
+export function DecisionBrief({ compact = false }: { compact?: boolean }) {
+  const fields = compact
+    ? sampleBrief.fields.filter((field) =>
+        ["What changed", "Recommended action", "Quantity and timing"].includes(field.label),
+      )
+    : sampleBrief.fields;
+
   return (
-    <article id="sample-brief" className="decision-brief">
+    <article id={compact ? undefined : "sample-brief"} className="decision-brief">
       <p className="decision-brief__disclosure">{sampleBrief.disclosure}</p>
       <p className="decision-brief__context">{sampleBrief.context}</p>
       <dl className="decision-brief__fields">
-        {sampleBrief.fields.map((field) => (
+        {fields.map((field) => (
           <div className="decision-brief__row" key={field.label}>
             <dt>{field.label}</dt><dd>{field.value}</dd>
           </div>
         ))}
       </dl>
-      <dl className="decision-brief__supporting">
+      {compact ? <p className="mt-5 text-sm leading-6 text-[var(--text-muted)]">Three of six review fields · full brief below</p> : null}
+      {!compact ? <dl className="decision-brief__supporting">
         <div><dt>Decision owner</dt><dd>{sampleBrief.decisionOwner}</dd></div>
         {sampleBrief.reviewDate ? <div><dt>Review date</dt><dd>{sampleBrief.reviewDate}</dd></div> : null}
-      </dl>
+      </dl> : null}
     </article>
   );
 }
@@ -114,7 +121,7 @@ export function DecisionCard({
 export const ExampleCard = DecisionCard;
 
 export function ProcessSteps({ steps }: { steps: { title: string; body: string }[] }) {
-  return <ol className="grid gap-4 md:grid-cols-2">{steps.map((step, index) => <li className="surface-card rounded-2xl p-6" key={step.title}><p className="eyebrow-chip">Step {index + 1}</p><h3 className="mt-4 text-xl font-semibold text-white">{step.title}</h3><p className="mt-3 leading-7 text-[var(--text-secondary)]">{step.body}</p></li>)}</ol>;
+  return <ol className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">{steps.map((step, index) => <li className="flex min-h-full items-start gap-4 border-l-2 border-[var(--blue-secondary)] py-4 pl-4" key={step.title}><span aria-hidden="true" className="text-sm font-bold tracking-widest text-[var(--blue-soft)]">{String(index + 1).padStart(2, "0")}</span><div><h3 className="text-lg font-semibold leading-7 text-white">{step.title}</h3>{step.body ? <p className="mt-2 leading-7 text-[var(--text-secondary)]">{step.body}</p> : null}</div></li>)}</ol>;
 }
 
 export function ResponsibilityGrid({

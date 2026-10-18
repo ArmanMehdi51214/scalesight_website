@@ -4,9 +4,9 @@ const siteUrl = "https://scalesight.org";
 
 export const routeMetadata = {
   home: {
-    title: "ScaleSight | Planning decisions for growing consumer brands",
+    title: "ScaleSight | Managed Planning for Consumer Brands",
     description:
-      "ScaleSight maintains demand and supply analysis so growing consumer brands can review decisions about quantity, timing, service and cash.",
+      "Maintained demand, inventory and supply analysis with reviewed recommendations on quantity, timing and cash. Explore a focused planning pilot.",
     canonical: "/",
   },
   howWeWork: {

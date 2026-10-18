@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ScaleSight | Planning decisions for growing consumer brands",
-    description: "ScaleSight maintains demand and supply analysis for client review.",
+    title: "ScaleSight | Managed Planning for Consumer Brands",
+    description: "Maintained demand, inventory and supply analysis with reviewed recommendations on quantity, timing and cash. Explore a focused planning pilot.",
     images: ["/logo.png"],
   },
   icons: {
