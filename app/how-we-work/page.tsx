@@ -52,7 +52,7 @@ export default function HowWeWorkPage() {
         <div className="content-shell px-4 py-16 sm:px-6 md:py-20">
           <p className="eyebrow-chip">AGREED INPUTS</p>
           <h2 className="section-title mt-4 max-w-3xl" id="inputs-heading">Use the data that answers the question.</h2>
-          <div className="mt-9 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2">
+          <div className="inputs-panel mt-9 grid md:grid-cols-2">
             <article className="bg-[var(--panel)] p-6"><h3 className="text-xl font-semibold text-white">Demand</h3><p className="mt-3 leading-7 text-[var(--text-secondary)]">Sales and sell-through at the useful product, channel and time level. Separate opening orders from repeat demand where the data allows.</p></article>
             <article className="bg-[var(--panel)] p-6"><h3 className="text-xl font-semibold text-white">Stock and incoming supply</h3><p className="mt-3 leading-7 text-[var(--text-secondary)]">Available and committed stock, open purchase orders, arrival dates and relevant transfer constraints.</p></article>
             <article className="bg-[var(--panel)] p-6"><h3 className="text-xl font-semibold text-white">Operating constraints</h3><p className="mt-3 leading-7 text-[var(--text-secondary)]">Lead times, minimum order quantities, production slots, pack sizes and shelf life where relevant.</p></article>

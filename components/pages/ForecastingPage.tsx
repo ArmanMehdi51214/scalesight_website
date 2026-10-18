@@ -67,8 +67,8 @@ export default function ForecastingPage() {
       <section className="content-shell px-4 py-16 sm:px-6 md:py-20" aria-labelledby="four-weeks-heading">
         <p className="eyebrow-chip">THE PILOT PATH</p>
         <h2 className="section-title mt-4 max-w-3xl" id="four-weeks-heading">Four weeks, one agreed decision scope.</h2>
-        <ol className="relative mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {weeks.map((week) => <li className="relative border-t-2 border-[var(--blue-secondary)] bg-[var(--panel)] p-6" key={week.number}>
+        <ol className="pilot-journey mt-10">
+          {weeks.map((week) => <li className="journey-stop" key={week.number}>
             <p className="text-sm font-bold tracking-[0.2em] text-[var(--blue-soft)]">WEEK {week.number}</p>
             <h3 className="mt-4 text-xl font-semibold text-white">{week.name}</h3>
             <p className="mt-3 text-base leading-7 text-[var(--text-secondary)]">{week.detail}</p>

@@ -69,3 +69,8 @@
 ## Visual redesign — D
 - Home now includes schematic pillars, the shared review path, a six-field indexed brief, dark ownership lanes and audience tiles, progressive example tabs, and closing wash.
 - Original copy and destinations retained; added only requested artifact/diagram labels and source brief repetitions.
+
+## Visual redesign — E
+- Work: six-step path and framed input documents. Pilot: staggered four-week journey and responsibility lanes.
+- Examples: large schematic views with evidence/options/output rails. About: founder monogram composition. Partners: connected division diagram.
+- Contact: elevated form and separate expectation/success-booking surfaces. Contact handlers, fields and Calendly implementation unchanged.

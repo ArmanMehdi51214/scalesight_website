@@ -27,8 +27,8 @@ export default function AboutPage() {
               <p>Larger brands often hire planners, analysts and data-science specialists around their systems. ScaleSight gives growing brands access to analytical support without building every capability internally. For lean teams, that adds planning capability. For established teams, it adds bandwidth around a defined investigation.</p>
             </div>
           </div>
-          <aside className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(155deg,rgba(4,180,253,0.13),rgba(12,23,39,0.96)_45%)] p-7 sm:p-10" aria-label="Founder">
-            <p aria-hidden="true" className="select-none text-[6rem] font-semibold leading-none tracking-[-0.1em] text-white/10 sm:text-[8rem]">AM</p>
+          <aside className="founder-block p-7 sm:p-10" aria-label="Founder">
+            <p aria-hidden="true" className="select-none text-[6rem] font-semibold leading-none tracking-[-0.1em] founder-monogram sm:text-[8rem]">AM</p>
             <div className="mt-10 border-t border-white/15 pt-5">
               <p className="text-xl font-semibold text-white">Arman Mehdi</p>
               <p className="mt-1 text-base text-[var(--text-secondary)]">Founder, ScaleSight</p>

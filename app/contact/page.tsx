@@ -12,7 +12,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
 
   return <>
     <SiteHeader />
-    <main id="main-content" tabIndex={-1} className="content-shell px-4 py-16 sm:px-6 md:py-20">
+    <main id="main-content" tabIndex={-1} className="contact-page content-shell px-4 py-16 sm:px-6 md:py-20">
       <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-x-12">
         <div className="lg:col-start-1 lg:row-start-1">
           <p className="eyebrow">Talk through a decision</p>
@@ -28,7 +28,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
           </ul>
         </aside>
         <p className="max-w-2xl text-sm leading-6 text-[var(--text-secondary)] lg:col-start-1 lg:row-start-2">Start with a few details. After sending your enquiry, you can choose a time for a {siteConfig.calendar.durationLabel === "30-minute discovery call" ? "30-minute " : ""}conversation.</p>
-        <div className="surface-card rounded-3xl p-5 sm:p-8 lg:col-start-1 lg:row-start-3"><ContactForm intent={intent} /></div>
+        <div className="contact-form-card surface-card rounded-3xl p-5 sm:p-8 lg:col-start-1 lg:row-start-3"><ContactForm intent={intent} /></div>
       </section>
       {siteConfig.contactEmail ? <p className="mt-6 text-sm text-[var(--text-secondary)]">Prefer email? Contact us directly. <a className="underline underline-offset-4" href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a></p> : null}
     </main>

@@ -21,7 +21,7 @@ export function Hero({
   secondary?: ActionLink;
 }) {
   return (
-    <section className="content-shell px-4 py-16 sm:px-6 md:py-20">
+    <section className="page-hero content-shell px-4 py-16 sm:px-6 md:py-20">
       {eyebrow ? <p className="eyebrow-chip">{eyebrow}</p> : null}
       <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
         {heading}
