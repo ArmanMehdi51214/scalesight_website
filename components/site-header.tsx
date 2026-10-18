@@ -5,27 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { openCalendlyPopup } from "./marketing-primitives";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/30-day-planning-pilot", label: "30-Day Pilot" },
+  { href: "/how-we-work", label: "How we work" },
+  { href: "/examples", label: "Examples" },
+  { href: "/30-day-planning-pilot", label: "30-day pilot" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 function isActive(pathname: string, href: string) {
-  if (href === "/") {
-    return pathname === "/";
-  }
-
-  if (
-    href === "/30-day-planning-pilot" &&
-    pathname === "/30-day-planning-pilot/"
-  ) {
-    return true;
-  }
-
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
@@ -34,132 +22,35 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!open) {
-      return;
-    }
-
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setOpen(false);
-      }
+      if (event.key === "Escape") setOpen(false);
     };
-
-    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", handleEscape);
-
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", handleEscape);
-    };
-  }, [open]);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-transparent">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <Link
-          aria-label="ScaleSight home"
-          className="inline-flex items-center text-white"
-          href="/"
-        >
-          <Image
-            alt="ScaleSight Logo - Managed Ecommerce Intelligence"
-            title="ScaleSight - Managed Ecommerce Intelligence"
-            className="h-auto w-[9.5rem] md:w-[10.5rem]"
-            height={85}
-            width={304}
-            quality={85}
-            priority
-            src="/logo.png"
-          />
+    <header className="site-header sticky top-0 z-50">
+      <div className="content-shell flex items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <Link aria-label="ScaleSight home" className="inline-flex shrink-0 items-center" href="/">
+          <Image alt="ScaleSight" className="h-auto w-36 md:w-40" height={85} width={304} priority src="/logo.png" />
         </Link>
-
-        <nav className="hidden items-center gap-8 lg:flex">
-          {navItems.map((item) => {
-            const active = isActive(pathname, item.href);
-
-            return (
-              <Link
-                key={item.href}
-                className={active ? "nav-link nav-link--active" : "nav-link"}
-                href={item.href}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+        <nav aria-label="Main navigation" className="hidden items-center gap-6 lg:flex">
+          {navItems.map((item) => <Link aria-current={isActive(pathname, item.href) ? "page" : undefined} key={item.href} className={isActive(pathname, item.href) ? "nav-link nav-link--active" : "nav-link"} href={item.href}>{item.label}</Link>)}
         </nav>
-
-        <div className="hidden lg:block">
-          <Link
-            className="primary-button !px-5 !py-3 !text-sm"
-            href="/contact"
-            onClick={(e) => {
-              e.preventDefault();
-              openCalendlyPopup();
-            }}
-          >
-            Book a Strategy Call
-          </Link>
-        </div>
-
-        <button
-          aria-expanded={open}
-          aria-label="Toggle navigation"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white transition hover:bg-white/5 lg:hidden"
-          onClick={() => setOpen((value) => !value)}
-          type="button"
-        >
-          {open ? <X size={18} /> : <Menu size={18} />}
+        <Link className="primary-button hidden min-h-11 items-center justify-center !px-4 !py-2.5 !text-sm lg:inline-flex" href="/contact">Talk through a decision</Link>
+        <button aria-controls="mobile-navigation" aria-expanded={open} aria-label={open ? "Close navigation" : "Open navigation"} className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white hover:bg-white/5 focus-visible:outline lg:hidden" onClick={() => setOpen((value) => !value)} type="button">
+          {open ? <X aria-hidden="true" size={20} /> : <Menu aria-hidden="true" size={20} />}
         </button>
       </div>
-
-      {open ? (
-        <div className="lg:hidden">
-          <button
-            aria-label="Close navigation overlay"
-            className="fixed inset-0 top-[5.4rem] z-40 bg-[rgba(7,17,31,0.7)] backdrop-blur-sm"
-            onClick={() => setOpen(false)}
-            type="button"
-          />
-
-          <div className="absolute inset-x-4 top-full z-50">
-            <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,23,39,0.98),rgba(8,15,26,0.98))] p-3 shadow-[0_28px_90px_rgba(0,0,0,0.36)]">
-              <nav className="flex flex-col gap-2">
-                {navItems.map((item) => {
-                  const active = isActive(pathname, item.href);
-
-                  return (
-                    <Link
-                      key={item.href}
-                      className={
-                        active
-                          ? "mobile-nav-link mobile-nav-link--active"
-                          : "mobile-nav-link"
-                      }
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                })}
-
-                <Link
-                  className="primary-button mt-3 justify-center"
-                  href="/contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpen(false);
-                    openCalendlyPopup();
-                  }}
-                >
-                  Book a Strategy Call
-                </Link>
-              </nav>
-            </div>
+      <div className="content-shell px-4 sm:px-6 lg:hidden" hidden={!open} id="mobile-navigation">
+        <nav aria-label="Mobile navigation" className="mb-4 rounded-2xl border border-white/10 bg-[var(--panel)] p-3 shadow-xl">
+          <div className="flex flex-col gap-1">
+            {navItems.map((item) => <Link aria-current={isActive(pathname, item.href) ? "page" : undefined} key={item.href} className={isActive(pathname, item.href) ? "mobile-nav-link mobile-nav-link--active" : "mobile-nav-link"} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>)}
+            <Link className="primary-button mt-2 min-h-11 justify-center" href="/contact" onClick={() => setOpen(false)}>Talk through a decision</Link>
           </div>
-        </div>
-      ) : null}
+        </nav>
+      </div>
     </header>
   );
 }

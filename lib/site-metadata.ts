@@ -1,0 +1,77 @@
+import type { Metadata } from "next";
+
+const siteUrl = "https://scalesight.org";
+
+export const routeMetadata = {
+  home: {
+    title: "ScaleSight | Managed Planning for Consumer Brands",
+    description:
+      "Maintained demand, inventory and supply analysis with reviewed recommendations on quantity, timing and cash. Explore a focused planning pilot.",
+    canonical: "/",
+  },
+  howWeWork: {
+    title: "How ScaleSight Works | Managed Planning",
+    description:
+      "See how ScaleSight investigates demand signals, compares practical options and brings your team a reviewed planning recommendation.",
+    canonical: "/how-we-work",
+  },
+  examples: {
+    title: "Illustrative Planning Examples | ScaleSight",
+    description:
+      "Explore synthetic examples of supply timing, launch demand and size-depth decisions. See the evidence and trade-offs behind a planning brief.",
+    canonical: "/examples",
+  },
+  pilot: {
+    title: "30-Day Planning Pilot | ScaleSight",
+    description:
+      "Test managed analytical planning on one upcoming buy, production run or allocation decision with an agreed scope and review process.",
+    canonical: "/30-day-planning-pilot",
+  },
+  about: {
+    title: "About ScaleSight | Analysis Behind the Commitment",
+    description:
+      "Meet the founder and understand how ScaleSight connects data-science analysis with planning review for growing consumer brands.",
+    canonical: "/about",
+  },
+  partners: {
+    title: "Partner with ScaleSight | Analytical Planning Support",
+    description:
+      "Discuss scoped planning analysis and decision support for consumer-brand clients, with clear roles and delivery boundaries.",
+    canonical: "/partners",
+  },
+  contact: {
+    title: "Discuss a Planning Decision | ScaleSight",
+    description: "Tell us the buy, production or allocation choice your team is weighing and explore whether a focused planning review fits.",
+    canonical: "/contact",
+  },
+  privacy: {
+    title: "Privacy | ScaleSight",
+    description: "Read the ScaleSight privacy policy.",
+    canonical: "/privacy",
+  },
+  designSystem: {
+    title: "ScaleSight Design System",
+    description: "Visual primitives and brand tokens used by the ScaleSight website.",
+    canonical: "/design-system",
+  },
+} as const;
+
+export type RouteMetadataKey = keyof typeof routeMetadata;
+
+export function getRouteMetadata(key: RouteMetadataKey): Metadata {
+  const route = routeMetadata[key];
+  const url = new URL(route.canonical, siteUrl).toString();
+
+  return {
+    title: route.title,
+    description: route.description,
+    alternates: { canonical: route.canonical },
+    openGraph: {
+      title: route.title,
+      description: route.description,
+      url,
+      type: "website",
+      siteName: "ScaleSight",
+    },
+  };
+}
