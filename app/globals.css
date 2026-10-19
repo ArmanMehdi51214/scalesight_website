@@ -711,6 +711,61 @@ a {
 .section-E06 .reading-copy {
   margin-left:auto;
 }
+.page-about .section-hero {
+  background:var(--paper);
+  border:0;
+}
+.page-about h1 {
+  max-width:27ch;
+  font-size:clamp(2.25rem,4.8vw,4rem);
+}
+.section-A01>.content-shell {
+  padding-bottom:48px;
+}
+.section-A02>.content-shell {
+  padding-top:0;
+}
+.section-A02 .reading-copy {
+  margin-left:auto;
+  max-width:72ch;
+}
+.section-A02 p {
+  font-size:1.125rem;
+}
+.section-A03 {
+  background:var(--navy);
+  color:white;
+}
+.principles {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.principles li {
+  font-size:clamp(1.5rem,3vw,2.5rem);
+  letter-spacing:-.035em;
+  padding-block:24px;
+  border-bottom:1px solid #ffffff26;
+}
+.principles li:first-child {
+  padding-top:0;
+}
+.principles li:last-child {
+  border:0;
+  padding-bottom:0;
+}
+.founder-signature {
+  border-left:2px solid var(--accent-brand);
+  padding-left:24px;
+}
+.founder-signature p:first-child {
+  font-size:1.5rem;
+  font-weight:600;
+  color:var(--ink);
+}
+.founder-signature p+p {
+  margin-top:8px;
+}
 .section-title {
   font-size:var(--section);
   line-height:1.15;
