@@ -766,6 +766,22 @@ a {
 .founder-signature p+p {
   margin-top:8px;
 }
+.section-R03 {
+  background:var(--bg-soft);
+}
+.section-R04 .step-list {
+  margin-block:0;
+}
+.section-R05>.content-shell {
+  padding-top:0;
+}
+.section-R05 .reading-copy {
+  border-left:2px solid var(--accent-brand);
+  padding-left:24px;
+}
+.section-R06 {
+  background:var(--navy);
+}
 .section-title {
   font-size:var(--section);
   line-height:1.15;
