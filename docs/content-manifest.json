@@ -142,12 +142,30 @@
             "href": "/examples/#supply-timing"
           },
           {
+            "text": "When supply timing changes, what should happen to the promotion?"
+          },
+          {
+            "text": "Decision output: a timing recommendation with cash, service and feasibility trade-offs."
+          },
+          {
             "text": "Launch demand and the next production mix",
             "href": "/examples/#launch-demand"
           },
           {
+            "text": "Is the launch adding demand or shifting the flavor mix?"
+          },
+          {
+            "text": "Decision output: a next-run recommendation with component, capacity and cash implications."
+          },
+          {
             "text": "Size-level demand and the next buy",
             "href": "/examples/#size-depth"
+          },
+          {
+            "text": "Which size demand should shape the next buy?"
+          },
+          {
+            "text": "Decision output: a size-depth recommendation with lead-time, stock and cash trade-offs."
           }
         ]
       },

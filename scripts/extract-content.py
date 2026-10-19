@@ -60,6 +60,11 @@ r['/examples']=[make('E01',['See how','These are'],'hero'),make('E02',['What a']
 for id,starts in [('E03',['When supply','CPG /','Evidence to','Options to','Decision output:','Open illustrative']),('E04',['Is the','Food /','Evidence to','Options to','Decision output:','Open illustrative']),('E05',['Which size','Apparel /','Evidence to','Options to','Decision output:','Open illustrative'])]:
  r['/examples'].append(make(id,starts,'example',cut='Candidate demo:'))
 r['/examples'] += [make('E06',['The workspace'],'note'),make('E07',['Bring us','Talk through'],'cta')]
+# Page 9 BUILD prescribes a question and short output on each Home card; reuse exact E03-E05 copy.
+home_cards=r['/'][5]['blocks'][:2]
+for card,example in zip(r['/'][5]['blocks'][2:],r['/examples'][2:5]):
+ home_cards.extend([card,example['blocks'][0],example['blocks'][4]])
+r['/'][5]['blocks']=home_cards
 r['/about']=[make('A01',['I started'],'hero'),make('A02',['I’m Arman','ScaleSight brings','Larger brands'],'narrative'),make('A03',['Start with','Make the','Check supply','Keep ownership'],'principles'),make('A04',['Arman Mehdi','Founder,'],'signature'),make('A05',['What commitment','Talk through'],'cta')]
 r['/partners']=[make('R01',['Add analytical','ScaleSight can'],'hero'),make('R02',['For advisors','A focused']),make('R03',['A clear','You contribute']),make('R04',['Agree a','Define roles','Scope the','Review the'],'list'),make('R05',['Delivery is'],'note'),make('R06',['Discuss a'],'cta')]
 r['/contact']=[make('C01',['Bring us','Tell us'],'hero'),make('C02',['Discuss the','Check the','Agree whether'],'list'),make('C03',['Start with'],'form',cut='Field / required?'),make('C04',['Choose a'],'booking'),make('C05',['Prefer email'],'email')]

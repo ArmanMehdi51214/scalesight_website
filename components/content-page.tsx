@@ -41,7 +41,7 @@ function SectionContent({ section }: { section: Section }) {
   if(kind === "cards" || kind === "process" || kind === "timeline" || kind === "deliverables") return <>{heading}<Pairs blocks={b.slice(1)} className={kind === 'process' ? 'process-grid' : kind === 'timeline' ? 'week-grid' : 'copy-grid'}/>{kind==='deliverables' && <div className="brief-wrap"><PlanningBrief/></div>}</>;
   if(kind === "audiences" || kind === "inputs") return <>{heading}<Pairs blocks={b.slice(1,-1)}/><p className="ownership-note">{b.at(-1)?.text}</p></>;
   if(kind === "steps") return <>{heading}<ol className="step-list">{b.slice(1,-1).map(block=><li key={block.text}>{block.text}</li>)}</ol><Link className="text-link" href={b.at(-1)!.href!}>{b.at(-1)!.text}</Link></>;
-  if(kind === "links") return <>{heading}<p className="section-intro">{b[1].text}</p><div className="example-links">{b.slice(2).map(block=><Link href={block.href!} key={block.text}><h3>{block.text}</h3></Link>)}</div></>;
+  if(kind === "links") return <>{heading}<p className="section-intro">{b[1].text}</p><div className="example-links">{b.slice(2).filter((_,i)=>i%3===0).map((block,i)=><article key={block.text}><Link href={block.href!}><h3>{block.text}</h3></Link><p>{b[i*3+3].text}</p><p>{b[i*3+4].text}</p></article>)}</div></>;
   if(kind === "roles") return <>{heading}<div className="roles-table"><div className="roles-head"><h3>{b[1].text}</h3><h3>{b[2].text}</h3></div>{[3,5,7].map(i=><div className="roles-row" key={i}><p>{b[i].text}</p><p>{b[i+1].text}</p></div>)}</div></>;
   if(kind === "example") {
     const key = id === 'E03' ? 'supplyTiming' : id === 'E04' ? 'launchDemand' : 'sizeDepth';
