@@ -1,28 +1,21 @@
-# ScaleSight — The considered commitment
+# ScaleSight — decision-led editorial design
 
-**Concept:** An editorial planning practice, expressed through spacious typography and layered, reviewed decision artifacts on cool blue paper.
+A calm analytical publication: navy provides structure, off-white provides reading space, and the existing violet-blue accent marks actions. The visual material is the PDF's actual text. No illustrations, icons, invented labels or decorative numbers. Geist and the existing ScaleSight logo stay unchanged.
 
-## Single token source
-All design tokens live in `app/globals.css` under `:root`; components consume their semantic aliases. Keep the existing locally served Geist family and original logo. Navy ink anchors light reading surfaces; dark ownership sections give the page a deliberate change of pace.
+## System
 
-- Colour: original navy `#07111f`, blue `#005ef0`, cyan `#04b4fd`; accent `#4f49f3`. Paper `#f7f9fd`, wash `#edf2fc`, white surfaces; navy body ink and slate secondary ink. Dark sections use white and pale blue text. Accent is sparing.
-- Type: existing Geist; display 60/64 desktop, 38/42 mobile; section 44/48 to 30/36; card 20/28; body 16/28 and 18/32; labels 12/20. Tight display tracking, normal reading text.
-- Radii: 12, 16, 24px. Hairline: 1px navy at 12% opacity (white at 16% on navy).
-- Shadows: low surface = short contact plus broad faint shadow; elevated artifact = two soft navy shadows; hero = contact, medium and diffuse navy layers.
-- Space: 8px base; 16/24 gutters, 24/32 card padding, 48/64 composition gaps, 80/112 section rhythm; content width 1180px.
-- Washes: blue radial at upper right over paper; cyan radial at lower left with faint accent at upper right; closing band combines blue wash with a fine navy grid. No bitmap illustrations.
+1180px shell; 24px desktop and 16px mobile gutters. Spacing uses an 8px base (8/16/24/32/48/64/80/96). Display type 36–60px, section type 30–44px, body 16–18px with 1.7 line-height. Navy #101d35; paper #fafbfe; white #fff; ink #142139; secondary #506078. Accent #4F49F3; light accent #bcbaff on navy. Hairline rules, 8/16/24px radii, one restrained shadow for the decision brief. Buttons and controls have at least 44px targets. Focus rings remain visible; reduced-motion disables transitions.
 
-## Components
-ArtifactCard, OptionComparison (equal visual treatment, accessible text), TimelineStrip (schematic), TabPanel (progressively enhanced keyboard tabs, persistent DOM), PillarFeature, OwnershipSplit, ProcessPath, sticky-field DecisionBrief, native FAQAccordion, CTABand. Shared light surfaces, disclosure, diagrams and spacings connect the family.
+## Components and composition
 
-## Focal visual by page
-Home: three layered brief cards; three schematic decision pillars; connected review path; full six-field brief with desktop scroll index; dark handoff lanes and audience tiles; example tabs; generous closing wash.
-How we work: six connected review steps and a framed inputs panel.
-Pilot: four-week editorial journey with existing week copy; responsibility handoff.
-Examples: three large schematic decision views, each followed by evidence → options → output; shared sample brief.
-About: oversized founder initials and restrained typographic signature block.
-Partners: connected advisor / ScaleSight / agreed-together division diagram.
-Contact: elevated form, adjacent expectations, clearly bordered success/booking panel; existing logic and fields unchanged.
+Shared: compact navy header, text navigation, primary/secondary actions, editorial section, two-column copy, paired cards, native FAQ disclosure, structured HTML brief, closing section and navy footer. All copy comes from the PDF manifest; layout never supplies a new label.
 
-## Motion and accessibility
-Hero cards enter once in reading order. IntersectionObserver enhances below-fold reveals and path drawing without hiding server content. Tabs crossfade; surfaces lift slightly on hover. No loops or parallax. Reduced motion disables all transitions and animations. Sticky index is desktop/pointer only; keyboard interaction restores plain stacked fields. All charts include text equivalents and visible synthetic disclosure; non-numeric diagrams say Schematic. Focus uses a high-contrast blue ring, targets are at least 44px, and mobile preserves document order.
+- Home: navy split hero with the exact compact brief on a white surface; open question columns; connected service steps; full-width brief; navy fit section; three linked scenarios; closing actions.
+- How we work: generous light hero and six numbered process rows (numbers already in PDF), two-by-two input groups, ownership prose and quiet FAQs.
+- Pilot: navy hero, open fit list, four connected weekly columns, deliverables followed by the complete brief, a paired responsibility table, evaluation and continuation.
+- Examples: restrained introduction, complete brief, then three spacious question/evidence compositions separated by rules. Synthetic labels remain visible. Unapproved external demos stay disabled.
+- About: oversized first-person heading, narrow narrative, four large principle lines and an intact typographic founder signature in the prescribed reading order.
+- Partners: editorial two-column sections, a horizontal process, explicit boundaries, one final action.
+- Contact: headline and expectations above a wide form on mobile; desktop uses a main form column and supporting side column while preserving DOM/keyboard order. Existing submission and booking flow remains.
+
+No deployment, new dependencies, pricing, brand claims or imagery. Browser QA at 360/390/768/1024/1440px follows content verification.
