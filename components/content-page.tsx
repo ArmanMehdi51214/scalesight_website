@@ -14,7 +14,21 @@ function Action({ block, secondary = false }: { block: Block; secondary?: boolea
 export function PlanningBrief({ compact = false }: { compact?: boolean }) {
   const brief = manifest.sampleBrief;
   const fields = compact ? brief.fields.filter((_, i) => [0, 2, 3].includes(i)) : brief.fields;
-  return <article className={`planning-brief${compact ? " planning-brief--compact" : ""}`}>
+  if (compact) return <article className="hero-decisions">
+    <div className="hero-decisions__intro">
+      <p className="brief-disclosure">{brief.disclosure}</p>
+      <p className="brief-context">{brief.context}</p>
+    </div>
+    <dl className="hero-decisions__cards">
+      {fields.map((field, index) => <div className={`hero-decision hero-decision--${index + 1}`} key={field.label}>
+        <dt>{field.label}</dt>
+        <dd>{field.value.split(/(1,200|800|six days|6,000|3,000 A \/ 3,000 B|3,600 A \/ 2,400 B)/g).map((part, i) =>
+          i % 2 ? <strong key={i}>{part}</strong> : part
+        )}</dd>
+      </div>)}
+    </dl>
+  </article>;
+  return <article className="planning-brief">
     <p className="brief-disclosure">{brief.disclosure}</p>
     <p className="brief-context">{brief.context}</p>
     <dl className="brief-fields">{fields.map(field => <div key={field.label}><dt>{field.label}</dt><dd>{field.value}</dd></div>)}</dl>

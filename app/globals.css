@@ -1244,3 +1244,127 @@ footer p {
   padding-top:24px;
   font-size:.8125rem;
 }
+
+/* Home: the same brief, expressed as a sequence of decision cards. */
+.section-H01 {
+  background: radial-gradient(ellipse at 85% 40%, #4f49f324, transparent 55%), linear-gradient(120deg, var(--navy-deep), #182a49);
+}
+.hero-decisions {
+  min-width: 0;
+  padding-block: 8px;
+}
+.hero-decisions__intro {
+  padding-inline: 24px;
+  margin-bottom: 24px;
+}
+.hero-decisions .brief-disclosure {
+  color: #c9c7ff;
+}
+.hero-decisions .brief-context {
+  color: #c6d0e2;
+  max-width: 48ch;
+  font-size: .8125rem;
+  margin-top: 8px;
+}
+.hero-decisions__cards {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  isolation: isolate;
+}
+.hero-decisions__cards::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(#a5a2ff33, #bcbaff, #a5a2ff33);
+  z-index: -1;
+}
+.hero-decision {
+  position: relative;
+  padding: 24px 32px;
+  border-radius: 16px;
+  border: 1px solid #ffffff24;
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+.hero-decision dt {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .025em;
+  margin-bottom: 12px;
+}
+.hero-decision dd {
+  font-size: .9375rem;
+  line-height: 1.75;
+}
+.hero-decision strong {
+  font-weight: 600;
+  color: inherit;
+  white-space: nowrap;
+}
+.hero-decision--1 {
+  width: 92%;
+  background: #edf1ff;
+  color: var(--ink);
+  border-color: #fff;
+  box-shadow: 0 12px 32px #00000014;
+}
+.hero-decision--1 dt {
+  color: #4540b8;
+}
+.hero-decision--1 dd {
+  color: #394967;
+}
+.hero-decision--2 {
+  margin-left: 24px;
+  background: linear-gradient(120deg, #4f49f3, #3c36bc);
+  color: white;
+  border-color: #a9a5ff70;
+  box-shadow: 0 16px 48px #05051f40, inset 0 1px 0 #ffffff24;
+}
+.hero-decision--2 dt {
+  color: #e2e0ff;
+}
+.hero-decision--2 dd {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+.hero-decision--3 {
+  width: 92%;
+  background: linear-gradient(120deg, #223453, #1a2944);
+  color: #e5eaff;
+  box-shadow: 0 12px 32px #00000014;
+}
+.hero-decision--3 dt {
+  color: #c9c7ff;
+}
+.hero-decision--3 strong {
+  display: inline;
+  padding-block: 2px;
+  border-bottom: 1px solid #a5a2ff80;
+}
+@keyframes decision-card-arrive {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-decision { animation: decision-card-arrive 650ms cubic-bezier(.2,.7,.2,1) backwards; }
+  .hero-decision--2 { animation-delay: 120ms; }
+  .hero-decision--3 { animation-delay: 240ms; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hero-decision:hover { transform: translateY(-4px); border-color: #bcbaff; box-shadow: 0 20px 48px #00000024; }
+}
+@media (max-width: 1023px) {
+  .hero-decision { padding: 24px; }
+  .hero-decision--2 { margin-left: 16px; }
+}
+@media (max-width: 767px) {
+  .hero-decisions { padding: 0; }
+  .hero-decisions__intro { padding-inline: 8px; }
+  .hero-decision { padding: 24px; }
+  .hero-decision--1, .hero-decision--3 { width: calc(100% - 16px); }
+  .hero-decision--2 dd { font-size: 1rem; }
+}

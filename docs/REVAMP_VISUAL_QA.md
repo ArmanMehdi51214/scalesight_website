@@ -25,3 +25,7 @@ Local production observations: fresh contexts, 4× CPU slowdown, 150ms latency a
 ## Preserved release dependencies
 
 No deployment or external demo activation. Existing `/privacy` still returns 404: the PDF requires an owner-approved notice reflecting actual providers, and supplies no publishable notice. Contact address, notification delivery, review date and Calendly event remain configuration-driven. No address, date, event or policy has been invented. The existing API's acceptance and privacy gates remain. Real delivery and booking must be verified with approved configuration before release. The independent internal `/design-system` route is outside the seven-page marketing content contract.
+
+## Home hero card refinement
+
+Replaced the compact white brief with three staggered cards using the same PDF text in the same order. Added sequential entrance animation, hover lift, stronger numeric emphasis and pale/violet/navy surfaces. Browser-checked at 360/390/768/1024/1440px: three cards visible, zero document overflow; reduced-motion computes animation to `none`. Content-lock remains zero differences. Lint, TypeScript and production build pass. Full brief sections are unchanged.
