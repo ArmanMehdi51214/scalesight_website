@@ -782,6 +782,117 @@ a {
 .section-R06 {
   background:var(--navy);
 }
+.page-contact {
+  padding:80px 24px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 320px;
+  gap:40px 64px;
+}
+.contact-heading {
+  grid-column:1/-1;
+  max-width:800px;
+}
+.contact-heading h1 {
+  max-width:17ch;
+}
+.contact-heading>p {
+  margin-top:24px;
+  font-size:1.125rem;
+  max-width:65ch;
+}
+.contact-expectations {
+  grid-column:2;
+  grid-row:2;
+  align-self:start;
+  border-top:2px solid var(--accent-brand);
+}
+.contact-expectations ul {
+  padding:0;
+  list-style:none;
+}
+.contact-expectations li {
+  padding-block:24px;
+  border-bottom:1px solid var(--border);
+  font-size:1rem;
+  line-height:1.7;
+}
+.contact-form-card {
+  grid-column:1;
+  grid-row:2;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:32px;
+  box-shadow:var(--shadow);
+}
+.form-intro {
+  margin-bottom:32px!important;
+}
+.field-group {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-width:0;
+}
+.field-group>label,.field-group legend {
+  font-size:.8125rem;
+  font-weight:600;
+  color:var(--ink);
+}
+.field-input {
+  width:100%;
+  min-height:48px;
+  padding:12px 16px;
+  border:1px solid #bdc8da;
+  border-radius:8px;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:.9375rem;
+  line-height:1.5;
+}
+.field-input::placeholder {
+  color:#65738b;
+}
+.field-input[aria-invalid=true] {
+  border-color:#ac213c;
+}
+.field-input:focus {
+  border-color:var(--accent-brand);
+}
+.field-group:has(textarea) {
+  grid-column:1/-1;
+}
+input[type=checkbox] {
+  accent-color:var(--accent-brand);
+  width:18px;
+  height:18px;
+}
+.contact-form-card .text-white {
+  color:var(--ink);
+}
+.contact-form-card .text-rose-300,.contact-form-card .text-rose-200 {
+  color:#a91d37;
+}
+.contact-form-card fieldset label {
+  font-size:.8125rem;
+}
+.direct-contact {
+  grid-column:1/-1;
+}
+.page-contact>#C04 {
+  display:none;
+}
+.surface-card {
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+}
+.page-contact .surface-card {
+  box-shadow:none;
+}
+.page-contact [aria-labelledby=enquiry-success] h2 {
+  font-size:1.5rem;
+}
 .section-title {
   font-size:var(--section);
   line-height:1.15;
