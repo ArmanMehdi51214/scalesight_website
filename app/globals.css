@@ -678,8 +678,38 @@ a {
 .section-P06 {
   background:var(--bg-soft);
 }
+.example-detail {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+}
+.example-detail h2 {
+  font-size:clamp(1.875rem,2.8vw,2.5rem);
+}
+.example-category {
+  color:var(--blue-soft)!important;
+  font-size:.8125rem!important;
+  margin-top:24px!important;
+}
+.example-evidence p {
+  padding-top:24px;
+  border-top:1px solid var(--border);
+  margin-bottom:24px;
+}
+.example-evidence .brief-disclosure {
+  margin-bottom:0;
+}
 .section-example+.section-example {
   border-top:1px solid var(--border);
+}
+.section-E04 {
+  background:var(--bg-soft);
+}
+.section-E06 {
+  border-top:1px solid var(--border);
+}
+.section-E06 .reading-copy {
+  margin-left:auto;
 }
 .section-title {
   font-size:var(--section);
