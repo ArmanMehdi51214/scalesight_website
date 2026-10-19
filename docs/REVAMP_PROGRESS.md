@@ -11,3 +11,15 @@ Branch: `revamp/managed-service`.
 - Content lock: zero differences. Browser audit: zero failures. See REVAMP_VISUAL_QA.md and REVAMP_QA_RESULTS.json.
 - No dependencies added, no real enquiries or bookings, no external publishing.
 - Release dependencies remain: approved Privacy Notice, confirmed contact delivery/calendar configuration, and real staging delivery/booking verification. Unapproved demos stay disabled.
+
+## Final audit — 20 October 2026
+
+PDF regeneration and rendered content: zero differences. Production build, lint and types pass. 56 layout/reflow checks pass; no Chromium runtime errors or desktop axe violations. Full link/form/configuration findings are in FINAL_AUDIT.md and FINAL_AUDIT_RESULTS.json.
+
+### OPEN_ITEMS
+
+- `/privacy` returns 404; requires approved policy content reflecting actual providers.
+- Contact email/delivery destination unset; privacy unapproved; real submissions return 503.
+- Configured Calendly event still needs real duration/booking verification with authorization.
+- Sample review date not configured; no invented date. Named demo publication remains disabled.
+- Safari/Firefox and physical-device checks were not performed.
