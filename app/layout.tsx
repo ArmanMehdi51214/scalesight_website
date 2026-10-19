@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { getRouteMetadata } from "@/lib/site-metadata";
 import { siteConfig } from "@/lib/site-config";
-import { MotionEnhancements } from "@/components/visual-interactions";
 import AnalyticsListener from "@/components/analytics-listener";
 
 import "./globals.css";
@@ -49,7 +48,6 @@ export default function RootLayout({
         <a className="skip-link" href="#main-content">Skip to main content</a>
         {children}
         <AnalyticsListener />
-        <MotionEnhancements />
       </body>
     </html>
   );
