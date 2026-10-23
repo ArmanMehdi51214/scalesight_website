@@ -9,27 +9,24 @@
         "kind": "hero",
         "blocks": [
           {
-            "text": "FOR GROWING CONSUMER BRANDS"
+            "text": "MANAGED PLANNING FOR FOOD & BEVERAGE BRANDS"
           },
           {
-            "text": "CPG · BEVERAGES & RTD · DTC APPAREL"
+            "text": "Better stock decisions. Before you commit."
           },
           {
-            "text": "Before the next PO, know what deserves the cash."
-          },
-          {
-            "text": "We connect demand, inventory and incoming supply to weekly, specialist-reviewed recommendations on quantity, timing and cash."
-          },
-          {
-            "text": "Data science + supply-chain expertise, maintained for you. Your team decides."
-          },
-          {
-            "text": "See an illustrative planning brief",
-            "href": "/examples/#sample-brief"
+            "text": "Know what to make, what to buy, and what can wait. We turn sales, stock and incoming supply into weekly, specialist-reviewed recommendations."
           },
           {
             "text": "Explore the 30-day pilot",
             "href": "/30-day-planning-pilot"
+          },
+          {
+            "text": "See a planning brief",
+            "href": "/examples/#sample-brief"
+          },
+          {
+            "text": "Maintained by ScaleSight. Decided by your team."
           }
         ]
       },
@@ -1039,5 +1036,38 @@
     "e.g. brand.com",
     "e.g. Founder or Operations lead",
     "e.g. Next production run, timing and the choice you are weighing."
-  ]
+  ],
+  "heroPreview": {
+    "label": "Inside a planning brief",
+    "disclosure": "Illustrative · synthetic data",
+    "title": "The next run. A more considered mix.",
+    "context": "Beverage production / 12 November",
+    "signal": {
+      "label": "01 / The signal",
+      "title": "A faster seller. An incomplete picture.",
+      "aLabel": "Flavor A",
+      "aValue": "1,200 units",
+      "bLabel": "Flavor B",
+      "bValue": "800 units",
+      "note": "Four weeks of sales. Flavor B was unavailable for six days."
+    },
+    "review": {
+      "label": "02 / The interpretation",
+      "title": "Check availability before adding volume.",
+      "copy": "Higher sales alone do not prove higher demand. Investigate B’s availability, then compare a different mix within the same run."
+    },
+    "decision": {
+      "label": "03 / The decision to weigh",
+      "title": "Same run. Two possible mixes.",
+      "volume": "6,000",
+      "volumeLabel": "total units in either option",
+      "firstLabel": "Current mix",
+      "firstValue": "3,000 A / 3,000 B",
+      "secondLabel": "Compare with",
+      "secondValue": "3,600 A / 2,400 B"
+    },
+    "footerLabel": "The cash perspective",
+    "footerCopy": "Both options assume $12,000 in product cost at $2 per unit. Packaging, freight and service risk still need review.",
+    "ownership": "Your team makes the final call."
+  }
 }

@@ -20,6 +20,10 @@ class Page(HTMLParser):
   if self.body and not self.skip:
    self.text.append(s)
    if self.sectionStack and self.sectionStack[-1]:self.sections[self.sectionStack[-1]].append(s)
+def strings(value):
+ if isinstance(value,str):return [value]
+ if isinstance(value,dict):return [s for v in value.values() for s in strings(v)]
+ return []
 brief=[m['sampleBrief']['disclosure'],m['sampleBrief']['context']]+[x for f in m['sampleBrief']['fields'] for x in f.values()]+[m['sampleBrief']['ownerLabel'],m['sampleBrief']['owner']]
 failures=[]
 for route,sections in m['routes'].items():
@@ -34,14 +38,14 @@ for route,sections in m['routes'].items():
  for section in sections:
   if section['kind'] in ['form','booking']:continue
   expectedCopy=[b['text'] for b in section['blocks'] if not(section['kind']=='example' and b['text']=='Open illustrative workspace')]
-  if section['id']=='H01':expectedCopy += brief[:2]+[x for i,f in enumerate(m['sampleBrief']['fields']) if i in [0,2,3] for x in f.values()]
+  if section['id']=='H01':expectedCopy += strings(m['heroPreview'])
   if section['kind'] in ['brief','deliverables']:expectedCopy += brief
   if section['kind']=='example':expectedCopy += [m['sampleBrief']['disclosure']]
   actual=compact(' '.join(p.sections.get(section['id'],[])))
   if actual!=compact(' '.join(expectedCopy)):failures.append(f"{route} {section['id']} exact section copy differs (extra, duplicated, missing or reordered text)")
  expected=[s['id'] for s in sections]
  if p.ids!=expected:failures.append(f'{route} section IDs: {p.ids}; expected {expected}')
- allowed=m['approved']+m['accessibilityAndValidation']+brief+[b['text'] for s in sections for b in s['blocks']]
+ allowed=strings(m.get('heroPreview',{}))+m['approved']+m['accessibilityAndValidation']+brief+[b['text'] for s in sections for b in s['blocks']]
  remaining=text
  for s in sorted(set(allowed),key=lambda s:len(compact(s)),reverse=True):remaining=remaining.replace(compact(s),'')
  if remaining:failures.append(f'{route} unapproved text: {remaining[:2000]}')

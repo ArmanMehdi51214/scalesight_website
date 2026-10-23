@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProductFrame from "@/components/product-frame";
+import HomeHero, { HomeSignals } from "@/components/home-hero";
 import manifest from "@/docs/content-manifest.json";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
@@ -12,28 +12,14 @@ export type ContentRoute = keyof typeof manifest.routes;
 function Action({ block, secondary = false }: { block: Block; secondary?: boolean }) {
   return <Link className={secondary ? "secondary-button" : "primary-button"} href={block.href!}>{block.text}</Link>;
 }
-export function PlanningBrief({ compact = false }: { compact?: boolean }) {
+export function PlanningBrief() {
   const brief = manifest.sampleBrief;
-  const fields = compact ? brief.fields.filter((_, i) => [0, 2, 3].includes(i)) : brief.fields;
-  if (compact) return <article className="hero-decisions">
-    <div className="hero-decisions__intro">
-      <p className="brief-disclosure">{brief.disclosure}</p>
-      <p className="brief-context">{brief.context}</p>
-    </div>
-    <dl className="hero-decisions__cards">
-      {fields.map((field, index) => <div className={`hero-decision hero-decision--${index + 1}`} key={field.label}>
-        <dt>{field.label}</dt>
-        <dd>{field.value.split(/(1,200|800|six days|6,000|3,000 A \/ 3,000 B|3,600 A \/ 2,400 B)/g).map((part, i) =>
-          i % 2 ? <strong key={i}>{part}</strong> : part
-        )}</dd>
-      </div>)}
-    </dl>
-  </article>;
+  const fields = brief.fields;
   return <article className="planning-brief">
     <p className="brief-disclosure">{brief.disclosure}</p>
     <p className="brief-context">{brief.context}</p>
     <dl className="brief-fields">{fields.map(field => <div key={field.label}><dt>{field.label}</dt><dd>{field.value}</dd></div>)}</dl>
-    {!compact && <dl className="brief-signoff"><div><dt>{brief.ownerLabel}</dt><dd>{brief.owner}</dd></div>{siteConfig.sampleBriefReviewDate && <div><dt>Review date</dt><dd>{siteConfig.sampleBriefReviewDate}</dd></div>}</dl>}
+    <dl className="brief-signoff"><div><dt>{brief.ownerLabel}</dt><dd>{brief.owner}</dd></div>{siteConfig.sampleBriefReviewDate && <div><dt>Review date</dt><dd>{siteConfig.sampleBriefReviewDate}</dd></div>}</dl>
   </article>;
 }
 function Pairs({ blocks, className = "copy-grid" }: { blocks: Block[]; className?: string }) {
@@ -42,14 +28,16 @@ function Pairs({ blocks, className = "copy-grid" }: { blocks: Block[]; className
 function SectionContent({ section }: { section: Section }) {
   const {id,kind,blocks:b} = section;
   const heading = <h2>{b[0].text}</h2>;
+  if(id === "H01") return <HomeHero blocks={b}/>;
+  if(id === "H02") return <HomeSignals blocks={b}/>;
   if(kind === "hero") {
-    const headingIndex = id === "H01" ? 2 : id === "P01" ? 1 : 0;
-    return <div className={id === "H01" ? "hero-grid" : "hero-copy"}><div>
+    const headingIndex = id === "P01" ? 1 : 0;
+    return <div className="hero-copy"><div>
       {b.slice(0,headingIndex).map(block => <p className="eyebrow" key={block.text}>{block.text}</p>)}
       <h1>{b[headingIndex].text}</h1>
       {b.slice(headingIndex+1).filter(block => !block.href).map(block => <p className="hero-intro" key={block.text}>{block.text}</p>)}
       <div className="actions">{b.filter(block => block.href).map((block,i) => <Action block={block} secondary={i>0} key={block.text}/>)}</div>
-    </div>{id === "H01" && <><ProductFrame/><PlanningBrief compact/></>}</div>;
+    </div></div>;
   }
   if(kind === "faq") return <div className="faq-list">{b.filter((_,i)=>i%2===0).map((block,i) => <details key={block.text}><summary>{block.text}</summary><p>{b[i*2+1].text}</p></details>)}</div>;
   if(kind === "brief") return <>{heading}{b[1] && <p className="section-intro">{b[1].text}</p>}<div id={id==='E02' ? 'sample-brief' : undefined} className="brief-wrap"><PlanningBrief/></div></>;
