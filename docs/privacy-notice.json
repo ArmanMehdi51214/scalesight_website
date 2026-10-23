@@ -152,7 +152,7 @@
         },
         {
           "type": "paragraph",
-          "text": "The current website application does not set optional analytics cookies or connect to an external analytics provider. The booking service may use its own cookies when you choose to open it; its privacy notice explains its practices. Hosting and security providers may process technical information needed to deliver and protect the website."
+          "text": "The current website application does not set optional analytics cookies or connect to an external analytics provider. The Calendly widget loads when you visit the contact page and may use its own cookies; its privacy notice explains its practices. Hosting and security providers may process technical information needed to deliver and protect the website."
         },
         {
           "type": "paragraph",
@@ -166,7 +166,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "When you submit a planning enquiry, we use the information you provide to review your request and communicate with you."
+          "text": "You can schedule a conversation directly through the Calendly booking widget on our contact page. Calendly collects the information needed to arrange the meeting, such as your name, email address and selected time."
         },
         {
           "type": "paragraph",
@@ -178,7 +178,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Please avoid submitting confidential business records, personal financial details, or sensitive information through the general website enquiry form."
+          "text": "Please avoid submitting confidential business records, personal financial details, or sensitive information through the booking widget or general contact email."
         }
       ]
     },
@@ -200,7 +200,7 @@
         },
         {
           "type": "paragraph",
-          "text": "The website enquiry form is not intended as a secure channel for transferring client operational datasets."
+          "text": "The website booking widget and general contact email are not intended as secure channels for transferring client operational datasets."
         }
       ]
     },

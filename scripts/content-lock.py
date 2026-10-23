@@ -1,8 +1,9 @@
 """Rendered HTML contract. Run against a running Next server; no dependencies."""
-import json,re,sys,urllib.request
+import json,os,re,sys,urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
 m=json.loads(Path('docs/content-manifest.json').read_text())
+contactEmail=os.environ.get('NEXT_PUBLIC_CONTACT_EMAIL','arman@scalesight.org')
 base=sys.argv[1] if len(sys.argv)>1 else 'http://localhost:3100'
 compact=lambda s:re.sub(r'\s+','',s)
 class Page(HTMLParser):
@@ -41,6 +42,7 @@ for route,sections in m['routes'].items():
  for section in sections:
   if section['kind'] in ['form','booking']:continue
   expectedCopy=[b['text'] for b in section['blocks'] if not(section['kind']=='example' and b['text']=='Open illustrative workspace')]
+  if section['kind']=='email':expectedCopy += [contactEmail]
   if section['kind']=='hero' and guide:expectedCopy=[guide['label']]+expectedCopy+[l['text'] for l in guide['links']]
   if section['id']=='H01':expectedCopy += strings(m['heroPreview'])
   if section['kind'] in ['brief','deliverables']:expectedCopy += brief
@@ -49,7 +51,7 @@ for route,sections in m['routes'].items():
   if actual!=compact(' '.join(expectedCopy)):failures.append(f"{route} {section['id']} exact section copy differs (extra, duplicated, missing or reordered text)")
  expected=[s['id'] for s in sections]
  if p.ids!=expected:failures.append(f'{route} section IDs: {p.ids}; expected {expected}')
- allowed=guideCopy+strings(m.get('heroPreview',{}))+m['approved']+m['accessibilityAndValidation']+brief+[b['text'] for s in sections for b in s['blocks']]
+ allowed=[contactEmail]+guideCopy+strings(m.get('heroPreview',{}))+m['approved']+m['accessibilityAndValidation']+brief+[b['text'] for s in sections for b in s['blocks']]
  remaining=text
  for s in sorted(set(allowed),key=lambda s:len(compact(s)),reverse=True):remaining=remaining.replace(compact(s),'')
  if remaining:failures.append(f'{route} unapproved text: {remaining[:2000]}')
