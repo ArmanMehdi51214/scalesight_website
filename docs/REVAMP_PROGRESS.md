@@ -23,3 +23,10 @@ PDF regeneration and rendered content: zero differences. Production build, lint 
 - Configured Calendly event still needs real duration/booking verification with authorization.
 - Sample review date not configured; no invented date. Named demo publication remains disabled.
 - Safari/Firefox and physical-device checks were not performed.
+
+## Stitch implementation — 23 October 2026
+
+- Classified all nine desktop screens in STITCH_MAP.md before application edits.
+- Stage 1: extracted shared tint, radius and shadow tokens; light header uses the existing coloured primary logo, Geist and existing navigation; navy footer retained. Mobile menu keeps existing behaviour and targets.
+- No extra strings added: approved-extras.json is empty.
+- Stage 2 is limited to Home; later routes await review.
