@@ -53,13 +53,13 @@ export default function BookingPanel({ name, email }: { name: string; email: str
       <h2 id="enquiry-success" className="text-2xl font-semibold text-white">Thanks - your enquiry has been received. You can now choose a time for a conversation.</h2>
       {url ? <div className="mt-6 flex flex-wrap gap-3">
         <button ref={buttonRef} className="primary-button min-h-11" type="button" onClick={openCalendar} disabled={loading || booked}>
-          {loading ? "Loading calendar…" : `Choose a ${siteConfig.calendar.durationLabel.startsWith("30-minute") ? "30-minute " : ""}conversation`}
+          Choose a 30-minute conversation
         </button>
         <a className="secondary-button min-h-11" href={url} target="_blank" rel="noopener noreferrer" aria-label="Open the booking page (opens in a new tab)" onClick={() => trackEvent("booking_link_click", { route: "/contact", ctaLocation: "booking-fallback" })}>Open the booking page</a>
       </div> : null}
       <div className="mt-4 text-sm text-[var(--text-secondary)]" aria-live="polite">
-        {booked ? <p><span className="font-semibold text-white">Meeting booked</span> You will receive a confirmation from Calendly.</p> : null}
-        {unavailable || !url ? <p>{unavailableMessage}{siteConfig.contactEmail ? <> <a className="underline" href={`mailto:${siteConfig.contactEmail}`}>Email us</a>.</> : null}</p> : null}
+        {booked ? <p><span className="font-semibold text-white">Meeting booked</span></p> : null}
+        {unavailable || !url ? <p>{unavailableMessage}{siteConfig.contactEmail ? <> <a className="underline" href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.</> : null}</p> : null}
       </div>
     </section>
   );

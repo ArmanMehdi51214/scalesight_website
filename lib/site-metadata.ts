@@ -45,8 +45,8 @@ export const routeMetadata = {
     canonical: "/contact",
   },
   privacy: {
-    title: "Privacy | ScaleSight",
-    description: "Read the ScaleSight privacy policy.",
+    title: "Privacy Notice | ScaleSight",
+    description: "How ScaleSight collects, uses and protects personal information, and how to make a privacy-related request.",
     canonical: "/privacy",
   },
   designSystem: {

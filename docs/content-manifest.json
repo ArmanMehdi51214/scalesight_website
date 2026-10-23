@@ -1,0 +1,1159 @@
+{
+  "source": "ScaleSight_Website_Revamp_Developer_Brief_Wahib.pdf",
+  "sha256": "a77f0c23941e34f50c600ed3ce7879b0f4a5f4ce18ac00e642fb1ae84c2bde27",
+  "extraction": "pdftotext -raw; whitespace normalized only. COPY and explicitly prescribed UI labels; BUILD prose excluded. Demo links remain conditional on configuration and approval.",
+  "routes": {
+    "/": [
+      {
+        "id": "H01",
+        "kind": "hero",
+        "blocks": [
+          {
+            "text": "MANAGED PLANNING FOR FOOD & BEVERAGE BRANDS"
+          },
+          {
+            "text": "Better stock decisions. Before you commit."
+          },
+          {
+            "text": "Know what to make, what to buy, and what can wait. We turn sales, stock and incoming supply into weekly, specialist-reviewed recommendations."
+          },
+          {
+            "text": "Explore the 30-day pilot",
+            "href": "/30-day-planning-pilot"
+          },
+          {
+            "text": "See a planning brief",
+            "href": "/examples/#sample-brief"
+          },
+          {
+            "text": "Maintained by ScaleSight. Decided by your team."
+          }
+        ]
+      },
+      {
+        "id": "H02",
+        "kind": "cards",
+        "blocks": [
+          {
+            "text": "A signal still leaves a decision to make."
+          },
+          {
+            "text": "A retail launch opens strongly"
+          },
+          {
+            "text": "Is this opening stock or repeat demand - and what should change in the next run?"
+          },
+          {
+            "text": "One flavor moves faster"
+          },
+          {
+            "text": "Should total output increase, or should the mix change within existing capacity?"
+          },
+          {
+            "text": "One channel is running short"
+          },
+          {
+            "text": "Should you replenish, reallocate usable stock, or hold until the evidence improves?"
+          }
+        ]
+      },
+      {
+        "id": "H03",
+        "kind": "steps",
+        "blocks": [
+          {
+            "text": "We maintain the analysis behind the next commitment."
+          },
+          {
+            "text": "Agree the decision and inputs."
+          },
+          {
+            "text": "Investigate what changed and what may explain it."
+          },
+          {
+            "text": "Compare practical options against supply and cash constraints."
+          },
+          {
+            "text": "Bring your team a reviewed recommendation."
+          },
+          {
+            "text": "See how we work",
+            "href": "/how-we-work"
+          }
+        ]
+      },
+      {
+        "id": "H04",
+        "kind": "brief",
+        "blocks": [
+          {
+            "text": "A weekly brief built around the decision."
+          },
+          {
+            "text": "See what changed, what we checked, and what the options mean before you commit."
+          }
+        ]
+      },
+      {
+        "id": "H05",
+        "kind": "audiences",
+        "blocks": [
+          {
+            "text": "More analytical capacity around the planning you have."
+          },
+          {
+            "text": "For teams already planning"
+          },
+          {
+            "text": "Add bandwidth around the exceptions, launches and commitments that need deeper investigation."
+          },
+          {
+            "text": "For lean teams building capability"
+          },
+          {
+            "text": "Get maintained analysis and planning review without immediately building every capability internally."
+          },
+          {
+            "text": "For a specific specialist question"
+          },
+          {
+            "text": "Scope a focused investigation around one decision, with clear inputs and limits."
+          },
+          {
+            "text": "We maintain the analysis and recommendations. Your team validates the operating constraints, makes the final call and executes."
+          }
+        ]
+      },
+      {
+        "id": "H06",
+        "kind": "links",
+        "blocks": [
+          {
+            "text": "See the reasoning behind the recommendation."
+          },
+          {
+            "text": "Illustrative examples using synthetic data. These are not client results."
+          },
+          {
+            "text": "Supply timing and a promotion",
+            "href": "/examples/#supply-timing"
+          },
+          {
+            "text": "When supply timing changes, what should happen to the promotion?"
+          },
+          {
+            "text": "Decision output: a timing recommendation with cash, service and feasibility trade-offs."
+          },
+          {
+            "text": "Launch demand and the next production mix",
+            "href": "/examples/#launch-demand"
+          },
+          {
+            "text": "Is the launch adding demand or shifting the flavor mix?"
+          },
+          {
+            "text": "Decision output: a next-run recommendation with component, capacity and cash implications."
+          },
+          {
+            "text": "Size-level demand and the next buy",
+            "href": "/examples/#size-depth"
+          },
+          {
+            "text": "Which size demand should shape the next buy?"
+          },
+          {
+            "text": "Decision output: a size-depth recommendation with lead-time, stock and cash trade-offs."
+          }
+        ]
+      },
+      {
+        "id": "H07",
+        "kind": "cta",
+        "blocks": [
+          {
+            "text": "Test the approach on one upcoming decision."
+          },
+          {
+            "text": "Choose a buy, production run or allocation decision and explore whether maintained analysis and review improve the process."
+          },
+          {
+            "text": "Explore the 30-day pilot",
+            "href": "/30-day-planning-pilot"
+          }
+        ]
+      },
+      {
+        "id": "H08",
+        "kind": "faq",
+        "blocks": [
+          {
+            "text": "Do we need to change systems?"
+          },
+          {
+            "text": "We start with agreed inputs and your current planning context. The scope defines how data is shared and what analysis is maintained."
+          },
+          {
+            "text": "Who makes the final decision?"
+          },
+          {
+            "text": "Your team does. ScaleSight investigates the evidence, compares options and brings a reviewed recommendation."
+          },
+          {
+            "text": "Do you work with teams that already have planners?"
+          },
+          {
+            "text": "Yes. A focused engagement can add analytical bandwidth alongside your existing people and processes."
+          }
+        ]
+      },
+      {
+        "id": "H09",
+        "kind": "cta",
+        "blocks": [
+          {
+            "text": "Have an upcoming commitment still open?"
+          },
+          {
+            "text": "Bring us the choice you are weighing."
+          },
+          {
+            "text": "Talk through a planning decision",
+            "href": "/contact"
+          }
+        ]
+      }
+    ],
+    "/how-we-work": [
+      {
+        "id": "W01",
+        "kind": "hero",
+        "blocks": [
+          {
+            "text": "From a demand signal to a decision your team can act on"
+          },
+          {
+            "text": "ScaleSight works with the data and planning context you already have. We investigate what changed, compare the available options, and bring your team a reviewed recommendation. The workspace supports the service; your team does not have another planning tool to operate."
+          },
+          {
+            "text": "Talk through a planning decision",
+            "href": "/contact"
+          }
+        ]
+      },
+      {
+        "id": "W02",
+        "kind": "process",
+        "blocks": [
+          {
+            "text": "Start with the commitment, then agree the inputs."
+          },
+          {
+            "text": "01 Choose the decision"
+          },
+          {
+            "text": "Agree the upcoming buy, production, replenishment or allocation decision, the products and channels involved, the timing and the decision owner."
+          },
+          {
+            "text": "02 Agree the inputs"
+          },
+          {
+            "text": "Start with relevant sales or sell-through, stock, open purchase orders, lead times and product definitions. Add returns, exchanges, promotions, costs or retailer data where the question needs them."
+          },
+          {
+            "text": "03 Investigate the signal"
+          },
+          {
+            "text": "Check availability, promotions, seasonality, launches and channel changes. Use statistical or machine-learning methods where useful, with assumptions and limits visible."
+          },
+          {
+            "text": "04 Compare the options"
+          },
+          {
+            "text": "Compare practical choices on quantity, timing or mix against supply constraints, service risk and cash exposure."
+          },
+          {
+            "text": "05 Review and recommend"
+          },
+          {
+            "text": "Apply planning review and prepare a concise recommendation for your team to discuss and decide."
+          },
+          {
+            "text": "06 Maintain the work"
+          },
+          {
+            "text": "Refresh the agreed analysis during the engagement and revisit the decisions when the evidence or constraints change."
+          }
+        ]
+      },
+      {
+        "id": "W03",
+        "kind": "editorial",
+        "blocks": [
+          {
+            "text": "Forecasts create evidence. Planning review gives it context."
+          },
+          {
+            "text": "A demand estimate is one input. We also examine what is available, what is already committed, what can arrive in time and what each option requires from cash and capacity."
+          }
+        ]
+      },
+      {
+        "id": "W04",
+        "kind": "link",
+        "blocks": [
+          {
+            "text": "See an illustrative planning brief",
+            "href": "/examples/#sample-brief"
+          }
+        ]
+      },
+      {
+        "id": "W05",
+        "kind": "inputs",
+        "blocks": [
+          {
+            "text": "Use the data that answers the question."
+          },
+          {
+            "text": "Demand"
+          },
+          {
+            "text": "Sales and sell-through at the useful product, channel and time level. Separate opening orders from repeat demand where the data allows."
+          },
+          {
+            "text": "Stock and incoming supply"
+          },
+          {
+            "text": "Available and committed stock, open purchase orders, arrival dates and relevant transfer constraints."
+          },
+          {
+            "text": "Operating constraints"
+          },
+          {
+            "text": "Lead times, minimum order quantities, production slots, pack sizes and shelf life where relevant."
+          },
+          {
+            "text": "Commercial context"
+          },
+          {
+            "text": "Promotions, launches, costs, returns or exchanges when they materially change the decision."
+          },
+          {
+            "text": "We agree the data sources and access method during scoping. The analysis reflects the coverage and quality of the available inputs."
+          }
+        ]
+      },
+      {
+        "id": "W06",
+        "kind": "editorial",
+        "blocks": [
+          {
+            "text": "A clear recommendation, with a clear owner."
+          },
+          {
+            "text": "ScaleSight maintains the agreed analysis, investigates exceptions, compares options and prepares the reviewed brief. Your team supplies operating context, validates constraints, chooses the action and executes through its own processes."
+          }
+        ]
+      },
+      {
+        "id": "W07",
+        "kind": "faq",
+        "blocks": [
+          {
+            "text": "Can you work alongside our planning system?"
+          },
+          {
+            "text": "Yes. We scope the additional analysis around your existing process and the decision that needs attention."
+          },
+          {
+            "text": "Is every engagement machine learning?"
+          },
+          {
+            "text": "No. The question, data and decision horizon determine which methods are useful."
+          },
+          {
+            "text": "What if the data is incomplete?"
+          },
+          {
+            "text": "We identify the gaps, state the assumptions and agree whether a narrower investigation can still be useful."
+          },
+          {
+            "text": "Will you place orders for us?"
+          },
+          {
+            "text": "Your team retains approval and execution of buys, production and allocation."
+          }
+        ]
+      },
+      {
+        "id": "W08",
+        "kind": "cta",
+        "blocks": [
+          {
+            "text": "Have an upcoming inventory decision?"
+          },
+          {
+            "text": "Talk it through with us.",
+            "href": "/contact"
+          }
+        ]
+      }
+    ],
+    "/30-day-planning-pilot": [
+      {
+        "id": "P01",
+        "kind": "hero",
+        "blocks": [
+          {
+            "text": "30-DAY FOCUSED PLANNING PILOT"
+          },
+          {
+            "text": "Test the managed planning approach on one real decision."
+          },
+          {
+            "text": "Choose one upcoming buy, production run or allocation decision. ScaleSight uses agreed inputs to investigate the signal, compare options and bring reviewed recommendations. At the end, decide whether ongoing review is useful enough to make recurring."
+          },
+          {
+            "text": "Talk through a planning decision",
+            "href": "/contact?intent=pilot"
+          }
+        ]
+      },
+      {
+        "id": "P02",
+        "kind": "fit",
+        "blocks": [
+          {
+            "text": "A useful starting point has a real commitment attached."
+          },
+          {
+            "text": "A strong pilot has a named decision owner, an upcoming commitment date, relevant data and a choice that remains open. It can support a lean team or add bandwidth around an established planning process."
+          },
+          {
+            "text": "An upcoming production run with competing flavor signals."
+          },
+          {
+            "text": "A buying decision affected by size-level returns or availability."
+          },
+          {
+            "text": "A supply delay that changes allocation or promotion choices."
+          }
+        ]
+      },
+      {
+        "id": "P03",
+        "kind": "timeline",
+        "blocks": [
+          {
+            "text": "Four weeks, one agreed decision scope."
+          },
+          {
+            "text": "1 / Scope"
+          },
+          {
+            "text": "Agree the decision, products, channels, owner, timing, inputs and constraints. Define how usefulness will be judged. Establish the first decision note and data-gap log."
+          },
+          {
+            "text": "2 / Establish the read"
+          },
+          {
+            "text": "Prepare and check inputs, distinguish demand from availability effects, and document the baseline and assumptions. Review the first evidence-led read."
+          },
+          {
+            "text": "3 / Compare options"
+          },
+          {
+            "text": "Investigate the change and compare feasible quantity, timing or mix choices against supply, service and cash constraints."
+          },
+          {
+            "text": "4 / Review and choose"
+          },
+          {
+            "text": "Review the recommendation, remaining uncertainty and learning. Agree whether to stop, refine the scope or continue with recurring support."
+          }
+        ]
+      },
+      {
+        "id": "P04",
+        "kind": "deliverables",
+        "blocks": [
+          {
+            "text": "What the pilot gives your team"
+          },
+          {
+            "text": "A decision-specific workspace"
+          },
+          {
+            "text": "A shared view of the evidence, assumptions and alternatives for the agreed question."
+          },
+          {
+            "text": "Maintained analysis"
+          },
+          {
+            "text": "Forecasts, demand checks and scenarios appropriate to the available data and decision."
+          },
+          {
+            "text": "Reviewed decision briefs"
+          },
+          {
+            "text": "What changed, what we checked, the options, the recommended action and the cash and service implications."
+          },
+          {
+            "text": "A final review"
+          },
+          {
+            "text": "A record of the findings, outstanding questions and whether continued support would be useful."
+          }
+        ]
+      },
+      {
+        "id": "P05",
+        "kind": "roles",
+        "blocks": [
+          {
+            "text": "Who does what"
+          },
+          {
+            "text": "ScaleSight"
+          },
+          {
+            "text": "Your team"
+          },
+          {
+            "text": "Frame the analytical question and organize agreed inputs."
+          },
+          {
+            "text": "Provide relevant data and explain operating constraints."
+          },
+          {
+            "text": "Investigate signals, compare options and document assumptions."
+          },
+          {
+            "text": "Validate lead times, costs, MOQs, commitments and practical feasibility."
+          },
+          {
+            "text": "Prepare and review recommendations within scope."
+          },
+          {
+            "text": "Review the trade-offs, make final decisions and execute."
+          }
+        ]
+      },
+      {
+        "id": "P06",
+        "kind": "editorial",
+        "blocks": [
+          {
+            "text": "Judge the pilot by the decision it supports."
+          },
+          {
+            "text": "Did the analysis clarify the choice? Did it arrive before the commitment? Were the assumptions and trade-offs usable? Did it help the team decide what to change, hold or investigate? We quantify effects where the data supports them."
+          }
+        ]
+      },
+      {
+        "id": "P07",
+        "kind": "editorial",
+        "blocks": [
+          {
+            "text": "Continue when the review earns its place."
+          },
+          {
+            "text": "After the pilot, we review what was useful and what remains open. Any ongoing engagement has an agreed decision scope, review cadence and fee. Continued access and support are defined in that agreement."
+          }
+        ]
+      },
+      {
+        "id": "P08",
+        "kind": "faq",
+        "blocks": [
+          {
+            "text": "How long is the pilot?"
+          },
+          {
+            "text": "The proposed pilot is 30 days. We agree the start date, decision deadline and data readiness before work begins."
+          },
+          {
+            "text": "What does it cost?"
+          },
+          {
+            "text": "We confirm the fee after agreeing the decision, data requirements and review scope."
+          },
+          {
+            "text": "How much time will our team need?"
+          },
+          {
+            "text": "We agree the onboarding and review time during scoping, based on the data and operating context."
+          },
+          {
+            "text": "Do we need Shopify?"
+          },
+          {
+            "text": "No single sales platform defines fit. We first confirm whether the relevant data can support the question."
+          },
+          {
+            "text": "Do you replace our planner or analyst?"
+          },
+          {
+            "text": "ScaleSight adds analytical planning capacity around an agreed scope. Your team retains operational ownership."
+          },
+          {
+            "text": "Do you guarantee savings or fewer stockouts?"
+          },
+          {
+            "text": "We assess evidence and trade-offs. Business outcomes depend on demand, data quality, constraints and the decisions your team takes."
+          },
+          {
+            "text": "What happens if the data cannot support the question?"
+          },
+          {
+            "text": "We review the limitation with you and agree whether to narrow the question or change the approach."
+          },
+          {
+            "text": "What happens after 30 days?"
+          },
+          {
+            "text": "We review the work together. Continued analysis, support and workspace access require an agreed next scope."
+          }
+        ]
+      },
+      {
+        "id": "P09",
+        "kind": "cta",
+        "blocks": [
+          {
+            "text": "Have a buy, run or allocation decision approaching?"
+          },
+          {
+            "text": "Talk through a planning decision",
+            "href": "/contact?intent=pilot"
+          }
+        ]
+      }
+    ],
+    "/examples": [
+      {
+        "id": "E01",
+        "kind": "hero",
+        "blocks": [
+          {
+            "text": "See how a planning question becomes a decision."
+          },
+          {
+            "text": "These are illustrative workspaces built with synthetic data. They show how ScaleSight may structure an investigation. They are not client results or client operating data."
+          }
+        ]
+      },
+      {
+        "id": "E02",
+        "kind": "brief",
+        "blocks": [
+          {
+            "text": "What a reviewed planning brief can contain"
+          }
+        ]
+      },
+      {
+        "id": "E03",
+        "kind": "example",
+        "blocks": [
+          {
+            "text": "When supply timing changes, what should happen to the promotion?"
+          },
+          {
+            "text": "CPG / supply timing"
+          },
+          {
+            "text": "Evidence to examine: available stock, committed orders, revised arrival dates and expected promotion demand."
+          },
+          {
+            "text": "Options to compare: expedite eligible supply, split the receipt, reallocate usable stock or adjust the promotion."
+          },
+          {
+            "text": "Decision output: a timing recommendation with cash, service and feasibility trade-offs."
+          },
+          {
+            "text": "Open illustrative workspace"
+          }
+        ]
+      },
+      {
+        "id": "E04",
+        "kind": "example",
+        "blocks": [
+          {
+            "text": "Is the launch adding demand or shifting the flavor mix?"
+          },
+          {
+            "text": "Food / launch demand"
+          },
+          {
+            "text": "Evidence to examine: total portfolio sales, availability, opening fill, repeat orders and shared production capacity."
+          },
+          {
+            "text": "Options to compare: increase total output, change the mix within the planned run or hold until repeat demand is clearer."
+          },
+          {
+            "text": "Decision output: a next-run recommendation with component, capacity and cash implications."
+          },
+          {
+            "text": "Open illustrative workspace"
+          }
+        ]
+      },
+      {
+        "id": "E05",
+        "kind": "example",
+        "blocks": [
+          {
+            "text": "Which size demand should shape the next buy?"
+          },
+          {
+            "text": "Apparel / size depth"
+          },
+          {
+            "text": "Evidence to examine: sales by size, in-stock exposure, returns, exchanges and retained demand."
+          },
+          {
+            "text": "Options to compare: deepen selected sizes, rebalance the size curve or hold depth pending better evidence."
+          },
+          {
+            "text": "Decision output: a size-depth recommendation with lead-time, stock and cash trade-offs."
+          },
+          {
+            "text": "Open illustrative workspace"
+          }
+        ]
+      },
+      {
+        "id": "E06",
+        "kind": "note",
+        "blocks": [
+          {
+            "text": "The workspace shows how the investigation may be structured. In an engagement, ScaleSight maintains the agreed analysis and brings a reviewed recommendation. Your team makes the final decision."
+          }
+        ]
+      },
+      {
+        "id": "E07",
+        "kind": "cta",
+        "blocks": [
+          {
+            "text": "Bring us a planning question."
+          },
+          {
+            "text": "Talk through a planning decision",
+            "href": "/contact?intent=planning"
+          }
+        ]
+      }
+    ],
+    "/about": [
+      {
+        "id": "A01",
+        "kind": "hero",
+        "blocks": [
+          {
+            "text": "Better questions. Clearer commitments."
+          },
+          {
+            "text": "I started ScaleSight to make deeper planning analysis useful before a brand commits more cash."
+          }
+        ]
+      },
+      {
+        "id": "A02",
+        "kind": "narrative",
+        "blocks": [
+          {
+            "text": "I’m Arman, a data scientist. In consumer brands, a forecast is only one input to a much larger decision: what to buy or produce, how much, when, and what the choice means for cash and availability."
+          },
+          {
+            "text": "ScaleSight brings data-science analysis and supply-chain review together around the commitments a brand has to make. We work from agreed sales, inventory, incoming supply and lead-time data, investigate changing demand, and compare the options. We maintain the analysis and bring the team a clear recommendation; the team keeps the final call."
+          },
+          {
+            "text": "Larger brands often hire planners, analysts and data-science specialists around their systems. ScaleSight gives growing brands access to analytical support without building every capability internally. For lean teams, that adds planning capability. For established teams, it adds bandwidth around a defined investigation."
+          }
+        ]
+      },
+      {
+        "id": "A03",
+        "kind": "principles",
+        "blocks": [
+          {
+            "text": "Start with the decision."
+          },
+          {
+            "text": "Make the assumptions visible."
+          },
+          {
+            "text": "Check supply and cash consequences."
+          },
+          {
+            "text": "Keep ownership with the client."
+          }
+        ]
+      },
+      {
+        "id": "A04",
+        "kind": "signature",
+        "blocks": [
+          {
+            "text": "Arman Mehdi"
+          },
+          {
+            "text": "Founder, ScaleSight | Data scientist"
+          }
+        ]
+      },
+      {
+        "id": "A05",
+        "kind": "cta",
+        "blocks": [
+          {
+            "text": "What commitment is your team weighing next?"
+          },
+          {
+            "text": "Talk through a planning decision",
+            "href": "/contact"
+          }
+        ]
+      }
+    ],
+    "/partners": [
+      {
+        "id": "R01",
+        "kind": "hero",
+        "blocks": [
+          {
+            "text": "Add analytical planning capacity to the work you already lead."
+          },
+          {
+            "text": "ScaleSight can support an advisor’s client with scoped demand, inventory and supply analysis, reviewed recommendations and a decision brief. We agree the roles and working arrangement before delivery begins."
+          }
+        ]
+      },
+      {
+        "id": "R02",
+        "kind": "editorial",
+        "blocks": [
+          {
+            "text": "For advisors working around real inventory commitments"
+          },
+          {
+            "text": "A focused engagement may support fractional operations leaders, supply-chain advisors or systems consultants when a client needs additional analytical capacity around a buying, production or allocation decision."
+          }
+        ]
+      },
+      {
+        "id": "R03",
+        "kind": "editorial",
+        "blocks": [
+          {
+            "text": "A clear division of work"
+          },
+          {
+            "text": "You contribute the client context and agreed advisory role. ScaleSight maintains the scoped investigation and decision brief. Client relationship ownership, meeting participation and recommendation review are defined together."
+          }
+        ]
+      },
+      {
+        "id": "R04",
+        "kind": "list",
+        "blocks": [
+          {
+            "text": "Agree a suitable decision and client."
+          },
+          {
+            "text": "Define roles, data access, fees and visibility."
+          },
+          {
+            "text": "Scope the investigation and outputs."
+          },
+          {
+            "text": "Review the recommendation with the agreed stakeholders."
+          }
+        ]
+      },
+      {
+        "id": "R05",
+        "kind": "note",
+        "blocks": [
+          {
+            "text": "Delivery is scoped to the client and decision. Referral terms, branded delivery, confidentiality and continued support are agreed separately."
+          }
+        ]
+      },
+      {
+        "id": "R06",
+        "kind": "cta",
+        "blocks": [
+          {
+            "text": "Discuss a partner engagement",
+            "href": "/contact?intent=partner"
+          }
+        ]
+      }
+    ],
+    "/contact": [
+      {
+        "id": "C01",
+        "kind": "hero",
+        "blocks": [
+          {
+            "text": "Bring us the decision you’re weighing."
+          },
+          {
+            "text": "Tell us what you’re buying, producing or allocating next. A short conversation will determine whether a focused planning review fits."
+          }
+        ]
+      },
+      {
+        "id": "C02",
+        "kind": "list",
+        "blocks": [
+          {
+            "text": "Discuss the commitment and timing."
+          },
+          {
+            "text": "Check the relevant data and operating context."
+          },
+          {
+            "text": "Agree whether a focused pilot is a useful next step."
+          }
+        ]
+      },
+      {
+        "id": "C03",
+        "kind": "form",
+        "blocks": [
+          {
+            "text": "Start with a few details. After sending your enquiry, you can choose a time for a 30-minute conversation."
+          }
+        ]
+      },
+      {
+        "id": "C04",
+        "kind": "booking",
+        "blocks": [
+          {
+            "text": "Choose a 30-minute conversation"
+          }
+        ]
+      },
+      {
+        "id": "C05",
+        "kind": "email",
+        "blocks": [
+          {
+            "text": "Prefer email? Contact us directly."
+          }
+        ]
+      }
+    ]
+  },
+  "sampleBrief": {
+    "disclosure": "Illustrative · synthetic data",
+    "context": "Synthetic beverage example. Next production slot: 12 November. Decision owner: Brand operations.",
+    "fields": [
+      {
+        "label": "What changed",
+        "value": "Flavor A sold 1,200 units over four weeks; B sold 800. B was unavailable for six days."
+      },
+      {
+        "label": "What we checked",
+        "value": "Total sales, availability, repeat orders, incoming supply and shared run capacity. A faster observed rate alone does not establish incremental demand."
+      },
+      {
+        "label": "Recommended action",
+        "value": "Investigate B availability before increasing total volume. Compare an unchanged total run with a revised mix."
+      },
+      {
+        "label": "Quantity and timing",
+        "value": "Compare 6,000 units at 3,000 A / 3,000 B with 3,600 A / 2,400 B before the next slot is committed."
+      },
+      {
+        "label": "Cash and service trade-off",
+        "value": "At an assumed $2 unit cost, both total $12,000 in product cost. Timing, packaging, freight and lost-sales risk still require review."
+      },
+      {
+        "label": "Assumptions and next signal",
+        "value": "Synthetic figures; equal unit costs assumed. Recheck B after seven in-stock days and validate MOQ, committed stock and lead time."
+      }
+    ],
+    "ownerLabel": "Decision owner",
+    "owner": "Brand operations"
+  },
+  "approved": [
+    "How we work",
+    "Examples",
+    "30-day pilot",
+    "About",
+    "Talk through a decision",
+    "ScaleSight helps growing consumer brands turn demand, inventory and incoming supply into reviewed recommendations on quantity, timing and cash.",
+    "Service",
+    "Illustrative examples",
+    "Company",
+    "Partners",
+    "Contact",
+    "Legal",
+    "Privacy",
+    "Analysis maintained by ScaleSight. Decisions made with the client.",
+    "Lahore, Pakistan",
+    "Name",
+    "Work email",
+    "Brand or company",
+    "Website",
+    "Your role",
+    "Sales channels",
+    "DTC",
+    "Retail",
+    "Wholesale",
+    "Marketplace",
+    "Other",
+    "What decision is coming up?",
+    "What support does your client need?",
+    "Send planning enquiry",
+    "We use these details to respond to your enquiry. Read our Privacy Notice.",
+    "Sending…",
+    "Enter a valid email address.",
+    "Thanks - your enquiry has been received. You can now choose a time for a conversation.",
+    "We could not send your enquiry. Please try again or email us directly.",
+    "Your enquiry has been received. The booking calendar is unavailable here. Open the booking page or email us to arrange a time.",
+    "Meeting booked"
+  ],
+  "accessibilityAndValidation": [
+    "Skip to main content",
+    "*",
+    "Please check the following:",
+    "Enter your name.",
+    "Enter your email address.",
+    "Enter your company.",
+    "Enter your brand or company.",
+    "Enter a valid website address."
+  ],
+  "placeholders": [
+    "e.g. Sam Lee",
+    "e.g. sam@brand.com",
+    "e.g. Your brand",
+    "e.g. brand.com",
+    "e.g. Founder or Operations lead",
+    "e.g. Next production run, timing and the choice you are weighing."
+  ],
+  "heroPreview": {
+    "label": "Inside a planning brief",
+    "disclosure": "Illustrative · synthetic data",
+    "title": "The next run. A more considered mix.",
+    "context": "Beverage production / 12 November",
+    "signal": {
+      "label": "01 / The signal",
+      "title": "A faster seller. An incomplete picture.",
+      "aLabel": "Flavor A",
+      "aValue": "1,200 units",
+      "bLabel": "Flavor B",
+      "bValue": "800 units",
+      "note": "Four weeks of sales. Flavor B was unavailable for six days."
+    },
+    "review": {
+      "label": "02 / The interpretation",
+      "title": "Check availability before adding volume.",
+      "copy": "Higher sales alone do not prove higher demand. Investigate B’s availability, then compare a different mix within the same run."
+    },
+    "decision": {
+      "label": "03 / The decision to weigh",
+      "title": "Same run. Two possible mixes.",
+      "volume": "6,000",
+      "volumeLabel": "total units in either option",
+      "firstLabel": "Current mix",
+      "firstValue": "3,000 A / 3,000 B",
+      "secondLabel": "Compare with",
+      "secondValue": "3,600 A / 2,400 B"
+    },
+    "footerLabel": "The cash perspective",
+    "footerCopy": "Both options assume $12,000 in product cost at $2 per unit. Packaging, freight and service risk still need review.",
+    "ownership": "Your team makes the final call."
+  },
+  "pageGuides": {
+    "/how-we-work": {
+      "label": "How we work",
+      "links": [
+        {
+          "text": "The process",
+          "href": "#W02"
+        },
+        {
+          "text": "Data & inputs",
+          "href": "#inputs"
+        },
+        {
+          "text": "Your questions",
+          "href": "#W07"
+        }
+      ]
+    },
+    "/30-day-planning-pilot": {
+      "label": "30-day planning pilot",
+      "links": [
+        {
+          "text": "Is it a fit?",
+          "href": "#P02"
+        },
+        {
+          "text": "The four-week plan",
+          "href": "#P03"
+        },
+        {
+          "text": "What you receive",
+          "href": "#P04"
+        }
+      ]
+    },
+    "/examples": {
+      "label": "Illustrative examples",
+      "links": [
+        {
+          "text": "The planning brief",
+          "href": "#E02"
+        },
+        {
+          "text": "Supply timing",
+          "href": "#supply-timing"
+        },
+        {
+          "text": "Launch demand",
+          "href": "#launch-demand"
+        }
+      ]
+    },
+    "/about": {
+      "label": "The thinking behind ScaleSight",
+      "links": [
+        {
+          "text": "Our approach",
+          "href": "#A02"
+        },
+        {
+          "text": "Our principles",
+          "href": "#A03"
+        }
+      ]
+    },
+    "/partners": {
+      "label": "For advisors & partners",
+      "links": [
+        {
+          "text": "Where we fit",
+          "href": "#R02"
+        },
+        {
+          "text": "Working together",
+          "href": "#R03"
+        },
+        {
+          "text": "Start a conversation",
+          "href": "#R06"
+        }
+      ]
+    }
+  }
+}

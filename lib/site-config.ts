@@ -31,7 +31,7 @@ export const siteConfig = {
       process.env.NEXT_PUBLIC_PRIVACY_NOTICE_APPROVED === "true",
   },
   staging: process.env.NEXT_PUBLIC_SITE_ENV === "staging" || process.env.VERCEL_ENV === "preview",
-  locationText: "Lahore, PK",
+  locationText: "Lahore, Pakistan",
   sampleBriefReviewDate: process.env.NEXT_PUBLIC_SAMPLE_BRIEF_REVIEW_DATE || undefined,
 } as const;
 

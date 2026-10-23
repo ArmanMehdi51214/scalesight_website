@@ -1,0 +1,254 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 200px 0 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 65%, color-mix(in srgb, var(--accent-brand) 11%, transparent), transparent 65%);
+}
+.copy {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.copy .eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--accent-hover);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .13em;
+  line-height: 1.5;
+}
+.eyebrow > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-brand);
+  box-shadow: 0 0 0 4px var(--wash);
+}
+.copy h1.title {
+  max-width: none;
+  margin: 26px 0 0;
+  font-size: clamp(2.6rem, 5.4vw, 4.75rem);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: 1.06;
+}
+.title > span {
+  color: var(--accent-brand);
+}
+.copy .intro {
+  max-width: 57ch;
+  margin: 25px auto 0;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-top: 29px;
+}
+.actions > a {
+  gap: 16px;
+  font-size: .8125rem;
+}
+.actions > a:first-child {
+  min-height: 48px;
+  padding: 12px 20px;
+  box-shadow: 0 3px 7px #4f49f31a, inset 0 1px 0 #ffffff30;
+}
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.secondary:hover {
+  color: var(--accent-brand);
+}
+.copy .note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 17px;
+  color: var(--slate);
+  font-size: .6875rem;
+}
+.workspace {
+  margin: 60px auto 0;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: 0 2px 5px #101d3505, 0 24px 65px -30px #101d3538, 0 0 0 7px #ffffff80;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 28px;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--surface-tint);
+}
+.workspaceLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .75rem;
+  font-weight: 500;
+}
+.workspaceLabel svg { color: var(--accent-brand); }
+.disclosure {
+  font-size: .625rem;
+  color: var(--slate);
+}
+.briefHeading {
+  padding: 26px 28px 23px;
+}
+.briefHeading h2 {
+  max-width: none;
+  font-size: 1.375rem;
+  letter-spacing: -.035em;
+  font-weight: 500;
+}
+.briefHeading p {
+  margin-top: 7px;
+  font-size: .6875rem;
+}
+.briefBody {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr 1fr;
+  border-top: 1px solid var(--line-soft);
+}
+.briefBody > div { padding: 25px 28px 28px; }
+.briefBody > div + div { border-left: 1px solid var(--line-soft); }
+.briefBody .label {
+  margin-bottom: 18px;
+  font-size: .625rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--slate);
+}
+.briefBody h3 {
+  max-width: 24ch;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -.025em;
+}
+.sales { margin: 22px 0 0; }
+.sales > div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: .625rem;
+}
+.sales dd { margin: 0; font-variant-numeric: tabular-nums; color: var(--slate); }
+.sales span {
+  grid-column: 1 / -1;
+  display: block;
+  height: 7px;
+  border-radius: 2px;
+}
+.barA { width: 100%; background: var(--accent-brand); }
+.barB { width: 66.6667%; background: var(--accent-light); }
+.briefBody .signalNote { margin-top: 17px; font-size: .6875rem; line-height: 1.65; }
+.briefBody .reviewCopy { margin-top: 18px; font-size: .8125rem; line-height: 1.85; }
+.decision { background: var(--surface-tint); }
+.decision .label { color: var(--accent-hover); }
+.decision .volume {
+  margin-top: 14px;
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.volume span { display: block; margin-top: 5px; font-size: .625rem; letter-spacing: 0; color: var(--slate); }
+.mix { margin: 18px 0 0; font-size: .625rem; }
+.mix > div { display: flex; justify-content: space-between; gap: 10px; padding-top: 10px; }
+.mix dt { color: var(--slate); }
+.mix dd { margin: 0; font-weight: 500; }
+.briefFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 19px 28px;
+  border-top: 1px solid var(--line-soft);
+}
+.briefFooter p { max-width: 74ch; font-size: .625rem; line-height: 1.7; }
+.briefFooter strong { display: block; margin-bottom: 3px; color: var(--ink); font-weight: 500; }
+.briefFooter > span { display: flex; align-items: center; gap: 7px; flex-shrink: 0; font-size: .625rem; color: var(--slate); }
+.signals {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 100px;
+  align-items: start;
+}
+.signals > h2 { font-weight: 500; max-width: 14ch; font-size: clamp(2rem, 3.3vw, 2.75rem); line-height: 1.15; }
+.signalRow {
+  display: grid;
+  grid-template-columns: 25px 1fr 22px;
+  gap: 18px;
+  padding: 26px 0;
+  border-top: 1px solid var(--line-soft);
+}
+.signalRow:first-child { padding-top: 4px; border-top: 0; }
+.rowNumber { padding-top: 4px; font-size: .6875rem; color: var(--accent-hover); font-variant-numeric: tabular-nums; }
+.rowNumber::before { content: attr(data-number); }
+.signalRow h3 { font-size: 1.0625rem; font-weight: 500; }
+.signalRow p { margin-top: 9px; font-size: .875rem; line-height: 1.8; }
+.signalRow > svg { margin-top: 3px; color: var(--accent-brand); }
+@media (max-width: 1023px) {
+  .briefBody > div { padding: 22px 20px; }
+  .mix > div { flex-direction: column; gap: 3px; }
+  .signals { gap: 50px; }
+  .briefFooter { gap: 20px; }
+  .briefFooter > span { max-width: 120px; flex-shrink: 1; }
+}
+@media (max-width: 767px) {
+  .copy h1.title { font-size: clamp(2.35rem, 7.4vw, 3.6rem); letter-spacing: -.06em; }
+  .copy .eyebrow { font-size: .5625rem; letter-spacing: .08em; gap: 8px; }
+  .copy .intro { font-size: .9375rem; max-width: 42ch; }
+  .actions { gap: 10px; flex-direction: column; margin-top: 24px; }
+  .actions > a { justify-content: center; }
+  .actions > a:first-child { width: 100%; max-width: 320px; }
+  .copy .note { font-size: .625rem; margin-top: 10px; }
+  .workspace { margin-top: 40px; border-radius: 10px; }
+  .toolbar { padding: 14px 18px; gap: 8px; }
+  .workspaceLabel { gap: 7px; font-size: .625rem; }
+  .disclosure { max-width: 100px; font-size: .5625rem; text-align: right; }
+  .briefHeading { padding: 23px 20px; }
+  .briefHeading h2 { max-width: 22ch; font-size: 1.25rem; }
+  .briefBody { grid-template-columns: 1fr; }
+  .briefBody > div { padding: 24px 20px; }
+  .briefBody > div + div { border-left: 0; border-top: 1px solid var(--line-soft); }
+  .briefBody .label { margin-bottom: 12px; }
+  .briefBody h3 { max-width: none; }
+  .sales { max-width: 380px; margin-top: 18px; }
+  .sales > div, .mix { font-size: .75rem; }
+  .briefBody .signalNote { font-size: .75rem; }
+  .briefBody .reviewCopy { margin-top: 12px; font-size: .875rem; }
+  .mix > div { flex-direction: row; gap: 12px; }
+  .briefFooter { flex-direction: column; align-items: flex-start; gap: 14px; padding: 20px; }
+  .briefFooter p { font-size: .6875rem; }
+  .briefFooter > span { max-width: none; font-size: .6875rem; }
+  .signals { grid-template-columns: 1fr; gap: 36px; }
+  .signals > h2 { max-width: 17ch; font-size: 2rem; }
+  .signalRow { gap: 12px; grid-template-columns: 20px 1fr 18px; }
+}

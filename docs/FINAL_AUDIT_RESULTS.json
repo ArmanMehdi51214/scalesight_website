@@ -1,0 +1,562 @@
+{
+  "date": "2026-10-20",
+  "visual": {
+    "views": [
+      {
+        "route": "/",
+        "width": 360,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/",
+        "width": 390,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/",
+        "width": 768,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/",
+        "width": 1024,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/",
+        "width": 1440,
+        "overflow": false,
+        "h1": 1,
+        "images": 0,
+        "axe": []
+      },
+      {
+        "route": "/how-we-work",
+        "width": 360,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/how-we-work",
+        "width": 390,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/how-we-work",
+        "width": 768,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/how-we-work",
+        "width": 1024,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/how-we-work",
+        "width": 1440,
+        "overflow": false,
+        "h1": 1,
+        "images": 0,
+        "axe": []
+      },
+      {
+        "route": "/30-day-planning-pilot",
+        "width": 360,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/30-day-planning-pilot",
+        "width": 390,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/30-day-planning-pilot",
+        "width": 768,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/30-day-planning-pilot",
+        "width": 1024,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/30-day-planning-pilot",
+        "width": 1440,
+        "overflow": false,
+        "h1": 1,
+        "images": 0,
+        "axe": []
+      },
+      {
+        "route": "/examples",
+        "width": 360,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/examples",
+        "width": 390,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/examples",
+        "width": 768,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/examples",
+        "width": 1024,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/examples",
+        "width": 1440,
+        "overflow": false,
+        "h1": 1,
+        "images": 0,
+        "axe": []
+      },
+      {
+        "route": "/about",
+        "width": 360,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/about",
+        "width": 390,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/about",
+        "width": 768,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/about",
+        "width": 1024,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/about",
+        "width": 1440,
+        "overflow": false,
+        "h1": 1,
+        "images": 0,
+        "axe": []
+      },
+      {
+        "route": "/partners",
+        "width": 360,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/partners",
+        "width": 390,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/partners",
+        "width": 768,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/partners",
+        "width": 1024,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/partners",
+        "width": 1440,
+        "overflow": false,
+        "h1": 1,
+        "images": 0,
+        "axe": []
+      },
+      {
+        "route": "/contact",
+        "width": 360,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/contact",
+        "width": 390,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/contact",
+        "width": 768,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/contact",
+        "width": 1024,
+        "overflow": false,
+        "h1": 1,
+        "images": 0
+      },
+      {
+        "route": "/contact",
+        "width": 1440,
+        "overflow": false,
+        "h1": 1,
+        "images": 0,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "keyboard": {
+      "menuOpen": true,
+      "menuClosed": true,
+      "faqOpened": true,
+      "validation": true,
+      "partnerLabel": true,
+      "success": true
+    }
+  },
+  "functional": {
+    "pages": [
+      {
+        "route": "/",
+        "status": 200,
+        "titleMatchesPDF": true,
+        "descriptionMatchesPDF": true,
+        "canonicalCorrect": true,
+        "ogCorrect": true
+      },
+      {
+        "route": "/how-we-work",
+        "status": 200,
+        "titleMatchesPDF": true,
+        "descriptionMatchesPDF": true,
+        "canonicalCorrect": true,
+        "ogCorrect": true
+      },
+      {
+        "route": "/30-day-planning-pilot",
+        "status": 200,
+        "titleMatchesPDF": true,
+        "descriptionMatchesPDF": true,
+        "canonicalCorrect": true,
+        "ogCorrect": true
+      },
+      {
+        "route": "/examples",
+        "status": 200,
+        "titleMatchesPDF": true,
+        "descriptionMatchesPDF": true,
+        "canonicalCorrect": true,
+        "ogCorrect": true
+      },
+      {
+        "route": "/about",
+        "status": 200,
+        "titleMatchesPDF": true,
+        "descriptionMatchesPDF": true,
+        "canonicalCorrect": true,
+        "ogCorrect": true
+      },
+      {
+        "route": "/partners",
+        "status": 200,
+        "titleMatchesPDF": true,
+        "descriptionMatchesPDF": true,
+        "canonicalCorrect": true,
+        "ogCorrect": true
+      },
+      {
+        "route": "/contact",
+        "status": 200,
+        "titleMatchesPDF": true,
+        "descriptionMatchesPDF": true,
+        "canonicalCorrect": true,
+        "ogCorrect": true
+      }
+    ],
+    "links": [
+      {
+        "href": "/",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/"
+      },
+      {
+        "href": "/how-we-work",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/how-we-work"
+      },
+      {
+        "href": "/examples",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/examples"
+      },
+      {
+        "href": "/30-day-planning-pilot",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/30-day-planning-pilot"
+      },
+      {
+        "href": "/about",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/about"
+      },
+      {
+        "href": "/contact",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/contact"
+      },
+      {
+        "href": "/examples#sample-brief",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/examples"
+      },
+      {
+        "href": "/examples#supply-timing",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/examples"
+      },
+      {
+        "href": "/examples#launch-demand",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/examples"
+      },
+      {
+        "href": "/examples#size-depth",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/examples"
+      },
+      {
+        "href": "/partners",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/partners"
+      },
+      {
+        "href": "/privacy",
+        "status": 404,
+        "anchorExists": true,
+        "finalPath": "/privacy"
+      },
+      {
+        "href": "/contact?intent=pilot",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/contact"
+      },
+      {
+        "href": "/contact?intent=planning",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/contact"
+      },
+      {
+        "href": "/contact?intent=partner",
+        "status": 200,
+        "anchorExists": true,
+        "finalPath": "/contact"
+      }
+    ],
+    "reflow": [
+      {
+        "route": "/",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "route": "/",
+        "width": 512,
+        "overflow": false
+      },
+      {
+        "route": "/",
+        "width": 720,
+        "overflow": false
+      },
+      {
+        "route": "/how-we-work",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "route": "/how-we-work",
+        "width": 512,
+        "overflow": false
+      },
+      {
+        "route": "/how-we-work",
+        "width": 720,
+        "overflow": false
+      },
+      {
+        "route": "/30-day-planning-pilot",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "route": "/30-day-planning-pilot",
+        "width": 512,
+        "overflow": false
+      },
+      {
+        "route": "/30-day-planning-pilot",
+        "width": 720,
+        "overflow": false
+      },
+      {
+        "route": "/examples",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "route": "/examples",
+        "width": 512,
+        "overflow": false
+      },
+      {
+        "route": "/examples",
+        "width": 720,
+        "overflow": false
+      },
+      {
+        "route": "/about",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "route": "/about",
+        "width": 512,
+        "overflow": false
+      },
+      {
+        "route": "/about",
+        "width": 720,
+        "overflow": false
+      },
+      {
+        "route": "/partners",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "route": "/partners",
+        "width": 512,
+        "overflow": false
+      },
+      {
+        "route": "/partners",
+        "width": 720,
+        "overflow": false
+      },
+      {
+        "route": "/contact",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "route": "/contact",
+        "width": 512,
+        "overflow": false
+      },
+      {
+        "route": "/contact",
+        "width": 720,
+        "overflow": false
+      }
+    ],
+    "checks": {
+      "intent-planning": true,
+      "intent-pilot": true,
+      "intent-partner": true,
+      "intent-invalid": true,
+      "placeholders": true,
+      "invalidEmailBlocked": true,
+      "sendingDisabled": true,
+      "failureRetainsValues": true,
+      "failureDoesNotShowBooking": true,
+      "successAfterAcceptance": true,
+      "noPrematureBooking": true,
+      "calendarFallback": true,
+      "rejectsUntrustedBooking": true,
+      "reducedMotion": true,
+      "menuClosesAfterSelection": true,
+      "noJSBriefVisible": true
+    },
+    "errors": []
+  },
+  "contentDifferences": 0,
+  "releaseReady": false,
+  "configuration": {
+    "contactEmailConfigured": false,
+    "deliveryDestinationConfigured": false,
+    "privacyApproved": false,
+    "calendarConfigured": true,
+    "analyticsEnabled": false,
+    "reviewDateConfigured": false
+  },
+  "localAPI": {
+    "malformedJSON": 400,
+    "missingRequiredFields": 422,
+    "crossOrigin": 403,
+    "unconfiguredDelivery": 503
+  }
+}

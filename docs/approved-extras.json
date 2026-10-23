@@ -1,0 +1,12 @@
+[
+  {
+    "text": "Recovery options",
+    "location": "components/product-frame.tsx: image alt",
+    "reason": "Neutral description of the real single-decision crop."
+  },
+  {
+    "text": "Illustrative \u00b7 synthetic data",
+    "location": "public/images/planning-decision.webp: disclosure pill",
+    "reason": "Exact image disclosure explicitly required by task step 4; no new page copy."
+  }
+]

@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 import AnalyticsListener from "@/components/analytics-listener";
 
 import "./globals.css";
+import "./interior-pages.css";
 
 const geist = localFont({
   src: "./fonts/Geist-Regular.ttf",
@@ -42,7 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{ __html: 'document.documentElement.dataset.js="true";' }} /></head>
       <body className={geist.variable}>
         <a className="skip-link" href="#main-content">Skip to main content</a>
         {children}

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>ScaleSight</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#cbdbf5", "tertiary": "#005277", "surface-tint": "#4841ed", "secondary-fixed": "#dfe2f1", "on-background": "#0b1c30", "background": "#f8f9ff", "on-secondary-container": "#606471", "inverse-surface": "#213145", "primary-fixed": "#e2dfff", "outline": "#777587", "on-error-container": "#93000a", "tertiary-container": "#006b9a", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#434652", "on-tertiary-container": "#c8e6ff", "on-secondary": "#ffffff", "on-error": "#ffffff", "surface-container-low": "#eff4ff", "surface-container": "#e5eeff", "on-primary-fixed-variant": "#2d1cd6", "tertiary-fixed": "#c9e6ff", "surface-container-lowest": "#ffffff", "primary-container": "#4f49f3", "tertiary-fixed-dim": "#89ceff", "on-tertiary-fixed-variant": "#004c6e", "on-surface": "#0b1c30", "secondary-container": "#dfe2f1", "on-tertiary": "#ffffff", "on-surface-variant": "#464556", "surface-variant": "#d3e4fe", "primary": "#3428db", "error": "#ba1a1a", "inverse-on-surface": "#eaf1ff", "inverse-primary": "#c2c1ff", "outline-variant": "#c7c4d9", "on-secondary-fixed": "#171b26", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "secondary": "#5a5e6a", "primary-fixed-dim": "#c2c1ff", "surface": "#f8f9ff", "on-primary-container": "#e2dfff", "error-container": "#ffdad6", "secondary-fixed-dim": "#c3c6d4", "on-primary-fixed": "#0c006a", "surface-container-high": "#dce9ff", "on-tertiary-fixed": "#001e2f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-lg": "4rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin": "1.25rem", "margin-md": "2.5rem", "space-lg": "1.5rem", "gutter-lg": "2rem" }, "fontFamily": { "label-mono": [ "JetBrains Mono" ], "headline-md": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "data-tabular": [ "JetBrains Mono" ], "display-hero-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-mono": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "body-lg": [ "17px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.035em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "data-tabular": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60"><div class="h-20 max-w-[1180px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="ScaleSight Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vck600KrHlRAzABhNd4MxqAVsDkfChvbZtAyrpUqkeX64UwYDQiGRebQr_eoYzvpxfOn7mfr7pD10WTMzA3rLT4HUzNppVtJFHvOo_-MK9IYCVU4-TYahnhCis4yRWCZI9K8kdEoh8Zb9mWynuaAHG4tkRFLWpmj7VFPiqyu-uavHBgA_3ORq2-k0-qnCpk8zl1nKQEoo8dCyHreIDUdYkZTg0r-si4xqQ7oH3Lqp44hA6B20SpeWKig"/><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">ScaleSight</span></a></div><nav class="hidden md:flex items-center gap-8" data-active-classes="text-primary font-semibold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="how-we-work" href="#">How we work</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="examples" href="#">Examples</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="30-day-pilot" href="#">30-day pilot</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><a class="bg-primary-container text-on-primary font-body-md text-body-md font-medium px-5 py-2.5 rounded-lg hover:bg-primary transition-all min-h-[44px] inline-flex items-center justify-center shadow-sm" data-path="contact" href="#">Talk through a decision</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Interactive Navigation Highlight Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const activeLink = document.querySelector('nav a[data-path="30-day-pilot"]');
+      if (activeLink) {
+        activeLink.classList.remove('text-on-surface-variant');
+        activeLink.classList.add('text-primary', 'font-semibold');
+      }
+    });
+  </script>
+<!-- 1. HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container via-surface-container-low to-surface py-20 lg:py-28">
+<div class="max-w-[1180px] mx-auto px-gutter relative z-10 flex flex-col items-center text-center">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono text-label-mono text-on-surface uppercase tracking-wider">30-DAY FOCUSED PLANNING PILOT</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-display-hero text-on-surface max-w-4xl tracking-tight mb-6">
+        Test the managed planning approach on one real decision.
+      </h1>
+<!-- Intro Paragraph -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 text-balance">
+        Choose one upcoming buy, production run or allocation decision. ScaleSight uses agreed inputs to investigate the signal, compare options and bring reviewed recommendations. At the end, decide whether ongoing review is useful enough to make recurring.
+      </p>
+<!-- Primary CTA -->
+<a class="bg-primary-container text-on-primary font-body-md text-body-md font-medium px-8 py-3.5 rounded-lg hover:bg-primary transition-all duration-200 shadow-md hover:shadow-lg inline-flex items-center gap-2 group" data-path="contact" href="#">
+<span>Talk through a planning decision</span>
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:translate-x-0.5">arrow_forward</span>
+</a>
+<!-- Architectural Ambient Depth Element -->
+<div class="w-full max-w-3xl h-px mt-16 bg-gradient-to-r from-transparent via-outline-variant/40 to-transparent"></div>
+</div>
+</section>
+<!-- 2. STARTING POINT & FIT EXAMPLES -->
+<section class="w-full bg-surface py-16 lg:py-24">
+<div class="max-w-[1180px] mx-auto px-gutter">
+<div class="max-w-2xl mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-4">
+          A useful starting point has a real commitment attached.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          A strong pilot has a named decision owner, an upcoming commitment date, relevant data and a choice that remains open. It can support a lean team or add bandwidth around an established planning process.
+        </p>
+</div>
+<!-- 3 Fit Example Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">
+              An upcoming production run with competing flavor signals.
+            </p>
+</div>
+<div class="pt-8 mt-6">
+<span class="font-label-mono text-label-mono text-secondary uppercase tracking-widest">Pilot Fit · Production Mix</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-[22px]">swap_vert</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">
+              A buying decision affected by size-level returns or availability.
+            </p>
+</div>
+<div class="pt-8 mt-6">
+<span class="font-label-mono text-label-mono text-secondary uppercase tracking-widest">Pilot Fit · Inventory Allocation</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-[22px]">schedule</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">
+              A supply delay that changes allocation or promotion choices.
+            </p>
+</div>
+<div class="pt-8 mt-6">
+<span class="font-label-mono text-label-mono text-secondary uppercase tracking-widest">Pilot Fit · Horizon Recalibration</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. FOCAL COMPOSITION: HORIZONTAL FOUR-WEEK TIMELINE -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28 relative overflow-hidden">
+<div class="max-w-[1180px] mx-auto px-gutter relative z-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div>
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest block mb-2">Sequential Architecture</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Four weeks, one agreed decision scope.
+          </h2>
+</div>
+<div class="hidden lg:flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-mono text-label-mono text-secondary">30-day decision cadence</span>
+</div>
+</div>
+<!-- Connected Horizontal Timeline -->
+<div class="relative">
+<!-- Connecting Track Line for Desktop -->
+<div class="hidden lg:block absolute top-[28px] left-[5%] right-[5%] h-0.5 bg-outline-variant/60 -z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative z-10">
+<!-- Node 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-6">
+<span class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center font-label-mono text-headline-sm text-primary font-bold shadow-inner">
+                01
+              </span>
+<span class="font-label-mono text-label-mono text-secondary uppercase tracking-wider">Week 1</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">1 / Scope</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Agree the decision, products, channels, owner, timing, inputs and constraints. Define how usefulness will be judged. Establish the first decision note and data-gap log.
+            </p>
+</div>
+<!-- Node 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-6">
+<span class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center font-label-mono text-headline-sm text-primary font-bold shadow-inner">
+                02
+              </span>
+<span class="font-label-mono text-label-mono text-secondary uppercase tracking-wider">Week 2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">2 / Establish the read</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Prepare and check inputs, distinguish demand from availability effects, and document the baseline and assumptions. Review the first evidence-led read.
+            </p>
+</div>
+<!-- Node 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-6">
+<span class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center font-label-mono text-headline-sm text-primary font-bold shadow-inner">
+                03
+              </span>
+<span class="font-label-mono text-label-mono text-secondary uppercase tracking-wider">Week 3</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">3 / Compare options</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Investigate the change and compare feasible quantity, timing or mix choices against supply, service and cash constraints.
+            </p>
+</div>
+<!-- Node 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-6">
+<span class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center font-label-mono text-headline-sm text-primary font-bold shadow-inner">
+                04
+              </span>
+<span class="font-label-mono text-label-mono text-primary font-semibold uppercase tracking-wider">Week 4</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">4 / Review and choose</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Review the recommendation, remaining uncertainty and learning. Agree whether to stop, refine the scope or continue with recurring support.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. WHAT THE PILOT GIVES YOUR TEAM + COMPACT REVIEWED-BRIEF CARD -->
+<section class="w-full bg-surface py-20 lg:py-28">
+<div class="max-w-[1180px] mx-auto px-gutter">
+<div class="mb-14">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest block mb-2">Deliverables &amp; Infrastructure</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          What the pilot gives your team
+        </h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- Left: 4 Features Grid -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-7 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[20px]">space_dashboard</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">A decision-specific workspace</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                A shared view of the evidence, assumptions and alternatives for the agreed question.
+              </p>
+</div>
+<div class="mt-6 pt-4">
+<span class="font-label-mono text-label-mono text-secondary">01 / Scope Workspace</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-7 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[20px]">query_stats</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Maintained analysis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Forecasts, demand checks and scenarios appropriate to the available data and decision.
+              </p>
+</div>
+<div class="mt-6 pt-4">
+<span class="font-label-mono text-label-mono text-secondary">02 / Dynamic Forecast</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-7 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[20px]">inventory</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Reviewed decision briefs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                What changed, what we checked, the options, the recommended action and the cash and service implications.
+              </p>
+</div>
+<div class="mt-6 pt-4">
+<span class="font-label-mono text-label-mono text-secondary">03 / Action Artifact</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-7 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">A final review</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                A record of the findings, outstanding questions and whether continued support would be useful.
+              </p>
+</div>
+<div class="mt-6 pt-4">
+<span class="font-label-mono text-label-mono text-secondary">04 / Assessment</span>
+</div>
+</div>
+</div>
+<!-- Right: Compact Reviewed-Brief Browser Window Card -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl shadow-md overflow-hidden">
+<!-- Window Header Bar -->
+<div class="bg-surface-container-high px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1 rounded-md text-center max-w-[220px] truncate shadow-xs">
+<span class="font-label-mono text-label-mono text-on-surface-variant">app.scalesight.internal/plan/s24-horizon</span>
+</div>
+<div class="w-6 flex justify-end">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+</div>
+</div>
+<!-- Card Preview Content -->
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface uppercase tracking-wider font-semibold">
+                DECISION BRIEF #04
+              </span>
+<span class="font-label-mono text-label-mono px-2.5 py-0.5 rounded-full bg-primary-fixed text-primary font-medium">
+                Illustrative · synthetic data
+              </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+              Batch Cut vs. Allocation Hold
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+              Evaluation of SKU 4022-A supply timing slippage against Q3 DTC and Wholesale service thresholds.
+            </p>
+<!-- Key Metrics Grid -->
+<div class="grid grid-cols-2 gap-3 p-4 rounded-lg bg-surface-container-low mb-6">
+<div>
+<span class="font-label-mono text-label-mono text-secondary uppercase block">Adjusted Baseline</span>
+<span class="font-data-tabular text-headline-sm text-on-surface font-semibold">14,250 u</span>
+</div>
+<div>
+<span class="font-label-mono text-label-mono text-secondary uppercase block">Stockout Risk delta</span>
+<span class="font-data-tabular text-headline-sm text-error font-semibold">-18.4%</span>
+</div>
+<div>
+<span class="font-label-mono text-label-mono text-secondary uppercase block">Net Cash Required</span>
+<span class="font-data-tabular text-headline-sm text-on-surface font-semibold">$84,200</span>
+</div>
+<div>
+<span class="font-label-mono text-label-mono text-secondary uppercase block">Channel Confidence</span>
+<span class="font-data-tabular text-headline-sm text-primary font-semibold">High (94%)</span>
+</div>
+</div>
+<!-- Recommendation Summary Box -->
+<div class="bg-surface-container rounded-lg p-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-mono text-label-mono text-on-surface font-semibold uppercase">Recommended Action</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+                Prioritize PO-1092 re-allocation to DTC flagship depot. Reduce wholesale secondary wave by 1,200 units to preserve 32 days of core DTC coverage.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. DARK NAVY SECTION ("WHO DOES WHAT") -->
+<section class="w-full bg-[#0B0F19] text-white py-20 lg:py-28 relative overflow-hidden">
+<!-- Fine Structural Matrix Texture -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="max-w-[1180px] mx-auto px-gutter relative z-10">
+<div class="max-w-2xl mb-16">
+<span class="font-label-mono text-label-mono text-primary-fixed uppercase tracking-widest block mb-2">Operating Cadence</span>
+<h2 class="font-headline-lg text-headline-lg text-white tracking-tight">
+          Who does what
+        </h2>
+</div>
+<!-- Two Side-by-Side Lanes Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- ScaleSight Lane -->
+<div class="bg-white/[0.03] rounded-xl p-8 backdrop-blur-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-6 mb-8">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<h3 class="font-headline-md text-headline-md text-white font-semibold">ScaleSight</h3>
+</div>
+<span class="font-label-mono text-label-mono text-slate-400 uppercase">Analysis &amp; Modeling</span>
+</div>
+<div class="space-y-8">
+<!-- Item 1 -->
+<div>
+<span class="font-label-mono text-label-mono text-primary-fixed block mb-2">01 / Question Framing</span>
+<p class="font-body-lg text-body-lg text-slate-200">
+                  Frame the analytical question and organize agreed inputs.
+                </p>
+</div>
+<!-- Item 2 -->
+<div>
+<span class="font-label-mono text-label-mono text-primary-fixed block mb-2">02 / Signal Analysis</span>
+<p class="font-body-lg text-body-lg text-slate-200">
+                  Investigate signals, compare options and document assumptions.
+                </p>
+</div>
+<!-- Item 3 -->
+<div>
+<span class="font-label-mono text-label-mono text-primary-fixed block mb-2">03 / Synthesis</span>
+<p class="font-body-lg text-body-lg text-slate-200">
+                  Prepare and review recommendations within scope.
+                </p>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-6">
+<span class="font-label-mono text-label-mono text-slate-500">Autonomous modeling and scenario stress-testing</span>
+</div>
+</div>
+<!-- Your Team Lane -->
+<div class="bg-white/[0.03] rounded-xl p-8 backdrop-blur-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-6 mb-8">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-slate-400"></span>
+<h3 class="font-headline-md text-headline-md text-white font-semibold">Your team</h3>
+</div>
+<span class="font-label-mono text-label-mono text-slate-400 uppercase">Context &amp; Authority</span>
+</div>
+<div class="space-y-8">
+<!-- Item 1 -->
+<div>
+<span class="font-label-mono text-label-mono text-slate-400 block mb-2">01 / Inputs &amp; Context</span>
+<p class="font-body-lg text-body-lg text-slate-200">
+                  Provide relevant data and explain operating constraints.
+                </p>
+</div>
+<!-- Item 2 -->
+<div>
+<span class="font-label-mono text-label-mono text-slate-400 block mb-2">02 / Operational Reality</span>
+<p class="font-body-lg text-body-lg text-slate-200">
+                  Validate lead times, costs, MOQs, commitments and practical feasibility.
+                </p>
+</div>
+<!-- Item 3 -->
+<div>
+<span class="font-label-mono text-label-mono text-slate-400 block mb-2">03 / Execution</span>
+<p class="font-body-lg text-body-lg text-slate-200">
+                  Review the trade-offs, make final decisions and execute.
+                </p>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-6">
+<span class="font-label-mono text-label-mono text-slate-500">Commercial control and supplier execution</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. EVALUATION & CONTINUITY PRINCIPLES -->
+<section class="w-full bg-surface py-20 lg:py-28">
+<div class="max-w-[1180px] mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg">
+<!-- Block 1 -->
+<div class="bg-surface-container-low p-8 lg:p-10 rounded-xl">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary mb-6 shadow-xs">
+<span class="material-symbols-outlined text-[24px]">balance</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">
+            Judge the pilot by the decision it supports.
+          </h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Did the analysis clarify the choice? Did it arrive before the commitment? Were the assumptions and trade-offs usable? Did it help the team decide what to change, hold or investigate? We quantify effects where the data supports them.
+          </p>
+</div>
+<!-- Block 2 -->
+<div class="bg-surface-container-low p-8 lg:p-10 rounded-xl">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary mb-6 shadow-xs">
+<span class="material-symbols-outlined text-[24px]">published_with_changes</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">
+            Continue when the review earns its place.
+          </h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            After the pilot, we review what was useful and what remains open. Any ongoing engagement has an agreed decision scope, review cadence and fee. Continued access and support are defined in that agreement.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. FAQ ACCORDION / GRID -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28">
+<div class="max-w-[1180px] mx-auto px-gutter">
+<div class="max-w-2xl mb-14">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest block mb-2">Common Questions</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Frequently asked details
+        </h2>
+</div>
+<div class="max-w-3xl mx-auto space-y-4" id="faq-container">
+<!-- FAQ 1 (Open State) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden transition-all duration-200">
+<button aria-expanded="true" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold pr-4">How long is the pilot?</span>
+<span class="material-symbols-outlined text-primary text-[20px] transition-transform duration-200 rotate-180">expand_more</span>
+</button>
+<div class="faq-content px-6 pb-6 pt-0 block">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              The proposed pilot is 30 days. We agree the start date, decision deadline and data readiness before work begins.
+            </p>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden transition-all duration-200">
+<button aria-expanded="false" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold pr-4">What does it cost?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-6 pb-6 pt-0 hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              We confirm the fee after agreeing the decision, data requirements and review scope.
+            </p>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden transition-all duration-200">
+<button aria-expanded="false" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold pr-4">How much time will our team need?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-6 pb-6 pt-0 hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              We agree the onboarding and review time during scoping, based on the data and operating context.
+            </p>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden transition-all duration-200">
+<button aria-expanded="false" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold pr-4">Do we need Shopify?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-6 pb-6 pt-0 hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              No single sales platform defines fit. We first confirm whether the relevant data can support the question.
+            </p>
+</div>
+</div>
+<!-- FAQ 5 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden transition-all duration-200">
+<button aria-expanded="false" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold pr-4">Do you replace our planner or analyst?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-6 pb-6 pt-0 hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              ScaleSight adds analytical planning capacity around an agreed scope. Your team retains operational ownership.
+            </p>
+</div>
+</div>
+<!-- FAQ 6 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden transition-all duration-200">
+<button aria-expanded="false" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold pr-4">Do you guarantee savings or fewer stockouts?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-6 pb-6 pt-0 hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              We assess evidence and trade-offs. Business outcomes depend on demand, data quality, constraints and the decisions your team takes.
+            </p>
+</div>
+</div>
+<!-- FAQ 7 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden transition-all duration-200">
+<button aria-expanded="false" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold pr-4">What happens if the data cannot support the question?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-6 pb-6 pt-0 hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              We review the limitation with you and agree whether to narrow the question or change the approach.
+            </p>
+</div>
+</div>
+<!-- FAQ 8 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden transition-all duration-200">
+<button aria-expanded="false" class="faq-toggle w-full px-6 py-5 flex items-center justify-between text-left" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold pr-4">What happens after 30 days?</span>
+<span class="material-symbols-outlined text-secondary text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-6 pb-6 pt-0 hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              We review the work together. Continued analysis, support and workspace access require an agreed next scope.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. FINAL CTA BAND -->
+<section class="w-full bg-surface py-20 lg:py-28">
+<div class="max-w-[1180px] mx-auto px-gutter">
+<div class="bg-gradient-to-br from-surface-container via-surface-container-low to-surface-container-lowest p-10 lg:p-16 rounded-2xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="max-w-xl text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-2">
+            Have a buy, run or allocation decision approaching?
+          </h2>
+<span class="font-label-mono text-label-mono text-secondary">
+            Scoping call · 30-day bounded evaluation · Named decision owner
+          </span>
+</div>
+<a class="bg-primary-container text-on-primary font-body-md text-body-md font-medium px-8 py-4 rounded-lg hover:bg-primary transition-all duration-200 shadow-md hover:shadow-lg whitespace-nowrap inline-flex items-center gap-2 group flex-shrink-0" data-path="contact" href="#">
+<span>Talk through a planning decision</span>
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:translate-x-0.5">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Inline Vanilla Interactive Logic for FAQ Accordion -->
+<script>
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.material-symbols-outlined');
+
+        if (isExpanded) {
+          button.setAttribute('aria-expanded', 'false');
+          content.classList.add('hidden');
+          icon.classList.remove('rotate-180', 'text-primary');
+          icon.classList.add('text-secondary');
+        } else {
+          button.setAttribute('aria-expanded', 'true');
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180', 'text-primary');
+          icon.classList.remove('text-secondary');
+        }
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-[#0B0F19] text-slate-300 py-16 px-gutter border-t border-white/10 relative overflow-hidden"><div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div><div class="max-w-[1180px] mx-auto relative z-10"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-xl pb-12"><div class="md:col-span-5 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="ScaleSight Logo" class="h-7 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1Vck600KrHlRAzABhNd4MxqAVsDkfChvbZtAyrpUqkeX64UwYDQiGRebQr_eoYzvpxfOn7mfr7pD10WTMzA3rLT4HUzNppVtJFHvOo_-MK9IYCVU4-TYahnhCis4yRWCZI9K8kdEoh8Zb9mWynuaAHG4tkRFLWpmj7VFPiqyu-uavHBgA_3ORq2-k0-qnCpk8zl1nKQEoo8dCyHreIDUdYkZTg0r-si4xqQ7oH3Lqp44hA6B20SpeWKig"/><span class="font-headline-sm text-headline-sm text-white font-bold tracking-tight">ScaleSight</span></div><p class="font-body-md text-body-md text-slate-400 max-w-sm leading-relaxed">ScaleSight helps growing consumer brands turn demand, inventory and incoming supply into reviewed recommendations on quantity, timing and cash.</p></div><div class="md:col-span-7 grid grid-cols-3 gap-space-lg"><div class="flex flex-col gap-space-sm"><span class="font-label-mono text-label-mono text-slate-400 uppercase tracking-wider">Service</span><div class="flex flex-col gap-2 mt-2"><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="how-we-work" href="#">How we work</a><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="30-day-pilot" href="#">30-day pilot</a><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="examples" href="#">Illustrative examples</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-mono text-label-mono text-slate-400 uppercase tracking-wider">Company</span><div class="flex flex-col gap-2 mt-2"><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="about" href="#">About</a><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="partners" href="#">Partners</a><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="contact" href="#">Contact</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-mono text-label-mono text-slate-400 uppercase tracking-wider">Legal</span><div class="flex flex-col gap-2 mt-2"><a class="font-body-md text-body-md text-slate-300 hover:text-white transition-colors" data-path="privacy" href="#">Privacy</a></div></div></div></div><div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4"><p class="font-label-mono text-label-mono text-slate-500">Analysis maintained by ScaleSight. Decisions made with the client.</p><p class="font-label-mono text-label-mono text-slate-600">© 2024 ScaleSight Inc.</p></div></div></footer></body></html>
