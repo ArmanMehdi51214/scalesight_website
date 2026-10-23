@@ -3,6 +3,7 @@
 declare global {
   interface Window {
     Calendly?: {
+      initInlineWidget: (options: { url: string; parentElement: HTMLElement; resize?: boolean }) => void;
       initPopupWidget: (options: { url: string; prefill: { name: string; email: string } }) => void;
       closePopupWidget?: () => void;
     };
@@ -34,6 +35,7 @@ export function loadCalendlyWidget(): Promise<void> {
       window.clearTimeout(timeout);
       if (error) {
         widgetPromise = undefined;
+        document.querySelector('script[data-calendly-widget="true"]')?.remove();
         reject(error);
       } else {
         resolve();

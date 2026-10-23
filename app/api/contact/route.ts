@@ -82,6 +82,7 @@ export async function POST(request: Request) {
 
   const stub = process.env.CONTACT_SUBMISSION_MODE === "stub" && process.env.NODE_ENV !== "production";
   if (!stub && (!siteConfig.notificationDestination || process.env.PRIVACY_NOTICE_APPROVED !== "true")) {
+    submissions.delete(submissionKey);
     console.error("Contact delivery is unavailable: approved privacy notice or notification destination is missing.");
     return response(503, { ok: false, error: "delivery_unavailable" });
   }

@@ -904,7 +904,7 @@
             "text": "Bring us the decision you’re weighing."
           },
           {
-            "text": "Tell us what you’re buying, producing or allocating next. A short conversation will determine whether a focused planning review fits."
+            "text": "Choose a time for a 30-minute conversation about your next buy, production run or allocation decision."
           }
         ]
       },
@@ -925,10 +925,10 @@
       },
       {
         "id": "C03",
-        "kind": "form",
+        "kind": "narrative",
         "blocks": [
           {
-            "text": "Start with a few details. After sending your enquiry, you can choose a time for a 30-minute conversation."
+            "text": "Book directly below. Choose a time that works for you, add your details in Calendly, and receive your meeting confirmation."
           }
         ]
       },
@@ -1020,7 +1020,13 @@
     "Thanks - your enquiry has been received. You can now choose a time for a conversation.",
     "We could not send your enquiry. Please try again or email us directly.",
     "Your enquiry has been received. The booking calendar is unavailable here. Open the booking page or email us to arrange a time.",
-    "Meeting booked"
+    "Meeting booked",
+    "arman@scalesight.org",
+    "Loading available times…",
+    "The calendar could not load here. Open the booking page to choose a time.",
+    "The booking calendar is unavailable. Email us to arrange a conversation.",
+    "Open booking page",
+    "Booking is provided by Calendly. Read our Privacy Notice."
   ],
   "accessibilityAndValidation": [
     "Skip to main content",

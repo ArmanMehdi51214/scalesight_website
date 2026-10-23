@@ -1,5 +1,5 @@
 export const siteConfig = {
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || undefined,
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "arman@scalesight.org",
   notificationDestination: process.env.CONTACT_NOTIFICATION_DESTINATION || undefined,
   calendar: {
     url: getCalendlyUrl(process.env.NEXT_PUBLIC_CALENDLY_URL),

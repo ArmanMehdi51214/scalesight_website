@@ -3,6 +3,7 @@
 import { FormEvent, ReactNode, useRef, useState } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
+import { siteConfig } from "@/lib/site-config";
 import BookingPanel from "@/components/booking-panel";
 
 type Intent = "planning" | "pilot" | "partner";
@@ -38,6 +39,7 @@ export default function ContactForm({ intent }: { intent: Intent }) {
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length) {
       setStatus("idle");
+      document.getElementById(Object.keys(nextErrors)[0])?.focus();
       return;
     }
     sending.current = true;
@@ -48,6 +50,7 @@ export default function ContactForm({ intent }: { intent: Intent }) {
         method: "POST",
         headers: { "Content-Type": "application/json", "Idempotency-Key": idempotencyKey },
         body: JSON.stringify({ ...values, intent }),
+        signal: AbortSignal.timeout(15_000),
       });
       const result = await response.json();
       if (response.ok && result.ok) {
@@ -84,7 +87,7 @@ export default function ContactForm({ intent }: { intent: Intent }) {
     <p className="sr-only" aria-live="polite">{status === "sending" ? "Sending…" : ""}</p>
     <div className="md:col-span-2" aria-live="polite" role={status === "failure" || Object.keys(errors).length ? "alert" : "status"}>
       {Object.values(errors).filter(Boolean).length ? <div className="mb-4 rounded-xl border border-rose-400/40 p-4 text-sm text-rose-200"><p className="font-semibold">Please check the following:</p><ul className="mt-2 list-disc pl-5">{Object.entries(errors).filter(([, message]) => message).map(([key, message]) => <li key={key}><a className="underline" href={`#${key}`}>{message}</a></li>)}</ul></div> : null}
-      {status === "failure" ? <p className="mb-4 text-sm text-rose-200">We could not send your enquiry. Please try again or email us directly.</p> : null}
+      {status === "failure" ? <div className="mb-4 text-sm text-rose-200"><p>We could not send your enquiry. Please try again or email us directly.</p><a className="text-link" href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a></div> : null}
     </div>
     {field("name", "Name", <input {...fieldProps("name")} className="field-input" name="name" autoComplete="name" placeholder="e.g. Sam Lee" value={values.name} onChange={(event) => update("name", event.target.value)} required />)}
     {field("email", "Work email", <input {...fieldProps("email")} className="field-input" name="email" type="email" autoComplete="email" placeholder="e.g. sam@brand.com" value={values.email} onChange={(event) => update("email", event.target.value)} required />)}

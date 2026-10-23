@@ -41,7 +41,7 @@ export const routeMetadata = {
   },
   contact: {
     title: "Discuss a Planning Decision | ScaleSight",
-    description: "Tell us the buy, production or allocation choice your team is weighing and explore whether a focused planning review fits.",
+    description: "Book a 30-minute conversation about your next buying, production or allocation decision. Choose a time directly with ScaleSight.",
     canonical: "/contact",
   },
   privacy: {
