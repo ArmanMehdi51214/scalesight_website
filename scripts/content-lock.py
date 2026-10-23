@@ -23,10 +23,13 @@ class Page(HTMLParser):
 def strings(value):
  if isinstance(value,str):return [value]
  if isinstance(value,dict):return [s for v in value.values() for s in strings(v)]
+ if isinstance(value,list):return [s for v in value for s in strings(v)]
  return []
 brief=[m['sampleBrief']['disclosure'],m['sampleBrief']['context']]+[x for f in m['sampleBrief']['fields'] for x in f.values()]+[m['sampleBrief']['ownerLabel'],m['sampleBrief']['owner']]
 failures=[]
 for route,sections in m['routes'].items():
+ guide=m.get('pageGuides',{}).get(route)
+ guideCopy=([guide['label']]+[l['text'] for l in guide['links']]) if guide else []
  p=Page();html=urllib.request.urlopen(base+route).read().decode();html=re.sub(r'<div aria-hidden="true"[^>]*>.*?</div>', '', html);p.feed(html)
  text=compact(' '.join(p.text));pos=0
  for section in sections:
@@ -38,6 +41,7 @@ for route,sections in m['routes'].items():
  for section in sections:
   if section['kind'] in ['form','booking']:continue
   expectedCopy=[b['text'] for b in section['blocks'] if not(section['kind']=='example' and b['text']=='Open illustrative workspace')]
+  if section['kind']=='hero' and guide:expectedCopy=[guide['label']]+expectedCopy+[l['text'] for l in guide['links']]
   if section['id']=='H01':expectedCopy += strings(m['heroPreview'])
   if section['kind'] in ['brief','deliverables']:expectedCopy += brief
   if section['kind']=='example':expectedCopy += [m['sampleBrief']['disclosure']]
@@ -45,7 +49,7 @@ for route,sections in m['routes'].items():
   if actual!=compact(' '.join(expectedCopy)):failures.append(f"{route} {section['id']} exact section copy differs (extra, duplicated, missing or reordered text)")
  expected=[s['id'] for s in sections]
  if p.ids!=expected:failures.append(f'{route} section IDs: {p.ids}; expected {expected}')
- allowed=strings(m.get('heroPreview',{}))+m['approved']+m['accessibilityAndValidation']+brief+[b['text'] for s in sections for b in s['blocks']]
+ allowed=guideCopy+strings(m.get('heroPreview',{}))+m['approved']+m['accessibilityAndValidation']+brief+[b['text'] for s in sections for b in s['blocks']]
  remaining=text
  for s in sorted(set(allowed),key=lambda s:len(compact(s)),reverse=True):remaining=remaining.replace(compact(s),'')
  if remaining:failures.append(f'{route} unapproved text: {remaining[:2000]}')

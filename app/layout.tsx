@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 import AnalyticsListener from "@/components/analytics-listener";
 
 import "./globals.css";
+import "./interior-pages.css";
 
 const geist = localFont({
   src: "./fonts/Geist-Regular.ttf",

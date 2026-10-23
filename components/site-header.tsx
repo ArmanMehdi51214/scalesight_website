@@ -46,7 +46,7 @@ export default function SiteHeader() {
         <nav aria-label="Main navigation" className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => <Link aria-current={isActive(pathname, item.href) ? "page" : undefined} key={item.href} className={isActive(pathname, item.href) ? "nav-link nav-link--active" : "nav-link"} href={item.href}>{item.label}</Link>)}
         </nav>
-        <Link className="header-cta primary-button min-h-11 items-center justify-center !px-4 !py-2.5 !text-sm" href="/contact">Talk through a decision</Link>
+        <Link className="header-cta primary-button" href="/contact">Talk through a decision</Link>
         <button ref={menuRef} aria-controls="mobile-navigation" aria-expanded={open} aria-label={open ? "Close navigation" : "Open navigation"} className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--ink)] hover:bg-[var(--wash)] focus-visible:outline lg:hidden" onClick={() => setOpen((value) => !value)} type="button">
           {open ? <X aria-hidden="true" size={20} /> : <Menu aria-hidden="true" size={20} />}
         </button>

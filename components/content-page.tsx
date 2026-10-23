@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import HomeHero, { HomeSignals } from "@/components/home-hero";
 import manifest from "@/docs/content-manifest.json";
 import SiteHeader from "@/components/site-header";
@@ -10,7 +11,7 @@ type Section = { id: string; kind: string; blocks: Block[] };
 export type ContentRoute = keyof typeof manifest.routes;
 
 function Action({ block, secondary = false }: { block: Block; secondary?: boolean }) {
-  return <Link className={secondary ? "secondary-button" : "primary-button"} href={block.href!}>{block.text}</Link>;
+  return <Link className={secondary ? "secondary-button" : "primary-button"} href={block.href!}>{block.text}<ArrowRight size={16} aria-hidden="true" /></Link>;
 }
 export function PlanningBrief() {
   const brief = manifest.sampleBrief;
@@ -25,19 +26,23 @@ export function PlanningBrief() {
 function Pairs({ blocks, className = "copy-grid" }: { blocks: Block[]; className?: string }) {
   return <div className={className}>{blocks.filter((_,i) => i % 2 === 0).map((block,i) => <article key={block.text}><h3>{block.text}</h3><p>{blocks[i*2+1]?.text}</p></article>)}</div>;
 }
-function SectionContent({ section }: { section: Section }) {
+function SectionContent({ section, route }: { section: Section; route: ContentRoute }) {
   const {id,kind,blocks:b} = section;
   const heading = <h2>{b[0].text}</h2>;
   if(id === "H01") return <HomeHero blocks={b}/>;
   if(id === "H02") return <HomeSignals blocks={b}/>;
   if(kind === "hero") {
     const headingIndex = id === "P01" ? 1 : 0;
-    return <div className="hero-copy"><div>
+    const guide = manifest.pageGuides[route as keyof typeof manifest.pageGuides];
+    return <div className="page-masthead"><div className="hero-copy">
+      <p className="page-kicker">{guide.label}</p>
       {b.slice(0,headingIndex).map(block => <p className="eyebrow" key={block.text}>{block.text}</p>)}
       <h1>{b[headingIndex].text}</h1>
       {b.slice(headingIndex+1).filter(block => !block.href).map(block => <p className="hero-intro" key={block.text}>{block.text}</p>)}
       <div className="actions">{b.filter(block => block.href).map((block,i) => <Action block={block} secondary={i>0} key={block.text}/>)}</div>
-    </div></div>;
+    </div><nav className="page-guide" aria-label={`${guide.label} sections`}>
+      {guide.links.map((link, index) => <Link href={link.href} key={link.href}><span className="guide-number" aria-hidden="true" data-number={`0${index + 1}`} /><span>{link.text}</span><ArrowUpRight size={15} aria-hidden="true" /></Link>)}
+    </nav></div>;
   }
   if(kind === "faq") return <div className="faq-list">{b.filter((_,i)=>i%2===0).map((block,i) => <details key={block.text}><summary>{block.text}</summary><p>{b[i*2+1].text}</p></details>)}</div>;
   if(kind === "brief") return <>{heading}{b[1] && <p className="section-intro">{b[1].text}</p>}<div id={id==='E02' ? 'sample-brief' : undefined} className="brief-wrap"><PlanningBrief/></div></>;
@@ -62,7 +67,7 @@ function SectionContent({ section }: { section: Section }) {
 export default function ContentPage({route}: {route: ContentRoute}) {
   const sections: Section[] = manifest.routes[route];
   const anchors: Record<string,string> = { W05:'inputs', E03:'supply-timing',E04:'launch-demand',E05:'size-depth' };
-  return <><SiteHeader/><main id="main-content" tabIndex={-1} className={`content-page page-${route==='/'?'home':route.slice(1)}`}>
-    {sections.map(section=><section key={section.id} id={anchors[section.id] || section.id} data-section={section.id} className={`page-section section-${section.kind} section-${section.id}`}><div className="content-shell"><SectionContent section={section}/></div></section>)}
+  return <><SiteHeader/><main id="main-content" tabIndex={-1} className={`content-page ${route === "/" ? "page-home" : `interior-page page-${route.slice(1)}`}`}>
+    {sections.map(section=><section key={section.id} id={anchors[section.id] || section.id} data-section={section.id} className={`page-section section-${section.kind} section-${section.id}`}><div className="content-shell"><SectionContent section={section} route={route}/></div></section>)}
   </main><SiteFooter/></>;
 }

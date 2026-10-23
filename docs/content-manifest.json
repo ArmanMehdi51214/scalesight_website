@@ -469,7 +469,7 @@
             "text": "4 / Review and choose"
           },
           {
-            "text": "Review the first evidence-led read. 3 / Compare options Investigate the change and compare feasible quantity, timing or mix choices against supply, service and cash constraints. 4 / Review and choose Review the recommendation, remaining uncertainty and learning. Agree whether to stop, refine the scope or continue with recurring support."
+            "text": "Review the recommendation, remaining uncertainty and learning. Agree whether to stop, refine the scope or continue with recurring support."
           }
         ]
       },
@@ -583,7 +583,7 @@
             "text": "How much time will our team need?"
           },
           {
-            "text": "We agree the start date, decision deadline and data readiness before work begins. What does it cost? We confirm the fee after agreeing the decision, data requirements and review scope. How much time will our team need? We agree the onboarding and review time during scoping, based on the data and operating context."
+            "text": "We agree the onboarding and review time during scoping, based on the data and operating context."
           },
           {
             "text": "Do we need Shopify?"
@@ -637,7 +637,7 @@
         "kind": "hero",
         "blocks": [
           {
-            "text": "See how a planning question becomes a decision. INTRO / DISCLOSURE"
+            "text": "See how a planning question becomes a decision."
           },
           {
             "text": "These are illustrative workspaces built with synthetic data. They show how ScaleSight may structure an investigation. They are not client results or client operating data."
@@ -753,6 +753,9 @@
         "id": "A01",
         "kind": "hero",
         "blocks": [
+          {
+            "text": "Better questions. Clearer commitments."
+          },
           {
             "text": "I started ScaleSight to make deeper planning analysis useful before a brand commits more cash."
           }
@@ -1069,5 +1072,88 @@
     "footerLabel": "The cash perspective",
     "footerCopy": "Both options assume $12,000 in product cost at $2 per unit. Packaging, freight and service risk still need review.",
     "ownership": "Your team makes the final call."
+  },
+  "pageGuides": {
+    "/how-we-work": {
+      "label": "How we work",
+      "links": [
+        {
+          "text": "The process",
+          "href": "#W02"
+        },
+        {
+          "text": "Data & inputs",
+          "href": "#inputs"
+        },
+        {
+          "text": "Your questions",
+          "href": "#W07"
+        }
+      ]
+    },
+    "/30-day-planning-pilot": {
+      "label": "30-day planning pilot",
+      "links": [
+        {
+          "text": "Is it a fit?",
+          "href": "#P02"
+        },
+        {
+          "text": "The four-week plan",
+          "href": "#P03"
+        },
+        {
+          "text": "What you receive",
+          "href": "#P04"
+        }
+      ]
+    },
+    "/examples": {
+      "label": "Illustrative examples",
+      "links": [
+        {
+          "text": "The planning brief",
+          "href": "#E02"
+        },
+        {
+          "text": "Supply timing",
+          "href": "#supply-timing"
+        },
+        {
+          "text": "Launch demand",
+          "href": "#launch-demand"
+        }
+      ]
+    },
+    "/about": {
+      "label": "The thinking behind ScaleSight",
+      "links": [
+        {
+          "text": "Our approach",
+          "href": "#A02"
+        },
+        {
+          "text": "Our principles",
+          "href": "#A03"
+        }
+      ]
+    },
+    "/partners": {
+      "label": "For advisors & partners",
+      "links": [
+        {
+          "text": "Where we fit",
+          "href": "#R02"
+        },
+        {
+          "text": "Working together",
+          "href": "#R03"
+        },
+        {
+          "text": "Start a conversation",
+          "href": "#R06"
+        }
+      ]
+    }
   }
 }
