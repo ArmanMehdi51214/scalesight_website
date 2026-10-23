@@ -37,4 +37,19 @@ No mobile reference supplied. Derive 390px layouts with stacked cards, full-widt
 
 ## Product imagery
 
-No docs/screens-source directory exists. Capture availability and masking results will be recorded here before adding an image. No unapproved example screenshots or live demo links.
+No docs/screens-source directory exists. Captured the approved demo at 1440×900, deviceScaleFactor 2; masked all brand text and hid logos/wordmarks/URLs before capture. Home uses only the recovery-option comparison, with the required synthetic-data pill. No full dashboard, unrelated example art, or live demo links. Capture script: scripts/screens/capture-demo.mjs; provenance: docs/decision-image.json. Tesseract is unavailable locally: reviewed the final image visually and validate masked DOM text, metadata and capture hash in the build; OCR runs automatically wherever tesseract is installed.
+
+Reference metadata reports 2560px raster canvases, while the downloaded thumbnails are 512px tall. Fidelity checks use the requested 1440px viewport (and derived 390px mobile), not an assumption that the small PNG is a 1440px source.
+
+## Home fidelity review
+
+Production screenshots: [1440px](stitch-qa/home-1440.png), [390px](stitch-qa/home-390.png), [200% CSS zoom / reflow](stitch-qa/home-zoom200.png).
+
+- Matched: light centered hero, 1180px shell, 80px desktop header, pale wash, wide rounded browser frame with soft shadow, three-column white lanes, navy process section, inset pilot CTA and dark footer.
+- Intentional: manifest headline is shorter than Stitch's headline; wraps into two desktop lines. Geist replaces both reference fonts. Existing primary logo replaces Stitch's duplicated logo treatment. Navy replaces reference near-black; all new tint surfaces derive from brand tokens.
+- Intentional: real single-decision recovery-options crop replaces empty canvas; preserve original demo UI inside the crop, with no invented dashboard UI. The three manifest-backed brief cards remain below the frame, preserving the prior content contract.
+- Intentional: four approved process steps replace three invented Stitch service cards. Full brief, audiences, example links, FAQ and final CTA remain in manifest order, making the page longer than the source image.
+- Spacing: 64px hero top / frame gap; 96px desktop sections; 56px mobile sections; 24–32px card padding. The screenshot frame is shorter than Stitch's empty 520px canvas because it fits one actual decision.
+- Type: 56px desktop / 36px mobile H1; 40px / 28px section headings; existing Geist. Shadows use shared navy-derived tokens, with the strongest shadow reserved for the product frame.
+- Accessibility corrections: remove pulsing status decoration and account icon; keep 44px targets, restore menu-button focus on Escape, and honor reduced motion.
+- No other routes have been restyled beyond the shared shell. Screens 2–9 receive fidelity passes only after Home review.

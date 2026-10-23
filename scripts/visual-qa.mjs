@@ -15,7 +15,7 @@ fs.mkdirSync('/tmp/scalesight-pdf-qa', { recursive: true });
   for(const width of [360,390,768,1024,1440]){
    await page.setViewportSize({width,height:1000});
    await page.goto(base+route); await page.waitForTimeout(200);
-   const metrics=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,h1:document.querySelectorAll('h1').length,images:[...document.querySelectorAll('main img,main svg')].length}));
+   const metrics=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,h1:document.querySelectorAll('h1').length,invalidImages:[...document.querySelectorAll('main img')].filter(e=>!e.complete||!e.naturalWidth||!e.getAttribute('alt')||!e.getAttribute('width')||!e.getAttribute('height')).length}));
    report.views.push({route,width,...metrics});
    if(width===390||width===1440) await page.screenshot({path:`/tmp/scalesight-pdf-qa/${route.replaceAll('/','')||'home'}-${width}.png`,fullPage:true});
    if(width===1440)report.views.at(-1).axe=(await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}));
@@ -29,5 +29,5 @@ fs.mkdirSync('/tmp/scalesight-pdf-qa', { recursive: true });
  await page.route('**/api/contact',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({ok:true})}));
  await page.getByLabel('Name',{exact:false}).fill('PDF QA');await page.getByLabel('Work email').fill('qa@example.com');await page.getByRole('textbox',{name:'Company',exact:false}).fill('QA');await page.getByRole('button',{name:'Send planning enquiry'}).click();await page.getByRole('heading',{name:manifest.approved.find(x=>x.startsWith('Thanks -'))}).waitFor();report.keyboard.success=true;
  fs.writeFileSync('/tmp/scalesight-pdf-qa/report.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));await browser.close();
- if(report.errors.length||report.views.some(x=>x.overflow||x.h1!==1||x.images||x.axe?.length)||Object.values(report.keyboard).some(x=>!x))process.exitCode=1;
+ if(report.errors.length||report.views.some(x=>x.overflow||x.h1!==1||x.invalidImages||x.axe?.length)||Object.values(report.keyboard).some(x=>!x))process.exitCode=1;
 })();

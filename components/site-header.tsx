@@ -21,13 +21,17 @@ export default function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+  const menuRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const updateScroll = () => headerRef.current?.classList.toggle("is-scrolled", window.scrollY > 8);
     updateScroll();
     window.addEventListener("scroll", updateScroll, { passive: true });
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape" && menuRef.current?.getAttribute("aria-expanded") === "true") {
+        setOpen(false);
+        menuRef.current.focus();
+      }
     };
     window.addEventListener("keydown", handleEscape);
     return () => { window.removeEventListener("keydown", handleEscape); window.removeEventListener("scroll", updateScroll); };
@@ -43,7 +47,7 @@ export default function SiteHeader() {
           {navItems.map((item) => <Link aria-current={isActive(pathname, item.href) ? "page" : undefined} key={item.href} className={isActive(pathname, item.href) ? "nav-link nav-link--active" : "nav-link"} href={item.href}>{item.label}</Link>)}
         </nav>
         <Link className="header-cta primary-button min-h-11 items-center justify-center !px-4 !py-2.5 !text-sm" href="/contact">Talk through a decision</Link>
-        <button aria-controls="mobile-navigation" aria-expanded={open} aria-label={open ? "Close navigation" : "Open navigation"} className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--ink)] hover:bg-[var(--wash)] focus-visible:outline lg:hidden" onClick={() => setOpen((value) => !value)} type="button">
+        <button ref={menuRef} aria-controls="mobile-navigation" aria-expanded={open} aria-label={open ? "Close navigation" : "Open navigation"} className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--ink)] hover:bg-[var(--wash)] focus-visible:outline lg:hidden" onClick={() => setOpen((value) => !value)} type="button">
           {open ? <X aria-hidden="true" size={20} /> : <Menu aria-hidden="true" size={20} />}
         </button>
       </div>

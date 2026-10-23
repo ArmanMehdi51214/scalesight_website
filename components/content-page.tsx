@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProductFrame from "@/components/product-frame";
 import manifest from "@/docs/content-manifest.json";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
@@ -48,7 +49,7 @@ function SectionContent({ section }: { section: Section }) {
       <h1>{b[headingIndex].text}</h1>
       {b.slice(headingIndex+1).filter(block => !block.href).map(block => <p className="hero-intro" key={block.text}>{block.text}</p>)}
       <div className="actions">{b.filter(block => block.href).map((block,i) => <Action block={block} secondary={i>0} key={block.text}/>)}</div>
-    </div>{id === "H01" && <PlanningBrief compact/>}</div>;
+    </div>{id === "H01" && <><ProductFrame/><PlanningBrief compact/></>}</div>;
   }
   if(kind === "faq") return <div className="faq-list">{b.filter((_,i)=>i%2===0).map((block,i) => <details key={block.text}><summary>{block.text}</summary><p>{b[i*2+1].text}</p></details>)}</div>;
   if(kind === "brief") return <>{heading}{b[1] && <p className="section-intro">{b[1].text}</p>}<div id={id==='E02' ? 'sample-brief' : undefined} className="brief-wrap"><PlanningBrief/></div></>;

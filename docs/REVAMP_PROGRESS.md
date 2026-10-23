@@ -30,3 +30,16 @@ PDF regeneration and rendered content: zero differences. Production build, lint 
 - Stage 1: extracted shared tint, radius and shadow tokens; light header uses the existing coloured primary logo, Geist and existing navigation; navy footer retained. Mobile menu keeps existing behaviour and targets.
 - No extra strings added: approved-extras.json is empty.
 - Stage 2 is limited to Home; later routes await review.
+
+### Stage 2 — Home ready for review
+
+- Centered light hero, real recovery-options crop, decision cards, navy process section, inset pilot CTA, and derived mobile composition implemented; all manifest sections and targets retained.
+- Captured only one decision from the approved demo at 1440×900 / DPR 2 after DOM masking. Image is WebP with responsive Next Image output, dimensions and hero preload. No other example imagery; live demos remain disabled.
+- approved-extras.json: neutral alt “Recovery options”; explicitly requested image pill “Illustrative · synthetic data”.
+- Brand guard is part of build: zero failures; negative filename test correctly fails. Tesseract unavailable locally, so no OCR claim; masked text, image metadata, visual review and capture hash verified.
+- Lint, typecheck, production build and content-lock pass (zero differences). Existing visual-qa: 35 viewports, no overflow or axe violations, keyboard and mocked form checks pass.
+- Final audit passes functionality/metadata/reflow; only failing link is the already-known /privacy 404. Contact email, delivery and live booking verification remain open.
+- Final Home checks: 360/390/768/1024/1440, all visible targets at least 44×44px, one H1, keyboard/skip/menu Escape focus/FAQ and reduced motion pass. 200% CSS zoom reflow has no overflow.
+- Local lab LCP 0.868–0.956s; CLS 0 across three mobile samples at 4× CPU, 4 Mbps down and 40ms latency. This is a local lab result, not field data.
+- Screenshots and results: docs/stitch-qa/. Fidelity adaptations and all nine screen mappings: docs/STITCH_MAP.md.
+- Commits: shell stage b144ae1; Home stage follows this entry. No deployment. Stop here for Home review; stages 3–4 have not begun.
