@@ -1,8 +1,11 @@
 export const siteConfig = {
   name: "ScaleSight",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.scalesight.org",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
-  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || "",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "arman@scalesight.org",
+  bookingUrl:
+    process.env.NEXT_PUBLIC_BOOKING_URL ||
+    process.env.NEXT_PUBLIC_CALENDLY_URL ||
+    "",
   partnersActive: false,
   // Publication is a deliberate owner action after the documented launch gates.
   publicationApproved: process.env.SITE_PUBLICATION_APPROVED === "true",
