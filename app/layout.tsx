@@ -1,70 +1,18 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
-
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
+import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
-
-const geist = localFont({
-  src: "./fonts/Geist-Regular.ttf",
-  variable: "--font-geist-sans",
-});
-
+const geist = localFont({ src: "./fonts/Geist-Regular.ttf", variable: "--font-geist-sans", display: "swap" });
 export const metadata: Metadata = {
-  title: "ScaleSight | Ecommerce Planning Partner for Shopify Brands",
-  description:
-    "ScaleSight is a managed planning partner for Shopify and DTC ecommerce brands. Get demand forecasting, inventory planning, and weekly decision support — starting with a 30-Day Planning Pilot.",
-  keywords: [
-    "ecommerce planning",
-    "inventory planning",
-    "demand forecasting",
-    "Shopify planning",
-    "DTC ecommerce",
-    "sales forecasting",
-    "stockout prevention",
-    "revenue forecasting",
-    "ecommerce business planning",
-    "managed planning service",
-    "weekly inventory review",
-    "ecommerce decision support",
-  ],
-  openGraph: {
-    title: "ScaleSight | Ecommerce Planning Partner for Shopify Brands",
-    description:
-      "Forecast demand, plan inventory, and make better business decisions with a managed planning system built for Shopify brands.",
-    type: "website",
-    siteName: "ScaleSight",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ScaleSight | Ecommerce Planning Partner",
-    description:
-      "Forecast demand, plan inventory, and make better business decisions with a managed planning system built for Shopify brands.",
-  },
-  icons: {
-    icon: "/favicon.png",
-  },
+  metadataBase: new URL(siteConfig.url),
+  title: "ScaleSight | Managed Inventory Planning for Food & Beverage",
+  description: "Managed analytical planning for growing food and beverage brands. Maintained analysis, compared options and weekly specialist-reviewed recommendations.",
+  robots: { index: siteConfig.publicationApproved && siteConfig.privacyApproved, follow: true },
+  icons: { icon: "/favicon.png" },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://assets.calendly.com/assets/external/widget.css"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={geist.variable}>
-        {children}
-        <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="afterInteractive"
-        />
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const schema = { "@context": "https://schema.org", "@type": "Organization", name: "ScaleSight", url: siteConfig.url, description: "Managed analytical inventory and supply planning for food and beverage brands." };
+  return <html lang="en"><body className={geist.variable}><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader /><main id="main-content" tabIndex={-1}>{children}</main><SiteFooter /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} /></body></html>;
 }
