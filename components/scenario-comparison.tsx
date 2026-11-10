@@ -1,2 +1,31 @@
-import ProofImage from "./proof-image";
-export default function ScenarioComparison() {return <div className="scenario-comparison"><div className="comparison-header"><span className="eyebrow">Exploratory assumption</span><span className="static-note">Static evidence comparison</span></div><div className="comparison-grid"><article><h3>Baseline · Limited stock</h3><ProofImage assetId="SF-03" /><p className="section-copy">Review available stock, protected commitments and the allocation constraint.</p></article><article><h3>Alternative · Split supply</h3><ProofImage assetId="SF-02" /><p className="section-copy">Inspect the selected split response and reduced promotional demand. This is a separate supplied view, not a recalculation of the baseline.</p></article></div><p className="recommendation"><strong>ScaleSight-reviewed recommendation</strong>Inspect the recommendation shown in the supplied supply-intervention capture. Any operating action remains subject to your team’s validation and approval.</p><p className="static-note">Illustrative captures. No inputs are editable and no source records are changed.</p></div>;}
+export default function ScenarioComparison() {
+  return (
+    <div className="scenario-comparison">
+      <div className="comparison-header">
+        <span className="eyebrow">Exploratory assumption</span>
+      </div>
+      <div className="comparison-grid">
+        <article className="comparison-text">
+          <h3>Baseline</h3>
+          <p className="section-copy">
+            Available inventory, weekly demand, incoming PO timing and protected
+            commitments.
+          </p>
+        </article>
+        <article className="comparison-text">
+          <h3>Alternative</h3>
+          <p className="section-copy">
+            Compare accepting the delay, bringing all stock forward, splitting
+            the shipment or reducing optional promotional demand.
+          </p>
+        </article>
+      </div>
+      <p className="recommendation">
+        <strong>ScaleSight-reviewed recommendation</strong>The reviewed
+        recommendation stays separate from exploratory assumptions. Your team
+        validates the constraints, approves or changes the decision, and
+        executes through its existing systems.
+      </p>
+    </div>
+  );
+}

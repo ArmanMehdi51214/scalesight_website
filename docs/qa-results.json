@@ -1,0 +1,571 @@
+{
+  "pages": [
+    {
+      "width": 360,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "ScaleSight | Managed Inventory Planning for Food & Beverage",
+      "canonical": "https://www.scalesight.org/",
+      "description": "Weekly specialist-reviewed recommendations on what to buy, make or replenish, how much, when and the cash each option commits. Your team makes the final call."
+    },
+    {
+      "width": 360,
+      "route": "/planning-workspace",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Planning Workspace | ScaleSight Decision Intelligence",
+      "canonical": "https://www.scalesight.org/planning-workspace",
+      "description": "See the evidence, assumptions, alternatives and reviewed recommendation behind one planning question. Workspace scope and interactions are agreed for each engagement."
+    },
+    {
+      "width": 360,
+      "route": "/how-we-work",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "How ScaleSight Works | Managed Planning & Review",
+      "canonical": "https://www.scalesight.org/how-we-work",
+      "description": "Agree the decision and inputs, check changing demand and supply, compare feasible responses and review the recommendation. Your team approves and executes."
+    },
+    {
+      "width": 360,
+      "route": "/examples",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Illustrative Planning Examples | ScaleSight",
+      "canonical": "https://www.scalesight.org/examples",
+      "description": "Explore synthetic supply-timing and production-mix concepts: evidence, alternatives and the recommendation to review before committing cash. These are not client results."
+    },
+    {
+      "width": 360,
+      "route": "/30-day-planning-pilot",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "30-Day Planning Pilot | ScaleSight",
+      "canonical": "https://www.scalesight.org/30-day-planning-pilot",
+      "description": "Test managed analytical planning on one upcoming buy, production run or allocation choice. A focused paid 30-day pilot with scope and fee agreed before work begins."
+    },
+    {
+      "width": 360,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "About ScaleSight | Analysis Behind the Commitment",
+      "canonical": "https://www.scalesight.org/about",
+      "description": "ScaleSight connects data-science analysis and practical planning review to production, purchasing, replenishment and allocation decisions for food and beverage brands."
+    },
+    {
+      "width": 360,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Discuss a Planning Decision | ScaleSight",
+      "canonical": "https://www.scalesight.org/contact",
+      "description": "Tell us the upcoming purchase, production or allocation commitment your team is weighing. Discuss whether a focused planning review fits your timing and available data."
+    },
+    {
+      "width": 360,
+      "route": "/privacy",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Privacy Notice | ScaleSight",
+      "canonical": "https://www.scalesight.org/privacy",
+      "description": "Privacy information for ScaleSight website enquiries and business communications. Existing draft pending owner and legal confirmation."
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "ScaleSight | Managed Inventory Planning for Food & Beverage",
+      "canonical": "https://www.scalesight.org/",
+      "description": "Weekly specialist-reviewed recommendations on what to buy, make or replenish, how much, when and the cash each option commits. Your team makes the final call."
+    },
+    {
+      "width": 390,
+      "route": "/planning-workspace",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Planning Workspace | ScaleSight Decision Intelligence",
+      "canonical": "https://www.scalesight.org/planning-workspace",
+      "description": "See the evidence, assumptions, alternatives and reviewed recommendation behind one planning question. Workspace scope and interactions are agreed for each engagement."
+    },
+    {
+      "width": 390,
+      "route": "/how-we-work",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "How ScaleSight Works | Managed Planning & Review",
+      "canonical": "https://www.scalesight.org/how-we-work",
+      "description": "Agree the decision and inputs, check changing demand and supply, compare feasible responses and review the recommendation. Your team approves and executes."
+    },
+    {
+      "width": 390,
+      "route": "/examples",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Illustrative Planning Examples | ScaleSight",
+      "canonical": "https://www.scalesight.org/examples",
+      "description": "Explore synthetic supply-timing and production-mix concepts: evidence, alternatives and the recommendation to review before committing cash. These are not client results."
+    },
+    {
+      "width": 390,
+      "route": "/30-day-planning-pilot",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "30-Day Planning Pilot | ScaleSight",
+      "canonical": "https://www.scalesight.org/30-day-planning-pilot",
+      "description": "Test managed analytical planning on one upcoming buy, production run or allocation choice. A focused paid 30-day pilot with scope and fee agreed before work begins."
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "About ScaleSight | Analysis Behind the Commitment",
+      "canonical": "https://www.scalesight.org/about",
+      "description": "ScaleSight connects data-science analysis and practical planning review to production, purchasing, replenishment and allocation decisions for food and beverage brands."
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Discuss a Planning Decision | ScaleSight",
+      "canonical": "https://www.scalesight.org/contact",
+      "description": "Tell us the upcoming purchase, production or allocation commitment your team is weighing. Discuss whether a focused planning review fits your timing and available data."
+    },
+    {
+      "width": 390,
+      "route": "/privacy",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Privacy Notice | ScaleSight",
+      "canonical": "https://www.scalesight.org/privacy",
+      "description": "Privacy information for ScaleSight website enquiries and business communications. Existing draft pending owner and legal confirmation."
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "ScaleSight | Managed Inventory Planning for Food & Beverage",
+      "canonical": "https://www.scalesight.org/",
+      "description": "Weekly specialist-reviewed recommendations on what to buy, make or replenish, how much, when and the cash each option commits. Your team makes the final call."
+    },
+    {
+      "width": 768,
+      "route": "/planning-workspace",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Planning Workspace | ScaleSight Decision Intelligence",
+      "canonical": "https://www.scalesight.org/planning-workspace",
+      "description": "See the evidence, assumptions, alternatives and reviewed recommendation behind one planning question. Workspace scope and interactions are agreed for each engagement."
+    },
+    {
+      "width": 768,
+      "route": "/how-we-work",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "How ScaleSight Works | Managed Planning & Review",
+      "canonical": "https://www.scalesight.org/how-we-work",
+      "description": "Agree the decision and inputs, check changing demand and supply, compare feasible responses and review the recommendation. Your team approves and executes."
+    },
+    {
+      "width": 768,
+      "route": "/examples",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Illustrative Planning Examples | ScaleSight",
+      "canonical": "https://www.scalesight.org/examples",
+      "description": "Explore synthetic supply-timing and production-mix concepts: evidence, alternatives and the recommendation to review before committing cash. These are not client results."
+    },
+    {
+      "width": 768,
+      "route": "/30-day-planning-pilot",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "30-Day Planning Pilot | ScaleSight",
+      "canonical": "https://www.scalesight.org/30-day-planning-pilot",
+      "description": "Test managed analytical planning on one upcoming buy, production run or allocation choice. A focused paid 30-day pilot with scope and fee agreed before work begins."
+    },
+    {
+      "width": 768,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "About ScaleSight | Analysis Behind the Commitment",
+      "canonical": "https://www.scalesight.org/about",
+      "description": "ScaleSight connects data-science analysis and practical planning review to production, purchasing, replenishment and allocation decisions for food and beverage brands."
+    },
+    {
+      "width": 768,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Discuss a Planning Decision | ScaleSight",
+      "canonical": "https://www.scalesight.org/contact",
+      "description": "Tell us the upcoming purchase, production or allocation commitment your team is weighing. Discuss whether a focused planning review fits your timing and available data."
+    },
+    {
+      "width": 768,
+      "route": "/privacy",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Privacy Notice | ScaleSight",
+      "canonical": "https://www.scalesight.org/privacy",
+      "description": "Privacy information for ScaleSight website enquiries and business communications. Existing draft pending owner and legal confirmation."
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "ScaleSight | Managed Inventory Planning for Food & Beverage",
+      "canonical": "https://www.scalesight.org/",
+      "description": "Weekly specialist-reviewed recommendations on what to buy, make or replenish, how much, when and the cash each option commits. Your team makes the final call."
+    },
+    {
+      "width": 1024,
+      "route": "/planning-workspace",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Planning Workspace | ScaleSight Decision Intelligence",
+      "canonical": "https://www.scalesight.org/planning-workspace",
+      "description": "See the evidence, assumptions, alternatives and reviewed recommendation behind one planning question. Workspace scope and interactions are agreed for each engagement."
+    },
+    {
+      "width": 1024,
+      "route": "/how-we-work",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "How ScaleSight Works | Managed Planning & Review",
+      "canonical": "https://www.scalesight.org/how-we-work",
+      "description": "Agree the decision and inputs, check changing demand and supply, compare feasible responses and review the recommendation. Your team approves and executes."
+    },
+    {
+      "width": 1024,
+      "route": "/examples",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Illustrative Planning Examples | ScaleSight",
+      "canonical": "https://www.scalesight.org/examples",
+      "description": "Explore synthetic supply-timing and production-mix concepts: evidence, alternatives and the recommendation to review before committing cash. These are not client results."
+    },
+    {
+      "width": 1024,
+      "route": "/30-day-planning-pilot",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "30-Day Planning Pilot | ScaleSight",
+      "canonical": "https://www.scalesight.org/30-day-planning-pilot",
+      "description": "Test managed analytical planning on one upcoming buy, production run or allocation choice. A focused paid 30-day pilot with scope and fee agreed before work begins."
+    },
+    {
+      "width": 1024,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "About ScaleSight | Analysis Behind the Commitment",
+      "canonical": "https://www.scalesight.org/about",
+      "description": "ScaleSight connects data-science analysis and practical planning review to production, purchasing, replenishment and allocation decisions for food and beverage brands."
+    },
+    {
+      "width": 1024,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Discuss a Planning Decision | ScaleSight",
+      "canonical": "https://www.scalesight.org/contact",
+      "description": "Tell us the upcoming purchase, production or allocation commitment your team is weighing. Discuss whether a focused planning review fits your timing and available data."
+    },
+    {
+      "width": 1024,
+      "route": "/privacy",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Privacy Notice | ScaleSight",
+      "canonical": "https://www.scalesight.org/privacy",
+      "description": "Privacy information for ScaleSight website enquiries and business communications. Existing draft pending owner and legal confirmation."
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "ScaleSight | Managed Inventory Planning for Food & Beverage",
+      "canonical": "https://www.scalesight.org/",
+      "description": "Weekly specialist-reviewed recommendations on what to buy, make or replenish, how much, when and the cash each option commits. Your team makes the final call."
+    },
+    {
+      "width": 1440,
+      "route": "/planning-workspace",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Planning Workspace | ScaleSight Decision Intelligence",
+      "canonical": "https://www.scalesight.org/planning-workspace",
+      "description": "See the evidence, assumptions, alternatives and reviewed recommendation behind one planning question. Workspace scope and interactions are agreed for each engagement."
+    },
+    {
+      "width": 1440,
+      "route": "/how-we-work",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "How ScaleSight Works | Managed Planning & Review",
+      "canonical": "https://www.scalesight.org/how-we-work",
+      "description": "Agree the decision and inputs, check changing demand and supply, compare feasible responses and review the recommendation. Your team approves and executes."
+    },
+    {
+      "width": 1440,
+      "route": "/examples",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Illustrative Planning Examples | ScaleSight",
+      "canonical": "https://www.scalesight.org/examples",
+      "description": "Explore synthetic supply-timing and production-mix concepts: evidence, alternatives and the recommendation to review before committing cash. These are not client results."
+    },
+    {
+      "width": 1440,
+      "route": "/30-day-planning-pilot",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "30-Day Planning Pilot | ScaleSight",
+      "canonical": "https://www.scalesight.org/30-day-planning-pilot",
+      "description": "Test managed analytical planning on one upcoming buy, production run or allocation choice. A focused paid 30-day pilot with scope and fee agreed before work begins."
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "About ScaleSight | Analysis Behind the Commitment",
+      "canonical": "https://www.scalesight.org/about",
+      "description": "ScaleSight connects data-science analysis and practical planning review to production, purchasing, replenishment and allocation decisions for food and beverage brands."
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Discuss a Planning Decision | ScaleSight",
+      "canonical": "https://www.scalesight.org/contact",
+      "description": "Tell us the upcoming purchase, production or allocation commitment your team is weighing. Discuss whether a focused planning review fits your timing and available data."
+    },
+    {
+      "width": 1440,
+      "route": "/privacy",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "title": "Privacy Notice | ScaleSight",
+      "canonical": "https://www.scalesight.org/privacy",
+      "description": "Privacy information for ScaleSight website enquiries and business communications. Existing draft pending owner and legal confirmation."
+    }
+  ],
+  "errors": [],
+  "accessibility": [
+    {
+      "width": 390,
+      "route": "/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/planning-workspace",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/how-we-work",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/examples",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/30-day-planning-pilot",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/privacy",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/planning-workspace",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/how-we-work",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/examples",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/30-day-planning-pilot",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/privacy",
+      "violations": []
+    }
+  ],
+  "links": [],
+  "interactions": [
+    {
+      "test": "keyboard lightbox open",
+      "passed": true
+    },
+    {
+      "test": "native dialog focus contained",
+      "passed": true,
+      "initial": "Close full-resolution image"
+    },
+    {
+      "test": "Escape closes and returns focus",
+      "passed": true
+    },
+    {
+      "test": "mobile navigation expands",
+      "passed": true
+    },
+    {
+      "test": "mobile navigation closes after route change",
+      "passed": true
+    },
+    {
+      "test": "required field errors announced",
+      "passed": true
+    },
+    {
+      "test": "real delivery-unavailable response preserves entries",
+      "passed": true
+    },
+    {
+      "test": "mock-confirmed receipt shows success and optional booking or fallback",
+      "passed": true
+    },
+    {
+      "test": "reduced motion honored",
+      "passed": true
+    },
+    {
+      "test": "/sitemap.xml resolves",
+      "passed": true
+    },
+    {
+      "test": "/robots.txt resolves",
+      "passed": true
+    },
+    {
+      "test": "/opengraph-image resolves",
+      "passed": true
+    }
+  ],
+  "redirects": [
+    {
+      "route": "/case-studies",
+      "status": 308,
+      "location": "/examples"
+    },
+    {
+      "route": "/forecasting",
+      "status": 308,
+      "location": "/how-we-work"
+    },
+    {
+      "route": "/confident",
+      "status": 308,
+      "location": "/30-day-planning-pilot"
+    },
+    {
+      "route": "/30-day-plan",
+      "status": 308,
+      "location": "/30-day-planning-pilot"
+    },
+    {
+      "route": "/design-system",
+      "status": 308,
+      "location": "/planning-workspace"
+    },
+    {
+      "route": "/partners",
+      "status": 307,
+      "location": "/contact?intent=partner"
+    }
+  ]
+}
