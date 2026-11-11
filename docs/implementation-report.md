@@ -102,3 +102,7 @@ Performance: images reserve their space and use responsive optimization; lower i
 - **Founder portrait:** none supplied; typography-led layout is implemented. Portrait is optional, not a blocker for this layout.
 - **Demo links:** remain on-site only; external links require generic renaming and explicit approval.
 - **Release:** no deployment/push performed. Preserve current production until legal, proof and delivery gates are resolved; complete representative performance and final owner visual review before deliberate release. Pages are noindex while publication/privacy approval remains false.
+
+## Follow-up: direct blue hero backgrounds
+
+Home and Pilot now render as full-width sections with constrained inner content. Navy/gradient backgrounds are applied directly to each section, replacing the negative-layer pseudo-element. Fresh production browser checks at 360px and 1440px confirm the expected navy/gradient, viewport-wide sections and no horizontal overflow; see `direct-background-qa-results.json`. Lint, production build and TypeScript pass. The URL where the owner reported white remains unconfirmed, so the observed external/local running-server cause has not been asserted.

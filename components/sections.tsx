@@ -58,29 +58,31 @@ export function HeroSection({
   const block = copy[id];
   return (
     <section
-      className={`hero container ${center ? "hero-center" : ""}`}
+      className={`hero ${center ? "hero-center" : ""}`}
       data-section={id}
     >
-      <div className="hero-copy">
-        <SectionIntro block={block} heading="h1" />
-        {block.cta && (
-          <div className="hero-actions">
-            <Action href={block.cta.href}>{block.cta.label}</Action>
-            {id === "H01" && (
-              <Action href="/30-day-planning-pilot" secondary>
-                Explore the 30-day pilot
-              </Action>
-            )}
-          </div>
-        )}
-        {id === "P01" && (
-          <p className="fee-note">
-            Paid pilot; scope and fee agreed before work begins
-          </p>
-        )}
-        {children}
+      <div className="container hero-inner">
+        <div className="hero-copy">
+          <SectionIntro block={block} heading="h1" />
+          {block.cta && (
+            <div className="hero-actions">
+              <Action href={block.cta.href}>{block.cta.label}</Action>
+              {id === "H01" && (
+                <Action href="/30-day-planning-pilot" secondary>
+                  Explore the 30-day pilot
+                </Action>
+              )}
+            </div>
+          )}
+          {id === "P01" && (
+            <p className="fee-note">
+              Paid pilot; scope and fee agreed before work begins
+            </p>
+          )}
+          {children}
+        </div>
+        {assetId && <ProofImage assetId={assetId} hero />}
       </div>
-      {assetId && <ProofImage assetId={assetId} hero />}
     </section>
   );
 }
