@@ -106,3 +106,7 @@ Performance: images reserve their space and use responsive optimization; lower i
 ## Follow-up: direct blue hero backgrounds
 
 Home and Pilot now render as full-width sections with constrained inner content. Navy/gradient backgrounds are applied directly to each section, replacing the negative-layer pseudo-element. Fresh production browser checks at 360px and 1440px confirm the expected navy/gradient, viewport-wide sections and no horizontal overflow; see `direct-background-qa-results.json`. Lint, production build and TypeScript pass. The URL where the owner reported white remains unconfirmed, so the observed external/local running-server cause has not been asserted.
+
+## Follow-up: site-wide blue theme
+
+The owner clarified that the header and all service/company/contact/legal pages should be blue, including areas left white by the reference revision. This latest instruction supersedes the earlier selective dark-section placement. The shared canvas is now deep navy `#0b162b`, content panels navy `#101d35`, secondary surfaces `#14243d`, primary text white and secondary text `#bbc7da`. Links/focus use the light accent for dark-surface contrast, buttons retain the violet brand accent, and the header uses the existing white logo. Screenshot pixels and all content are unchanged. Error and legal draft warnings keep distinct readable warning colors. Browser evidence for all eight pages at 360/1440px and the expanded mobile menu is recorded in `sitewide-blue-qa-results.json`.

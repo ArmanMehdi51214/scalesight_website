@@ -14,7 +14,7 @@ export default function SiteHeader() {
       <div className="container header-inner">
         <Link className="wordmark" href="/" aria-label="ScaleSight home">
           <Image
-            src="/images/scalesight-logo.svg"
+            src="/images/scalesight-logo-white.svg"
             alt="ScaleSight"
             width={174}
             height={44}
