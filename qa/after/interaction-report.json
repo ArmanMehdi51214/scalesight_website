@@ -1,0 +1,1046 @@
+{
+  "accessibility": [
+    {
+      "width": 390,
+      "route": "/",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/planning-workspace",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/how-we-work",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/examples",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/30-day-planning-pilot",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "route": "/privacy",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/planning-workspace",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/how-we-work",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/examples",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/30-day-planning-pilot",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "route": "/privacy",
+      "violations": []
+    }
+  ],
+  "interactions": [
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/",
+      "width": 390,
+      "geometry": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fproduction-demand-evidence.png&w=3840&q=75",
+          "width": 534,
+          "height": 667.5
+        }
+      ]
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/planning-workspace",
+      "width": 390,
+      "geometry": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fsupply-managed-cycle.png&w=3840&q=75",
+          "width": 534,
+          "height": 667.5
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fproduction-demand-evidence.png&w=3840&q=75",
+          "width": 534,
+          "height": 667.5
+        }
+      ]
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/how-we-work",
+      "width": 390,
+      "geometry": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fsupply-managed-cycle.png&w=3840&q=75",
+          "width": 534,
+          "height": 667.5
+        }
+      ]
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/examples",
+      "width": 390,
+      "geometry": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fproduction-demand-evidence.png&w=3840&q=75",
+          "width": 534,
+          "height": 667.5
+        }
+      ]
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/30-day-planning-pilot",
+      "width": 390,
+      "geometry": []
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/about",
+      "width": 390,
+      "geometry": []
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/contact",
+      "width": 390,
+      "geometry": []
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/privacy",
+      "width": 390,
+      "geometry": []
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/",
+      "width": 1440,
+      "geometry": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fproduction-demand-evidence.png&w=3840&q=75",
+          "width": 712.65625,
+          "height": 313.640625
+        }
+      ]
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/planning-workspace",
+      "width": 1440,
+      "geometry": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fsupply-managed-cycle.png&w=3840&q=75",
+          "width": 712.65625,
+          "height": 313.640625
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fproduction-demand-evidence.png&w=3840&q=75",
+          "width": 610,
+          "height": 268.453125
+        }
+      ]
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/how-we-work",
+      "width": 1440,
+      "geometry": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fsupply-managed-cycle.png&w=3840&q=75",
+          "width": 1246,
+          "height": 548.359375
+        }
+      ]
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/examples",
+      "width": 1440,
+      "geometry": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fproof%2Fproduction-demand-evidence.png&w=3840&q=75",
+          "width": 1246,
+          "height": 548.359375
+        }
+      ]
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/30-day-planning-pilot",
+      "width": 1440,
+      "geometry": []
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/about",
+      "width": 1440,
+      "geometry": []
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/contact",
+      "width": 1440,
+      "geometry": []
+    },
+    {
+      "test": "proof images have rendered area",
+      "passed": true,
+      "route": "/privacy",
+      "width": 1440,
+      "geometry": []
+    },
+    {
+      "test": "required fields announced",
+      "passed": true,
+      "width": 360
+    },
+    {
+      "test": "field errors preserve relative input positions",
+      "passed": true,
+      "width": 360,
+      "inputsBefore": [
+        {
+          "id": "contact-name",
+          "top": 661.21875
+        },
+        {
+          "id": "contact-email",
+          "top": 821.21875
+        },
+        {
+          "id": "contact-company",
+          "top": 981.21875
+        },
+        {
+          "id": "contact-website",
+          "top": 1141.21875
+        },
+        {
+          "id": "contact-role",
+          "top": 1301.21875
+        }
+      ],
+      "inputsAfter": [
+        {
+          "id": "contact-name",
+          "top": 450.21875
+        },
+        {
+          "id": "contact-email",
+          "top": 610.21875
+        },
+        {
+          "id": "contact-company",
+          "top": 770.21875
+        },
+        {
+          "id": "contact-website",
+          "top": 930.21875
+        },
+        {
+          "id": "contact-role",
+          "top": 1090.21875
+        }
+      ]
+    },
+    {
+      "test": "honeypot stays hidden and out of tab order",
+      "passed": true,
+      "width": 360
+    },
+    {
+      "test": "mocked failure retains values",
+      "passed": true,
+      "width": 360
+    },
+    {
+      "test": "mocked receipt has no page overflow",
+      "passed": true,
+      "width": 360
+    },
+    {
+      "test": "skip link receives keyboard focus",
+      "passed": true,
+      "width": 360
+    },
+    {
+      "test": "skip link moves focus into main",
+      "passed": true,
+      "width": 360
+    },
+    {
+      "test": "FAQ keyboard expands",
+      "passed": true,
+      "width": 360
+    },
+    {
+      "test": "expanded FAQ accessible",
+      "passed": true,
+      "width": 360
+    },
+    {
+      "test": "required fields announced",
+      "passed": true,
+      "width": 390
+    },
+    {
+      "test": "field errors preserve relative input positions",
+      "passed": true,
+      "width": 390,
+      "inputsBefore": [
+        {
+          "id": "contact-name",
+          "top": 666.1875
+        },
+        {
+          "id": "contact-email",
+          "top": 826.1875
+        },
+        {
+          "id": "contact-company",
+          "top": 986.1875
+        },
+        {
+          "id": "contact-website",
+          "top": 1146.1875
+        },
+        {
+          "id": "contact-role",
+          "top": 1306.1875
+        }
+      ],
+      "inputsAfter": [
+        {
+          "id": "contact-name",
+          "top": 450.1875
+        },
+        {
+          "id": "contact-email",
+          "top": 610.1875
+        },
+        {
+          "id": "contact-company",
+          "top": 770.1875
+        },
+        {
+          "id": "contact-website",
+          "top": 930.1875
+        },
+        {
+          "id": "contact-role",
+          "top": 1090.1875
+        }
+      ]
+    },
+    {
+      "test": "honeypot stays hidden and out of tab order",
+      "passed": true,
+      "width": 390
+    },
+    {
+      "test": "mocked failure retains values",
+      "passed": true,
+      "width": 390
+    },
+    {
+      "test": "mocked receipt has no page overflow",
+      "passed": true,
+      "width": 390
+    },
+    {
+      "test": "skip link receives keyboard focus",
+      "passed": true,
+      "width": 390
+    },
+    {
+      "test": "skip link moves focus into main",
+      "passed": true,
+      "width": 390
+    },
+    {
+      "test": "FAQ keyboard expands",
+      "passed": true,
+      "width": 390
+    },
+    {
+      "test": "expanded FAQ accessible",
+      "passed": true,
+      "width": 390
+    },
+    {
+      "test": "required fields announced",
+      "passed": true,
+      "width": 768
+    },
+    {
+      "test": "field errors preserve relative input positions",
+      "passed": true,
+      "width": 768,
+      "inputsBefore": [
+        {
+          "id": "contact-name",
+          "top": 763.296875
+        },
+        {
+          "id": "contact-email",
+          "top": 763.296875
+        },
+        {
+          "id": "contact-company",
+          "top": 923.296875
+        },
+        {
+          "id": "contact-website",
+          "top": 923.296875
+        },
+        {
+          "id": "contact-role",
+          "top": 1083.296875
+        }
+      ],
+      "inputsAfter": [
+        {
+          "id": "contact-name",
+          "top": 450.296875
+        },
+        {
+          "id": "contact-email",
+          "top": 450.296875
+        },
+        {
+          "id": "contact-company",
+          "top": 610.296875
+        },
+        {
+          "id": "contact-website",
+          "top": 610.296875
+        },
+        {
+          "id": "contact-role",
+          "top": 770.296875
+        }
+      ]
+    },
+    {
+      "test": "honeypot stays hidden and out of tab order",
+      "passed": true,
+      "width": 768
+    },
+    {
+      "test": "mocked failure retains values",
+      "passed": true,
+      "width": 768
+    },
+    {
+      "test": "mocked receipt has no page overflow",
+      "passed": true,
+      "width": 768
+    },
+    {
+      "test": "responsibility rows align",
+      "passed": true,
+      "width": 768,
+      "deltas": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "test": "skip link receives keyboard focus",
+      "passed": true,
+      "width": 768
+    },
+    {
+      "test": "skip link moves focus into main",
+      "passed": true,
+      "width": 768
+    },
+    {
+      "test": "FAQ keyboard expands",
+      "passed": true,
+      "width": 768
+    },
+    {
+      "test": "expanded FAQ accessible",
+      "passed": true,
+      "width": 768
+    },
+    {
+      "test": "required fields announced",
+      "passed": true,
+      "width": 820
+    },
+    {
+      "test": "field errors preserve relative input positions",
+      "passed": true,
+      "width": 820,
+      "inputsBefore": [
+        {
+          "id": "contact-name",
+          "top": 772.984375
+        },
+        {
+          "id": "contact-email",
+          "top": 772.984375
+        },
+        {
+          "id": "contact-company",
+          "top": 932.984375
+        },
+        {
+          "id": "contact-website",
+          "top": 932.984375
+        },
+        {
+          "id": "contact-role",
+          "top": 1092.984375
+        }
+      ],
+      "inputsAfter": [
+        {
+          "id": "contact-name",
+          "top": 449.984375
+        },
+        {
+          "id": "contact-email",
+          "top": 449.984375
+        },
+        {
+          "id": "contact-company",
+          "top": 609.984375
+        },
+        {
+          "id": "contact-website",
+          "top": 609.984375
+        },
+        {
+          "id": "contact-role",
+          "top": 769.984375
+        }
+      ]
+    },
+    {
+      "test": "honeypot stays hidden and out of tab order",
+      "passed": true,
+      "width": 820
+    },
+    {
+      "test": "mocked failure retains values",
+      "passed": true,
+      "width": 820
+    },
+    {
+      "test": "mocked receipt has no page overflow",
+      "passed": true,
+      "width": 820
+    },
+    {
+      "test": "responsibility rows align",
+      "passed": true,
+      "width": 820,
+      "deltas": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "test": "skip link receives keyboard focus",
+      "passed": true,
+      "width": 820
+    },
+    {
+      "test": "skip link moves focus into main",
+      "passed": true,
+      "width": 820
+    },
+    {
+      "test": "FAQ keyboard expands",
+      "passed": true,
+      "width": 820
+    },
+    {
+      "test": "expanded FAQ accessible",
+      "passed": true,
+      "width": 820
+    },
+    {
+      "test": "required fields announced",
+      "passed": true,
+      "width": 1024
+    },
+    {
+      "test": "field errors preserve relative input positions",
+      "passed": true,
+      "width": 1024,
+      "inputsBefore": [
+        {
+          "id": "contact-name",
+          "top": 810.8125
+        },
+        {
+          "id": "contact-email",
+          "top": 810.8125
+        },
+        {
+          "id": "contact-company",
+          "top": 970.8125
+        },
+        {
+          "id": "contact-website",
+          "top": 970.8125
+        },
+        {
+          "id": "contact-role",
+          "top": 1130.8125
+        }
+      ],
+      "inputsAfter": [
+        {
+          "id": "contact-name",
+          "top": 449.8125
+        },
+        {
+          "id": "contact-email",
+          "top": 449.8125
+        },
+        {
+          "id": "contact-company",
+          "top": 609.8125
+        },
+        {
+          "id": "contact-website",
+          "top": 609.8125
+        },
+        {
+          "id": "contact-role",
+          "top": 769.8125
+        }
+      ]
+    },
+    {
+      "test": "honeypot stays hidden and out of tab order",
+      "passed": true,
+      "width": 1024
+    },
+    {
+      "test": "mocked failure retains values",
+      "passed": true,
+      "width": 1024
+    },
+    {
+      "test": "mocked receipt has no page overflow",
+      "passed": true,
+      "width": 1024
+    },
+    {
+      "test": "responsibility rows align",
+      "passed": true,
+      "width": 1024,
+      "deltas": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "test": "skip link receives keyboard focus",
+      "passed": true,
+      "width": 1024
+    },
+    {
+      "test": "skip link moves focus into main",
+      "passed": true,
+      "width": 1024
+    },
+    {
+      "test": "FAQ keyboard expands",
+      "passed": true,
+      "width": 1024
+    },
+    {
+      "test": "expanded FAQ accessible",
+      "passed": true,
+      "width": 1024
+    },
+    {
+      "test": "required fields announced",
+      "passed": true,
+      "width": 1180
+    },
+    {
+      "test": "field errors preserve relative input positions",
+      "passed": true,
+      "width": 1180,
+      "inputsBefore": [
+        {
+          "id": "contact-name",
+          "top": 839.78125
+        },
+        {
+          "id": "contact-email",
+          "top": 839.78125
+        },
+        {
+          "id": "contact-company",
+          "top": 999.78125
+        },
+        {
+          "id": "contact-website",
+          "top": 999.78125
+        },
+        {
+          "id": "contact-role",
+          "top": 1159.78125
+        }
+      ],
+      "inputsAfter": [
+        {
+          "id": "contact-name",
+          "top": 449.78125
+        },
+        {
+          "id": "contact-email",
+          "top": 449.78125
+        },
+        {
+          "id": "contact-company",
+          "top": 609.78125
+        },
+        {
+          "id": "contact-website",
+          "top": 609.78125
+        },
+        {
+          "id": "contact-role",
+          "top": 769.78125
+        }
+      ]
+    },
+    {
+      "test": "honeypot stays hidden and out of tab order",
+      "passed": true,
+      "width": 1180
+    },
+    {
+      "test": "mocked failure retains values",
+      "passed": true,
+      "width": 1180
+    },
+    {
+      "test": "mocked receipt has no page overflow",
+      "passed": true,
+      "width": 1180
+    },
+    {
+      "test": "responsibility rows align",
+      "passed": true,
+      "width": 1180,
+      "deltas": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "test": "skip link receives keyboard focus",
+      "passed": true,
+      "width": 1180
+    },
+    {
+      "test": "skip link moves focus into main",
+      "passed": true,
+      "width": 1180
+    },
+    {
+      "test": "FAQ keyboard expands",
+      "passed": true,
+      "width": 1180
+    },
+    {
+      "test": "expanded FAQ accessible",
+      "passed": true,
+      "width": 1180
+    },
+    {
+      "test": "required fields announced",
+      "passed": true,
+      "width": 1440
+    },
+    {
+      "test": "field errors preserve relative input positions",
+      "passed": true,
+      "width": 1440,
+      "inputsBefore": [
+        {
+          "id": "contact-name",
+          "top": 850.53125
+        },
+        {
+          "id": "contact-email",
+          "top": 850.53125
+        },
+        {
+          "id": "contact-company",
+          "top": 1010.53125
+        },
+        {
+          "id": "contact-website",
+          "top": 1010.53125
+        },
+        {
+          "id": "contact-role",
+          "top": 1170.53125
+        }
+      ],
+      "inputsAfter": [
+        {
+          "id": "contact-name",
+          "top": 449.53125
+        },
+        {
+          "id": "contact-email",
+          "top": 449.53125
+        },
+        {
+          "id": "contact-company",
+          "top": 609.53125
+        },
+        {
+          "id": "contact-website",
+          "top": 609.53125
+        },
+        {
+          "id": "contact-role",
+          "top": 769.53125
+        }
+      ]
+    },
+    {
+      "test": "honeypot stays hidden and out of tab order",
+      "passed": true,
+      "width": 1440
+    },
+    {
+      "test": "mocked failure retains values",
+      "passed": true,
+      "width": 1440
+    },
+    {
+      "test": "mocked receipt has no page overflow",
+      "passed": true,
+      "width": 1440
+    },
+    {
+      "test": "responsibility rows align",
+      "passed": true,
+      "width": 1440,
+      "deltas": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "test": "skip link receives keyboard focus",
+      "passed": true,
+      "width": 1440
+    },
+    {
+      "test": "skip link moves focus into main",
+      "passed": true,
+      "width": 1440
+    },
+    {
+      "test": "FAQ keyboard expands",
+      "passed": true,
+      "width": 1440
+    },
+    {
+      "test": "expanded FAQ accessible",
+      "passed": true,
+      "width": 1440
+    },
+    {
+      "test": "required fields announced",
+      "passed": true,
+      "width": 1920
+    },
+    {
+      "test": "field errors preserve relative input positions",
+      "passed": true,
+      "width": 1920,
+      "inputsBefore": [
+        {
+          "id": "contact-name",
+          "top": 850.53125
+        },
+        {
+          "id": "contact-email",
+          "top": 850.53125
+        },
+        {
+          "id": "contact-company",
+          "top": 1010.53125
+        },
+        {
+          "id": "contact-website",
+          "top": 1010.53125
+        },
+        {
+          "id": "contact-role",
+          "top": 1170.53125
+        }
+      ],
+      "inputsAfter": [
+        {
+          "id": "contact-name",
+          "top": 449.53125
+        },
+        {
+          "id": "contact-email",
+          "top": 449.53125
+        },
+        {
+          "id": "contact-company",
+          "top": 609.53125
+        },
+        {
+          "id": "contact-website",
+          "top": 609.53125
+        },
+        {
+          "id": "contact-role",
+          "top": 769.53125
+        }
+      ]
+    },
+    {
+      "test": "honeypot stays hidden and out of tab order",
+      "passed": true,
+      "width": 1920
+    },
+    {
+      "test": "mocked failure retains values",
+      "passed": true,
+      "width": 1920
+    },
+    {
+      "test": "mocked receipt has no page overflow",
+      "passed": true,
+      "width": 1920
+    },
+    {
+      "test": "responsibility rows align",
+      "passed": true,
+      "width": 1920,
+      "deltas": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "test": "skip link receives keyboard focus",
+      "passed": true,
+      "width": 1920
+    },
+    {
+      "test": "skip link moves focus into main",
+      "passed": true,
+      "width": 1920
+    },
+    {
+      "test": "FAQ keyboard expands",
+      "passed": true,
+      "width": 1920
+    },
+    {
+      "test": "expanded FAQ accessible",
+      "passed": true,
+      "width": 1920
+    },
+    {
+      "test": "content remains visible without JavaScript",
+      "passed": true,
+      "route": "/"
+    },
+    {
+      "test": "content remains visible without JavaScript",
+      "passed": true,
+      "route": "/planning-workspace"
+    }
+  ],
+  "runtimeErrors": [],
+  "summary": {
+    "accessibilityPages": 16,
+    "violations": 0,
+    "interactionChecks": 96,
+    "failedInteractions": 0,
+    "runtimeErrors": 0
+  }
+}

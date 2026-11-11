@@ -1,0 +1,62 @@
+{
+  "baseline": "47827ab",
+  "applicationChange": "app/globals.css",
+  "protectedSourcesUnchanged": true,
+  "proofAssets": [
+    {
+      "path": "docs/proof-originals/production-commitments.png",
+      "beforeSHA256": "eabe38ac78c27dd022572bd7c5fd59bf6ba37bfd1447c03a523fdd76a4d671ae",
+      "afterSHA256": "eabe38ac78c27dd022572bd7c5fd59bf6ba37bfd1447c03a523fdd76a4d671ae",
+      "unchanged": true
+    },
+    {
+      "path": "docs/proof-originals/production-detail.png",
+      "beforeSHA256": "b950f319e8752057a5377a83ed56d0fcdaaf09ae49ba4b7aa1f7e88694cd19b7",
+      "afterSHA256": "b950f319e8752057a5377a83ed56d0fcdaaf09ae49ba4b7aa1f7e88694cd19b7",
+      "unchanged": true
+    },
+    {
+      "path": "docs/proof-originals/supply-allocation.png",
+      "beforeSHA256": "a0b590dd55a6e52990fb4aa9fc1eab3eacc3ff9ef628f923552d324698498af8",
+      "afterSHA256": "a0b590dd55a6e52990fb4aa9fc1eab3eacc3ff9ef628f923552d324698498af8",
+      "unchanged": true
+    },
+    {
+      "path": "docs/proof-originals/supply-intervention.png",
+      "beforeSHA256": "bf55794b0a2c4a6b5683e95fc9001b2ee04c4bbcc3c860d305fb272c9ac1cfa0",
+      "afterSHA256": "bf55794b0a2c4a6b5683e95fc9001b2ee04c4bbcc3c860d305fb272c9ac1cfa0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/proof-originals/supply-responsibilities.png",
+      "beforeSHA256": "d7cbdcc6a1f1d0f101e4d4c561657cbc461d1e5899b39d6cdf04b7e6d40b6edd",
+      "afterSHA256": "d7cbdcc6a1f1d0f101e4d4c561657cbc461d1e5899b39d6cdf04b7e6d40b6edd",
+      "unchanged": true
+    },
+    {
+      "path": "docs/proof-originals/supply-weekly-brief.png",
+      "beforeSHA256": "9c4e92baa8bc6630664e8e75c75ade5498383e595f6b9edb0db097a5f16ff9c7",
+      "afterSHA256": "9c4e92baa8bc6630664e8e75c75ade5498383e595f6b9edb0db097a5f16ff9c7",
+      "unchanged": true
+    },
+    {
+      "path": "public/images/proof/production-cash-exposure.png",
+      "beforeSHA256": "8a879b465bf19172cda276ec59897226af131297888457a0d7ea2d75aa124748",
+      "afterSHA256": "8a879b465bf19172cda276ec59897226af131297888457a0d7ea2d75aa124748",
+      "unchanged": true
+    },
+    {
+      "path": "public/images/proof/production-demand-evidence.png",
+      "beforeSHA256": "d8714992a7e6911212700eaaf5b89eb940ed1df651cab2cc8f0bdea64e2047cf",
+      "afterSHA256": "d8714992a7e6911212700eaaf5b89eb940ed1df651cab2cc8f0bdea64e2047cf",
+      "unchanged": true
+    },
+    {
+      "path": "public/images/proof/supply-managed-cycle.png",
+      "beforeSHA256": "4d986666c43ae771397442e07418eb86180613990c5770f7183d382c4acf366b",
+      "afterSHA256": "4d986666c43ae771397442e07418eb86180613990c5770f7183d382c4acf366b",
+      "unchanged": true
+    }
+  ],
+  "allProofBytesUnchanged": true
+}

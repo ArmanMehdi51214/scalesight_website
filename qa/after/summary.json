@@ -1,0 +1,37 @@
+{
+  "layout": {
+    "pages": 64,
+    "badStatus": 0,
+    "horizontalOverflow": 0,
+    "imagesWithoutSpace": 0,
+    "mobileSmallTapTargets": 0,
+    "alignment": 0,
+    "unequalCards": 0,
+    "anchorRisks": 0,
+    "failedInteractions": 0,
+    "runtimeErrors": 0,
+    "lineLengthAdvisories": 0
+  },
+  "accessibilityAndInteractions": {
+    "accessibilityPages": 16,
+    "violations": 0,
+    "interactionChecks": 96,
+    "failedInteractions": 0,
+    "runtimeErrors": 0
+  },
+  "preservedRouteSnapshots": 64,
+  "protectedSourcesUnchanged": true,
+  "proofImageBytesUnchanged": true,
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "contactTests": 15,
+    "staleContentHits": 0
+  },
+  "sourceCommits": [
+    "4739b2f",
+    "b78283d",
+    "dd1bc52"
+  ]
+}

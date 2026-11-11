@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScaleSight layout review</title>
+<style>
+  :root { color-scheme: light; font: 16px/1.5 system-ui, sans-serif; color: #10192e; background: #f4f6fc; }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  header { position: sticky; top: 0; z-index: 1; background: #fff; border-bottom: 1px solid #dce2ed; padding: 16px 24px; }
+  h1 { font-size: 20px; margin: 0 0 12px; }
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+  select, a { min-height: 44px; }
+  select { font: inherit; padding: 8px; border: 1px solid #dce2ed; border-radius: 8px; }
+  a { display: inline-flex; align-items: center; color: #4f49f3; }
+  main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 24px; max-width: 2000px; margin: auto; }
+  figure { margin: 0; min-width: 0; }
+  figcaption { font-weight: 600; margin-bottom: 12px; }
+  img { display: block; width: 100%; height: auto; border: 1px solid #dce2ed; }
+  :focus-visible { outline: 3px solid #4f49f3; outline-offset: 4px; }
+  @media (max-width: 700px) { main { grid-template-columns: 1fr; } }
+</style>
+<header>
+  <h1>ScaleSight layout review</h1>
+  <div class="controls">
+    <label>Route <select id="route">
+      <option value="home">Home</option><option value="planning-workspace">Planning workspace</option>
+      <option value="how-we-work">How we work</option><option value="examples">Examples</option>
+      <option value="30-day-planning-pilot">30-day pilot</option><option value="about">About</option>
+      <option value="contact">Contact</option><option value="privacy">Privacy</option>
+    </select></label>
+    <label>Width <select id="width"><option>360</option><option>390</option><option>768</option><option>820</option><option>1024</option><option>1180</option><option selected>1440</option><option>1920</option></select></label>
+    <a href="findings-before.md">Original findings</a><a href="final-report.md">Final report</a>
+  </div>
+</header>
+<main>
+  <figure><figcaption>Before · <a id="before-link">Open original screenshot</a></figcaption><img id="before" alt="Website layout before polish"></figure>
+  <figure><figcaption>After · <a id="after-link">Open original screenshot</a></figcaption><img id="after" alt="Website layout after polish"></figure>
+</main>
+<script>
+  const route = document.getElementById("route");
+  const width = document.getElementById("width");
+  function update() {
+    for (const phase of ["before", "after"]) {
+      const src = `${phase}/${route.value}-${width.value}.png`;
+      document.getElementById(phase).src = src;
+      document.getElementById(`${phase}-link`).href = src;
+    }
+  }
+  route.addEventListener("change", update);
+  width.addEventListener("change", update);
+  update();
+</script>
+</html>
