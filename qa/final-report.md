@@ -69,3 +69,11 @@ No runtime libraries, network integrations, animations or tracking were added. I
 - The final QA commit contains the finished screenshots, interaction audit, comparison gallery and this report.
 
 Changes remain local for review; no push or deployment was performed for this polish pass.
+
+## Follow-up: homepage hero centering
+
+The owner identified an alignment gap in the centered homepage hero: its width-constrained eyebrow had no automatic inline margins, and the supporting-point flex row used its default start alignment. The earlier mobile override also switched the centered hero to left alignment.
+
+The eyebrow now shares the heading's center line. The supporting points are centered as a group on larger screens and individually stacked/centered on phones. The homepage heading, body and actions retain a coherent centered alignment at all widths; the illustrated brief below retains its deliberate reading alignment. Other pages keep their existing alignment.
+
+The layout audit now measures centered hero text and every wrapped action/supporting-point row, instead of excluding centered compositions. The refreshed `after/` captures and reports cover all eight active routes and all eight responsive widths. Copy, links, metadata, proof assets and interaction logic remain unchanged.

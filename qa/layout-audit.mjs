@@ -14,7 +14,7 @@ await fs.mkdir(output, { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.QA_BROWSER_PATH, headless: true, args: ["--no-sandbox", "--disable-dev-shm-usage"] });
 const context = await browser.newContext({ deviceScaleFactor: 1, reducedMotion: "reduce" });
 const page = await context.newPage();
-const report = { phase, base, widths, routes, pages: [], interactions: [], errors: [], notes: ["Line lengths are estimates using the font's measured alphabet, not claims about exact character wraps. Short card/caption text is advisory.", "Alignment checks use structural roles: shared containers, section introductions and proof badge/caption edges; deliberate centered and nested reading layouts are excluded.", "Tap checks include all visible links, buttons, summaries and checkbox labels. Hidden dialogs/skip links are checked in their open/focused state."] };
+const report = { phase, base, widths, routes, pages: [], interactions: [], errors: [], notes: ["Line lengths are estimates using the font's measured alphabet, not claims about exact character wraps. Short card/caption text is advisory.", "Alignment checks use structural roles: shared containers, section introductions and proof badge/caption edges. Centered hero text and each wrapped action/supporting-point row are measured against the hero center line; nested reading layouts are intentional.", "Tap checks include all visible links, buttons, summaries and checkbox labels. Hidden dialogs/skip links are checked in their open/focused state."] };
 page.on("pageerror", error => report.errors.push(error.message));
 
 async function measure() {
@@ -45,6 +45,30 @@ async function measure() {
       const centered = getComputedStyle(el).textAlign === "center";
       if (!centered) for (const child of children) if (Math.abs(rect(child).left - rect(el).left) > 1) alignment.push(issue(child, { expectedLeft: rect(el).left, left: rect(child).left }));
     }
+    const heroCenters = [];
+    for (const hero of document.querySelectorAll(".hero-center .hero-copy")) {
+      const expectedCenter = (rect(hero).left + rect(hero).right) / 2;
+      for (const child of hero.querySelectorAll(":scope > .eyebrow,:scope > h1,:scope > .section-copy")) {
+        const center = (rect(child).left + rect(child).right) / 2;
+        const passed = Math.abs(center - expectedCenter) <= 1 && getComputedStyle(child).textAlign === "center";
+        heroCenters.push(issue(child, { expectedCenter, center, passed }));
+        if (!passed) alignment.push(issue(child, { expectedCenter, center }));
+      }
+      for (const group of hero.querySelectorAll(":scope > .hero-actions,:scope > .hero-micro")) {
+        const rows = new Map();
+        for (const child of [...group.children].filter(visible)) {
+          const top = Math.round(rect(child).top);
+          const row = rows.get(top) || [];
+          row.push(child); rows.set(top, row);
+        }
+        for (const row of rows.values()) {
+          const center = (Math.min(...row.map(el => rect(el).left)) + Math.max(...row.map(el => rect(el).right))) / 2;
+          const passed = Math.abs(center - expectedCenter) <= 1;
+          heroCenters.push(issue(group, { expectedCenter, center, passed }));
+          if (!passed) alignment.push(issue(group, { expectedCenter, center }));
+        }
+      }
+    }
     for (const el of document.querySelectorAll(".proof")) for (const child of el.querySelectorAll(":scope > .proof-topline,:scope > figcaption")) if (Math.abs(rect(child).left - rect(el).left) > 1) alignment.push(issue(child));
     const lineLengths = [];
     const canvas = document.createElement("canvas");
@@ -74,7 +98,7 @@ async function measure() {
     const headerHeight = rect(header).height;
     const targets = [...document.querySelectorAll("main[id],main [id]")].filter(el => visible(el) && !el.matches("input,textarea,dialog,form") && !el.closest("dialog"));
     const anchors = targets.filter(el => parseFloat(getComputedStyle(el).scrollMarginTop) < headerHeight + 8).map(el => issue(el, { margin: getComputedStyle(el).scrollMarginTop, headerHeight }));
-    return { pageOverflow: document.documentElement.scrollWidth > viewport, overflow, imagesWithoutSpace, taps, alignment, lineLengths, cards, anchors, h1: document.querySelectorAll("h1").length, headerHeight, content: document.querySelector("main").innerText, links: [...document.querySelectorAll("a[href]")].map(el => [el.textContent.trim(), el.getAttribute("href")]), metadata: [...document.querySelectorAll("title,meta[name=description],meta[name=robots],link[rel=canonical]")].map(el => el.outerHTML) };
+    return { pageOverflow: document.documentElement.scrollWidth > viewport, overflow, imagesWithoutSpace, taps, alignment, heroCenters, lineLengths, cards, anchors, h1: document.querySelectorAll("h1").length, headerHeight, content: document.querySelector("main").innerText, links: [...document.querySelectorAll("a[href]")].map(el => [el.textContent.trim(), el.getAttribute("href")]), metadata: [...document.querySelectorAll("title,meta[name=description],meta[name=robots],link[rel=canonical]")].map(el => el.outerHTML) };
   });
 }
 try {

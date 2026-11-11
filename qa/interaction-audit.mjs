@@ -24,6 +24,9 @@ try {
       });
       const geometry = await page.locator(".proof-img").evaluateAll(images => images.map(img => ({ src: img.getAttribute("src"), width: img.getBoundingClientRect().width, height: img.getBoundingClientRect().height })));
       check("proof images have rendered area", geometry.every(img => img.width > 0 && img.height > 0), { route, width, geometry });
+      if (route === "/") {
+        await page.locator(".hero-copy").screenshot({ path: `qa/after/home-hero-${width}.png` });
+      }
       if (["/planning-workspace", "/examples"].includes(route)) {
         await page.locator(".proof").first().screenshot({ path: `qa/after/proof-${route.slice(1)}-${width}.png` });
       }

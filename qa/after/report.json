@@ -32,6 +32,64 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [
+        {
+          "element": "p.eyebrow",
+          "text": "MANAGED PLANNING FOR GROWING FOOD & BEVERAGE BRANDS",
+          "expectedCenter": 180,
+          "center": 180,
+          "passed": true
+        },
+        {
+          "element": "h1.",
+          "text": "Before your next production run, know what deserves the cash.",
+          "expectedCenter": 180,
+          "center": 180,
+          "passed": true
+        },
+        {
+          "element": "p.section-copy",
+          "text": "ScaleSight maintains the analysis behind your inventory decisions and prepares weekly, specialist-re",
+          "expectedCenter": 180,
+          "center": 180,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 180,
+          "center": 180,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 180,
+          "center": 180,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 180,
+          "center": 180,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 180,
+          "center": 179.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 180,
+          "center": 179.9921875,
+          "passed": true
+        }
+      ],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -173,6 +231,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -298,6 +357,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -411,6 +471,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -528,6 +589,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -633,6 +695,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -734,6 +797,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -839,6 +903,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -984,6 +1049,64 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [
+        {
+          "element": "p.eyebrow",
+          "text": "MANAGED PLANNING FOR GROWING FOOD & BEVERAGE BRANDS",
+          "expectedCenter": 195,
+          "center": 195,
+          "passed": true
+        },
+        {
+          "element": "h1.",
+          "text": "Before your next production run, know what deserves the cash.",
+          "expectedCenter": 195,
+          "center": 195,
+          "passed": true
+        },
+        {
+          "element": "p.section-copy",
+          "text": "ScaleSight maintains the analysis behind your inventory decisions and prepares weekly, specialist-re",
+          "expectedCenter": 195,
+          "center": 195,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 195,
+          "center": 195,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 195,
+          "center": 195,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 195,
+          "center": 195,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 195,
+          "center": 194.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 195,
+          "center": 194.9921875,
+          "passed": true
+        }
+      ],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -1125,6 +1248,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -1250,6 +1374,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -1363,6 +1488,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -1480,6 +1606,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -1585,6 +1712,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -1686,6 +1814,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -1791,6 +1920,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -1936,6 +2066,43 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [
+        {
+          "element": "p.eyebrow",
+          "text": "MANAGED PLANNING FOR GROWING FOOD & BEVERAGE BRANDS",
+          "expectedCenter": 384,
+          "center": 384,
+          "passed": true
+        },
+        {
+          "element": "h1.",
+          "text": "Before your next production run, know what deserves the cash.",
+          "expectedCenter": 384,
+          "center": 384,
+          "passed": true
+        },
+        {
+          "element": "p.section-copy",
+          "text": "ScaleSight maintains the analysis behind your inventory decisions and prepares weekly, specialist-re",
+          "expectedCenter": 384,
+          "center": 384,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 384,
+          "center": 383.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 384,
+          "center": 384,
+          "passed": true
+        }
+      ],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -2077,6 +2244,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -2202,6 +2370,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -2315,6 +2484,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -2432,6 +2602,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -2537,6 +2708,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -2638,6 +2810,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -2743,6 +2916,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -2888,6 +3062,43 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [
+        {
+          "element": "p.eyebrow",
+          "text": "MANAGED PLANNING FOR GROWING FOOD & BEVERAGE BRANDS",
+          "expectedCenter": 410,
+          "center": 410,
+          "passed": true
+        },
+        {
+          "element": "h1.",
+          "text": "Before your next production run, know what deserves the cash.",
+          "expectedCenter": 410,
+          "center": 410,
+          "passed": true
+        },
+        {
+          "element": "p.section-copy",
+          "text": "ScaleSight maintains the analysis behind your inventory decisions and prepares weekly, specialist-re",
+          "expectedCenter": 410,
+          "center": 410,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 410,
+          "center": 409.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 410,
+          "center": 410,
+          "passed": true
+        }
+      ],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -3029,6 +3240,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -3154,6 +3366,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -3267,6 +3480,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -3384,6 +3598,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -3489,6 +3704,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -3590,6 +3806,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -3695,6 +3912,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -3840,6 +4058,43 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [
+        {
+          "element": "p.eyebrow",
+          "text": "MANAGED PLANNING FOR GROWING FOOD & BEVERAGE BRANDS",
+          "expectedCenter": 512,
+          "center": 512,
+          "passed": true
+        },
+        {
+          "element": "h1.",
+          "text": "Before your next production run, know what deserves the cash.",
+          "expectedCenter": 512,
+          "center": 511.9921875,
+          "passed": true
+        },
+        {
+          "element": "p.section-copy",
+          "text": "ScaleSight maintains the analysis behind your inventory decisions and prepares weekly, specialist-re",
+          "expectedCenter": 512,
+          "center": 511.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 512,
+          "center": 511.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 512,
+          "center": 512,
+          "passed": true
+        }
+      ],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -3981,6 +4236,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -4106,6 +4362,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -4219,6 +4476,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -4336,6 +4594,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -4441,6 +4700,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -4542,6 +4802,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -4647,6 +4908,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -4792,6 +5054,43 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [
+        {
+          "element": "p.eyebrow",
+          "text": "MANAGED PLANNING FOR GROWING FOOD & BEVERAGE BRANDS",
+          "expectedCenter": 590,
+          "center": 590,
+          "passed": true
+        },
+        {
+          "element": "h1.",
+          "text": "Before your next production run, know what deserves the cash.",
+          "expectedCenter": 590,
+          "center": 589.9921875,
+          "passed": true
+        },
+        {
+          "element": "p.section-copy",
+          "text": "ScaleSight maintains the analysis behind your inventory decisions and prepares weekly, specialist-re",
+          "expectedCenter": 590,
+          "center": 590,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 590,
+          "center": 589.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 590,
+          "center": 590,
+          "passed": true
+        }
+      ],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -4933,6 +5232,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -5058,6 +5358,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -5171,6 +5472,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -5288,6 +5590,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -5393,6 +5696,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -5494,6 +5798,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -5599,6 +5904,7 @@
       "imagesWithoutSpace": [],
       "taps": [],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -5751,6 +6057,43 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [
+        {
+          "element": "p.eyebrow",
+          "text": "MANAGED PLANNING FOR GROWING FOOD & BEVERAGE BRANDS",
+          "expectedCenter": 720,
+          "center": 720,
+          "passed": true
+        },
+        {
+          "element": "h1.",
+          "text": "Before your next production run, know what deserves the cash.",
+          "expectedCenter": 720,
+          "center": 720,
+          "passed": true
+        },
+        {
+          "element": "p.section-copy",
+          "text": "ScaleSight maintains the analysis behind your inventory decisions and prepares weekly, specialist-re",
+          "expectedCenter": 720,
+          "center": 719.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 720,
+          "center": 719.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 720,
+          "center": 720,
+          "passed": true
+        }
+      ],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -5899,6 +6242,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -6031,6 +6375,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -6151,6 +6496,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -6275,6 +6621,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -6387,6 +6734,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -6495,6 +6843,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -6607,6 +6956,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -6759,6 +7109,43 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [
+        {
+          "element": "p.eyebrow",
+          "text": "MANAGED PLANNING FOR GROWING FOOD & BEVERAGE BRANDS",
+          "expectedCenter": 960,
+          "center": 960,
+          "passed": true
+        },
+        {
+          "element": "h1.",
+          "text": "Before your next production run, know what deserves the cash.",
+          "expectedCenter": 960,
+          "center": 960,
+          "passed": true
+        },
+        {
+          "element": "p.section-copy",
+          "text": "ScaleSight maintains the analysis behind your inventory decisions and prepares weekly, specialist-re",
+          "expectedCenter": 960,
+          "center": 959.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-actions",
+          "text": "See an illustrative decisionExplore the 30-day pilot",
+          "expectedCenter": 960,
+          "center": 959.9921875,
+          "passed": true
+        },
+        {
+          "element": "div.hero-micro",
+          "text": "Maintained analysisSpecialist-reviewed recommendationsYour team’s final call",
+          "expectedCenter": 960,
+          "center": 960,
+          "passed": true
+        }
+      ],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -6907,6 +7294,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -7039,6 +7427,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -7159,6 +7548,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -7283,6 +7673,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -7395,6 +7786,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -7503,6 +7895,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -7615,6 +8008,7 @@
         }
       ],
       "alignment": [],
+      "heroCenters": [],
       "lineLengths": [],
       "cards": [],
       "anchors": [],
@@ -8016,7 +8410,7 @@
   "errors": [],
   "notes": [
     "Line lengths are estimates using the font's measured alphabet, not claims about exact character wraps. Short card/caption text is advisory.",
-    "Alignment checks use structural roles: shared containers, section introductions and proof badge/caption edges; deliberate centered and nested reading layouts are excluded.",
+    "Alignment checks use structural roles: shared containers, section introductions and proof badge/caption edges. Centered hero text and each wrapped action/supporting-point row are measured against the hero center line; nested reading layouts are intentional.",
     "Tap checks include all visible links, buttons, summaries and checkbox labels. Hidden dialogs/skip links are checked in their open/focused state."
   ],
   "partners": {

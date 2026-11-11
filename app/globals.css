@@ -311,8 +311,11 @@ main[id], main [id] {
 .hero-center {
   text-align: center;
 }
-.hero-center .hero-copy, .hero-center h1, .hero-center .section-copy {
+.hero-center .hero-copy, .hero-center .hero-copy > .eyebrow, .hero-center h1, .hero-center .section-copy {
   margin-inline: auto;
+}
+.hero-center .hero-copy > .eyebrow {
+  text-wrap: balance;
 }
 .eyebrow {
   text-transform: uppercase;
@@ -371,6 +374,9 @@ main[id], main [id] {
 }
 .hero-micro svg {
   color: var(--accent);
+}
+.hero-center .hero-micro {
+  justify-content: center;
 }
 .section, .example-story {
   padding-block: var(--section-space);
@@ -1438,11 +1444,9 @@ main[id], main [id] {
   }
 }
 @media (max-width: 767px) {
-  .hero-center {
-    text-align: left;
-  }
-  .hero-center .hero-copy, .hero-center h1, .hero-center .section-copy {
-    margin-inline: 0;
+  .hero-center .hero-micro {
+    flex-direction: column;
+    align-items: center;
   }
   .hero-actions {
     flex-direction: column;
