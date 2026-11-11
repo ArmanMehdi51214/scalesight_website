@@ -1,0 +1,34 @@
+[
+  {
+    "route": "/",
+    "width": 360,
+    "background": "rgba(0, 0, 0, 0)",
+    "gradient": "linear-gradient(120deg, rgb(11, 22, 43), rgb(24, 42, 73))",
+    "viewport": 360,
+    "overflow": false
+  },
+  {
+    "route": "/30-day-planning-pilot",
+    "width": 360,
+    "background": "rgb(16, 29, 53)",
+    "gradient": "none",
+    "viewport": 360,
+    "overflow": false
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "background": "rgba(0, 0, 0, 0)",
+    "gradient": "linear-gradient(120deg, rgb(11, 22, 43), rgb(24, 42, 73))",
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "route": "/30-day-planning-pilot",
+    "width": 1440,
+    "background": "rgb(16, 29, 53)",
+    "gradient": "none",
+    "viewport": 1440,
+    "overflow": false
+  }
+]

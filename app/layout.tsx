@@ -1,54 +1,53 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { getRouteMetadata } from "@/lib/site-metadata";
+import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
 import { siteConfig } from "@/lib/site-config";
-import AnalyticsListener from "@/components/analytics-listener";
-
 import "./globals.css";
-import "./interior-pages.css";
-
 const geist = localFont({
   src: "./fonts/Geist-Regular.ttf",
   variable: "--font-geist-sans",
+  display: "swap",
 });
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://scalesight.org"),
-  ...getRouteMetadata("home"),
+  metadataBase: new URL(siteConfig.url),
+  title: "ScaleSight | Managed Inventory Planning for Food & Beverage",
+  description:
+    "Managed analytical planning for growing food and beverage brands. Maintained analysis, compared options and weekly specialist-reviewed recommendations.",
   robots: {
-    index: !siteConfig.staging,
-    follow: !siteConfig.staging,
-    googleBot: {
-      index: !siteConfig.staging,
-      follow: !siteConfig.staging,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    index: siteConfig.publicationApproved && siteConfig.privacyApproved,
+    follow: true,
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "ScaleSight | Managed Planning for Consumer Brands",
-    description: "Maintained demand, inventory and supply analysis with reviewed recommendations on quantity, timing and cash. Explore a focused planning pilot.",
-    images: ["/logo.png"],
-  },
-  icons: {
-    icon: "/favicon.png",
-  },
+  icons: { icon: "/favicon.png" },
 };
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "ScaleSight",
+    url: siteConfig.url,
+    description:
+      "Managed analytical inventory and supply planning for food and beverage brands.",
+  };
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{ __html: 'document.documentElement.dataset.js="true";' }} /></head>
+    <html lang="en">
       <body className={geist.variable}>
-        <a className="skip-link" href="#main-content">Skip to main content</a>
-        {children}
-        <AnalyticsListener />
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
+        <SiteHeader />
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
+        <SiteFooter />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
+          }}
+        />
       </body>
     </html>
   );

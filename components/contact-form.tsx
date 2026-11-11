@@ -1,103 +1,248 @@
 "use client";
-
-import { FormEvent, ReactNode, useRef, useState } from "react";
 import Link from "next/link";
-import { trackEvent } from "@/lib/analytics";
-import BookingPanel from "@/components/booking-panel";
-
-type Intent = "planning" | "pilot" | "partner";
-type FormValues = { name: string; email: string; brand: string; website: string; role: string; channels: string[]; decision: string; companyFax: string };
-type Status = "idle" | "sending" | "success" | "failure";
-const initialValues: FormValues = { name: "", email: "", brand: "", website: "", role: "", channels: [], decision: "", companyFax: "" };
-
-export default function ContactForm({ intent }: { intent: Intent }) {
-  const [values, setValues] = useState(initialValues);
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [status, setStatus] = useState<Status>("idle");
-  const sending = useRef(false);
-  const started = useRef(false);
-  const partner = intent === "partner";
-  function update<K extends keyof FormValues>(key: K, value: FormValues[K]) {
-    setValues((current) => ({ ...current, [key]: value }));
-    setErrors((current) => ({ ...current, [key]: "" }));
-  }
-
+import { useRef, useState, type FormEvent } from "react";
+import { ArrowUpRight } from "lucide-react";
+import {
+  salesChannels,
+  validateEnquiry,
+  type FieldErrors,
+} from "@/lib/contact-validation";
+export default function ContactForm({
+  intent,
+  email,
+  bookingUrl,
+}: {
+  intent: string;
+  email: string;
+  bookingUrl: string;
+}) {
+  const [errors, setErrors] = useState<FieldErrors>({});
+  const [error, setError] = useState("");
+  const [pending, setPending] = useState(false);
+  const [received, setReceived] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (sending.current) return;
-    const nextErrors: Record<string, string> = {};
-    if (!values.name.trim()) nextErrors.name = "Enter your name.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())) nextErrors.email = values.email.trim() ? "Enter a valid email address." : "Enter your email address.";
-    if (!values.brand.trim()) nextErrors.brand = partner ? "Enter your company." : "Enter your brand or company.";
-    if (values.website.trim()) {
-      try {
-        const website = /^https?:\/\//i.test(values.website) ? values.website : `https://${values.website}`;
-        if (!new URL(website).hostname.includes(".")) throw new Error();
-      } catch { nextErrors.website = "Enter a valid website address."; }
-    }
-    setErrors(nextErrors);
-    if (Object.keys(nextErrors).length) {
-      setStatus("idle");
+    if (pending) return;
+    const values = new FormData(event.currentTarget);
+    const payload = {
+      ...Object.fromEntries(values),
+      channels: values.getAll("channels"),
+    };
+    const validation = validateEnquiry(payload);
+    setErrors(validation.errors);
+    setError("");
+    if (Object.keys(validation.errors).length) {
+      const key = Object.keys(validation.errors)[0];
+      form.current?.querySelector<HTMLInputElement>(`[name="${key}"]`)?.focus();
       return;
     }
-    sending.current = true;
-    setStatus("sending");
-    const idempotencyKey = crypto.randomUUID();
+    setPending(true);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Idempotency-Key": idempotencyKey },
-        body: JSON.stringify({ ...values, intent }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
-      const result = await response.json();
-      if (response.ok && result.ok) {
-        setStatus("success");
-        trackEvent("contact_submit_success", { route: "/contact", ctaLocation: "contact-form" });
+      const body = await response.json();
+      if (!response.ok || body.received !== true) {
+        setErrors(body.errors || {});
+        setError(
+          body.error ||
+            "We could not send your enquiry. Please try again or contact us directly by email.",
+        );
       } else {
-        setErrors(result.errors || {});
-        setStatus("failure");
+        setReceived(true);
       }
     } catch {
-      setStatus("failure");
+      setError(
+        "We could not send your enquiry. Please try again or contact us directly by email.",
+      );
     } finally {
-      sending.current = false;
+      setPending(false);
     }
   }
-
-  const fieldProps = (key: keyof FormValues) => ({
-    id: key,
-    "aria-invalid": Boolean(errors[key]),
-    "aria-describedby": errors[key] ? `${key}-error` : undefined,
-    onFocus: () => {
-      if (!started.current) {
-        started.current = true;
-        trackEvent("contact_form_start", { route: "/contact", ctaLocation: "contact-form" });
-      }
-    },
-  });
-
-  if (status === "success") return <BookingPanel name={values.name} email={values.email} />;
-
-  const field = (key: keyof FormValues, label: string, control: ReactNode) => <div className="field-group" key={key}><label htmlFor={key}>{label}{["name", "email", "brand"].includes(key) ? <span aria-hidden="true"> *</span> : null}</label>{control}{errors[key] ? <p id={`${key}-error`} className="text-sm text-rose-300" role="alert">{errors[key]}</p> : null}</div>;
-
-  return <form noValidate onSubmit={submit} className="grid gap-5 md:grid-cols-2" aria-busy={status === "sending"}>
-    <p className="sr-only" aria-live="polite">{status === "sending" ? "Sending…" : ""}</p>
-    <div className="md:col-span-2" aria-live="polite" role={status === "failure" || Object.keys(errors).length ? "alert" : "status"}>
-      {Object.values(errors).filter(Boolean).length ? <div className="mb-4 rounded-xl border border-rose-400/40 p-4 text-sm text-rose-200"><p className="font-semibold">Please check the following:</p><ul className="mt-2 list-disc pl-5">{Object.entries(errors).filter(([, message]) => message).map(([key, message]) => <li key={key}><a className="underline" href={`#${key}`}>{message}</a></li>)}</ul></div> : null}
-      {status === "failure" ? <p className="mb-4 text-sm text-rose-200">We could not send your enquiry. Please try again or email us directly.</p> : null}
-    </div>
-    {field("name", "Name", <input {...fieldProps("name")} className="field-input" name="name" autoComplete="name" placeholder="e.g. Sam Lee" value={values.name} onChange={(event) => update("name", event.target.value)} required />)}
-    {field("email", "Work email", <input {...fieldProps("email")} className="field-input" name="email" type="email" autoComplete="email" placeholder="e.g. sam@brand.com" value={values.email} onChange={(event) => update("email", event.target.value)} required />)}
-    {field("brand", partner ? "Company" : "Brand or company", <input {...fieldProps("brand")} className="field-input" name="brand" autoComplete="organization" placeholder="e.g. Your brand" value={values.brand} onChange={(event) => update("brand", event.target.value)} required />)}
-    {field("website", "Website", <input {...fieldProps("website")} className="field-input" name="website" type="text" autoComplete="url" inputMode="url" placeholder="e.g. brand.com" value={values.website} onChange={(event) => update("website", event.target.value)} />)}
-    {field("role", "Your role", <input {...fieldProps("role")} className="field-input" name="role" placeholder="e.g. Founder or Operations lead" value={values.role} onChange={(event) => update("role", event.target.value)} />)}
-    <fieldset className="field-group"><legend>Sales channels</legend><div className="mt-2 flex flex-wrap gap-x-4 gap-y-2">{["DTC", "Retail", "Wholesale", "Marketplace", "Other"].map((channel) => <label className="inline-flex min-h-11 items-center gap-2" key={channel}><input type="checkbox" checked={values.channels.includes(channel)} onChange={(event) => update("channels", event.target.checked ? [...values.channels, channel] : values.channels.filter((item) => item !== channel))} />{channel}</label>)}</div></fieldset>
-    {field("decision", partner ? "What support does your client need?" : "What decision is coming up?", <textarea {...fieldProps("decision")} className="field-input min-h-32" name="decision" placeholder="e.g. Next production run, timing and the choice you are weighing." value={values.decision} onChange={(event) => update("decision", event.target.value)} />)}
-    <div aria-hidden="true" className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden"><label htmlFor="companyFax">Fax</label><input id="companyFax" name="companyFax" tabIndex={-1} autoComplete="off" value={values.companyFax} onChange={(event) => update("companyFax", event.target.value)} /></div>
-    <input type="hidden" name="intent" value={intent} />
-    <div className="md:col-span-2">
-      <p className="text-sm leading-6 text-[var(--text-secondary)]">We use these details to respond to your enquiry. Read our <Link className="underline underline-offset-4" href="/privacy">Privacy Notice</Link>.</p>
-      <button className="primary-button mt-5 min-h-11 w-full justify-center md:w-auto" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Send planning enquiry"}</button>
-    </div>
-  </form>;
+  if (received)
+    return (
+      <div className="success-panel" role="status">
+        <h3>Thank you - your enquiry has been received.</h3>
+        {bookingUrl ? (
+          <>
+            <p>You can now choose a time for a conversation.</p>
+            <a
+              className="button"
+              href={bookingUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Choose a conversation time{" "}
+              <ArrowUpRight size={17} aria-hidden="true" />
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+            <p className="scope-note">
+              Your enquiry is received. A meeting is booked only after the
+              booking provider confirms your chosen time.
+            </p>
+          </>
+        ) : (
+          <p>
+            Online booking is currently unavailable. We will respond to your
+            enquiry to agree the next step.
+          </p>
+        )}
+      </div>
+    );
+  return (
+    <form
+      ref={form}
+      onSubmit={submit}
+      className="contact-form"
+      noValidate
+      aria-busy={pending}
+    >
+      <input type="hidden" name="intent" value={intent} />
+      <div hidden aria-hidden="true">
+        <input
+          name="companyContact"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+      {(
+        [
+          {
+            name: "name",
+            label: "Name",
+            type: "text",
+            required: true,
+            autocomplete: "name",
+            limit: 120,
+          },
+          {
+            name: "email",
+            label: "Work email",
+            type: "email",
+            required: true,
+            autocomplete: "email",
+            limit: 254,
+          },
+          {
+            name: "company",
+            label: "Brand or company",
+            type: "text",
+            required: true,
+            autocomplete: "organization",
+            limit: 160,
+          },
+          {
+            name: "website",
+            label: "Website",
+            type: "url",
+            required: false,
+            autocomplete: "url",
+            limit: 500,
+          },
+          {
+            name: "role",
+            label: "Role",
+            type: "text",
+            required: false,
+            autocomplete: "organization-title",
+            limit: 120,
+          },
+        ] as const
+      ).map((field) => (
+        <div className="form-field" key={field.name}>
+          <label htmlFor={`contact-${field.name}`}>
+            {field.label}
+            {field.required ? (
+              <span aria-hidden="true"> *</span>
+            ) : (
+              <span className="optional">Optional</span>
+            )}
+          </label>
+          <input
+            id={`contact-${field.name}`}
+            name={field.name}
+            type={field.type}
+            required={field.required}
+            autoComplete={field.autocomplete}
+            maxLength={field.limit}
+            aria-invalid={!!errors[field.name]}
+            aria-describedby={
+              errors[field.name] ? `${field.name}-error` : undefined
+            }
+          />
+          {errors[field.name] && (
+            <p className="field-error" id={`${field.name}-error`} role="alert">
+              {errors[field.name]}
+            </p>
+          )}
+        </div>
+      ))}
+      <fieldset className="channel-field form-wide">
+        <legend>
+          Sales channels <span className="optional">Optional</span>
+        </legend>
+        <div className="channel-options">
+          {salesChannels.map((channel) => (
+            <label key={channel}>
+              <input type="checkbox" name="channels" value={channel} />
+              {channel}
+            </label>
+          ))}
+        </div>
+        {errors.channels && (
+          <p className="field-error" role="alert">
+            {errors.channels}
+          </p>
+        )}
+      </fieldset>
+      <div className="form-field form-wide">
+        <label htmlFor="contact-decision">
+          What decision is coming up? <span className="optional">Optional</span>
+        </label>
+        <textarea
+          id="contact-decision"
+          name="decision"
+          maxLength={3000}
+          rows={4}
+          aria-invalid={!!errors.decision}
+          aria-describedby={errors.decision ? "decision-error" : undefined}
+        />
+        {errors.decision && (
+          <p id="decision-error" className="field-error" role="alert">
+            {errors.decision}
+          </p>
+        )}
+      </div>
+      <p className="privacy-line form-wide">
+        We use these details to respond to your enquiry. Read our{" "}
+        <Link href="/privacy">Privacy Notice</Link>.
+      </p>
+      {error && (
+        <div className="form-alert form-wide" role="alert">
+          {error}
+          {email && (
+            <>
+              {" "}
+              <a href={`mailto:${email}`}>Email {email}</a>
+            </>
+          )}
+        </div>
+      )}
+      <button type="submit" className="button form-wide" disabled={pending}>
+        {pending ? "Sending enquiry…" : "Send planning enquiry"}
+        <ArrowUpRight size={17} aria-hidden="true" />
+      </button>
+      <div className="confidential-note form-wide">
+        <strong>Please do not send confidential records in this form.</strong>
+        <p>
+          We first discuss the question and agree an appropriate method for
+          sharing any operational data required for a scoped engagement.
+        </p>
+      </div>
+    </form>
+  );
 }

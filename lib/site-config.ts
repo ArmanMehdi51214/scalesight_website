@@ -1,48 +1,21 @@
 export const siteConfig = {
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || undefined,
-  notificationDestination: process.env.CONTACT_NOTIFICATION_DESTINATION || undefined,
-  calendar: {
-    url: getCalendlyUrl(process.env.NEXT_PUBLIC_CALENDLY_URL),
-    durationLabel: "30-minute discovery call",
-  },
-  partners: {
-    active: process.env.NEXT_PUBLIC_PARTNERS_ACTIVE !== "false",
-  },
-  exampleDemoLinks: {
-    supplyTiming: {
-      enabled: false,
-      url: "https://scalesight-fishwife-demo.vercel.app/po-intervention",
-      label: "Open illustrative workspace",
-    },
-    launchDemand: {
-      enabled: false,
-      url: "https://scalesight-alecs-demo.vercel.app/incrementality",
-      label: "Open illustrative workspace",
-    },
-    sizeDepth: {
-      enabled: false,
-      url: "https://scalesight-understatement-demo.vercel.app/",
-      label: "Open illustrative workspace",
-    },
-  },
-  analytics: {
-    enabled:
-      process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === "true" &&
-      process.env.NEXT_PUBLIC_PRIVACY_NOTICE_APPROVED === "true",
-  },
-  staging: process.env.NEXT_PUBLIC_SITE_ENV === "staging" || process.env.VERCEL_ENV === "preview",
-  locationText: "Lahore, Pakistan",
-  sampleBriefReviewDate: process.env.NEXT_PUBLIC_SAMPLE_BRIEF_REVIEW_DATE || undefined,
-} as const;
+  name: "ScaleSight",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.scalesight.org",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "arman@scalesight.org",
+  bookingUrl:
+    process.env.NEXT_PUBLIC_BOOKING_URL ||
+    process.env.NEXT_PUBLIC_CALENDLY_URL ||
+    "",
+  partnersActive: false,
+  // Publication is a deliberate owner action after the documented launch gates.
+  publicationApproved: process.env.SITE_PUBLICATION_APPROVED === "true",
+  privacyApproved: false,
+};
 
-function getCalendlyUrl(value: string | undefined): string | undefined {
-  if (!value) return undefined;
-  try {
-    const url = new URL(value);
-    return url.protocol === "https:" && url.hostname === "calendly.com" && url.pathname.length > 1
-      ? url.toString()
-      : undefined;
-  } catch {
-    return undefined;
-  }
-}
+export const navigation = [
+  { href: "/how-we-work", label: "How we work" },
+  { href: "/planning-workspace", label: "Planning workspace" },
+  { href: "/examples", label: "Examples" },
+  { href: "/30-day-planning-pilot", label: "30-day pilot" },
+  { href: "/about", label: "About" },
+];

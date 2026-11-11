@@ -1,0 +1,151 @@
+[
+  {
+    "width": 360,
+    "route": "/",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "/how-we-work",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "/planning-workspace",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "/examples",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "/30-day-planning-pilot",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "/about",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "/contact",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "/privacy",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "mobile menu",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/how-we-work",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/planning-workspace",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/examples",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/30-day-planning-pilot",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/about",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/contact",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/privacy",
+    "body": "rgb(11, 22, 43)",
+    "header": "rgb(11, 22, 43)",
+    "text": "rgb(255, 255, 255)",
+    "overflow": false,
+    "violations": []
+  }
+]

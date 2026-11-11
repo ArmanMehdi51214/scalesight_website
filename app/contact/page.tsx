@@ -1,20 +1,68 @@
-import SiteFooter from "@/components/site-footer";
-import SiteHeader from "@/components/site-header";
+import { HeroSection, ProcessSteps } from "@/components/sections";
 import ContactForm from "@/components/contact-form";
-import manifest from "@/docs/content-manifest.json";
 import { siteConfig } from "@/lib/site-config";
-
-const validIntents = new Set(["planning", "pilot", "partner"]);
-export default async function ContactPage({ searchParams }: { searchParams: Promise<{ intent?: string | string[] }> }) {
-  const params = await searchParams;
-  const queryIntent = Array.isArray(params.intent) ? params.intent[0] : params.intent;
-  const intent = validIntents.has(queryIntent || "") ? queryIntent as "planning" | "pilot" | "partner" : "planning";
-  const sections = manifest.routes['/contact'];
-  return <><SiteHeader/><main id="main-content" tabIndex={-1} className="content-page interior-page page-contact content-shell">
-    <section data-section="C01" id="C01" className="contact-heading"><h1>{sections[0].blocks[0].text}</h1><p>{sections[0].blocks[1].text}</p></section>
-    <section data-section="C02" id="C02" className="contact-expectations"><ul>{sections[1].blocks.map(block=><li key={block.text}>{block.text}</li>)}</ul></section>
-    <section data-section="C03" id="C03" className="contact-form-card"><p className="form-intro">{sections[2].blocks[0].text}</p><ContactForm intent={intent}/></section>
-    <section data-section="C04" id="C04" aria-label="Booking"/>
-    <section data-section="C05" id="C05" className="direct-contact"><p>{sections[4].blocks[0].text}{siteConfig.contactEmail && <> <a className="text-link" href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a></>}</p></section>
-  </main><SiteFooter/></>;
+import { pageMetadata } from "@/lib/metadata";
+export const metadata = pageMetadata(
+  "Discuss a Planning Decision | ScaleSight",
+  "Tell us the upcoming purchase, production or allocation commitment your team is weighing. Discuss whether a focused planning review fits your timing and available data.",
+  "/contact",
+);
+export default async function Contact({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const query = await searchParams;
+  const intent =
+    query.intent === "pilot"
+      ? "pilot"
+      : query.intent === "partner"
+        ? "partner"
+        : "";
+  return (
+    <>
+      <HeroSection id="C01" />
+      <div className="container contact-grid">
+        <section className="contact-panel" aria-labelledby="form-title">
+          {intent && (
+            <p className="contact-intent">
+              {intent === "pilot"
+                ? "Enquiry: focused paid 30-day pilot"
+                : "Enquiry: partner engagement"}
+            </p>
+          )}
+          <h2 id="form-title">Start with a few details.</h2>
+          <ContactForm
+            intent={intent}
+            email={siteConfig.email}
+            bookingUrl={siteConfig.bookingUrl}
+          />
+        </section>
+        <aside className="contact-sidebar">
+          <h2>What to expect.</h2>
+          <ProcessSteps
+            steps={[
+              {
+                title: "We discuss the upcoming commitment and decision date.",
+              },
+              { title: "We check the relevant data and operating context." },
+              { title: "We agree whether a focused pilot makes sense." },
+            ]}
+          />
+          <p className="calendar-fallback">
+            {siteConfig.bookingUrl
+              ? "Optional booking is available after your enquiry is received."
+              : "Online booking is currently unavailable. Send an enquiry or contact us by email to agree a time."}
+          </p>
+          {siteConfig.email && (
+            <p className="section-copy">
+              <a className="text-link" href={`mailto:${siteConfig.email}`}>
+                {siteConfig.email} ↗
+              </a>
+            </p>
+          )}
+        </aside>
+      </div>
+    </>
+  );
 }

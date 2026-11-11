@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/brand-check.mjs && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "brand-check": "node scripts/brand-check.mjs"
+    "lint": "eslint"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

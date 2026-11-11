@@ -1,0 +1,38 @@
+[
+  {
+    "width": 360,
+    "route": "/",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "/30-day-planning-pilot",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 360,
+    "route": "/examples",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/30-day-planning-pilot",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/examples",
+    "overflow": false,
+    "violations": []
+  }
+]

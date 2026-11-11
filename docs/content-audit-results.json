@@ -1,0 +1,56 @@
+{
+  "staleContentHits": [],
+  "permittedLiveContexts": [
+    {
+      "file": "content/copy.ts",
+      "line": 167,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    },
+    {
+      "file": "content/copy.ts",
+      "line": 244,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    },
+    {
+      "file": ".next/server/app/examples.html",
+      "line": 1,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    },
+    {
+      "file": ".next/server/app/examples.rsc",
+      "line": 11,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    },
+    {
+      "file": ".next/server/app/examples.segments/_full.segment.rsc",
+      "line": 11,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    },
+    {
+      "file": ".next/server/app/examples.segments/examples/__PAGE__.segment.rsc",
+      "line": 7,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    },
+    {
+      "file": ".next/server/app/planning-workspace.html",
+      "line": 1,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    },
+    {
+      "file": ".next/server/app/planning-workspace.rsc",
+      "line": 25,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    },
+    {
+      "file": ".next/server/app/planning-workspace.segments/_full.segment.rsc",
+      "line": 25,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    },
+    {
+      "file": ".next/server/app/planning-workspace.segments/planning-workspace/__PAGE__.segment.rsc",
+      "line": 12,
+      "reason": "Explicit synthetic/no-client-integration disclosure or framework serialization; inspect in context"
+    }
+  ],
+  "scope": "Active source, public asset names/SVG text, rendered HTML/RSC/build metadata. Source PDFs, historical audit, private original pixels and vendor runtime are excluded; pixels require visual review."
+}

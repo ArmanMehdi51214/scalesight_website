@@ -1,64 +1,83 @@
 "use client";
-
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-
-const navItems = [
-  { href: "/how-we-work", label: "How we work" },
-  { href: "/examples", label: "Examples" },
-  { href: "/30-day-planning-pilot", label: "30-day pilot" },
-  { href: "/about", label: "About" },
-];
-
-function isActive(pathname: string, href: string) {
-  return pathname === href || pathname.startsWith(`${href}/`);
-}
-
+import { useRef, useState } from "react";
+import { navigation } from "@/lib/site-config";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 export default function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const headerRef = useRef<HTMLElement>(null);
-  const menuRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    const updateScroll = () => headerRef.current?.classList.toggle("is-scrolled", window.scrollY > 8);
-    updateScroll();
-    window.addEventListener("scroll", updateScroll, { passive: true });
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && menuRef.current?.getAttribute("aria-expanded") === "true") {
-        setOpen(false);
-        menuRef.current.focus();
-      }
-    };
-    window.addEventListener("keydown", handleEscape);
-    return () => { window.removeEventListener("keydown", handleEscape); window.removeEventListener("scroll", updateScroll); };
-  }, []);
-
+  const trigger = useRef<HTMLButtonElement>(null);
   return (
-    <header ref={headerRef} className="site-header sticky top-0 z-50">
-      <div className="content-shell flex items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link aria-label="ScaleSight home" className="header-brand inline-flex shrink-0 items-center" href="/">
-          <Image alt="ScaleSight" className="h-auto w-36 md:w-40" height={265} width={1043} preload src="/log files/scalesight coloured primary logo.svg" />
+    <header className="site-header">
+      <div className="container header-inner">
+        <Link className="wordmark" href="/" aria-label="ScaleSight home">
+          <Image
+            src="/images/scalesight-logo-white.svg"
+            alt="ScaleSight"
+            width={174}
+            height={44}
+          />
         </Link>
-        <nav aria-label="Main navigation" className="hidden items-center gap-6 lg:flex">
-          {navItems.map((item) => <Link aria-current={isActive(pathname, item.href) ? "page" : undefined} key={item.href} className={isActive(pathname, item.href) ? "nav-link nav-link--active" : "nav-link"} href={item.href}>{item.label}</Link>)}
+        <nav aria-label="Main navigation" className="desktop-nav">
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
-        <Link className="header-cta primary-button" href="/contact">Talk through a decision</Link>
-        <button ref={menuRef} aria-controls="mobile-navigation" aria-expanded={open} aria-label={open ? "Close navigation" : "Open navigation"} className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--ink)] hover:bg-[var(--wash)] focus-visible:outline lg:hidden" onClick={() => setOpen((value) => !value)} type="button">
-          {open ? <X aria-hidden="true" size={20} /> : <Menu aria-hidden="true" size={20} />}
+        <Link href="/contact" className="button button-small header-cta">
+          Talk through a decision <ArrowUpRight size={15} aria-hidden="true" />
+        </Link>
+        <button
+          ref={trigger}
+          type="button"
+          className="menu-toggle"
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X /> : <Menu />}
         </button>
       </div>
-      <div className="content-shell px-4 sm:px-6 lg:hidden" hidden={!open} id="mobile-navigation">
-        <nav aria-label="Mobile navigation" className="mb-4 rounded-2xl border border-[var(--border)] bg-[var(--panel)] p-3 shadow-xl">
-          <div className="flex flex-col gap-1">
-            {navItems.map((item) => <Link aria-current={isActive(pathname, item.href) ? "page" : undefined} key={item.href} className={isActive(pathname, item.href) ? "mobile-nav-link mobile-nav-link--active" : "mobile-nav-link"} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>)}
-            <Link className="primary-button mt-2 min-h-11 justify-center" href="/contact" onClick={() => setOpen(false)}>Talk through a decision</Link>
-          </div>
+      {open && (
+        <nav
+          id="mobile-navigation"
+          className="mobile-nav container"
+          aria-label="Mobile navigation"
+          onKeyDown={(event) => {
+            if (event.key === "Escape") {
+              setOpen(false);
+              trigger.current?.focus();
+            }
+          }}
+        >
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setOpen(false)}
+              aria-current={pathname === item.href ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            className="button"
+            onClick={() => setOpen(false)}
+          >
+            Talk through a decision{" "}
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </Link>
         </nav>
-      </div>
+      )}
     </header>
   );
 }

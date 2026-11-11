@@ -41,5 +41,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#mcp file
-.mcp.json
+# Local MCP configuration (never commit credentials)
+/.mcp.json
