@@ -23,7 +23,7 @@ export default function SiteFooter() {
           <div className="footer-intro">
             <Link className="wordmark" href="/">
               <Image
-                src="/images/scalesight-logo.svg"
+                src="/images/scalesight-logo-white.svg"
                 alt="ScaleSight"
                 width={174}
                 height={44}

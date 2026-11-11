@@ -11,8 +11,8 @@ export default async function Image() {
   return new ImageResponse(
     <div
       style={{
-        background: "#f4f6fc",
-        color: "#10192e",
+        background: "#0b162b",
+        color: "#ffffff",
         width: "100%",
         height: "100%",
         padding: "65px 75px",
@@ -22,13 +22,13 @@ export default async function Image() {
       }}
     >
       <div style={{ fontSize: 32, letterSpacing: -1, display: "flex" }}>
-        ScaleSight<span style={{ color: "#4f49f3" }}>.</span>
+        ScaleSight<span style={{ color: "#bcbaff" }}>.</span>
       </div>
       <div
         style={{
           marginTop: 65,
           fontSize: 16,
-          color: "#4f49f3",
+          color: "#bcbaff",
           letterSpacing: 3,
         }}
       >
@@ -44,7 +44,7 @@ export default async function Image() {
       >
         Before your next production run, know what deserves the cash.
       </div>
-      <div style={{ fontSize: 20, marginTop: 30, color: "#525d73" }}>
+      <div style={{ fontSize: 20, marginTop: 30, color: "#c6d0e2" }}>
         Maintained analysis. Reviewed recommendations. Your team’s final call.
       </div>
     </div>,

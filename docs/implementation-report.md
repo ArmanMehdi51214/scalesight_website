@@ -27,7 +27,7 @@ The existing live site was inspected separately: its content differs from this h
 
 Permanent 308 redirects: `/case-studies` → `/examples`; `/forecasting` → `/how-we-work`; `/confident` and `/30-day-plan` → `/30-day-planning-pilot`; `/design-system` → `/planning-workspace`. All six redirects, including the conditional partner redirect, were checked directly.
 
-Header/footer use the requested labels and active-route state. Existing brand logo and local Geist font are retained. Tokens: Ink `#10192E`, Accent `#4F49F3`, Canvas `#F4F6FC`, Soft lilac `#E6E7F9`, Reading `#FFFFFF`. Accent contrast: 5.87:1 against white, 5.43:1 against canvas, 4.79:1 against lilac. No accent adjustment was necessary for normal-sized AA text.
+Header/footer use the requested labels and active-route state. Existing brand logo and local Geist font are retained. Palette override: at the owner's subsequent request, colors and section placements now follow commit `d6eadd44f05f0157f3ed6214e84124a7d334f5b8`, superseding the PDF palette. Navy `#101d35`, deep navy `#0b162b`, paper `#fafbfe`, ink `#142139`, slate `#506078`, accent `#4f49f3`, hover `#3e38d6`, light accent `#bcbaff`, soft background `#f0f3fa` and border `#dce2ed`. Home/pilot heroes and the supply showcase use navy; footer uses deep navy and the existing white brand logo. Content, routes and layout are retained.
 
 ## Components and content
 
