@@ -1,0 +1,141 @@
+{
+  "projectId": "7755843071808658589",
+  "title": "ScaleSight Website Screens",
+  "screens": [
+    {
+      "number": 1,
+      "id": "ef1a8acd76164262a1484e7dc41f3188",
+      "title": "ScaleSight - Analytical Planning for Consumer Brands",
+      "files": [
+        {
+          "path": "01-ef1a8acd76164262a1484e7dc41f3188/code.html",
+          "bytes": 24978
+        },
+        {
+          "path": "01-ef1a8acd76164262a1484e7dc41f3188/screenshot.png",
+          "bytes": 30541
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "9c601aa9864c4de2b97ef991ad3d7a54",
+      "title": "ScaleSight - How We Work",
+      "files": [
+        {
+          "path": "02-9c601aa9864c4de2b97ef991ad3d7a54/code.html",
+          "bytes": 23482
+        },
+        {
+          "path": "02-9c601aa9864c4de2b97ef991ad3d7a54/screenshot.png",
+          "bytes": 24481
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "3bacec6d0ed04c5885388482e9d37162",
+      "title": "ScaleSight - 30-Day Planning Pilot",
+      "files": [
+        {
+          "path": "03-3bacec6d0ed04c5885388482e9d37162/code.html",
+          "bytes": 40561
+        },
+        {
+          "path": "03-3bacec6d0ed04c5885388482e9d37162/screenshot.png",
+          "bytes": 25567
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "3f4f4ddf482e49c3bb79ed534defc666",
+      "title": "ScaleSight - Examples",
+      "files": [
+        {
+          "path": "04-3f4f4ddf482e49c3bb79ed534defc666/code.html",
+          "bytes": 26538
+        },
+        {
+          "path": "04-3f4f4ddf482e49c3bb79ed534defc666/screenshot.png",
+          "bytes": 31793
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "c3a00018998d4b4b9d67bc56aaede98a",
+      "title": "ScaleSight - About",
+      "files": [
+        {
+          "path": "05-c3a00018998d4b4b9d67bc56aaede98a/code.html",
+          "bytes": 17446
+        },
+        {
+          "path": "05-c3a00018998d4b4b9d67bc56aaede98a/screenshot.png",
+          "bytes": 49524
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "c741e121ab0f4ae8a088c806d59d92c1",
+      "title": "ScaleSight - Partners",
+      "files": [
+        {
+          "path": "06-c741e121ab0f4ae8a088c806d59d92c1/code.html",
+          "bytes": 24646
+        },
+        {
+          "path": "06-c741e121ab0f4ae8a088c806d59d92c1/screenshot.png",
+          "bytes": 39431
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "9175a7ec7dfa4d7d997121607857a201",
+      "title": "ScaleSight - Contact",
+      "files": [
+        {
+          "path": "07-9175a7ec7dfa4d7d997121607857a201/code.html",
+          "bytes": 27615
+        },
+        {
+          "path": "07-9175a7ec7dfa4d7d997121607857a201/screenshot.png",
+          "bytes": 73554
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "38ae05f0dc3f409ab456ed5001f34c27",
+      "title": "ScaleSight - Contact (Enquiry Received)",
+      "files": [
+        {
+          "path": "08-38ae05f0dc3f409ab456ed5001f34c27/code.html",
+          "bytes": 19979
+        },
+        {
+          "path": "08-38ae05f0dc3f409ab456ed5001f34c27/screenshot.png",
+          "bytes": 85324
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "8db50b1101a94511b940b679a7455408",
+      "title": "ScaleSight - Contact (Error State)",
+      "files": [
+        {
+          "path": "09-8db50b1101a94511b940b679a7455408/code.html",
+          "bytes": 25681
+        },
+        {
+          "path": "09-8db50b1101a94511b940b679a7455408/screenshot.png",
+          "bytes": 69657
+        }
+      ]
+    }
+  ]
+}

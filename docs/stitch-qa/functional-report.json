@@ -1,0 +1,278 @@
+{
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "titleMatchesPDF": true,
+      "descriptionMatchesPDF": true,
+      "canonicalCorrect": true,
+      "ogCorrect": true
+    },
+    {
+      "route": "/how-we-work",
+      "status": 200,
+      "titleMatchesPDF": true,
+      "descriptionMatchesPDF": true,
+      "canonicalCorrect": true,
+      "ogCorrect": true
+    },
+    {
+      "route": "/30-day-planning-pilot",
+      "status": 200,
+      "titleMatchesPDF": true,
+      "descriptionMatchesPDF": true,
+      "canonicalCorrect": true,
+      "ogCorrect": true
+    },
+    {
+      "route": "/examples",
+      "status": 200,
+      "titleMatchesPDF": true,
+      "descriptionMatchesPDF": true,
+      "canonicalCorrect": true,
+      "ogCorrect": true
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "titleMatchesPDF": true,
+      "descriptionMatchesPDF": true,
+      "canonicalCorrect": true,
+      "ogCorrect": true
+    },
+    {
+      "route": "/partners",
+      "status": 200,
+      "titleMatchesPDF": true,
+      "descriptionMatchesPDF": true,
+      "canonicalCorrect": true,
+      "ogCorrect": true
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "titleMatchesPDF": true,
+      "descriptionMatchesPDF": true,
+      "canonicalCorrect": true,
+      "ogCorrect": true
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/"
+    },
+    {
+      "href": "/how-we-work",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/how-we-work"
+    },
+    {
+      "href": "/examples",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/examples"
+    },
+    {
+      "href": "/30-day-planning-pilot",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/30-day-planning-pilot"
+    },
+    {
+      "href": "/about",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/about"
+    },
+    {
+      "href": "/contact",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/contact"
+    },
+    {
+      "href": "/examples#sample-brief",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/examples"
+    },
+    {
+      "href": "/examples#supply-timing",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/examples"
+    },
+    {
+      "href": "/examples#launch-demand",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/examples"
+    },
+    {
+      "href": "/examples#size-depth",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/examples"
+    },
+    {
+      "href": "/partners",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/partners"
+    },
+    {
+      "href": "/privacy",
+      "status": 404,
+      "anchorExists": true,
+      "finalPath": "/privacy"
+    },
+    {
+      "href": "/contact?intent=pilot",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/contact"
+    },
+    {
+      "href": "/contact?intent=planning",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/contact"
+    },
+    {
+      "href": "/contact?intent=partner",
+      "status": 200,
+      "anchorExists": true,
+      "finalPath": "/contact"
+    }
+  ],
+  "reflow": [
+    {
+      "route": "/",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 512,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 720,
+      "overflow": false
+    },
+    {
+      "route": "/how-we-work",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "/how-we-work",
+      "width": 512,
+      "overflow": false
+    },
+    {
+      "route": "/how-we-work",
+      "width": 720,
+      "overflow": false
+    },
+    {
+      "route": "/30-day-planning-pilot",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "/30-day-planning-pilot",
+      "width": 512,
+      "overflow": false
+    },
+    {
+      "route": "/30-day-planning-pilot",
+      "width": 720,
+      "overflow": false
+    },
+    {
+      "route": "/examples",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "/examples",
+      "width": 512,
+      "overflow": false
+    },
+    {
+      "route": "/examples",
+      "width": 720,
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "width": 512,
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "width": 720,
+      "overflow": false
+    },
+    {
+      "route": "/partners",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "/partners",
+      "width": 512,
+      "overflow": false
+    },
+    {
+      "route": "/partners",
+      "width": 720,
+      "overflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 512,
+      "overflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 720,
+      "overflow": false
+    }
+  ],
+  "checks": {
+    "intent-planning": true,
+    "intent-pilot": true,
+    "intent-partner": true,
+    "intent-invalid": true,
+    "placeholders": true,
+    "invalidEmailBlocked": true,
+    "sendingDisabled": true,
+    "failureRetainsValues": true,
+    "failureDoesNotShowBooking": true,
+    "successAfterAcceptance": true,
+    "noPrematureBooking": true,
+    "calendarFallback": true,
+    "rejectsUntrustedBooking": true,
+    "reducedMotion": true,
+    "menuClosesAfterSelection": true,
+    "noJSBriefVisible": true
+  },
+  "errors": []
+}

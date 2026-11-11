@@ -1,0 +1,90 @@
+{
+  "views": [
+    {
+      "width": 360,
+      "overflow": false,
+      "h1": 1,
+      "smallTargets": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "smallTargets": []
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "smallTargets": []
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "h1": 1,
+      "smallTargets": []
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "smallTargets": []
+    }
+  ],
+  "performance": [
+    {
+      "lcp": 908,
+      "cls": 0
+    },
+    {
+      "lcp": 868,
+      "cls": 0
+    },
+    {
+      "lcp": 956,
+      "cls": 0
+    }
+  ],
+  "keyboard": {
+    "skip": true,
+    "main": true,
+    "menuOpen": true,
+    "menuLinkFocused": true,
+    "menuClosed": true,
+    "escapeFocus": true,
+    "faq": true
+  },
+  "contrast": [
+    {
+      "fg": "ffffff",
+      "bg": "4f49f3",
+      "ratio": 5.866440770833704
+    },
+    {
+      "fg": "142139",
+      "bg": "fafbfe",
+      "ratio": 15.535295264112193
+    },
+    {
+      "fg": "506078",
+      "bg": "fafbfe",
+      "ratio": 6.177170032318796
+    },
+    {
+      "fg": "bbc7da",
+      "bg": "0b162b",
+      "ratio": 10.563591717844101
+    },
+    {
+      "fg": "bcbaff",
+      "bg": "0b162b",
+      "ratio": 9.97170406622938
+    }
+  ],
+  "zoom200": {
+    "overflow": false,
+    "zoom": "2"
+  },
+  "reducedMotion": true,
+  "performanceProfile": "Chromium local production; 390×844, 4× CPU slowdown, 4 Mbps down / 1 Mbps up, 40 ms latency, three fresh contexts; lab samples, not field data."
+}

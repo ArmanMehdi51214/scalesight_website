@@ -1,0 +1,13 @@
+{
+  "file": "public/images/planning-decision.webp",
+  "width": 2276,
+  "height": 668,
+  "text": "Illustrative · synthetic data\nACCEPT DELAY\n$0\nUSD incremental\n6,200 exposed\nFULL EXPEDITE\n+$8,400\nUSD incremental\nNearly full protection\nSPLIT SHIPMENT\n+$5,600\nUSD incremental\nMost exposure removed\nSPLIT + REDUCE PROMO\n+$5,600\nUSD incremental\nProtected-account gap closed\nSCALESIGHT-REVIEWED RECOMMENDATION",
+  "sha256": "c868da66f58d2ac046c5300942bc9852e0c2af976fe95cb0b53bdc4dbce284d6",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "deviceScaleFactor": 2
+  },
+  "selector": ".option-grid"
+}
