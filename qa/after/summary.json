@@ -1,0 +1,93 @@
+{
+  "layout": {
+    "pages": 64,
+    "badStatus": 0,
+    "horizontalOverflow": 0,
+    "imagesWithoutSpace": 0,
+    "mobileSmallTapTargets": 0,
+    "alignment": 0,
+    "unequalCards": 0,
+    "anchorRisks": 0,
+    "failedInteractions": 0,
+    "runtimeErrors": 0,
+    "lineLengthAdvisories": 0
+  },
+  "accessibilityAndInteractions": {
+    "accessibilityPages": 16,
+    "violations": 0,
+    "interactionChecks": 96,
+    "failedInteractions": 0,
+    "runtimeErrors": 0
+  },
+  "preservedRouteSnapshots": 64,
+  "protectedSourcesUnchanged": true,
+  "proofImageBytesUnchanged": true,
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "contactTests": 15,
+    "staleContentHits": 0
+  },
+  "sourceCommits": [
+    "4739b2f",
+    "b78283d",
+    "dd1bc52"
+  ],
+  "heroCentering": [
+    {
+      "width": 360,
+      "checks": 8,
+      "failed": 0,
+      "maxCenterError": 0.0078125
+    },
+    {
+      "width": 390,
+      "checks": 8,
+      "failed": 0,
+      "maxCenterError": 0.0078125
+    },
+    {
+      "width": 768,
+      "checks": 5,
+      "failed": 0,
+      "maxCenterError": 0.0078125
+    },
+    {
+      "width": 820,
+      "checks": 5,
+      "failed": 0,
+      "maxCenterError": 0.0078125
+    },
+    {
+      "width": 1024,
+      "checks": 5,
+      "failed": 0,
+      "maxCenterError": 0.0078125
+    },
+    {
+      "width": 1180,
+      "checks": 5,
+      "failed": 0,
+      "maxCenterError": 0.0078125
+    },
+    {
+      "width": 1440,
+      "checks": 5,
+      "failed": 0,
+      "maxCenterError": 0.0078125
+    },
+    {
+      "width": 1920,
+      "checks": 5,
+      "failed": 0,
+      "maxCenterError": 0.0078125
+    }
+  ],
+  "followUp": {
+    "baseCommit": "c65811e",
+    "description": "Center homepage hero eyebrow, actions and supporting points across all eight widths",
+    "heroCenterChecks": 46,
+    "failedHeroCenterChecks": 0
+  }
+}

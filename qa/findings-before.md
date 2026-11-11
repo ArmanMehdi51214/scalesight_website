@@ -1,0 +1,25 @@
+# Layout findings before implementation
+
+Baseline: commit `47827ab`, local Next.js development server, 8 active routes × widths 360, 390, 768, 820, 1024, 1180, 1440 and 1920. Captured full pages and inspected route-by-route breakpoint contact sheets before changing application code. Original screenshots and measured details are in `before/`.
+
+All 64 direct route requests returned 200. The inactive partners route returned its existing 307 to `/contact?intent=partner`. No page overflow or images without reserved dimensions were found. There are 248 undersized mobile targets, 8 structural alignment errors and 72 anchor-clearance risks. Card row heights already match; preserve that behavior. The four menu audit failures include undersized links elsewhere on the page, rather than demonstrating menu clipping.
+
+| Route | Width | Element / problem | Planned repair |
+| --- | --- | --- | --- |
+| All | All | Multiple typography and spacing overrides; surface colors differ from the requested design system. Dense small captions and body copy, particularly at intermediate widths. | Consolidate one token set, editorial type scale, 1248px shared container, 16px mobile gutters and fixed section/spacing scales. Apply the explicitly requested light canvas/reading palette, retaining ink header and dark bands. |
+| All | 360 / 390 | Header/footer wordmark links are 38px high; footer navigation links are 25px high and email link 17px. | Reserve 44px minimum targets (48px standard controls), align footer columns on a 12-column grid and keep equal list spacing. |
+| All | 1024 / 1180 | Desktop navigation is compacted through smaller spacing/font overrides to make it fit. | Keep the expanded navigation only from 1200px; maintain the same header height at every width. |
+| All | All | Main-content skip target has no scroll margin. | Give main and identified in-page targets a shared header-clearance token; verify real anchor scrolling. |
+| Home | 360 / 390 | FAQ summary targets are only 32px; primary and secondary hero actions have different presentation and rhythm. | Make question rows fully tappable; normalize action height/padding and stack consistently on mobile. |
+| Home / Workspace | Desktop | Split proof/fallback panels use separate spacing overrides. Example cards can have vastly different content lengths. | Normalize 5/7 column splits, vertical centering, and shared card padding; align final tile actions without altering proof content. |
+| Workspace | 360 / 390 | Storyboard and compact steps remain two columns; long labels are cramped. The architecture disclosure sits apart from the showcase. | Stack small-screen cards/steps; preserve disclosure and restore an intentional shared gap around it. |
+| How we work | 360 / 390 | Input cards with paragraph copy remain narrow two-column cards. FAQ targets are undersized. | Single-column mobile cards, consistent type and padding, shared FAQ repair. |
+| Examples | 360 / 390 | Option cards retain a narrow two-column layout. Full-image link target is 24px high. Enlarge label overlays the proof image. | Stack option cards; enlarge image links; place enlargement affordance in its own frame row so it cannot cover evidence. Preserve per-asset crop settings and pixels. |
+| Pilot | 360 / 390 | Four-week steps use two columns with small type and positioned decorative arrows; FAQ targets are undersized. | Vertical mobile steps, equal card padding, consistent body size, shared FAQ repair. |
+| About | All | `.about-principle` adds 30px to the entire section and shifts its container away from the shared page edges. Three technical cards occupy an arbitrary four-column grid. | Keep the section container fixed; place the decorative rule inside it. Let three-card grids occupy three equal desktop columns. |
+| Contact | All | Sidebar has extra 15px top inset; form title has no anchor clearance. Error insertion changes a field's height. | Align panel/sidebar titles, reserve one-line field-error space without changing validation, add shared target scroll margin. |
+| Contact | 360 / 390 | Checkbox labels, privacy link and footer links have undersized targets. | 48px checkbox-label rows and inline policy/email targets; maintain hidden honeypot and existing form behavior. |
+| Privacy | 768 / 820 | Index and article remain side by side, leaving a narrow reading column. Index links and email links are undersized. | Stack index above article below desktop; 780px maximum reading column and height-bounded sticky desktop index; shared 48px links. |
+| Proof images | Mobile | Existing crop on the planning-cycle image exposes only part of the nine-step context; production evidence prioritizes the ratio cards over the whole chart. | Keep registered crops unless close inspection proves a better non-destructive focus; retain full-resolution viewer and explicitly report remaining mobile legibility limits. |
+
+No copy changes are planned. Long headings and verbose card content will be handled with fluid sizing, balanced wrapping and wider mobile cards. Existing badges, captions, alt text, legal warnings and proof fallbacks remain intact.
